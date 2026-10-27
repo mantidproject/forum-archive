@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Muon Analysis interface no longer loads current run - General - Mantid Help Forum</title>
+    <meta name="description" content="In Mantid version 3.8.x the Muon Analysis interface appears to have stopped loading the current run, instead loading seemingly random runs from the past. The is an essential function, and a quick resolution is needed as &amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="191.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Muon Analysis interface no longer loads current run&#39;" href="https://forum.mantidproject.org/t/muon-analysis-interface-no-longer-loads-current-run/191.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/muon-analysis-interface-no-longer-loads-current-run/191" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/muon-analysis-interface-no-longer-loads-current-run/191" />
+<meta property="og:title" content="Muon Analysis interface no longer loads current run" />
+<meta name="twitter:title" content="Muon Analysis interface no longer loads current run" />
+<meta property="og:description" content="In Mantid version 3.8.x the Muon Analysis interface appears to have stopped loading the current run, instead loading seemingly random runs from the past. The is an essential function, and a quick resolution is needed as users are beginning to migrate to alternative analysis programs." />
+<meta name="twitter:description" content="In Mantid version 3.8.x the Muon Analysis interface appears to have stopped loading the current run, instead loading seemingly random runs from the past. The is an essential function, and a quick resolution is needed as users are beginning to migrate to alternative analysis programs." />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="article:published_time" content="2016-12-13T09:17:17+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="191.html">Muon Analysis interface no longer loads current run</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/6.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Muon Analysis interface no longer loads current run'>
+      <link itemprop='url' href='191.html'>
+      <meta itemprop='datePublished' content='2016-12-13T09:17:16Z'>
+        <meta itemprop='articleSection' content='General'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/spc36'><span itemprop='name'>spc36</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="191.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2016-12-13T09:17:17Z' class='post-time'>
+                    December 13, 2016,  9:17am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-12-13T09:17:17Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>In Mantid version 3.8.x the Muon Analysis interface appears to have stopped loading the current run, instead loading seemingly random runs from the past. The is an essential function, and a quick resolution is needed as users are beginning to migrate to alternative analysis programs.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/NickDraper'><span itemprop='name'>NickDraper</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-12-13T09:49:46Z' class='post-time'>
+                    December 13, 2016,  9:49am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-12-13T09:49:46Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello,</p>
+<p>I’ve had a look at the code that determines which file is loaded when the current run button is clicked and this hasn’t changed since February this year, so the functionality should not have changed since version 3.6.</p>
+<p>I’ve just tested it from my desk using musr using a nightly build from the 29th of October, and that loads the correct file.</p>
+<p>I’m currently downloading the latest nightly to check that as well, but don’t expect anything different.</p>
+<p>Could you give us a little more detail?  What instrument are you doing this for?  what runs is it loading (and what is the correct answer you would believe?)</p>
+<p>Regards,<br>
+Nick</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/spc36'><span itemprop='name'>spc36</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-12-13T10:02:47Z' class='post-time'>
+                    December 13, 2016, 10:02am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-12-13T10:02:47Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Nick,</p>
+<p>The problems over the weekend occurred on HiFi (but I’ve seen the same issue elsewhere). For instance, I seem to have the same problem just now running Mantid on my own PC reading EMU data … clicking ‘Load Current Run’ loads run 66994; however the current run is actually 68130.</p>
+<p>I believe this problem may have been around for some time, but the symptoms have been erratic and have sometimes gone away with a few clicks of ‘Load Current Run’.</p>
+<p>Steve</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-12-13T10:27:03Z' class='post-time'>
+                    December 13, 2016, 10:27am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-12-13T10:27:03Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I reported this to Tom Perkins / Anders Markvardsen / Raquel Alvarez Banos by email a while ago. Issue 18116 addresses it. It seems that the interface keeps copies of the 5 temporary files, once it loads them. On asking it to load “Current run” it correctly identifies which of the files would be newest and then uses the stale copy if available.</p>
+<p>Closing and opening the Muon Analysis interface clears the cache.</p>
+<p>So testing needs to be done on a “live” instrument or you need to replace the files in the background while the Muon Interface is open.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/NickDraper'><span itemprop='name'>NickDraper</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-12-13T10:32:07Z' class='post-time'>
+                    December 13, 2016, 10:32am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-12-13T10:32:07Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks James, that’s really helpful especially as Raquel and Anders left for Christmas yesterday.</p>
+<p>I’ll take a look at the code to see if I can find out where this caching is happening.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/NickDraper'><span itemprop='name'>NickDraper</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-12-13T10:38:13Z' class='post-time'>
+                    December 13, 2016, 10:38am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-12-13T10:38:13Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="https://forum.mantidproject.org/u/martyngigg">@martyngigg</a> and I have found the cache that is responsible for this after your helpful pointer.  Martyn is going to change the code so that “Load Current Run” files never enter the cache.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

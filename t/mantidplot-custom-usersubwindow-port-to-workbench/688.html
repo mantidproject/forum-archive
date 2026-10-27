@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Mantidplot custom UserSubWindow -&gt; port to workbench - Installation - Mantid Help Forum</title>
+    <meta name="description" content="Hello 
+Ubuntu 20.04 
+Are there any issues porting mantidplot custom UserSubWindows to workbench? 
+I have a custom UserSubWindow I am trying to update to the latest source. 
+/home/dev/work/mantid/Framework/Types/inc/Manti&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="688.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Mantidplot custom UserSubWindow -&gt; port to workbench&#39;" href="https://forum.mantidproject.org/t/mantidplot-custom-usersubwindow-port-to-workbench/688.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/mantidplot-custom-usersubwindow-port-to-workbench/688" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/mantidplot-custom-usersubwindow-port-to-workbench/688" />
+<meta property="og:title" content="Mantidplot custom UserSubWindow -&gt; port to workbench" />
+<meta name="twitter:title" content="Mantidplot custom UserSubWindow -&gt; port to workbench" />
+<meta property="og:description" content="Hello  Ubuntu 20.04  Are there any issues porting mantidplot custom UserSubWindows to workbench?  I have a custom UserSubWindow I am trying to update to the latest source.  /home/dev/work/mantid/Framework/Types/inc/MantidTypes/Core/DateAndTime.h:9:10: fatal error: MantidTypes/DllConfig.h: No such file or directory  Only the file DllConfig.h does exist in ./build/Framework/Types/MantidTypes/  The rest of the Types headers headers are in ./Framework/Types/inc/MantidTypes/  Is there a reason why th..." />
+<meta name="twitter:description" content="Hello  Ubuntu 20.04  Are there any issues porting mantidplot custom UserSubWindows to workbench?  I have a custom UserSubWindow I am trying to update to the latest source.  /home/dev/work/mantid/Framework/Types/inc/MantidTypes/Core/DateAndTime.h:9:10: fatal error: MantidTypes/DllConfig.h: No such file or directory  Only the file DllConfig.h does exist in ./build/Framework/Types/MantidTypes/  The rest of the Types headers headers are in ./Framework/Types/inc/MantidTypes/  Is there a reason why th..." />
+<meta property="og:article:section" content="Installation" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="article:published_time" content="2020-09-17T08:21:23+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="688.html">Mantidplot custom UserSubWindow -&gt; port to workbench</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/installation/7.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Installation</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Mantidplot custom UserSubWindow -&gt; port to workbench'>
+      <link itemprop='url' href='688.html'>
+      <meta itemprop='datePublished' content='2020-09-17T08:21:23Z'>
+        <meta itemprop='articleSection' content='Installation'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/dezzed'><span itemprop='name'>dezzed</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="688.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2020-09-17T08:21:23Z' class='post-time'>
+                    September 17, 2020,  8:21am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-09-17T08:21:23Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello</p>
+<p>Ubuntu 20.04</p>
+<p>Are there any issues porting mantidplot custom UserSubWindows to workbench?</p>
+<p>I have a custom UserSubWindow I am trying to update to the latest source.</p>
+<p>/home/dev/work/mantid/Framework/Types/inc/MantidTypes/Core/DateAndTime.h:9:10: fatal error: MantidTypes/DllConfig.h: No such file or directory</p>
+<p>Only the file DllConfig.h does exist in ./build/Framework/Types/MantidTypes/<br>
+The rest of the Types headers headers are in ./Framework/Types/inc/MantidTypes/</p>
+<p>Is there a reason why the ./Framework/Types/inc/MantidTypes/ files are not copied into the ./build/Framework/Types/MantidTypes</p>
+<p>Regards</p>
+<p>Derek</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/dezzed'><span itemprop='name'>dezzed</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-09-17T13:35:36Z' class='post-time'>
+                    September 17, 2020,  1:35pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-09-17T13:35:36Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I have a similar issue with Ubuntu 18.04</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-09-17T15:04:20Z' class='post-time'>
+                    September 17, 2020,  3:04pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-09-17T15:04:20Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Derek,<br>
+The Indirect and Muon interfaces currently use UserSubWindow so this should be able to port over to Workbench.</p>
+<p>Have you got a working version of this custom interface for Mantidplot?</p>
+<p>It might be useful for us to see the set-up you have as it seems cmake isn’t correctly picking up your files.<br>
+Do you have your code as a branch on Github that you are able to share??</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/dezzed'><span itemprop='name'>dezzed</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-09-17T15:36:34Z' class='post-time'>
+                    September 17, 2020,  3:36pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-09-17T15:36:34Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I think my initial question assumed a problem with porting to workbench.</p>
+<p>I have now built mantid in Ubuntu 18.04<br>
+I have checked out v4.2.0 which I think (please confirm) still builds mantid.</p>
+<p>I agree that my cmake has a problem with paths.</p>
+<p>My CMakeLists file is for a much older version of Mantid</p>
+<p>I set include paths as:-<br>
+include_directories ( SYSTEM ${QWT5_INCLUDE_DIR} )<br>
+include_directories ( ${MANTID_ROOT}/Framework/API/inc/ )<br>
+include_directories ( ${MANTID_ROOT}/Framework/Geometry/inc/ )<br>
+include_directories ( ${MANTID_ROOT}/Framework/DataObjects/inc/ )<br>
+include_directories ( ${MANTID_ROOT}/qt/widgets/common/inc)<br>
+include_directories ( ${MANTID_ROOT}/qt/widgets/legacyqwt/inc)<br>
+include_directories ( ${MANTID_ROOT}/Framework/Kernel/inc/)<br>
+include_directories ( ${MANTID_ROOT}/Framework/Types/inc/)<br>
+include_directories ( ${MANTID_ROOT}/Framework/Parallel/inc/)</p>
+<p>include_directories ( ${MANTID_ROOT}/Framework/LiveData/inc/)<br>
+include_directories ( ${MANTID_ROOT}/build/Framework/LiveData/MantidLiveData/)</p>
+<p>include_directories ( ${MANTID_ROOT}/Framework/HistogramData/inc/)<br>
+include_directories ( …/…/…/ )<br>
+include_directories ( …/…/…/Framework/LiveData )</p>
+<p>The LiveData DLLConfig.h file is in a different place than all the other LiveData header files should this be expected?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/dezzed'><span itemprop='name'>dezzed</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-09-18T10:46:03Z' class='post-time'>
+                    September 18, 2020, 10:46am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-09-18T10:46:03Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Ok So this was just a problem with an include dir<br>
+include_directories ( ${MANTID_ROOT}/build/Framework/LiveData/MantidLiveData/)<br>
+should be<br>
+include_directories ( ${MANTID_ROOT}/build/Framework/LiveData/)</p>
+<p>Thanks for your assistance. I’ll move onto the next problem that will no doubt soon appear.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-09-18T15:12:18Z' class='post-time'>
+                    September 18, 2020,  3:12pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-09-18T15:12:18Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Great! Keep us updated with how you get on!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

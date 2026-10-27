@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Updates for Week 3 of 2019 - Developer - Mantid Help Forum</title>
+    <meta name="description" content="New algorithm for MD Normalization for single crystal data
+Workbench update plots if the workspace data changes
+
+Rebin2D avoid NaNs by skipping bins of zero size
+Bugfixes related to plotly changing API
+
+
+Detailed Merge&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="473.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Updates for Week 3 of 2019&#39;" href="https://forum.mantidproject.org/t/updates-for-week-3-of-2019/473.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/updates-for-week-3-of-2019/473" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/updates-for-week-3-of-2019/473" />
+<meta property="og:title" content="Updates for Week 3 of 2019" />
+<meta name="twitter:title" content="Updates for Week 3 of 2019" />
+<meta property="og:description" content="New algorithm for MD Normalization for single crystal data Workbench update plots if the workspace data changes  Rebin2D avoid NaNs by skipping bins of zero size Bugfixes related to plotly changing API   Detailed Merges for Jan 14 to 20, 2019 on github    PR23630 - Reflectometry GUI restructuring 1: Settings tabs  PR24221 - Replace PyEpics with CaChannel in GetLiveInstrumentValue  PR24270 - SCD interface: proton charge if no monitors and set goniometer  PR24328 - Stop Hard Crash on JobTreeView..." />
+<meta name="twitter:description" content="New algorithm for MD Normalization for single crystal data Workbench update plots if the workspace data changes  Rebin2D avoid NaNs by skipping bins of zero size Bugfixes related to plotly changing API   Detailed Merges for Jan 14 to 20, 2019 on github    PR23630 - Reflectometry GUI restructuring 1: Settings tabs  PR24221 - Replace PyEpics with CaChannel in GetLiveInstrumentValue  PR24270 - SCD interface: proton charge if no monitors and set goniometer  PR24328 - Stop Hard Crash on JobTreeView..." />
+<meta property="og:article:section" content="News" />
+<meta property="og:article:section:color" content="0E76BD" />
+<meta property="og:article:section" content="Developer" />
+<meta property="og:article:section:color" content="AB9364" />
+<meta property="article:published_time" content="2019-01-24T21:27:07+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="473.html">Updates for Week 3 of 2019</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/news/dev-news/15.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0E76BD'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>News</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/news/dev-news/15.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #AB9364'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Developer</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Updates for Week 3 of 2019'>
+      <link itemprop='url' href='473.html'>
+      <meta itemprop='datePublished' content='2019-01-24T21:27:07Z'>
+        <meta itemprop='articleSection' content='Developer'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/peterfpeterson'><span itemprop='name'>peterfpeterson</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="473.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2019-01-24T21:27:07Z' class='post-time'>
+                    January 24, 2019,  9:27pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-01-24T21:27:07Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <ul>
+<li>
+<a href="http://docs.mantidproject.org/nightly/algorithms/MDNorm-v1.html">New algorithm for MD Normalization</a> for single crystal data</li>
+<li>Workbench update plots if the workspace data changes</li>
+<li>
+<a href="http://docs.mantidproject.org/nightly/algorithms/Rebin2D-v1.html">Rebin2D</a> avoid NaNs by skipping bins of zero size</li>
+<li>Bugfixes related to plotly changing API</li>
+</ul>
+<h2>
+<a name="detailed-merges-for-jan-14-to-20-2019-1" class="anchor" href="473.html#detailed-merges-for-jan-14-to-20-2019-1"></a>Detailed Merges for Jan 14 to 20, 2019</h2>
+<p><a href="https://github.com/mantidproject/mantid/pulls?q=is%3Apr+merged%3A2019-01-15..2019-01-20">on github</a></p>
+<ul>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/23630">PR23630</a> - Reflectometry GUI restructuring 1: Settings tabs</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24221">PR24221</a> - Replace PyEpics with CaChannel in GetLiveInstrumentValue</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24270">PR24270</a> - SCD interface: proton charge if no monitors and set goniometer</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24328">PR24328</a> - Stop Hard Crash on JobTreeView Enter Press</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24338">PR24338</a> - Multiple plotting GUI</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24345">PR24345</a> - Reflectometry GUI restructuring 2: Save tab</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24348">PR24348</a> - Indirect Data Analysis - Result workspace names are wrong</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24366">PR24366</a> - Export SANS Table as CSV</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24368">PR24368</a> - Reflectometry GUI restructuring 3: missing widgets</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24383">PR24383</a> - Fix Variable Q Binning from SANS User File</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24414">PR24414</a> - Workbench: Update plots if the workspace data changes</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24420">PR24420</a> - Remove Unecessary calls to ISIS Data Archive</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24451">PR24451</a> - Initial addition for <a href="http://docs.mantidproject.org/nightly/algorithms/CalculateEfficiencyCorrection-v1.html">CalculateEfficiencyCorrection</a> algorithm</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24455">PR24455</a> - Fix failing system test: IRISIqtAndIqtFitTest</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24463">PR24463</a> - Tests for TableWorkspaceDisplay presenter</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24469">PR24469</a> - Add Ctrl+Enter shortcut to execute code in the CodeEditor</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24471">PR24471</a> - Add PyCharm environment file to CMake configuration</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24472">PR24472</a> - Cleanup Histogram usage</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24474">PR24474</a> - Stop crash when writing too many errors to stderr wituout an external console to write to</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24488">PR24488</a> - Indirect Elwin - Load without history option</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24496">PR24496</a> - Fix not showing last bin boundary in X values</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24497">PR24497</a> - Prevent a crash when property has no value attribute</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24498">PR24498</a> - Restrict the Details window to only 1 instance</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24502">PR24502</a> - Columns in Matrix and Table workspace displays are now adjustable</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24503">PR24503</a> - Minor fix to absorption corrections</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24505">PR24505</a> - <a href="http://docs.mantidproject.org/nightly/algorithms/Rebin2D-v1.html">Rebin2D</a> avoid NaNs by skipping bins of zero size</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24506">PR24506</a> - Call <a href="http://docs.mantidproject.org/nightly/algorithms/OptimizeCrystalPlacement-v1.html">OptimizeCrystalPlacement</a> more than once</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24507">PR24507</a> - CodeEditor: Set executing state after the code has been retrieved</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24513">PR24513</a> - Follow changes in plotly</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24516">PR24516</a> - <a href="http://docs.mantidproject.org/nightly/algorithms/MDNorm-v1.html">New algorithm for MD Normalization</a> for single crystal data</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24519">PR24519</a> - JobTreeView Identical Behaviour for Enter and Return Keypresses</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24523">PR24523</a> - Discard preservation of events for monitor counts</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24525">PR24525</a> - Avoid linking to both libomp and libgomp on Ubuntu 18.04</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24536">PR24536</a> - MR: use simple background average</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24540">PR24540</a> - Add detector bank to TOPAZ IDF</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24548">PR24548</a> - Try both arg lists for Layout</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

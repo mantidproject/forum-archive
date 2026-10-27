@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ExtractMembers option in ConvolutionFitSequential - Python - Mantid Help Forum</title>
+    <meta name="description" content="I am using ConvlutionFitSequential to fit a Fourier transformed stretched exponential function to the Quasielastic spectra with the following python code- 
+
+fit_str = ConvolutionFitSequential(InputWorkspace=lino3,Functio&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="375.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;ExtractMembers option in ConvolutionFitSequential&#39;" href="https://forum.mantidproject.org/t/extractmembers-option-in-convolutionfitsequential/375.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/extractmembers-option-in-convolutionfitsequential/375" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/extractmembers-option-in-convolutionfitsequential/375" />
+<meta property="og:title" content="ExtractMembers option in ConvolutionFitSequential" />
+<meta name="twitter:title" content="ExtractMembers option in ConvolutionFitSequential" />
+<meta property="og:description" content="I am using ConvlutionFitSequential to fit a Fourier transformed stretched exponential function to the Quasielastic spectra with the following python code-   fit_str = ConvolutionFitSequential(InputWorkspace=lino3,Function=function, BackgroundType=bgType,  StartX=startX, EndX=endX, SpecMin=specMin, SpecMax=specMax,  Convolve=convolve, PassWSIndexToFunction=True, Minimizer=minimizer,  MaxIterations=maxIt,ExtractMembers=True)   This returns the following error:    RuntimeError                      ..." />
+<meta name="twitter:description" content="I am using ConvlutionFitSequential to fit a Fourier transformed stretched exponential function to the Quasielastic spectra with the following python code-   fit_str = ConvolutionFitSequential(InputWorkspace=lino3,Function=function, BackgroundType=bgType,  StartX=startX, EndX=endX, SpecMin=specMin, SpecMax=specMax,  Convolve=convolve, PassWSIndexToFunction=True, Minimizer=minimizer,  MaxIterations=maxIt,ExtractMembers=True)   This returns the following error:    RuntimeError                      ..." />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="og:article:section" content="Python" />
+<meta property="og:article:section:color" content="9EB83B" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="3 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="1 ❤" />
+<meta property="article:published_time" content="2018-03-19T18:00:05+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="375.html">ExtractMembers option in ConvolutionFitSequential</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #9EB83B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Python</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='ExtractMembers option in ConvolutionFitSequential'>
+      <link itemprop='url' href='375.html'>
+      <meta itemprop='datePublished' content='2018-03-19T18:00:05Z'>
+        <meta itemprop='articleSection' content='Python'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Harish_Srinivasan'><span itemprop='name'>Harish_Srinivasan</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="375.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2018-03-19T18:00:05Z' class='post-time'>
+                    March 19, 2018,  6:00pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-19T18:00:05Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am using ConvlutionFitSequential to fit a Fourier transformed stretched exponential function to the Quasielastic spectra with the following python code-</p>
+<blockquote>
+<p>fit_str = ConvolutionFitSequential(InputWorkspace=lino3,Function=function, BackgroundType=bgType,<br>
+StartX=startX, EndX=endX, SpecMin=specMin, SpecMax=specMax,<br>
+Convolve=convolve, PassWSIndexToFunction=True, Minimizer=minimizer,<br>
+MaxIterations=maxIt,ExtractMembers=True)</p>
+</blockquote>
+<p>This returns the following error:</p>
+<blockquote>
+<hr>
+<p>RuntimeError                              Traceback (most recent call last)<br>
+ in ()<br>
+13 fit_str = ConvolutionFitSequential(InputWorkspace=lino3,Function=function, BackgroundType=bgType,<br>
+14                                    StartX=startX, EndX=endX, SpecMin=specMin, SpecMax=specMax,<br>
+—&gt; 15                                    Convolve=convolve, PassWSIndexToFunction=True, Minimizer=minimizer, MaxIterations=maxIt,ExtractMembers=True)</p>
+<p>/opt/Mantid/bin/mantid/simpleapi.pyc in algorithm_wrapper(InputWorkspace,Function,StartX,EndX,PassWSIndexToFunction=None,BackgroundType=None,SpecMin=None,SpecMax=None,Convolve=None,ExtractMembers=None,Minimizer=None,MaxIterations=None,PeakRadius=None, Version=1)<br>
+1024         set_properties(algm, *args, **final_keywords)<br>
+1025         try:<br>
+ → 1026             algm.execute()<br>
+1027         except RuntimeError as e:<br>
+1028             if e.args[0] == ‘Some invalid Properties found’:</p>
+<p>RuntimeError: Number of members is incorrect.</p>
+</blockquote>
+<p>While, if I keep</p>
+<blockquote>
+<p>ExtractMembers=False</p>
+</blockquote>
+<p>in the function, I don’t get this error. But I require these member functions of the fit in a separate workspace.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jmborr'><span itemprop='name'>jmborr</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-20T20:45:44Z' class='post-time'>
+                    March 20, 2018,  8:45pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-20T20:45:44Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Can you write down the Mantid version you’re using, the values for the variables you’re passing to the optional arguments of <code>ConvolutionFitSequential</code>, and upload the resolution and data workspaces as nexus files?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Harish_Srinivasan'><span itemprop='name'>Harish_Srinivasan</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-22T11:25:21Z' class='post-time'>
+                    March 22, 2018, 11:25am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-22T11:25:21Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Sorry for the delay!! I am using Mantid 3.11. I have uploaded the files after renaming them with '.txt ’ extension, since other formats are not allowed.</p>
+<p><a class="attachment" href="../../uploads/default/original/1X/6118fa3ffb5d44eb95976d88d05c0b2a345731aa.txt">sample.txt</a> (371.2 KB)<br>
+<a class="attachment" href="../../uploads/default/original/1X/cc6f5eec16931db1b129647d29fbfbb593fa82a2.txt">resolution.txt</a> (618.8 KB)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Harish_Srinivasan'><span itemprop='name'>Harish_Srinivasan</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-22T11:55:33Z' class='post-time'>
+                    March 22, 2018, 11:55am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-22T11:55:33Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>the nexus files are renamed as txt files</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/brandonhewer'><span itemprop='name'>brandonhewer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-22T15:00:47Z' class='post-time'>
+                    March 22, 2018,  3:00pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-22T15:00:47Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Harish,</p>
+<p>Would you be able to provide the values you supplied for the remaining parameters?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jmborr'><span itemprop='name'>jmborr</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/5bee0ba9df25beb13f602665760e37c4d811f084.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-22T20:43:25Z' class='post-time'>
+                    March 22, 2018,  8:43pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-22T20:43:25Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Following on Brandon’s question, can you post a screenshot of the dialog for the ConvolutionFitSequential algorithm with the arguments filled for your particular case?</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="../../uploads/default/original/1X/5bee0ba9df25beb13f602665760e37c4d811f084.png" data-download-href="https://forum.mantidproject.org/uploads/default/5bee0ba9df25beb13f602665760e37c4d811f084" title="screenshot"><img src="../../uploads/default/optimized/1X/5bee0ba9df25beb13f602665760e37c4d811f084_2_341x500.png" alt="screenshot" data-base62-sha1="d7fswwcSMgKUEOu76YHFvYc2QWU" width="341" height="500" srcset="../../uploads/default/optimized/1X/5bee0ba9df25beb13f602665760e37c4d811f084_2_341x500.png, ../../uploads/default/original/1X/5bee0ba9df25beb13f602665760e37c4d811f084.png 1.5x, ../../uploads/default/original/1X/5bee0ba9df25beb13f602665760e37c4d811f084.png 2x" data-small-upload="https://forum.mantidproject.org/uploads/default/optimized/1X/5bee0ba9df25beb13f602665760e37c4d811f084_2_10x10.png"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use xlink:href="#far-image"></use></svg><span class="filename">screenshot</span><span class="informations">499×731 40.5 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>Also please post the string representation of your fit function. For instance, something like:</p>
+<pre><code class="lang-auto">function = """name=LinearBackground,A0=0,A1=0,ties=(A0=0.000000,A1=0.0);
+(composite=Convolution,FixResolution=true,NumDeriv=true;
+name=Resolution,Workspace=resolution,WorkspaceIndex=0;
+name=Lorentzian,Amplitude=1,PeakCentre=0,FWHM=0.0175)"""
+</code></pre>
+<p>Documentation for the algorithm: <a href="http://docs.mantidproject.org/nightly/algorithms/ConvolutionFitSequential-v1.html" rel="noopener nofollow ugc">http://docs.mantidproject.org/nightly/algorithms/ConvolutionFitSequential-v1.html</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Harish_Srinivasan'><span itemprop='name'>Harish_Srinivasan</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-23T03:50:08Z' class='post-time'>
+                    March 23, 2018,  3:50am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-23T03:50:08Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I wasn’t using GUI yet, nevertheless I will try and post it. Does Conv Fit in Indirect → Analysis use the ‘ConvolutionFitSequential’ procedure?</p>
+<p>This is the python code</p>
+<blockquote>
+<p>function = “”“(composite=Convolution,FixResolution=true,NumDeriv=true;<br>
+name=TabulatedFunction,Workspace=res,WorkspaceIndex=0;<br>
+name=StretchedExpFT,Height=1.0,Tau=100,Beta=0.51,Centre=0)”“”<br>
+bgType = “Fit Linear”<br>
+startX = -0.3<br>
+endX = 1.2<br>
+specMin = 0<br>
+specMax = sample.getNumberHistograms()-1<br>
+convolve = False<br>
+minimizer = “Levenberg-Marquardt”<br>
+maxIt = 500<br>
+fit_str = ConvolutionFitSequential(InputWorkspace=sample,Function=function, BackgroundType=bgType,<br>
+StartX=startX, EndX=endX, SpecMin=specMin, SpecMax=specMax,<br>
+Convolve=convolve, Minimizer=minimizer, MaxIterations=maxIt,ExtractMembers=False)</p>
+</blockquote>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/brandonhewer'><span itemprop='name'>brandonhewer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-23T09:59:35Z' class='post-time'>
+                    March 23, 2018,  9:59am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-23T09:59:35Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Harish,</p>
+<p>The ConvFit interface does indeed use the ConvolutionFitSequential algorithm.</p>
+<p>If it’s not required that you use a python script to perform this fitting, the interface is a tool which will allow you to visualise and plot your data as well as the result of the fit. Note that the interface has undergone changes between Mantid versions 3.11 and 3.12 (outlined here -<br>
+<a href="http://docs.mantidproject.org/v3.12.0/release/v3.12.0/indirect_inelastic.html" rel="noopener nofollow ugc">http://docs.mantidproject.org/v3.12.0/release/v3.12.0/indirect_inelastic.html</a>)</p>
+<p><code>StretchedExpFT</code> is an available function found in the drop-down menu labelled <code>Fit Type</code> of the ConvFit interface.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Harish_Srinivasan'><span itemprop='name'>Harish_Srinivasan</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-23T10:12:48Z' class='post-time'>
+                    March 23, 2018, 10:12am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-23T10:12:48Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Brandon,</p>
+<aside class="quote no-group" data-username="brandonhewer" data-post="8" data-topic="375">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="../../user_avatar/forum.mantidproject.org/brandonhewer/48/85_2.png" class="avatar"> brandonhewer:</div>
+<blockquote>
+<p>The ConvFit interface does indeed use the ConvolutionFitSequential algorithm.</p>
+</blockquote>
+</aside>
+<p>Thank you for that information. May I know what algorithm it uses. I guess then it uses PlotPeakByLogValues if am not wrong.</p>
+<aside class="quote no-group quote-modified" data-username="brandonhewer" data-post="8" data-topic="375">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="../../user_avatar/forum.mantidproject.org/brandonhewer/48/85_2.png" class="avatar"> brandonhewer:</div>
+<blockquote>
+<p>If it’s not required that you use a python script to perform this fitting, the interface is a tool which will allow you to visualise and plot your data as well as the result of the fit. Note that the interface has undergone changes between Mantid versions 3.11 and 3.12 (outlined here -</p>
+<p><a href="http://docs.mantidproject.org/v3.12.0/release/v3.12.0/indirect_inelastic.html" class="inline-onebox" rel="noopener nofollow ugc">Indirect Inelastic Changes</a>)</p>
+<p>StretchedExpFT is an available function found in the drop-down menu labelled Fit Type of the ConvFit interface.</p>
+</blockquote>
+</aside>
+<p>Indeed, I can use the ConvFit GUI tool. But I had two things that I couldn’t find how to do in it,</p>
+<ol>
+<li>Fix the values of some parameters only for some Q-values (keep it free for others). Or set constraints to the value of parameters.</li>
+<li>I needed a  convolution of (StretchedExpFT and Lorentzian) for my fit. This is the reason why I tried to write and learn python script for just StretchedExpFT.</li>
+</ol>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/brandonhewer'><span itemprop='name'>brandonhewer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-23T10:16:15Z' class='post-time'>
+                    March 23, 2018, 10:16am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-23T10:16:15Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Harish,</p>
+<p>In answer to both of your questions:</p>
+<ol>
+<li>In Mantid 3.11 constraints were not a possibility within the ConvFit interface. As of Mantid 3.12, this has now changed. You are able to set the Constraint/Fix/Tie for a parameter by right-clicking on it and choosing from the available options.</li>
+<li>This was also not possible within Mantid 3.11. In Mantid 3.12 you can now add additional functions not in the <code>Fit Type</code> drop-down menu, by right clicking on <code>Functions</code> and selecting <code>Add Function</code>. This will provide you with a grouped list of available functions within Mantid.</li>
+</ol>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Harish_Srinivasan'><span itemprop='name'>Harish_Srinivasan</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-23T10:17:37Z' class='post-time'>
+                    March 23, 2018, 10:17am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-23T10:17:37Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Brandon,</p>
+<p>Thank you for your patient replies. Will update to 3.12 and let you know how things go. <img src="../../images/emoji/twitter/slight_smile.png%3Fv=9" title=":slight_smile:" class="emoji" alt=":slight_smile:"></p>
+<p>PS: Just an aside, is it possible to get the python script for the ConvFit job I am doing? I couldn’t get it working alright in the earlier version. Thank a ton.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Harish_Srinivasan'><span itemprop='name'>Harish_Srinivasan</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/47f9d2117c39d5fc59666d67f9d4c0098714973e.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-25T12:11:50Z' class='post-time'>
+                    March 25, 2018, 12:11pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-25T12:11:50Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Brandon,</p>
+<p>I tried to fit the data with the function (convolution of Lorentzian and StretchedexpFT), unfortunately, it returned an error. I am attaching the screenshot with results log at bottom right.<div class="lightbox-wrapper"><a class="lightbox" href="../../uploads/default/original/1X/47f9d2117c39d5fc59666d67f9d4c0098714973e.png" data-download-href="https://forum.mantidproject.org/uploads/default/47f9d2117c39d5fc59666d67f9d4c0098714973e" title="Screenshot%20from%202018-03-25%2017%3A31%3A35"><img src="../../uploads/default/optimized/1X/47f9d2117c39d5fc59666d67f9d4c0098714973e_2_690x431.png" alt="Screenshot%20from%202018-03-25%2017%3A31%3A35" data-base62-sha1="agJ8AuhhRHx02YmzEZjsrN8O4Ym" width="690" height="431" srcset="../../uploads/default/optimized/1X/47f9d2117c39d5fc59666d67f9d4c0098714973e_2_690x431.png, ../../uploads/default/optimized/1X/47f9d2117c39d5fc59666d67f9d4c0098714973e_2_1035x646.png 1.5x, ../../uploads/default/optimized/1X/47f9d2117c39d5fc59666d67f9d4c0098714973e_2_1380x862.png 2x" data-dominant-color="E7DFDE"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot%20from%202018-03-25%2017%3A31%3A35</span><span class="informations">1440×900 266 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>I guess from the error shown that fit didn’t converge. Is that the case? Is there a better way to do this?</p>
+<p>An update after increasing the number of iterations, FitStatus returned ‘success’, but again an error regarding the GroupWorkspaces popped up. I am attaching Error log for this case below:</p>
+<blockquote>
+<p>ConvolutionFitSequential started<br>
+ConvertSpectrumAxis started (child)<br>
+ConvertSpectrumAxis successful, Duration 0.00 seconds<br>
+Fit started<br>
+Numeric derivatives should be used when non-constant ties defined.<br>
+Fit status: success<br>
+Stopped after 1840 iterations<br>
+Fit successful, Duration 5 minutes 45.32 seconds<br>
+GroupWorkspaces started<br>
+GroupWorkspaces successful, Duration 0.00 seconds<br>
+GroupWorkspaces started<br>
+GroupWorkspaces successful, Duration 0.00 seconds<br>
+GroupWorkspaces started<br>
+GroupWorkspaces successful, Duration 0.00 seconds<br>
+ConvolutionFitSequential successful, Duration 5 minutes 45.33 seconds<br>
+Unexpected exception: Invalid value for property Workspace (Workspace) “300_conv_FitL_s0_Workspaces”: Workspace “300_conv_FitL_s0_Workspaces” was not found in the Analysis Data Service<br>
+Unexpected exception: Invalid value for property Workspace (Workspace) “300_conv_FitL_s0_Workspaces”: Workspace “300_conv_FitL_s0_Workspaces” was not found in the Analysis Data Service<br>
+Unexpected exception: Invalid value for property Workspace (Workspace) “300_conv_FitL_s0_Workspaces”: Workspace “300_conv_FitL_s0_Workspaces” was not found in the Analysis Data Service<br>
+Continue working.</p>
+</blockquote>
+<p>Thank you</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/brandonhewer'><span itemprop='name'>brandonhewer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-04-11T10:35:46Z' class='post-time'>
+                    April 11, 2018, 10:35am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-04-11T10:35:46Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Harish,</p>
+<p>Apologies for the slow response, I have been away on Annual Leave.</p>
+<p>This in fact looks like an issue with how the ConvolutionFitSequential algorithm names the output workspaces. The fit here has ran successfully but unfortunately, the ExtractMembers stage of the routine has been provided the wrong name.</p>
+<p>Thank you for bringing attention to this problem. At the present, adding an underscore character at the end of the name of the sample file, prior to supplying it to the ConvFit interface, should fix this issue - a more permanent solution to this issue is now being worked on.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Harish_Srinivasan'><span itemprop='name'>Harish_Srinivasan</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-04-11T11:12:27Z' class='post-time'>
+                    April 11, 2018, 11:12am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-04-11T11:12:27Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Brandon,</p>
+<p>Do you mean change the workspace name by adding an underscore at the end? Like for example,</p>
+<p>sample → sample_</p>
+<p>Thanks<br>
+Harish</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/brandonhewer'><span itemprop='name'>brandonhewer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-04-11T11:17:01Z' class='post-time'>
+                    April 11, 2018, 11:17am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-04-11T11:17:01Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Harish,</p>
+<p>Yes, before supplying this workspace (or file) to the ConvFit interface.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Harish_Srinivasan'><span itemprop='name'>Harish_Srinivasan</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/6055b461f21bbef68781c7b5021929d8e74fc81f.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-04-11T11:52:50Z' class='post-time'>
+                    April 11, 2018, 11:52am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-04-11T11:52:50Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi,</p>
+<p>In my case it still doesn’t seem to work. I changed my filename from <strong>365_sub.nxs</strong> to <strong>365_sub_.nxs</strong> and likewise for resolution file too. Here is the screenshot</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="../../uploads/default/original/1X/6055b461f21bbef68781c7b5021929d8e74fc81f.png" data-download-href="https://forum.mantidproject.org/uploads/default/6055b461f21bbef68781c7b5021929d8e74fc81f" title="Screenshot%20from%202018-04-11%2017%3A21%3A32"><img src="../../uploads/default/optimized/1X/6055b461f21bbef68781c7b5021929d8e74fc81f_2_690x431.png" alt="Screenshot%20from%202018-04-11%2017%3A21%3A32" data-base62-sha1="dKdsqkIiwTJ3lF8HLqNIn85jvpt" width="690" height="431" srcset="../../uploads/default/optimized/1X/6055b461f21bbef68781c7b5021929d8e74fc81f_2_690x431.png, ../../uploads/default/optimized/1X/6055b461f21bbef68781c7b5021929d8e74fc81f_2_1035x646.png 1.5x, ../../uploads/default/optimized/1X/6055b461f21bbef68781c7b5021929d8e74fc81f_2_1380x862.png 2x" data-small-upload="https://forum.mantidproject.org/uploads/default/optimized/1X/6055b461f21bbef68781c7b5021929d8e74fc81f_2_10x10.png"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use xlink:href="#far-image"></use></svg><span class="filename">Screenshot%20from%202018-04-11%2017%3A21%3A32</span><span class="informations">1440×900 293 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/wsh59'><span itemprop='name'>wsh59</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-04-12T10:07:15Z' class='post-time'>
+                    April 12, 2018, 10:07am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-04-12T10:07:15Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Harish<br>
+Some hints for fitting that you might find useful.</p>
+<ol>
+<li>Try the Bayes routines if you are using Windows. The gui is Bayes&gt;Quasi.<br>
+If you think you have 2 peaks the Lorentzian option will give you the probabilities for 1,2 &amp; 3 peaks.<br>
+If you think you have a stretched option use that option and it will give you the tau &amp; beta.<br>
+It should also show if any spectra have poor fitting.</li>
+<li>For stretched exponential try transforming to I(q,t) and then use IqtFit. You can start with a simple exp &amp; then move to stretched. Again this will show which function is most appropriate.</li>
+</ol>
+<p>Regarding extracting members, there are 2 forms: the bare function and the convolved function. The former would be appropriate for comparing with theory &amp; the latter checking the Fit.</p>
+<p>Spencer<br>
+<a href="mailto:Spencer.howells@stfc.ac.uk">Spencer.howells@stfc.ac.uk</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Harish_Srinivasan'><span itemprop='name'>Harish_Srinivasan</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-04-12T11:08:08Z' class='post-time'>
+                    April 12, 2018, 11:08am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-04-12T11:08:08Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Spencer,</p>
+<p>Thank you for the suggestions.</p>
+<ol>
+<li>I am using Ubuntu 14.04 (Linux), seems like Bayes&gt;Quasi is showing some error. Is it possible to use it only in Windows with the current version?</li>
+</ol>
+<p>Harish</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/wsh59'><span itemprop='name'>wsh59</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-04-12T12:28:53Z' class='post-time'>
+                    April 12, 2018, 12:28pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-04-12T12:28:53Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Harish<br>
+The programs are in Fortran and are only distributed on Windows.<br>
+I do have a set of files for Ubuntu and I will send them next weds when I am in ISIS. You just copy them into Mantid - instructions will be included.<br>
+Spencer</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/wsh59'><span itemprop='name'>wsh59</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-04-16T13:36:23Z' class='post-time'>
+                    April 16, 2018,  1:36pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-04-16T13:36:23Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="attachment" href="../../uploads/default/original/1X/19eb4ce78e614889d75414c9cb08ec84753a1b42.txt">Str_exp_beta.txt</a> (15.6 KB)<br>
+<a class="attachment" href="../../uploads/default/original/1X/e0ba348a306ef306fe4d94328f19572d337f239e.txt">Str_exp_tau.txt</a> (15.4 KB)</p>
+<p>pdf files of results of fit using ConvFit with background &amp; StretchedExpFT</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

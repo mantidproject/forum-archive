@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>How to install on Linux? - Installation - Mantid Help Forum</title>
+    <meta name="description" content="I’ve downloaded the Mantid 6.11 installer for Linux from the website and extracted the txz archive. However, running any of the scripts fails with errors like 
+./mantidworkbench 
+Warning: Ignoring XDG_SESSION_TYPE=waylan&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="931.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;How to install on Linux?&#39;" href="https://forum.mantidproject.org/t/how-to-install-on-linux/931.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/how-to-install-on-linux/931" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/how-to-install-on-linux/931" />
+<meta property="og:title" content="How to install on Linux?" />
+<meta name="twitter:title" content="How to install on Linux?" />
+<meta property="og:description" content="I’ve downloaded the Mantid 6.11 installer for Linux from the website and extracted the txz archive. However, running any of the scripts fails with errors like  ./mantidworkbench  Warning: Ignoring XDG_SESSION_TYPE=wayland on Gnome. Use QT_QPA_PLATFORM=wayland to run on Wayland anyway. xkbcommon: ERROR: failed to add default include path /jenkins_workdir/workspace/release-next_nightly_deployment/_bundle_build/mantidworkbench/share/X11/xkb xkbcommon: ERROR: failed to add default include path /jenk..." />
+<meta name="twitter:description" content="I’ve downloaded the Mantid 6.11 installer for Linux from the website and extracted the txz archive. However, running any of the scripts fails with errors like  ./mantidworkbench  Warning: Ignoring XDG_SESSION_TYPE=wayland on Gnome. Use QT_QPA_PLATFORM=wayland to run on Wayland anyway. xkbcommon: ERROR: failed to add default include path /jenkins_workdir/workspace/release-next_nightly_deployment/_bundle_build/mantidworkbench/share/X11/xkb xkbcommon: ERROR: failed to add default include path /jenk..." />
+<meta property="og:article:section" content="Installation" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="article:published_time" content="2025-02-06T16:12:51+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="931.html">How to install on Linux?</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/installation/7.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Installation</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='How to install on Linux?'>
+      <link itemprop='url' href='931.html'>
+      <meta itemprop='datePublished' content='2025-02-06T16:12:51Z'>
+        <meta itemprop='articleSection' content='Installation'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/attila-i-szabo'><span itemprop='name'>attila-i-szabo</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="931.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-02-06T16:12:51Z' class='post-time'>
+                    February 6, 2025,  4:12pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-06T16:12:51Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’ve downloaded the Mantid 6.11 installer for Linux from the website and extracted the txz archive. However, running any of the scripts fails with errors like</p>
+<pre><code class="lang-auto">./mantidworkbench 
+Warning: Ignoring XDG_SESSION_TYPE=wayland on Gnome. Use QT_QPA_PLATFORM=wayland to run on Wayland anyway.
+xkbcommon: ERROR: failed to add default include path /jenkins_workdir/workspace/release-next_nightly_deployment/_bundle_build/mantidworkbench/share/X11/xkb
+xkbcommon: ERROR: failed to add default include path /jenkins_workdir/workspace/release-next_nightly_deployment/_bundle_build/mantidworkbench/share/X11/xkb
+Warning: Ignoring XDG_SESSION_TYPE=wayland on Gnome. Use QT_QPA_PLATFORM=wayland to run on Wayland anyway.
+xkbcommon: ERROR: failed to add default include path /jenkins_workdir/workspace/release-next_nightly_deployment/_bundle_build/mantidworkbench/share/X11/xkb
+xkbcommon: ERROR: failed to add default include path /jenkins_workdir/workspace/release-next_nightly_deployment/_bundle_build/mantidworkbench/share/X11/xkb
+Segmentation fault (core dumped)
+</code></pre>
+<p>I assume one has to customise the scripts (using cmake?) so it doesn’t contain details of someone else’s installation, but there’s absolutely nothing about this on the website. Could you please help?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/sfoxley'><span itemprop='name'>sfoxley</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-07T07:45:03Z' class='post-time'>
+                    February 7, 2025,  7:45am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-07T07:45:03Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Which website did you download the install from? It looks like the nightly rather than the stable version of v6.11. It would be useful for us to look into whether there is a problem with the current nightly. You should not need to customise any scripts to make it work.</p>
+<p>We would recommend installing the conda version of Mantid if you are having problems with the standalone package. Details of how to set up a conda environment and do this can be found on the Installation page at <a href="https://www.mantidproject.org/installation/index.html#installation-conda" class="inline-onebox">Installation — MantidProject landing page documentation</a></p>
+<p>Thanks</p>
+<p>Sarah</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/attila-i-szabo'><span itemprop='name'>attila-i-szabo</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/e692c88c540f5edd994998356b189b26b0aceb08.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-07T10:27:59Z' class='post-time'>
+                    February 7, 2025, 10:27am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-07T10:29:12Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Sarah,</p>
+<p>I used the big “Linux” button on the website, which I thought should be the stable release?</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="../../uploads/default/original/1X/e692c88c540f5edd994998356b189b26b0aceb08.png" data-download-href="https://forum.mantidproject.org/uploads/default/e692c88c540f5edd994998356b189b26b0aceb08" title="image"><img src="../../uploads/default/optimized/1X/e692c88c540f5edd994998356b189b26b0aceb08_2_545x500.png" alt="image" data-base62-sha1="wTKiBQAGBgOYhFZl71vXcsdojI4" width="545" height="500" srcset="../../uploads/default/optimized/1X/e692c88c540f5edd994998356b189b26b0aceb08_2_545x500.png, ../../uploads/default/original/1X/e692c88c540f5edd994998356b189b26b0aceb08.png 1.5x, ../../uploads/default/original/1X/e692c88c540f5edd994998356b189b26b0aceb08.png 2x" data-dominant-color="CEE4C4"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">720×660 46.4 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>Best,<br>
+Attila</p>
+<p>(Edit: the first screenshot didn’t work out as I wanted, so I replaced it)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/thomashampson'><span itemprop='name'>thomashampson</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-07T11:09:31Z' class='post-time'>
+                    February 7, 2025, 11:09am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-07T11:09:31Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Attila,</p>
+<p>Thank you for highlighting this issue. I have done some checking and it appears that since v6.10.0 I cannot launch the standalone Linux package on Ubuntu. What flavour of Linux are you using? We focus our testing around our IDAaaS analysis platform, which uses Rocky Linux 8, which is why we missed this issue. We have a release (v6.12.0) scheduled to go out in a couple of weeks so we will attempt to fix it for that. In the meantime I think you have two options:</p>
+<ol>
+<li>Use v6.9.1, which should work for you.</li>
+<li>Install mantidworkbench using Conda, then you can use the latest release.</li>
+</ol>
+<p>Many thanks,<br>
+Tom</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/attila-i-szabo'><span itemprop='name'>attila-i-szabo</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-07T11:16:04Z' class='post-time'>
+                    February 7, 2025, 11:16am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-07T11:16:04Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Tom,</p>
+<p>I use Ubuntu 24.04. Thanks for taking on the fix, for now v6.9.1 will work for me.</p>
+<p>Best,<br>
+Attila</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/attila-i-szabo'><span itemprop='name'>attila-i-szabo</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-07T11:27:18Z' class='post-time'>
+                    February 7, 2025, 11:27am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-07T11:27:18Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Unfortunately 6.9.1 just crashes with a segfault:</p>
+<pre><code class="lang-auto">$ ./mantidworkbench 
+Segmentation fault (core dumped)
+</code></pre>
+<p>Do you have a suggestion why that is?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/sfoxley'><span itemprop='name'>sfoxley</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-07T11:30:48Z' class='post-time'>
+                    February 7, 2025, 11:30am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-07T11:30:48Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thank you for providing the screenshot. The reason I asked is that you can also download packages direct from our GitHub repository. As this is also our page I just wanted to double check.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/thomashampson'><span itemprop='name'>thomashampson</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-07T11:41:10Z' class='post-time'>
+                    February 7, 2025, 11:41am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-07T11:41:10Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Attila,</p>
+<p>Thank you for letting us know which Ubuntu version you are using. We will make sure to test on 24.04 going forward and will let you know of our progress towards fixing it for the upcoming release. If it’s fixed before then it will be available in a nightly build and we will let you know on this thread.</p>
+<p>In the meantime I think your only solution will be to use a conda install (unless you want to try an even older version of mantid).</p>
+<p>Thanks,<br>
+Tom</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/thomashampson'><span itemprop='name'>thomashampson</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-27T11:03:31Z' class='post-time'>
+                    February 27, 2025, 11:03am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-27T11:03:31Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Attila,</p>
+<p>We released v6.12.0 yesterday (<a href="https://www.mantidproject.org/installation/index#id1" class="inline-onebox">Installation — MantidProject landing page documentation</a>). This includes a fix for the problem you were seeing. Let us know if you have further issues.</p>
+<p>Thanks,<br>
+Tom</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

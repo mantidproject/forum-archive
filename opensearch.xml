@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>Mantid Help Forum Search</ShortName>
+  <Description>Search for posts on Mantid Help Forum</Description>
+  <Tags>discourse forum</Tags>
+    <Image type="image/png">https://forum.mantidproject.org/uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png</Image>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://forum.mantidproject.org/opensearch.xml"/>
+  <Url type="text/html" template="https://forum.mantidproject.org/search?q={searchTerms}"/>
+  <Query role="example" searchTerms="search term"/>
+</OpenSearchDescription>

@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>DeltaPDF3D algorithm - General - Mantid Help Forum</title>
+    <meta name="description" content="Hello, 
+I am trying to use the DeltaPDF3D algorithm in Diffraction/Utilities which requires an MDHistoWorkspace as input, dimensions must be [H,0,0], [0,K,0] and [0,0,L]. 
+I fail to get the required input using createMDH&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="733.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;DeltaPDF3D algorithm&#39;" href="https://forum.mantidproject.org/t/deltapdf3d-algorithm/733.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/deltapdf3d-algorithm/733" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/deltapdf3d-algorithm/733" />
+<meta property="og:title" content="DeltaPDF3D algorithm" />
+<meta name="twitter:title" content="DeltaPDF3D algorithm" />
+<meta property="og:description" content="Hello,  I am trying to use the DeltaPDF3D algorithm in Diffraction/Utilities which requires an MDHistoWorkspace as input, dimensions must be [H,0,0], [0,K,0] and [0,0,L].  I fail to get the required input using createMDHistoWorkspace since the algorithm requires comma separated dimension names.  So  Names=&quot;[H,0,0], [0,K,0], [0,0,L]&quot;  obviously fails while  Names=“H,K,L”  works.  I tried playing with single and double quotes without success.  What I am doing wrong?  How  to get it right?  Thanks  ..." />
+<meta name="twitter:description" content="Hello,  I am trying to use the DeltaPDF3D algorithm in Diffraction/Utilities which requires an MDHistoWorkspace as input, dimensions must be [H,0,0], [0,K,0] and [0,0,L].  I fail to get the required input using createMDHistoWorkspace since the algorithm requires comma separated dimension names.  So  Names=&quot;[H,0,0], [0,K,0], [0,0,L]&quot;  obviously fails while  Names=“H,K,L”  works.  I tried playing with single and double quotes without success.  What I am doing wrong?  How  to get it right?  Thanks  ..." />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="article:published_time" content="2021-05-07T14:35:46+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="733.html">DeltaPDF3D algorithm</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/6.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='DeltaPDF3D algorithm'>
+      <link itemprop='url' href='733.html'>
+      <meta itemprop='datePublished' content='2021-05-07T14:35:46Z'>
+        <meta itemprop='articleSection' content='General'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/ruggero'><span itemprop='name'>ruggero</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="733.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2021-05-07T14:35:46Z' class='post-time'>
+                    May 7, 2021,  2:35pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-05-07T14:35:46Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello,</p>
+<p>I am trying to use the DeltaPDF3D algorithm in Diffraction/Utilities which requires an MDHistoWorkspace as input, dimensions must be [H,0,0], [0,K,0] and [0,0,L].<br>
+I fail to get the required input using createMDHistoWorkspace since the algorithm requires comma separated dimension names.<br>
+So<br>
+Names="[H,0,0], [0,K,0], [0,0,L]"<br>
+obviously fails while<br>
+Names=“H,K,L”<br>
+works.<br>
+I tried playing with single and double quotes without success.<br>
+What I am doing wrong?<br>
+How  to get it right?</p>
+<p>Thanks<br>
+Best<br>
+Ruggero</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-05-07T15:39:04Z' class='post-time'>
+                    May 7, 2021,  3:39pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-05-07T15:39:04Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Another user has run into this problem too, but great to have this on the forum! I think the way <code>Names</code> chooses how many inputs there are is annoying. This short example seems to work:</p>
+<pre><code># import mantid algorithms, numpy and matplotlib
+from mantid.simpleapi import *
+import matplotlib.pyplot as plt
+import numpy as np
+ 
+S  =range(0,1000);
+ERR=range(0,1000);
+ 
+DeltaPDF3D_MDH=CreateMDHistoWorkspace(Dimensionality=3,Extents='-3,3,-10,10,-1,1',SignalInput=S,ErrorInput=ERR,\
+                          NumberOfBins='10,10,10',Names=('[H,0,0]','[0,K,0]','[0,0,L]'),\
+                          Units='rlu,rlu,rlu')
+                         
+DeltaPDF3D(InputWorkspace='DeltaPDF3D_MDH',OutputWorkspace='fft',
+           Method='None', WindowFunction='None')
+</code></pre>
+<p>Tell me if this works for you or not, and feel free to get in touch with any other questions!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/ruggero'><span itemprop='name'>ruggero</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-05-07T19:57:00Z' class='post-time'>
+                    May 7, 2021,  7:57pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-05-07T19:57:00Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks!<br>
+Indeed didn’t think about the tuple.<br>
+Maybe it is enough to update the documentation.<br>
+It seems to work, I do not get that error anymore.</p>
+<p>But I’ve got another error since DeltaPDF3D requires astropy which is apparently missing.<br>
+How to install it into Mantid?<br>
+Or, alternatively I have astropy installed in my system, how make Mantid this aware of that?</p>
+<p>Last question, I guess it is possible to import Mantid tree n the system Python via sys.path.append(…)<br>
+Which would be the path to append in a MacOS?</p>
+<p>Thanks<br>
+Ruggero</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-05-11T08:34:14Z' class='post-time'>
+                    May 11, 2021,  8:34am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-05-11T08:34:14Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Great, I will update the documentation to reflect this. I’m not too familiar with this algorithm so I’ll do some digging to see why astropy is missing! One thing you can try is installing astropy into the mantid python. I’ve posted the instructions for doing this separately as this is a rather common request: <a href="../install-python-packages-with-pip/737.html">Install Python packages with pip</a></p>
+<p>Tell me if you have any other questions!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/ruggero'><span itemprop='name'>ruggero</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-09T18:26:34Z' class='post-time'>
+                    July 9, 2021,  6:26pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-09T18:26:34Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello,</p>
+<p>one more question on the usage of the DeltaPDF3D algorithm.<br>
+I would like to save the OutputWorkspace and IntermediateWorkspace using SaveMD, without using the GUI functionality, so in a python script.</p>
+<p>With reference to the online documentation, suppose the call is as follows:<br>
+ws = DeltaPDF3D(InputWorkspace=‘DeltaPDF3D_MDH’,OutputWorkspace=‘fft4’, IntermediateWorkspace=‘int4’, Method=‘Punch and fill’, Size=0.3, CropSphere=True, SphereMax=3, Convolution=True, WindowFunction=‘None’)</p>
+<p>Then the<br>
+SaveMD(ws, Filename=‘somename.h5’)</p>
+<p>does not work and gives:<br>
+ValueError: When converting parameter “InputWorkspace”: Unable to extract shared_ptr from Python object…</p>
+<p>However if I save using the GUI, it works as expected.</p>
+<p>Thanks</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-12T10:05:49Z' class='post-time'>
+                    July 12, 2021, 10:05am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-12T10:05:49Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi,<br>
+Your script is very close. SaveMD wants the name of the workspaces which appear in the WorkspacesToolbox. So you could use:</p>
+<pre><code>DeltaPDF3D(InputWorkspace=‘DeltaPDF3D_MDH’,OutputWorkspace=‘fft4’, IntermediateWorkspace=‘int4’, Method=‘Punch and fill’, Size=0.3, CropSphere=True, SphereMax=3, Convolution=True, WindowFunction=‘None’)
+
+SaveMD('fft4', Filename = 'fft4.h5')
+SaveMD('int4', Filename = 'int4.h5')
+</code></pre>
+<p>Tell me if that works for you!</p>
+<p>PS. I’ve removed the “<code>ws = </code>” from the DeltaPDF3D line as this is often used to create the OutputWorkspace name, but instead you have it defined as a parameter <code>(OutputWorkspace=‘fft4’)</code> which is nice and we don’t need both.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/ruggero'><span itemprop='name'>ruggero</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-12T13:02:41Z' class='post-time'>
+                    July 12, 2021,  1:02pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-12T13:02:41Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi,</p>
+<p>thanks<br>
+I still get error:<br>
+…<br>
+SaveMD-[Notice] SaveMD started<br>
+SaveMD-[Error] Error in execution of algorithm SaveMD:<br>
+SaveMD-[Error] NXopen(/home/lqmr/X/BN57-01-16rec_25p5_0p1_sub_spf_kpf.h5, 5) failed<br>
+Traceback (most recent call last):<br>
+File “/opt/Mantid/lib/mantid/simpleapi.py”, line 1041, in <strong>call</strong><br>
+algm.execute()<br>
+RuntimeError: NXopen(/home/lqmr/X/BN57-01-16rec_25p5_0p1_sub_spf_kpf.h5, 5) failed</p>
+<p>The above exception was the direct cause of the following exception:</p>
+<h2>
+<a name="traceback-most-recent-call-last-file-mantid_deltapdfpy-line-32-in-module-savemdbn57_pf-filenamefout1-file-optmantidlibmantidsimpleapipy-line-1048-in-__call__-raise-runtimeerrormsg-from-e-runtimeerror-savemd-v2-nxopenhomelqmrxbn57-01-16rec_25p5_0p1_sub_spf_kpfh5-5-failed-1" class="anchor" href="733.html#traceback-most-recent-call-last-file-mantid_deltapdfpy-line-32-in-module-savemdbn57_pf-filenamefout1-file-optmantidlibmantidsimpleapipy-line-1048-in-__call__-raise-runtimeerrormsg-from-e-runtimeerror-savemd-v2-nxopenhomelqmrxbn57-01-16rec_25p5_0p1_sub_spf_kpfh5-5-failed-1"></a>Traceback (most recent call last):<br>
+File “mantid_deltaPDF.py”, line 32, in <br>
+SaveMD(‘BN57_pf’, Filename=fout1)<br>
+File “/opt/Mantid/lib/mantid/simpleapi.py”, line 1048, in <strong>call</strong><br>
+raise RuntimeError(msg) from e<br>
+RuntimeError: SaveMD-v2: NXopen(/home/lqmr/X/BN57-01-16rec_25p5_0p1_sub_spf_kpf.h5, 5) failed</h2>
+<p>fout1 is just a string.<br>
+It is not clear to me what the runtime error is.</p>
+<p>Thanks</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-14T14:18:54Z' class='post-time'>
+                    July 14, 2021,  2:18pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-14T14:18:54Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It almost looks like the underscore is being parsed incorrectly. Can you try an output string without an underscore, such as <code>"BN57pf"</code>. Do you still get the same error?</p>
+<p>Can you try directly providing the path and try without the underscore, so:</p>
+<p><code>SaveMD("BN57pf", "/home/lqmr/Desktop/BN57pf.h5")</code></p>
+<p>Alternatively, can you use the Algorithm Dialog, by typing SaveMD in the Algorithm Toolbox and clicking Execute, to see if this method works!?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/ruggero'><span itemprop='name'>ruggero</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-15T06:39:23Z' class='post-time'>
+                    July 15, 2021,  6:39am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-15T06:39:23Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I tried without underscore and with the full path, and both fail with the same error.</p>
+<p>Using the Algorithm dialog it works.</p>
+<p>I just wanted to make a script to run in the system python via</p>
+<p>from mantid.simpleapi import *<br>
+…</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-15T08:03:35Z' class='post-time'>
+                    July 15, 2021,  8:03am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-15T08:17:12Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Try the script in my latest post below <img src="../../images/emoji/twitter/arrow_down.png%3Fv=9" title=":arrow_down:" class="emoji" alt=":arrow_down:"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-15T08:08:05Z' class='post-time'>
+                    July 15, 2021,  8:08am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-15T08:08:05Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I see the same NXopen error as you on MacOS, that’s why I wasn’t seeing it on Ubuntu!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-15T08:15:19Z' class='post-time'>
+                    July 15, 2021,  8:15am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-15T08:23:53Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Okay, this works for me on MacOS. It seems you need to either set the “Default Save Directory” in File &gt; ManageUserDirectories or define the full path to save. Can you try this script (but obviously use the correct path for your machine):</p>
+<pre><code># import mantid algorithms, numpy and matplotlib
+from mantid.simpleapi import *
+import matplotlib.pyplot as plt
+import numpy as np
+ 
+DeltaPDF3D_MDE = CreateMDWorkspace(Dimensions='3', Extents='-3.1,3.1,-3.1,3.1,-0.1,0.1', Names='[H,0,0],[0,K,0],[0,0,L]',
+                                  Units='rlu,rlu,rlu', SplitInto='4',Frames='HKL,HKL,HKL')
+# Add some Bragg peaks
+for h in range(-3,4):
+  for k in range(-3,4):
+     FakeMDEventData(DeltaPDF3D_MDE, PeakParams='100,'+str(h)+','+str(k)+',0,0.01', RandomSeed='1337')
+# Add addiontal peaks on [0.5,0.5,0.5] type positions
+# This would correspond to negative substitutional correlations
+for h in [-2.5,-1.5,-0.5,0.5,1.5,2.5]:
+  for k in range(-3,4):
+     FakeMDEventData(DeltaPDF3D_MDE, PeakParams='20,'+str(h)+','+str(k)+',0,0.1', RandomSeed='13337')
+
+BinMD(InputWorkspace='DeltaPDF3D_MDE', AlignedDim0='[H,0,0],-3.05,3.05,61', AlignedDim1='[0,K,0],-3.05,3.05,61',
+     AlignedDim2='[0,0,L],-0.1,0.1,1', OutputWorkspace='DeltaPDF3D_MDH')
+           
+DeltaPDF3D(InputWorkspace='DeltaPDF3D_MDH',OutputWorkspace='fft_4',IntermediateWorkspace='int_4',
+           Method='Punch and fill',Size=0.3,CropSphere=True,SphereMax=3,Convolution=True, WindowFunction='None')
+
+SaveMD(Filename='/Users/danielmurphy/Desktop/fft_4.h5', InputWorkspace='fft_4')
+SaveMD(Filename='/Users/danielmurphy/Desktop/int_4.h5', InputWorkspace='int_4')</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/ruggero'><span itemprop='name'>ruggero</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-15T09:51:27Z' class='post-time'>
+                    July 15, 2021,  9:51am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-15T09:51:27Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks.</p>
+<p>I was actually on Ubuntu 18.04 on Windows using the Windows Linux Subsystem.<br>
+But the error was in the fact that I (user) didn’t have write permission on the folder I was trying to write in to.  I did not understand why…<br>
+I am really sorry for the mistake.</p>
+<p>On MacOs, I am not able to import the mantid path.</p>
+<p>In [1]: import sys</p>
+<p>In [2]: sys.path.append(r’/Applications/MantidWorkbench.app/Contents/MacOS/’)</p>
+<h2>
+<a name="in-3-from-mantidsimpleapi-import-1" class="anchor" href="733.html#in-3-from-mantidsimpleapi-import-1"></a>In [3]: from mantid.simpleapi import *</h2>
+<p>SystemError                               Traceback (most recent call last)<br>
+ in <br>
+----&gt; 1 from mantid.simpleapi import *</p>
+<p>/Applications/MantidWorkbench.app/Contents/MacOS/mantid/<strong>init</strong>.py in <br>
+103 # registry will be missing entries if all are not loaded.<br>
+104 ###############################################################################<br>
+ → 105 from mantid import kernel as _kernel<br>
+106 from mantid import api as _api<br>
+107 from mantid import geometry as _geometry</p>
+<p>/Applications/MantidWorkbench.app/Contents/MacOS/mantid/kernel/<strong>init</strong>.py in <br>
+34<br>
+35 # insert all the classes from _kernel in the mantid.kernel namespace<br>
+—&gt; 36 import_mantid_cext(’._kernel’, ‘mantid.kernel’, globals())<br>
+37<br>
+38 from mantid.kernel._aliases import *</p>
+<p>/Applications/MantidWorkbench.app/Contents/MacOS/mantid/utils/_utils.py in import_mantid_cext(modulename, package, caller_globals)<br>
+35                 # import from PACKAGE.MODULE, this is used for mantid packages, where the .pyd files<br>
+36                 # are placed at e.g. <code>from mantid.kernel import _kernel</code><br>
+—&gt; 37                 lib = import_module(modulename, package)<br>
+38             except ImportError as e1:<br>
+39                 # import relative to current working directory, this simulates doing <code>import _kernel</code></p>
+<p>/opt/local/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/importlib/<strong>init</strong>.py in import_module(name, package)<br>
+125                 break<br>
+126             level += 1<br>
+ → 127     return _bootstrap._gcd_import(name[level:], package, level)<br>
+128<br>
+129</p>
+<p>SystemError: initialization of _kernel raised unreported exception</p>
+<p>Should I import a different Mantid path?<br>
+I am using python 3.8, installed via MacPorts, should I use/install another python3.8?</p>
+<p>Thanks</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-15T10:24:48Z' class='post-time'>
+                    July 15, 2021, 10:24am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-15T10:24:48Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If possible you should use the python bundled with MantidWorkbench. Launch with:</p>
+<p><code>/Applications/MantidWorkbench.app/Contents/MacOS/mantidpython --classic</code></p>
+<p>Other commands to launch mantidpython from terminal are here: <a href="https://docs.mantidproject.org/nightly/concepts/PythonNotebook.html" class="inline-onebox" rel="noopener nofollow ugc">MantidPython and Notebook</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

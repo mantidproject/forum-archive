@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Querying sub-(and sub-sub-sub- etc) components returned by getInstrument - Python - Mantid Help Forum</title>
+    <meta name="description" content="Hello! 
+General mantidic/pythonic question: the getInstrument method returns a component and all of its subcomponents (and sub-sub components etc) as a multidimensional list. In my case, if I read a whole detector assemb&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="779.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Querying sub-(and sub-sub-sub- etc) components returned by getInstrument&#39;" href="https://forum.mantidproject.org/t/querying-sub-and-sub-sub-sub-etc-components-returned-by-getinstrument/779.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/querying-sub-and-sub-sub-sub-etc-components-returned-by-getinstrument/779" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/querying-sub-and-sub-sub-sub-etc-components-returned-by-getinstrument/779" />
+<meta property="og:title" content="Querying sub-(and sub-sub-sub- etc) components returned by getInstrument" />
+<meta name="twitter:title" content="Querying sub-(and sub-sub-sub- etc) components returned by getInstrument" />
+<meta property="og:description" content="Hello!  General mantidic/pythonic question: the getInstrument method returns a component and all of its subcomponents (and sub-sub components etc) as a multidimensional list. In my case, if I read a whole detector assembly, let’s call it “East”, I have to go down to fourth level in the list to find individual pixels i.e. I need four indices i,j,k,l to specify the pixel at East[i][j][k][l].  If I wanted to find the smallest pixel ID in the total “East” assembly, is there anything smarter than run..." />
+<meta name="twitter:description" content="Hello!  General mantidic/pythonic question: the getInstrument method returns a component and all of its subcomponents (and sub-sub components etc) as a multidimensional list. In my case, if I read a whole detector assembly, let’s call it “East”, I have to go down to fourth level in the list to find individual pixels i.e. I need four indices i,j,k,l to specify the pixel at East[i][j][k][l].  If I wanted to find the smallest pixel ID in the total “East” assembly, is there anything smarter than run..." />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="og:article:section" content="Python" />
+<meta property="og:article:section:color" content="9EB83B" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="1 ❤" />
+<meta property="article:published_time" content="2021-09-10T15:41:02+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="779.html">Querying sub-(and sub-sub-sub- etc) components returned by getInstrument</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #9EB83B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Python</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Querying sub-(and sub-sub-sub- etc) components returned by getInstrument'>
+      <link itemprop='url' href='779.html'>
+      <meta itemprop='datePublished' content='2021-09-10T15:41:02Z'>
+        <meta itemprop='articleSection' content='Python'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/malcolmguthrie'><span itemprop='name'>malcolmguthrie</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="779.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2021-09-10T15:41:02Z' class='post-time'>
+                    September 10, 2021,  3:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-09-10T15:41:02Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello!</p>
+<p>General mantidic/pythonic question: the getInstrument method returns a component and all of its subcomponents (and sub-sub components etc) as a multidimensional list. In my case, if I read a whole detector assembly, let’s call it “East”, I have to go down to fourth level in the list to find individual pixels i.e. I need four indices i,j,k,l to specify the pixel at East[i][j][k][l].</p>
+<p>If I wanted to find the smallest pixel ID in the total “East” assembly, is there anything smarter than running four nested for-loops that pulls out every pixel (in my case requiring 3<em>3</em>256*256 = 589824 loops)?</p>
+<p>Second question: in the general case, where I need n indices to get to my pixel i.e. East[i1][i2][i3]…[in], how would I set that up? If I went the nested for-loop approach I’d need n of these and have no idea how to construct a nested loop of arbitrary size.</p>
+<p>Thanks!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-09-13T10:05:09Z' class='post-time'>
+                    September 13, 2021, 10:05am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-09-13T10:05:09Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Malcolm!</p>
+<p>To find the smallest detector ID, I think this should work:</p>
+<pre><code class="lang-auto"># import mantid algorithms, numpy
+from mantid.simpleapi import *
+import numpy as np
+
+ws = CreateSampleWorkspace()
+detInfo = ws.detectorInfo()
+detIDs = detInfo.detectorIDs()
+
+print(np.min(detIDs))
+</code></pre>
+<p>Tell me if this isn’t quite what you’re looking for!</p>
+<p>A few searches for arbitrary nested for-loops on stackoverflow seem to be focussed on C++ where the performance is much better. I’m not sure if the lines above are calling a nested for-loop in the background, but they are calling C++ commands, so I think trying to pursue this nested for-loop in Python isn’t advisable.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/mducle'><span itemprop='name'>mducle</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-09-13T13:41:16Z' class='post-time'>
+                    September 13, 2021,  1:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-09-13T13:41:16Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Malcolm,</p>
+<p>regarding your second question, you can use a recursive function to drill down arbitray nested loops… e.g.</p>
+<pre><code class="lang-auto">from mantid.simpleapi import *
+import numpy as np
+
+def recursive_ids(inp):
+    if hasattr(inp, '__len__'):
+        return [recursive_ids(inp[ii]) for ii in range(len(inp))]
+    elif hasattr(inp, 'getID'):
+        return inp.getID()
+    else:
+        return None
+
+def recursive_min_ids(inp):
+     if isinstance(inp, list) and isinstance(inp[0], list):
+         return [recursive_min_ids(inp[ii]) for ii in range(len(inp))]
+     else:
+         return np.min(inp)
+        
+detIDs = recursive_ids(workspace.getInstrument())
+min_IDs = recursive_min_ids(detIDs)
+
+print(min_IDs)
+</code></pre>
+<p>In the above, <code>detIDs</code> is a nested list of detector ID numbers, and <code>min_IDs</code> is a nested list of the minimum ID numbers for each set of (nested) <code>CompAssembly</code>.</p>
+<p>All the best,</p>
+<p>Duc.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/malcolmguthrie'><span itemprop='name'>malcolmguthrie</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-01-10T18:34:05Z' class='post-time'>
+                    January 10, 2022,  6:34pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-01-10T18:34:05Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Both, by chance I happened to look at the forum and see I never replied to you. How rude of me! My only excuse is I was in the middle of moving job and country and it got quite chaotic…</p>
+<p>Anyway, thank you very much for the suggestions! In the end, a solution to my original problem (a bug in <code>AlignComponents</code> when detectors pixels are not numbered sequentially in the IDF) was solved by one of the ORNL developers. But your input is still helpful as I’m still trying to understand how IDF’s work!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

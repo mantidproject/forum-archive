@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Fitting Histogram data, not points - Suggestion and Feature Requests - Mantid Help Forum</title>
+    <meta name="description" content="For a histogram data set, at present, fitting evaluates the function at the centre of each bin. If the bins are large and the function has any significant curvature, the point value can differ from the average over the b&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="130.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Fitting Histogram data, not points&#39;" href="https://forum.mantidproject.org/t/fitting-histogram-data-not-points/130.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/fitting-histogram-data-not-points/130" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/fitting-histogram-data-not-points/130" />
+<meta property="og:title" content="Fitting Histogram data, not points" />
+<meta name="twitter:title" content="Fitting Histogram data, not points" />
+<meta property="og:description" content="For a histogram data set, at present, fitting evaluates the function at the centre of each bin. If the bins are large and the function has any significant curvature, the point value can differ from the average over the bin, which is what the data probably represents. If there are fast “wiggles” in the fit function these can really confuse the fit if the maximum or minimum happens to line up with the bin centre and has the right sign to appear to improve the fit.  Often it’s easy to analytically ..." />
+<meta name="twitter:description" content="For a histogram data set, at present, fitting evaluates the function at the centre of each bin. If the bins are large and the function has any significant curvature, the point value can differ from the average over the bin, which is what the data probably represents. If there are fast “wiggles” in the fit function these can really confuse the fit if the maximum or minimum happens to line up with the bin centre and has the right sign to appear to improve the fit.  Often it’s easy to analytically ..." />
+<meta property="og:article:section" content="Suggestion and Feature Requests" />
+<meta property="og:article:section:color" content="92278F" />
+<meta property="article:published_time" content="2016-06-30T15:29:22+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="130.html">Fitting Histogram data, not points</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/suggestion-and-feature-requests/10.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #92278F'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Suggestion and Feature Requests</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Fitting Histogram data, not points'>
+      <link itemprop='url' href='130.html'>
+      <meta itemprop='datePublished' content='2016-06-30T15:29:22Z'>
+        <meta itemprop='articleSection' content='Suggestion and Feature Requests'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="130.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2016-06-30T15:29:22Z' class='post-time'>
+                    June 30, 2016,  3:29pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-06-30T15:29:22Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>For a histogram data set, at present, fitting evaluates the function at the centre of each bin. If the bins are large and the function has any significant curvature, the point value can differ from the average over the bin, which is what the data probably represents. If there are fast “wiggles” in the fit function these can really confuse the fit if the maximum or minimum happens to line up with the bin centre and has the right sign to appear to improve the fit.</p>
+<p>Often it’s easy to analytically integrate a fit function over a range of X values, so the correct average and its derivatives could be calculated with little extra effort.</p>
+<p>Could a fit function declare that it knows about this, and is then passed an X array of bin edges to work with, and a flag to say so?</p>
+<p>Alternatively a function could assume it is always working with a histogram and reconstruct the bin edges for itself (as ConvertToHistogram does) and then do the averaging. That assumes equal sized bins which is usually the case.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-06-30T17:16:44Z' class='post-time'>
+                    June 30, 2016,  5:16pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-06-30T17:16:44Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The attached script demonstrates the problem. It fits a Lorentzian to a generated Lorentzian plus a small amount of noise, with various degrees of binning. I’ve defined the bin-size-aware fit function for comparison with the built in one.<br>
+<a class="attachment" href="../../uploads/default/original/1X/f31175fa2ddd66099ad9b3b3701f8ce519218e14.py">HistoAwareFits.py</a> (3.4 KB)</p>
+<p>The point-data function slightly over-estimates the amplitude if the bins are too big, significantly over-estimates the FWHM, and there can be scatter in the peak centre value depending on how the peak lines up with the bin boundaries.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/tom-perkins'><span itemprop='name'>tom-perkins</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-07-05T12:30:16Z' class='post-time'>
+                    July 5, 2016, 12:30pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-07-05T12:30:16Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi James,</p>
+<p>I’ve opened an issue to look into this question: <a href="https://github.com/mantidproject/mantid/issues/16796" class="inline-onebox" rel="noopener nofollow ugc">Fitting histogram data, not points · Issue #16796 · mantidproject/mantid · GitHub</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-07-12T14:44:51Z' class='post-time'>
+                    July 12, 2016,  2:44pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-07-12T14:44:51Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I note the new issue:<br>
+<a href="https://github.com/mantidproject/mantid/issues/16845" rel="noopener nofollow ugc">https://github.com/mantidproject/mantid/issues/16845</a><br>
+The “raw” muon data, perhaps after binning, grouping, and exponential lifetime correction, is a Histogram (counts per unit time-of-flight). The asymmetry data is still binned data with the same X boundaries, but it’s meaningless to normalise Y to the bin size, there’s no concept of “asymmetry per microsecond” or “total asymmetry per bin”. It’s the same as dividing a neutron spectrum by a monitor to get scattering probability. It’s still best fitted with “histogram-aware” functions if there are any sharp features such as rapid oscillation or strong relaxation. Muon ALC data however is usually true Point data in that it’s measured at fixed values of some sample environment setting such as magnetic field.</p>
+<p>So we probably have three classes of data here - Histogram of counts, Point data, and Something Else…</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/tom-perkins'><span itemprop='name'>tom-perkins</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-07-12T15:47:07Z' class='post-time'>
+                    July 12, 2016,  3:47pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-07-12T15:47:07Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks for the clarification on this, it fits with what was seen in the issue. At the moment <code>AsymmetryCalc</code> produces a points workspace from input histogram data - should it instead keep the X data as bins?<br>
+For example:</p>
+<pre><code>y = [1,2,3] + [3,1,12]
+x = [1,2,3,4] * 2
+e = [1,1,1] * 2
+input = CreateWorkspace(x, y, e, NSpec=2)
+asymmetry = AsymmetryCalc(input, Alpha=0.5)
+
+print input.readX(0) # [1, 2, 3, 4]
+print asymmetry.readX(0) # [1.5, 2.5, 3.5]</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-07-13T08:53:20Z' class='post-time'>
+                    July 13, 2016,  8:53am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-07-13T08:53:20Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes, I think AsymmetryCalc should keep the X bin boundaries and perhaps set a new flag to say this data isn’t now “normalisable”. RemoveExpDecay should do likewise. It probably doesn’t make sense to overlay raw data and asymmetry as the Y units are different, but asymmetry and corrected counts from RemoveExpDecay could quite reasonably be compared.</p>
+<p>We could argue that Rebin or Rebunch on an axis which was Point data should convert it back to Histogram with suitable boundaries, if many source X values contribute to each output bin. The likely use case is if I’d measured an ALC or similar scan with a very large number of discrete field points and I then wanted to “smooth” the data to pick out a weak but broad feature - but in a way that would still let me fit the data.</p>
+<p>Getting a bit further off the original topic, MD workspaces may need more options here too. Each axis should be individually selected as “histogram” or “point” and then there should be an overall flag saying if Y is “counts” to be normalised to the cell volume, or is an already-normalised quantity.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/tom-perkins'><span itemprop='name'>tom-perkins</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-07-13T10:41:21Z' class='post-time'>
+                    July 13, 2016, 10:41am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-07-13T10:41:21Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi James,</p>
+<p>Thanks, I’ve created an issue to keep the X bin boundaries for AsymmetryCalc (<a href="https://github.com/mantidproject/mantid/issues/16858" class="inline-onebox" rel="noopener nofollow ugc">AsymmetryCalc should keep X bin boundaries · Issue #16858 · mantidproject/mantid · GitHub</a>) - RemoveExpDecay already retains whatever X binning the input workspace had.</p>
+<p>Currently if you tried to compare asymmetry and corrected counts from RemoveExpDecay on the same axes, you would get a warning that one is point data and the other is histogram data, so this change would enable that comparison to be made without seeing the warning.</p>
+<p>At the moment Rebin, if given an input workspace with point data, automatically converts to histogram data, rebins and then converts back to point data. In the use case you mention, it might be better to convert to histogram first and then run Rebin on the histogram data workspace, as then the output would be histogram with the required boundaries.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/mantid_roman'><span itemprop='name'>mantid_roman</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-09-07T08:32:26Z' class='post-time'>
+                    September 7, 2016,  8:32am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-09-07T08:32:26Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi James,</p>
+<p>I have implemented this kind of fit for functions Lorentzian, Gaussian, FlatBackground and LinearBacground. It is controlled by a new Fit property EvaluationType which takes values: “CentrePoint” for a normal fit and “Histogram” for a histogram fit. It should be in the nightly build by now.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-09-07T08:54:52Z' class='post-time'>
+                    September 7, 2016,  8:54am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-09-07T08:54:52Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks Roman!</p>
+<p>As “Histogram” fit should be the default for fitting in the Muon Analysis interface (but not Muon ALC), we should consider implementing it for the common muon time-domain functions such as DynamicKuboToyabe, ExpDecayOsc, etc.</p>
+<p>Is this change exposed to Python, so either I define two versions of the function and Fit chooses the one which matches its EvaluationType property, or is EvaluationType passed through to the fit function which must then act on it?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/mantid_roman'><span itemprop='name'>mantid_roman</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-09-07T09:20:02Z' class='post-time'>
+                    September 7, 2016,  9:20am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-09-07T09:20:02Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>EvaluationType determines how to evaluate the function. But the function must be able to do it (function’s class must implement certain virtual methods). If the function cannot handle the histogram evaluation Fit fails.</p>
+<p>At the moment only functions written in C++ can be made histogram aware. Is it important to extend this to python functions?</p>
+<p>I can implement more functions if you need.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-09-07T09:42:52Z' class='post-time'>
+                    September 7, 2016,  9:42am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-09-07T09:42:52Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It would be good if Python could do this. Presumably by analogy with C++ we would define methods histogram1D and histogramDerivative1D.<br>
+My “Quantum” package (in Python) currently has a work-around when fitting time domain muon spectra, where it reconstructs bin boundaries before going on to simulate integrated data over the bins. It has to guess whether this is necessary based on the context. It would be better to use the bins directly.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

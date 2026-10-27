@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Fit Function Format and Log Error - Python - Mantid Help Forum</title>
+    <meta name="description" content="I am attempting to fit a typical Scattering Law 
+  
+Essentially it is a dirac delta function added to a Lorentzian convoluted with a resolution, plus linear background. 
+I would assume the function is structured as follo&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="334.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Fit Function Format and Log Error&#39;" href="https://forum.mantidproject.org/t/fit-function-format-and-log-error/334.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/e99b95e6d8c2a317ad62a34987822e8b14c27599.jpg" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/e99b95e6d8c2a317ad62a34987822e8b14c27599.jpg" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/fit-function-format-and-log-error/334" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/fit-function-format-and-log-error/334" />
+<meta property="og:title" content="Fit Function Format and Log Error" />
+<meta name="twitter:title" content="Fit Function Format and Log Error" />
+<meta property="og:description" content="I am attempting to fit a typical Scattering Law     Essentially it is a dirac delta function added to a Lorentzian convoluted with a resolution, plus linear background.  I would assume the function is structured as follows in the Fit Function panel:    Using Levenberg-Marquadt as a minimizer, I do not seem to run into any errors. But when I attempt to use FABADA, typically I get the following error:  Error in execution of algorithm Fit: Parameter value is NaN.  I have two questions, is my fit fu..." />
+<meta name="twitter:description" content="I am attempting to fit a typical Scattering Law     Essentially it is a dirac delta function added to a Lorentzian convoluted with a resolution, plus linear background.  I would assume the function is structured as follows in the Fit Function panel:    Using Levenberg-Marquadt as a minimizer, I do not seem to run into any errors. But when I attempt to use FABADA, typically I get the following error:  Error in execution of algorithm Fit: Parameter value is NaN.  I have two questions, is my fit fu..." />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="og:article:section" content="Python" />
+<meta property="og:article:section:color" content="9EB83B" />
+<meta property="article:published_time" content="2017-11-22T18:46:53+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="334.html">Fit Function Format and Log Error</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #9EB83B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Python</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Fit Function Format and Log Error'>
+      <link itemprop='url' href='334.html'>
+      <meta itemprop='datePublished' content='2017-11-22T18:46:53Z'>
+        <meta itemprop='articleSection' content='Python'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/xcleru'><span itemprop='name'>xcleru</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="334.html">
+
+                <link itemprop="image" href="../../uploads/default/original/1X/e99b95e6d8c2a317ad62a34987822e8b14c27599.jpg">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2017-11-22T18:46:53Z' class='post-time'>
+                    November 22, 2017,  6:46pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-11-22T18:46:53Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am attempting to fit a typical Scattering Law</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="../../uploads/default/original/1X/e99b95e6d8c2a317ad62a34987822e8b14c27599.jpg" data-download-href="https://forum.mantidproject.org/uploads/default/e99b95e6d8c2a317ad62a34987822e8b14c27599" title="image"><img src="../../uploads/default/optimized/1X/e99b95e6d8c2a317ad62a34987822e8b14c27599_2_690x99.jpg" alt="image" data-base62-sha1="xkAAEhTkmgjRLkpdV2StX8roukp" width="690" height="99" srcset="../../uploads/default/optimized/1X/e99b95e6d8c2a317ad62a34987822e8b14c27599_2_690x99.jpg, ../../uploads/default/original/1X/e99b95e6d8c2a317ad62a34987822e8b14c27599.jpg 1.5x, ../../uploads/default/original/1X/e99b95e6d8c2a317ad62a34987822e8b14c27599.jpg 2x" data-small-upload="https://forum.mantidproject.org/uploads/default/optimized/1X/e99b95e6d8c2a317ad62a34987822e8b14c27599_2_10x10.png"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">852×123 23.8 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div><br>
+Essentially it is a dirac delta function added to a Lorentzian convoluted with a resolution, plus linear background.<br>
+I would assume the function is structured as follows in the Fit Function panel:<br>
+<img src="../../uploads/default/original/1X/c11d474580f866e0b6b127ace0561c00e668ac20.png" alt="image" data-base62-sha1="rymSAB4SotIBIdEui1au2QFOf3G" width="407" height="323"></p>
+<p>Using Levenberg-Marquadt as a minimizer, I do not seem to run into any errors. But when I attempt to use FABADA, typically I get the following error:</p>
+<pre><code>Error in execution of algorithm Fit:
+Parameter value is NaN.
+</code></pre>
+<p>I have two questions, is my fit function properly formatted in Mantid and secondly, is there a way to troubleshoot for the Python error message above?</p>
+<h2>
+<a name="thank-you-very-much-1" class="anchor" href="334.html#thank-you-very-much-1"></a>Thank you very much.</h2>
+<hr>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/wsh59'><span itemprop='name'>wsh59</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-11-23T14:53:26Z' class='post-time'>
+                    November 23, 2017,  2:53pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-11-23T14:53:26Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>You can do this using the Interface  Indirect&gt;Data Analysis&gt;ConvFit</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/xcleru'><span itemprop='name'>xcleru</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-11-26T19:58:29Z' class='post-time'>
+                    November 26, 2017,  7:58pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-11-26T20:14:37Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Conv fit has been helpful, just a few questions, how can i select a function other than those given under the “Fit Type” drop-down menu? As in what if i wanted to fit 3 Lorentzians than the max of 2 shown.<br>
+And also, where can i see the PDF apart from the chi-squared output? Usually with FABADA i can see this</p>
+<p>Thanks again for all the help</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/wsh59'><span itemprop='name'>wsh59</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-11-27T09:50:58Z' class='post-time'>
+                    November 27, 2017,  9:50am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-11-27T09:50:58Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>ConvFit does not have a 3 Lor option. For that I use our original Bayes program available on the Interface Indirect&gt;Bayes&gt;Quasi - only available on Windows. This will give probability of 1,2 &amp; 3 peaks. In 30 years of experience I have only come across 3 peaks on 1 occasion!!<br>
+I will check on PDF in ConvFit, we are slowly getting used to using Fabada as it is quite new and still under development.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/wsh59'><span itemprop='name'>wsh59</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-11-27T10:37:46Z' class='post-time'>
+                    November 27, 2017, 10:37am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-11-27T10:37:46Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Had a look at the ConvFit interface. In the FABADA options if you select Advanced as True there is an option for number of bins in PDF.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/wsh59'><span itemprop='name'>wsh59</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-11-28T09:42:43Z' class='post-time'>
+                    November 28, 2017,  9:42am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-11-28T09:42:43Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Just realised that in the eqtn you give, the delta function is not in the convolution ie it should be (A0<em>delta + A1</em>Lor)*Res. What interface did you use - Fit wizard or Multi data set? I’ve tried both and they run in Fabada giving PDF output. However for MultiData when doing all spectra sequentially the workspaces for PDF get over-written. I will flag this with Mantid team as a bug.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/wsh59'><span itemprop='name'>wsh59</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-11-28T09:44:25Z' class='post-time'>
+                    November 28, 2017,  9:44am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-11-28T09:44:25Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If you have any queries about our QENS programs in general you can email me at <a href="mailto:spencer.howells@stfc.ac.uk">spencer.howells@stfc.ac.uk</a> I’m responsible for them!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/xcleru'><span itemprop='name'>xcleru</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-12-14T15:23:51Z' class='post-time'>
+                    December 14, 2017,  3:23pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-12-14T15:23:51Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello, Sorry for the delay, after doing some test runs i can confirm you are correct, having the delta function inside the convolution set does get rid of the error. I have tried both Fit wizard and indirect data analysis, and they do output a PDF if FABADA is used as the minimizer.<br>
+I have not tried Multidata set but i did notice that PDFs can get easily overwritten if not careful.</p>
+<p>ConvFit only lacks a 3 Lorentzian function but for my intents and purposes it may not be needed at the moment. I assume that Fit wizard will be able to do this if necessary.</p>
+<p>Thank you very much for the help, will email you for any concerns with regards to the program functions</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

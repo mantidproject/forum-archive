@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Using peaksworkspace - General - Mantid Help Forum</title>
+    <meta name="description" content="Hi, I’m trying to set up a script in Workbench that reads in single-crystal peaks and does some calculations. I had two questions (I’m a python novice so apologies in advance for that). 
+What I’ve done: 
+
+I successfully &amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="618.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Using peaksworkspace&#39;" href="https://forum.mantidproject.org/t/using-peaksworkspace/618.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/using-peaksworkspace/618" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/using-peaksworkspace/618" />
+<meta property="og:title" content="Using peaksworkspace" />
+<meta name="twitter:title" content="Using peaksworkspace" />
+<meta property="og:description" content="Hi, I’m trying to set up a script in Workbench that reads in single-crystal peaks and does some calculations. I had two questions (I’m a python novice so apologies in advance for that).  What I’ve done:   I successfully generated a single crystal peaksworkspace (by clicking in show instrument view). I successfully read this into the workbench editor using sxllst = mtd[‘SingleCrystalPeakTable’] . Mantid tells me this is a PeaksWorkspace object, so I read: Peaks Workspace)  Now my Q’s    I can’t g..." />
+<meta name="twitter:description" content="Hi, I’m trying to set up a script in Workbench that reads in single-crystal peaks and does some calculations. I had two questions (I’m a python novice so apologies in advance for that).  What I’ve done:   I successfully generated a single crystal peaksworkspace (by clicking in show instrument view). I successfully read this into the workbench editor using sxllst = mtd[‘SingleCrystalPeakTable’] . Mantid tells me this is a PeaksWorkspace object, so I read: Peaks Workspace)  Now my Q’s    I can’t g..." />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="article:published_time" content="2019-12-16T09:44:29+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="618.html">Using peaksworkspace</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/6.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Using peaksworkspace'>
+      <link itemprop='url' href='618.html'>
+      <meta itemprop='datePublished' content='2019-12-16T09:44:29Z'>
+        <meta itemprop='articleSection' content='General'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/malcolmguthrie'><span itemprop='name'>malcolmguthrie</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="618.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2019-12-16T09:44:29Z' class='post-time'>
+                    December 16, 2019,  9:44am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-12-16T09:44:29Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi, I’m trying to set up a script in Workbench that reads in single-crystal peaks and does some calculations. I had two questions (I’m a python novice so apologies in advance for that).</p>
+<p>What I’ve done:</p>
+<ol>
+<li>I successfully generated a single crystal peaksworkspace (by clicking in show instrument view).</li>
+<li>I successfully read this into the workbench editor using sxllst = mtd[‘SingleCrystalPeakTable’] .</li>
+<li>Mantid tells me this is a PeaksWorkspace object, so I read: <a href="https://docs.mantidproject.org/nightly/concepts/PeaksWorkspace.html?highlight=peaksworkspace" class="inline-onebox" rel="noopener nofollow ugc">Peaks Workspace</a>)</li>
+</ol>
+<p>Now my Q’s</p>
+<ol>
+<li>
+<p>I can’t get the number of peaks in the workspace i.e. npk = sxllst.getNumberOfPeaks()  returns "AttributeError: 'peaksWorkspace object has no attribute ‘getNumberOfPeaks’</p>
+</li>
+<li>
+<p>I am able to extract attributes of a single peak ‘n’ by using  p = sxllst.getPeak(n) and can then pull out wavelength, d-spacing etc. by calling these attributes of p. However, I want to get the information for all of the peaks and store this in a single array. (e.g. a single array containing the d-spacings of all peaks). I tried various guesses sxllst.getPeak(n1:n2); sxllst.getPeaks(n1,n2) sxllst.getPeaks([n1 n2]) etc. but none of these worked!</p>
+</li>
+</ol>
+<p>Thanks!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-12-16T14:13:15Z' class='post-time'>
+                    December 16, 2019,  2:13pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-12-16T14:13:15Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi,</p>
+<p>In answer to your first question, It seems that sxllst.getNumberPeaks() works as you intend and the documentation example highlighting .getNumber<strong>Of</strong>Peaks is incorrect (sorry!)</p>
+<p>As for your second request to fill an array with certain properties, I have put together a small script which uses a for loop to access values from all of the peaks:</p>
+<pre><code>import numpy as np
+from mantid.simpleapi import *
+
+sxllst = mtd['SingleCrystalPeakTable']
+npk = sxllst.getNumberPeaks()
+print npk
+
+num_properties = 5 # p, wl, tof, d, shape
+array = np.zeros((npk,num_properties))
+print array[0,0]
+
+for i in range(npk):
+    p = sxllst.getPeak(i) # locate the ith peak
+    #get the individual properties of the ith peak
+    array[i,0] = i
+    array[i,1] = p.getWavelength()
+    array[i,2] = p.getTOF()
+    array[i,3] = p.getDSpacing()
+    array[i,4] = p.getIntensity()
+
+print "| Peak Number | Wavelength | Time of Flight | D-spacing | Intensity |"
+print array
+</code></pre>
+<p>I hope this helps. Can I ask, is having these parameters stored in an array what you want or do you essentially want them in another tableworkspace?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/malcolmguthrie'><span itemprop='name'>malcolmguthrie</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-12-16T16:24:37Z' class='post-time'>
+                    December 16, 2019,  4:24pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-12-16T16:24:37Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi, thanks for the quick response! Also, thanks for the loop. The reason to extract all the peaks in the list is that I’m trying to adapt some matlab code I have which automatically indexes the peaks. The way that code is structured, it<br>
+has several subroutines that it’s necessary to pass the peaks data between as matrices.</p>
+<p>Cheers, Malcolm</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-12-16T16:32:51Z' class='post-time'>
+                    December 16, 2019,  4:32pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-12-16T16:32:51Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Okay, well if you’ve any more questions then please get in touch!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

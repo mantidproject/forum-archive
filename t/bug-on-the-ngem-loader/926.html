@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bug on the nGEM loader - Bugs - Mantid Help Forum</title>
+    <meta name="description" content="Expected behavior
+Setting the two parameters “MinEventsPerFame” and “MaxEventsPerFame” should rejet any event in a frame wih a number of event outside this range. 
+Actual behavior
+any event is loaded, even from frames wi&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="926.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Bug on the nGEM loader&#39;" href="https://forum.mantidproject.org/t/bug-on-the-ngem-loader/926.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/bug-on-the-ngem-loader/926" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/bug-on-the-ngem-loader/926" />
+<meta property="og:title" content="Bug on the nGEM loader" />
+<meta name="twitter:title" content="Bug on the nGEM loader" />
+<meta property="og:description" content="Expected behavior Setting the two parameters “MinEventsPerFame” and “MaxEventsPerFame” should rejet any event in a frame wih a number of event outside this range.  Actual behavior any event is loaded, even from frames with a number of events outside the selected range is loaded on the workspace  Steps to reproduce the behavior Select two different ranges of the EventsPerFrame on the same run, and check that the two worspace will be identical  Platforms affected All the imaging performed with the..." />
+<meta name="twitter:description" content="Expected behavior Setting the two parameters “MinEventsPerFame” and “MaxEventsPerFame” should rejet any event in a frame wih a number of event outside this range.  Actual behavior any event is loaded, even from frames with a number of events outside the selected range is loaded on the workspace  Steps to reproduce the behavior Select two different ranges of the EventsPerFrame on the same run, and check that the two worspace will be identical  Platforms affected All the imaging performed with the..." />
+<meta property="og:article:section" content="Bugs" />
+<meta property="og:article:section:color" content="ED207B" />
+<meta property="article:published_time" content="2024-12-19T19:25:07+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="926.html">Bug on the nGEM loader</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/if-you-want-to-report-a-bug-within-mantid-heres-the-place-to-do-it/12.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #ED207B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Bugs</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Bug on the nGEM loader'>
+      <link itemprop='url' href='926.html'>
+      <meta itemprop='datePublished' content='2024-12-19T19:25:06Z'>
+        <meta itemprop='articleSection' content='Bugs'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/draspi'><span itemprop='name'>draspi</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="926.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2024-12-19T19:25:07Z' class='post-time'>
+                    December 19, 2024,  7:25pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-12-19T19:25:07Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <h3><a name="expected-behavior-1" class="anchor" href="926.html#expected-behavior-1"></a>Expected behavior</h3>
+<p>Setting the two parameters “MinEventsPerFame” and “MaxEventsPerFame” should rejet any event in a frame wih a number of event outside this range.</p>
+<h3><a name="actual-behavior-2" class="anchor" href="926.html#actual-behavior-2"></a>Actual behavior</h3>
+<p>any event is loaded, even from frames with a number of events outside the selected range is loaded on the workspace</p>
+<h3><a name="steps-to-reproduce-the-behavior-3" class="anchor" href="926.html#steps-to-reproduce-the-behavior-3"></a>Steps to reproduce the behavior</h3>
+<p>Select two different ranges of the EventsPerFrame on the same run, and check that the two worspace will be identical</p>
+<h3><a name="platforms-affected-4" class="anchor" href="926.html#platforms-affected-4"></a>Platforms affected</h3>
+<p>All the imaging performed with the nGEM detector on the ISIS instruments INES and IMAT</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/RichardWaiteSTFC'><span itemprop='name'>RichardWaiteSTFC</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-01-06T13:15:36Z' class='post-time'>
+                    January 6, 2025,  1:15pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-01-06T13:15:36Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks for this report - I can reproduce this bug and have opened an issue on github here (where you can follow it’s progress)</p><aside class="onebox githubissue" data-onebox-src="https://github.com/mantidproject/mantid/issues/38558">
+  <header class="source">
+
+      <a href="https://github.com/mantidproject/mantid/issues/38558" target="_blank" rel="noopener nofollow ugc">github.com/mantidproject/mantid</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="github-row">
+  <div class="github-icon-container" title="Issue">
+	  <svg width="60" height="60" class="github-icon" viewBox="0 0 14 16" aria-hidden="true"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg>
+  </div>
+
+  <div class="github-info-container">
+    <h4>
+      <a href="https://github.com/mantidproject/mantid/issues/38558" target="_blank" rel="noopener nofollow ugc">LoadNGEM not respecting Min/MaxEventsPerFrame</a>
+    </h4>
+
+    <div class="github-info">
+      <div class="date">
+        opened <span class="discourse-local-date" data-format="ll" data-date="2025-01-06" data-time="12:58:45" data-timezone="UTC">12:58PM - 06 Jan 25 UTC</span>
+      </div>
+
+
+      <div class="user">
+        <a href="https://github.com/RichardWaiteSTFC" target="_blank" rel="noopener nofollow ugc">
+          <img alt="RichardWaiteSTFC" src="https://avatars.githubusercontent.com/u/55979119?v=4" class="onebox-avatar-inline" width="20" height="20">
+          RichardWaiteSTFC
+        </a>
+      </div>
+    </div>
+
+    <div class="labels">
+        <span style="display:inline-block;margin-top:2px;background-color: #B8B8B8;padding: 2px;border-radius: 4px;color: #fff;margin-left: 3px;">
+          Bug
+        </span>
+    </div>
+  </div>
+</div>
+
+  <div class="github-row">
+    <p class="github-body-container">**Original reporter:** [draspi](https://forum.mantidproject.org/u/draspi)
+Repor<span class="show-more-container"><a href="926.html" rel="noopener" class="show-more">…</a></span><span class="excerpt hidden">ted via user forum
+https://forum.mantidproject.org/t/bug-on-the-ngem-loader/926
+
+**Describe the bug**
+LoadNGEM not respecting Min/MaxEventsPerFrame - any event is loaded, even from frames with a number of events outside the selected range is loaded on the workspace.
+
+**To Reproduce**
+(1) Run this script
+```
+from mantid.simpleapi import *
+import matplotlib.pyplot as plt
+from mantid.plots.utility import MantidAxType
+
+ws = LoadNGEM(Filename=r'C:\mantid-conda\mantid\build\ExternalData\Testing\Data\UnitTest\GEM000005_00_000_short.edb',
+              OutputWorkspace='ws', MinEventsPerFrame=0, MaxEventsPerFrame=0)
+              
+
+fig, axes = plt.subplots(edgecolor='#ffffff', num='ws-1', subplot_kw={'projection': 'mantid'})
+axes.plot(ws, color='#1f77b4', label='ws: spec 1', wkspIndex=0)
+axes.plot(ws, color='#ff7f0e', label='ws: spec 100', wkspIndex=99)
+legend = axes.legend(fontsize=8.0).set_draggable(True).legend
+fig.show()
+```
+(2) Produces this
+
+![image](https://github.com/user-attachments/assets/59e70592-9de9-4e0d-af97-5bf454df3949)
+
+Would expect there to be no counts?
+
+**Expected behavior**
+Setting the two parameters “MinEventsPerFame” and “MaxEventsPerFame” should rejet any event in a frame wih a number of event outside this range.
+
+**Additional context**
+All the imaging performed with the nGEM detector on the ISIS instruments INES and IMAT</span></p>
+  </div>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/RichardWaiteSTFC'><span itemprop='name'>RichardWaiteSTFC</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-01-16T16:26:55Z' class='post-time'>
+                    January 16, 2025,  4:26pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-01-16T16:26:55Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This bug fix in this PR has been merged, it has made it into v6.12</p><aside class="onebox githubpullrequest" data-onebox-src="https://github.com/mantidproject/mantid/pull/38564">
+  <header class="source">
+
+      <a href="https://github.com/mantidproject/mantid/pull/38564" target="_blank" rel="noopener nofollow ugc">github.com/mantidproject/mantid</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="github-row">
+
+
+
+    <div class="github-icon-container" title="Pull Request">
+      <svg width="60" height="60" class="github-icon" viewBox="0 0 12 16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+    </div>
+
+  <div class="github-info-container">
+
+
+
+      <h4>
+        <a href="https://github.com/mantidproject/mantid/pull/38564" target="_blank" rel="noopener nofollow ugc">Fix bug in LoadNGEM where Min/MaxEventsPerFrame were not respected</a>
+      </h4>
+
+    <div class="branches">
+      <code>mantidproject:main</code> ← <code>mantidproject:38558_LoadNGEM_not_respecting_min_max_events</code>
+    </div>
+
+      <div class="github-info">
+        <div class="date">
+          opened <span class="discourse-local-date" data-format="ll" data-date="2025-01-06" data-time="16:53:05" data-timezone="UTC">04:53PM - 06 Jan 25 UTC</span>
+        </div>
+
+        <div class="user">
+          <a href="https://github.com/RichardWaiteSTFC" target="_blank" rel="noopener nofollow ugc">
+            <img alt="RichardWaiteSTFC" src="https://avatars.githubusercontent.com/u/55979119?v=4" class="onebox-avatar-inline" width="20" height="20">
+            RichardWaiteSTFC
+          </a>
+        </div>
+
+        <div class="lines" title="5 commits changed 4 files with 20 additions and 8 deletions">
+          <a href="https://github.com/mantidproject/mantid/pull/38564/files" target="_blank" rel="noopener nofollow ugc">
+            <span class="added">+20</span>
+            <span class="removed">-8</span>
+          </a>
+        </div>
+      </div>
+  </div>
+</div>
+
+  <div class="github-row">
+    <p class="github-body-container">### Description of work
+Added loop to clear events in frame if the current fram<span class="show-more-container"><a href="https://github.com/mantidproject/mantid/pull/38564" target="_blank" rel="noopener nofollow ugc" class="show-more">…</a></span><span class="excerpt hidden">e is not good (i.e. number of events outside Min/Max limits set) in preparation for next frame (don't know if that is the best way to do it)..
+
+The issue was here
+https://github.com/mantidproject/mantid/blob/22bed2110eee1945c2b6a4035bfc81d93e184056/Framework/DataHandling/src/LoadNGEM.cpp#L74-L88
+If the statement on L74 is false then `eventsInFrame` doesn't get cleared - such that the sum over all  `eventsInFrame[i].getNumberEvents()` is not equal to `eventCountInFrame`
+
+Fixes #38558
+
+**Report to:** [draspi](https://forum.mantidproject.org/u/draspi)
+
+### To test:
+
+(1) Follow instructions on the issue
+(2) For `MinEventsPerFrame=0` and `MaxEventsPerFrame=0` the workspace should have no counts (`ws.getNumberEvents() = 0`)
+(3) If  `MinEventsPerFrame` and `MaxEventsPerFrame` are not set then the resulting figure should look like the one in the issue.
+
+
+### Reviewer
+
+Please comment on the points listed below ([full description](http://developer.mantidproject.org/ReviewingAPullRequest.html)).
+**Your comments will be used as part of the gatekeeper process, so please comment clearly on what you have checked during your review.** If changes are made to the PR during the review process then your final comment will be the most important for gatekeepers. In this comment you should make it clear why any earlier review is still valid, or confirm that all requested changes have been addressed.
+
+#### Code Review
+
+- Is the code of an acceptable quality?
+- Does the code conform to the [coding standards](http://developer.mantidproject.org/Standards/)?
+- Are the unit tests small and test the class in isolation?
+- If there is GUI work does it follow the [GUI standards](http://developer.mantidproject.org/Standards/GUIStandards.html)?
+- If there are changes in the release notes then do they describe the changes appropriately?
+- Do the release notes conform to the [release notes guide](https://developer.mantidproject.org/Standards/ReleaseNotesGuide.html)?
+
+#### Functional Tests
+
+- Do changes function as described? Add comments below that describe the tests performed?
+- Do the changes handle unexpected situations, e.g. bad input?
+- Has the relevant (user and developer) documentation been added/updated?
+
+Does everything look good? Mark the review as **Approve**. A member of `@mantidproject/gatekeepers` will take care of it.
+
+### Gatekeeper
+
+If you need to request changes to a PR then please add a comment and set the review status to "Request changes". This will stop the PR from showing up in the list for other gatekeepers.</span></p>
+  </div>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+<p>
+Thanks for reporting the bug.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

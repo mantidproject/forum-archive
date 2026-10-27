@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Mantid: workbench not running on Ubuntu 20.04 - Installation - Mantid Help Forum</title>
+    <meta name="description" content="Hi, 
+I recently tried to build and install Mantid on Ubuntu 20.04. 
+The workbench wont start: I get the following errors (if excecuted int the terminal) 
+richard@leibniz:~/Mantid$ /opt/mantidunstable/bin/mantidworkbench
+
+&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="721.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Mantid: workbench not running on Ubuntu 20.04&#39;" href="https://forum.mantidproject.org/t/mantid-workbench-not-running-on-ubuntu-20-04/721.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/mantid-workbench-not-running-on-ubuntu-20-04/721" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/mantid-workbench-not-running-on-ubuntu-20-04/721" />
+<meta property="og:title" content="Mantid: workbench not running on Ubuntu 20.04" />
+<meta name="twitter:title" content="Mantid: workbench not running on Ubuntu 20.04" />
+<meta property="og:description" content="Hi,  I recently tried to build and install Mantid on Ubuntu 20.04.  The workbench wont start: I get the following errors (if excecuted int the terminal)  richard@leibniz:~/Mantid$ /opt/mantidunstable/bin/mantidworkbench  Traceback (most recent call last):  File “/opt/mantidunstable/bin/workbench”, line 11, in   load_entry_point(‘MantidWorkbench==6.0.0’, ‘gui_scripts’, ‘workbench’)()  File “/opt/mantidunstable/lib/workbench/app/main.py”, line 46, in main  start(options)  File “/opt/mantidunstable..." />
+<meta name="twitter:description" content="Hi,  I recently tried to build and install Mantid on Ubuntu 20.04.  The workbench wont start: I get the following errors (if excecuted int the terminal)  richard@leibniz:~/Mantid$ /opt/mantidunstable/bin/mantidworkbench  Traceback (most recent call last):  File “/opt/mantidunstable/bin/workbench”, line 11, in   load_entry_point(‘MantidWorkbench==6.0.0’, ‘gui_scripts’, ‘workbench’)()  File “/opt/mantidunstable/lib/workbench/app/main.py”, line 46, in main  start(options)  File “/opt/mantidunstable..." />
+<meta property="og:article:section" content="Installation" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="article:published_time" content="2021-02-17T23:32:45+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="721.html">Mantid: workbench not running on Ubuntu 20.04</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/installation/7.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Installation</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Mantid: workbench not running on Ubuntu 20.04'>
+      <link itemprop='url' href='721.html'>
+      <meta itemprop='datePublished' content='2021-02-17T23:32:44Z'>
+        <meta itemprop='articleSection' content='Installation'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/riwa'><span itemprop='name'>riwa</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="721.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2021-02-17T23:32:45Z' class='post-time'>
+                    February 17, 2021, 11:32pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-17T23:32:45Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi,<br>
+I recently tried to build and install Mantid on Ubuntu 20.04.</p>
+<p>The workbench wont start: I get the following errors (if excecuted int the terminal)</p>
+<pre><code>richard@leibniz:~/Mantid$ /opt/mantidunstable/bin/mantidworkbench
+</code></pre>
+<p>Traceback (most recent call last):<br>
+File “/opt/mantidunstable/bin/workbench”, line 11, in <br>
+load_entry_point(‘MantidWorkbench==6.0.0’, ‘gui_scripts’, ‘workbench’)()<br>
+File “/opt/mantidunstable/lib/workbench/app/main.py”, line 46, in main<br>
+start(options)<br>
+File “/opt/mantidunstable/lib/workbench/app/main.py”, line 50, in start<br>
+from workbench.app.start import start<br>
+File “/opt/mantidunstable/lib/workbench/app/start.py”, line 17, in <br>
+from mantidqt.utils.qt import plugins<br>
+File “/opt/mantidunstable/lib/mantidqt/utils/qt/<strong>init</strong>.py”, line 25, in <br>
+from qtpy.QtGui import QKeySequence # noqa<br>
+File “/usr/local/lib/python3.8/dist-packages/shiboken2/files.dir/shibokensupport/<strong>feature</strong>.py”, line 142, in _import<br>
+return original_import(name, *args, **kwargs)<br>
+File “/usr/lib/python3/dist-packages/qtpy/QtGui.py”, line 23, in <br>
+from PySide2.QtGui import *<br>
+File “/usr/local/lib/python3.8/dist-packages/shiboken2/files.dir/shibokensupport/<strong>feature</strong>.py”, line 142, in _import<br>
+return original_import(name, *args, **kwargs)<br>
+ModuleNotFoundError: No module named ‘PySide2.QtGui’<br>
+Traceback (most recent call last):<br>
+File “/usr/lib/python3.8/runpy.py”, line 194, in _run_module_as_main<br>
+return _run_code(code, main_globals, None,<br>
+File “/usr/lib/python3.8/runpy.py”, line 87, in _run_code<br>
+exec(code, run_globals)<br>
+File “/opt/mantidunstable/lib/mantidqt/dialogs/errorreports/main.py”, line 16, in <br>
+from mantidqt.dialogs.errorreports.report import CrashReportPage<br>
+File “/usr/local/lib/python3.8/dist-packages/shiboken2/files.dir/shibokensupport/<strong>feature</strong>.py”, line 142, in _import<br>
+return original_import(name, *args, **kwargs)<br>
+File “/opt/mantidunstable/lib/mantidqt/dialogs/errorreports/report.py”, line 8, in <br>
+from qtpy import QtCore, QtGui, QtWidgets<br>
+File “/usr/local/lib/python3.8/dist-packages/shiboken2/files.dir/shibokensupport/<strong>feature</strong>.py”, line 142, in _import<br>
+return original_import(name, *args, **kwargs)<br>
+File “/usr/lib/python3/dist-packages/qtpy/QtGui.py”, line 23, in <br>
+from PySide2.QtGui import *<br>
+File “/usr/local/lib/python3.8/dist-packages/shiboken2/files.dir/shibokensupport/<strong>feature</strong>.py”, line 142, in _import<br>
+return original_import(name, *args, **kwargs)<br>
+ModuleNotFoundError: No module named ‘PySide2.QtGui’</p>
+<p>Maybe I screwed up the build somewhere?<br>
+but not completely since using mantid with simpleapi in jupyter seems to work.</p>
+<p>Another strange thing is that in<br>
+/usr/lib/python3/dist-packages/mantid.pth<br>
+the path where I donloaded the source can be found, too:<br>
+/home/richard/Mantid/bin/<br>
+/home/richard/Downloads/mantid-6.0.0-Source/qt/python/<br>
+/home/richard/Downloads/mantid-6.0.0-Source/Framework/PythonInterface/<br>
+/home/richard/Downloads/mantid-6.0.0-Source/qt/applications/workbench/</p>
+<p>is this correct?</p>
+<p>Any help is appreciated?</p>
+<p>Cheers,<br>
+Richard</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-22T11:34:33Z' class='post-time'>
+                    February 22, 2021, 11:34am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-22T11:34:33Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi, Richard.</p>
+<p>I haven’t built on Ubuntu 20.04 myself, but can I check first that you ran the instructions specific to this environment: <a href="https://developer.mantidproject.org/GettingStarted.html#ubuntu-20-04" rel="noopener nofollow ugc">https://developer.mantidproject.org/GettingStarted.html#ubuntu-20-04</a></p>
+<p>It looks like you built a package and installed it. Do you absolutely need to do this? You may be running into some of the problems our developers have with packaging on Ubuntu 20.04. You can start up your build running <code>/home/richard/Mantid/bin/launch_mantidworkbench.sh</code> or <code>/home/richard/Mantid/bin/workbench</code></p>
+<p>Tell me if that works for you!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/riwa'><span itemprop='name'>riwa</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-22T12:53:31Z' class='post-time'>
+                    February 22, 2021, 12:53pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-22T12:53:31Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Daniel,</p>
+<p>thanks for the reply. I followed the specific instructions for Ubuntu 20.04.<br>
+I did not git-clone the source code but rather downloaded it from:<br>
+<a href="https://download.mantidproject.org/" rel="noopener nofollow ugc">https://download.mantidproject.org/</a><br>
+and I ran <code>AddPythonPath.py</code> after the installation.</p>
+<p>What would be the alternative to building and installing the package? use the Ubuntu 18.04 version?</p>
+<p>The result of your suggested command to start up the build is the following.</p>
+<p><code>/home/richard/Mantid/bin/launch_mantidworkbench.sh</code></p>
+<blockquote>
+<p>richard@leibniz:~/Mantid/bin$ ./launch_mantidworkbench.sh<br>
+/home/richard/Mantid/bin/site.py:26: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module’s documentation for alternative uses<br>
+import imp  # Avoid import loop in Python 3<br>
+Traceback (most recent call last):<br>
+File “/home/richard/Mantid/bin/workbench”, line 11, in <br>
+load_entry_point(‘MantidWorkbench’, ‘gui_scripts’, ‘workbench’)()<br>
+File “/home/richard/Downloads/mantid-6.0.0-Source/qt/applications/workbench/workbench/app/main.py”, line 46, in main<br>
+start(options)<br>
+File “/home/richard/Downloads/mantid-6.0.0-Source/qt/applications/workbench/workbench/app/main.py”, line 50, in start<br>
+from workbench.app.start import start<br>
+File “/home/richard/Downloads/mantid-6.0.0-Source/qt/applications/workbench/workbench/app/start.py”, line 17, in <br>
+from mantidqt.utils.qt import plugins<br>
+File “/home/richard/Downloads/mantid-6.0.0-Source/qt/python/mantidqt/utils/qt/<strong>init</strong>.py”, line 25, in <br>
+from qtpy.QtGui import QKeySequence # noqa<br>
+File “/usr/local/lib/python3.8/dist-packages/shiboken2/files.dir/shibokensupport/<strong>feature</strong>.py”, line 142, in _import<br>
+return original_import(name, *args, **kwargs)<br>
+File “/usr/lib/python3/dist-packages/qtpy/QtGui.py”, line 23, in <br>
+from PySide2.QtGui import *<br>
+File “/usr/local/lib/python3.8/dist-packages/shiboken2/files.dir/shibokensupport/<strong>feature</strong>.py”, line 142, in _import<br>
+return original_import(name, *args, **kwargs)<br>
+ModuleNotFoundError: No module named ‘PySide2.QtGui’<br>
+Traceback (most recent call last):<br>
+File “/usr/lib/python3.8/runpy.py”, line 194, in _run_module_as_main<br>
+return _run_code(code, main_globals, None,<br>
+File “/usr/lib/python3.8/runpy.py”, line 87, in _run_code<br>
+exec(code, run_globals)<br>
+File “/home/richard/Downloads/mantid-6.0.0-Source/qt/python/mantidqt/dialogs/errorreports/main.py”, line 16, in <br>
+from mantidqt.dialogs.errorreports.report import CrashReportPage<br>
+File “/usr/local/lib/python3.8/dist-packages/shiboken2/files.dir/shibokensupport/<strong>feature</strong>.py”, line 142, in _import<br>
+return original_import(name, *args, **kwargs)<br>
+File “/home/richard/Downloads/mantid-6.0.0-Source/qt/python/mantidqt/dialogs/errorreports/report.py”, line 8, in <br>
+from qtpy import QtCore, QtGui, QtWidgets<br>
+File “/usr/local/lib/python3.8/dist-packages/shiboken2/files.dir/shibokensupport/<strong>feature</strong>.py”, line 142, in _import<br>
+return original_import(name, *args, **kwargs)<br>
+File “/usr/lib/python3/dist-packages/qtpy/QtGui.py”, line 23, in <br>
+from PySide2.QtGui import *<br>
+File “/usr/local/lib/python3.8/dist-packages/shiboken2/files.dir/shibokensupport/<strong>feature</strong>.py”, line 142, in _import<br>
+return original_import(name, *args, **kwargs)<br>
+ModuleNotFoundError: No module named ‘PySide2.QtGui’</p>
+</blockquote>
+<p>It differs for: <code>/home/richard/Mantid/bin/workbench</code>:</p>
+<blockquote>
+<p>richard@leibniz:~/Mantid/bin$ ./workbench<br>
+Traceback (most recent call last):<br>
+File “./workbench”, line 11, in <br>
+load_entry_point(‘MantidWorkbench’, ‘gui_scripts’, ‘workbench’)()<br>
+File “/home/richard/Downloads/mantid-6.0.0-Source/qt/applications/workbench/workbench/app/main.py”, line 46, in main<br>
+start(options)<br>
+File “/home/richard/Downloads/mantid-6.0.0-Source/qt/applications/workbench/workbench/app/main.py”, line 50, in start<br>
+from workbench.app.start import start<br>
+File “/home/richard/Downloads/mantid-6.0.0-Source/qt/applications/workbench/workbench/app/start.py”, line 17, in <br>
+from mantidqt.utils.qt import plugins<br>
+File “/home/richard/Downloads/mantid-6.0.0-Source/qt/python/mantidqt/utils/qt/<strong>init</strong>.py”, line 25, in <br>
+from qtpy.QtGui import QKeySequence # noqa<br>
+File “/usr/local/lib/python3.8/dist-packages/shiboken2/files.dir/shibokensupport/<strong>feature</strong>.py”, line 142, in _import<br>
+return original_import(name, *args, **kwargs)<br>
+File “/usr/lib/python3/dist-packages/qtpy/QtGui.py”, line 23, in <br>
+from PySide2.QtGui import *<br>
+File “/usr/local/lib/python3.8/dist-packages/shiboken2/files.dir/shibokensupport/<strong>feature</strong>.py”, line 142, in _import<br>
+return original_import(name, *args, **kwargs)<br>
+ModuleNotFoundError: No module named ‘PySide2.QtGui’</p>
+</blockquote>
+<p>I find it suspicious that the path<br>
+<code>/home/richard/Downloads/mantid-6.0.0-Source/</code><br>
+appears in the logs above. It is the path where I downloaded and unpacked the sources.</p>
+<p>Maybe I screwed things up during the build somewhere.<br>
+I can try to delete/remove everything and rebuild mantid</p>
+<p>Best Richard</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

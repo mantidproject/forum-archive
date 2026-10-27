@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Workspace List property - Python - Mantid Help Forum</title>
+    <meta name="description" content="How do I write a Python algorithm that takes a list of workspaces as input (like GroupWorkspaces does)? I could use a list of strings but that doesn’t do any validation that the workspaces exist (or are of an appropriate&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="482.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Workspace List property&#39;" href="https://forum.mantidproject.org/t/workspace-list-property/482.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/workspace-list-property/482" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/workspace-list-property/482" />
+<meta property="og:title" content="Workspace List property" />
+<meta name="twitter:title" content="Workspace List property" />
+<meta property="og:description" content="How do I write a Python algorithm that takes a list of workspaces as input (like GroupWorkspaces does)? I could use a list of strings but that doesn’t do any validation that the workspaces exist (or are of an appropriate type, if required)." />
+<meta name="twitter:description" content="How do I write a Python algorithm that takes a list of workspaces as input (like GroupWorkspaces does)? I could use a list of strings but that doesn’t do any validation that the workspaces exist (or are of an appropriate type, if required)." />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="og:article:section" content="Python" />
+<meta property="og:article:section:color" content="9EB83B" />
+<meta property="article:published_time" content="2019-02-11T16:34:47+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="482.html">Workspace List property</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #9EB83B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Python</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Workspace List property'>
+      <link itemprop='url' href='482.html'>
+      <meta itemprop='datePublished' content='2019-02-11T16:34:47Z'>
+        <meta itemprop='articleSection' content='Python'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="482.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2019-02-11T16:34:47Z' class='post-time'>
+                    February 11, 2019,  4:34pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-02-11T16:34:47Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>How do I write a Python algorithm that takes a list of workspaces as input (like GroupWorkspaces does)? I could use a list of strings but that doesn’t do any validation that the workspaces exist (or are of an appropriate type, if required).</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/NickDraper'><span itemprop='name'>NickDraper</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-02-12T10:01:39Z' class='post-time'>
+                    February 12, 2019, 10:01am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-02-12T10:01:39Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>James,</p>
+<p>GroupWorkspaces does actually just accept a list of strings, but it uses a specific validator that knows that this is a list of workspaces, and ensures that they all exist.<br>
+The validator also is detected by the automatically generated algorithm dialog which then uses a list box rather than a text box.</p>
+<p>The validator is called the ADSValidator and it is in mantid.api.  I’ll add another post with an example.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/NickDraper'><span itemprop='name'>NickDraper</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-02-12T11:20:50Z' class='post-time'>
+                    February 12, 2019, 11:20am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-02-12T11:20:50Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Ok I’ve tried for a while, but this is the first time the ADSValiadtor was to be used in Python.  Most of it is exposed, but there seems to be some issues that is stopping it working, I’ve created an issue for this.  While the fix will no doubt be simple, finding where to fix it may be quite difficult.</p>
+<aside class="onebox githubissue">
+  <header class="source">
+      <a href="https://github.com/mantidproject/mantid/issues/24744" target="_blank" rel="noopener">github.com/mantidproject/mantid</a>
+  </header>
+  <article class="onebox-body">
+    <div class="github-row">
+  <div class="github-icon-container" title="Issue">
+	  <svg width="60" height="60" class="github-icon" viewbox="0 0 14 16" aria-hidden="true"><path d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg>
+  </div>
+
+  <div class="github-info-container">
+    <h4>
+      <a href="https://github.com/mantidproject/mantid/issues/24744" target="_blank" rel="noopener">ADSValidator does not work from Python</a>
+    </h4>
+
+    <div class="github-info">
+      <div class="date">
+        opened <span class="discourse-local-date" data-format="ll" data-date="2019-02-12" data-time="11:20:24" data-timezone="UTC">11:20AM - 12 Feb 19 UTC</span>
+      </div>
+
+        <div class="date">
+          closed <span class="discourse-local-date" data-format="ll" data-date="2020-01-27" data-time="09:41:04" data-timezone="UTC">09:41AM - 27 Jan 20 UTC</span>
+        </div>
+
+      <div class="user">
+        <a href="https://github.com/NickDraper" target="_blank" rel="noopener">
+          <img alt="NickDraper" src="https://avatars.githubusercontent.com/u/1017173?v=4" class="onebox-avatar-inline" width="20" height="20">
+          NickDraper
+        </a>
+      </div>
+    </div>
+
+    <div class="labels">
+        <span style="display:inline-block;margin-top:2px;background-color: #B8B8B8;padding: 2px;border-radius: 4px;color: #fff;margin-left: 3px;">Bug</span>
+        <span style="display:inline-block;margin-top:2px;background-color: #B8B8B8;padding: 2px;border-radius: 4px;color: #fff;margin-left: 3px;">ISIS Team: Core</span>
+    </div>
+  </div>
+</div>
+
+  <div class="github-row">
+    <p class="github-body-container">
+**Original reporter:** [username facility]/[nobody]. 
+### Expected behavior
+<span class="show-more-container"><a href="482.html" rel="noopener" class="show-more">…</a></span><span class="excerpt hidden">This should work
+``` python
+class TestAlg(PythonAlgorithm):
+
+    def category(self):
+        # defines the category the algorithm will be put in the algorithm browser
+        return 'Examples'
+
+    def PyInit(self):        
+        length_validator = ADSValidator(True,False)
+        #length_validator = StringArrayLengthValidator(5)
+        self.declareProperty(StringArrayProperty("Strings", 
+                                          validator=length_validator,
+                                          direction=Direction.Input))
+
+    def PyExec(self):
+        print("hello")
+
+AlgorithmFactory.subscribe(TestAlg)
+```
+Then executing the algorithm
+
+### Actual behavior
+ UNKNOWN Exception is caught in initialize()
+
+appears in the log.
+The same thing with the validator switched does work</span></p>
+  </div>
+
+  </article>
+  <div class="onebox-metadata">
+    
+    
+  </div>
+  <div style="clear: both"></div>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-02-12T11:33:17Z' class='post-time'>
+                    February 12, 2019, 11:33am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-02-12T11:33:17Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks for trying. Hopefully it’s an easy fix.<br>
+Making Mantid give useful traceback instead of that “UNKNOWN exception in initialize()” box might help - I get that and have to inspect my script carefully to work out where I’ve mis-spelled something.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

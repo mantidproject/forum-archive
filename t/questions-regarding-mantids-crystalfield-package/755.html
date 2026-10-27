@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Questions regarding Mantid&#39;s CrystalField package - Mantid Help Forum</title>
+    <meta name="description" content="Hello, 
+I need to perform Crystal Field analysis on some powdered neutron data. 
+My first attempt was to directly use the .nxspe data, however a few errors arise: 
+
+The elastic line is significantly more intense than the&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="755.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Questions regarding Mantid&#39;s CrystalField package&#39;" href="https://forum.mantidproject.org/t/questions-regarding-mantids-crystalfield-package/755.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/optimized/1X/f53269ec7b554d582bdcfe57c120157dd7acb0b8_2_1024x699.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/optimized/1X/f53269ec7b554d582bdcfe57c120157dd7acb0b8_2_1024x699.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/questions-regarding-mantids-crystalfield-package/755" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/questions-regarding-mantids-crystalfield-package/755" />
+<meta property="og:title" content="Questions regarding Mantid&#39;s CrystalField package" />
+<meta name="twitter:title" content="Questions regarding Mantid&#39;s CrystalField package" />
+<meta property="og:description" content="Hello,  I need to perform Crystal Field analysis on some powdered neutron data.  My first attempt was to directly use the .nxspe data, however a few errors arise:   The elastic line is significantly more intense than the magnetic modes. The fit attempts to only capture the elastic line and we can only see other signals in the difference. There are too many signals present, such as phonon modes.     My second attempt as recommended by a colleague is to create pure gaussians of ONLY the magnetic m..." />
+<meta name="twitter:description" content="Hello,  I need to perform Crystal Field analysis on some powdered neutron data.  My first attempt was to directly use the .nxspe data, however a few errors arise:   The elastic line is significantly more intense than the magnetic modes. The fit attempts to only capture the elastic line and we can only see other signals in the difference. There are too many signals present, such as phonon modes.     My second attempt as recommended by a colleague is to create pure gaussians of ONLY the magnetic m..." />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="2 ❤" />
+<meta property="article:published_time" content="2021-07-13T16:15:52+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="755.html">Questions regarding Mantid&#39;s CrystalField package</a>
+    </h1>
+
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Questions regarding Mantid&#39;s CrystalField package'>
+      <link itemprop='url' href='755.html'>
+      <meta itemprop='datePublished' content='2021-07-13T16:15:52Z'>
+        <meta itemprop='articleSection' content='Uncategorized'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jkaplan36'><span itemprop='name'>jkaplan36</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="755.html">
+
+                <link itemprop="image" href="../../uploads/default/original/1X/f53269ec7b554d582bdcfe57c120157dd7acb0b8.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2021-07-13T16:15:52Z' class='post-time'>
+                    July 13, 2021,  4:15pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-13T16:15:52Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello,</p>
+<p>I need to perform Crystal Field analysis on some powdered neutron data.</p>
+<p>My first attempt was to directly use the .nxspe data, however a few errors arise:</p>
+<ol>
+<li>The elastic line is significantly more intense than the magnetic modes. The fit attempts to only capture the elastic line and we can only see other signals in the difference.</li>
+<li>There are too many signals present, such as phonon modes.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../uploads/default/original/1X/f53269ec7b554d582bdcfe57c120157dd7acb0b8.png" data-download-href="https://forum.mantidproject.org/uploads/default/f53269ec7b554d582bdcfe57c120157dd7acb0b8" title="neutrondata"><img src="../../uploads/default/optimized/1X/f53269ec7b554d582bdcfe57c120157dd7acb0b8_2_690x471.png" alt="neutrondata" data-base62-sha1="yZ6ZsngRyoQ0EHjwBty5BQtxBS8" width="690" height="471" srcset="../../uploads/default/optimized/1X/f53269ec7b554d582bdcfe57c120157dd7acb0b8_2_690x471.png, ../../uploads/default/original/1X/f53269ec7b554d582bdcfe57c120157dd7acb0b8.png 1.5x, ../../uploads/default/original/1X/f53269ec7b554d582bdcfe57c120157dd7acb0b8.png 2x" data-small-upload="https://forum.mantidproject.org/uploads/default/optimized/1X/f53269ec7b554d582bdcfe57c120157dd7acb0b8_2_10x10.png"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use xlink:href="#far-image"></use></svg><span class="filename">neutrondata</span><span class="informations">1025×700 61.9 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div>
+</li>
+</ol>
+<p>My second attempt as recommended by a colleague is to create pure gaussians of ONLY the magnetic modes. (I fitted the relevant magnetic modes from I(E) data using LMFIT). I used the fitted parameters (amplitude, width, height) to create the gaussians for the 3 magnetic modes.</p>
+<p>However CrystalFieldFit no longer produces any sort of line shape.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="../../uploads/default/original/1X/59dd8f3a1726dc8441c7c0c4284ba509ff6e3bd1.png" data-download-href="https://forum.mantidproject.org/uploads/default/59dd8f3a1726dc8441c7c0c4284ba509ff6e3bd1" title="simulateddata"><img src="../../uploads/default/optimized/1X/59dd8f3a1726dc8441c7c0c4284ba509ff6e3bd1_2_690x459.png" alt="simulateddata" data-base62-sha1="cOZboMDqMCnMDStegFyO9HsAQal" width="690" height="459" srcset="../../uploads/default/optimized/1X/59dd8f3a1726dc8441c7c0c4284ba509ff6e3bd1_2_690x459.png, ../../uploads/default/original/1X/59dd8f3a1726dc8441c7c0c4284ba509ff6e3bd1.png 1.5x, ../../uploads/default/original/1X/59dd8f3a1726dc8441c7c0c4284ba509ff6e3bd1.png 2x" data-small-upload="https://forum.mantidproject.org/uploads/default/optimized/1X/59dd8f3a1726dc8441c7c0c4284ba509ff6e3bd1_2_10x10.png"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use xlink:href="#far-image"></use></svg><span class="filename">simulateddata</span><span class="informations">810×539 31.4 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>Any guidance would be appreciated as to whether I should use my simulated gaussians or if there’s a better way for me to use CrystalField with the raw data set.</p>
+<p>Thank you,<br>
+Jensen</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-14T14:06:39Z' class='post-time'>
+                    July 14, 2021,  2:06pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-14T14:06:39Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Jensen,</p>
+<p>Would excluding some of the data from your fit help?  See the Linked section here: <a href="https://docs.mantidproject.org/nightly/algorithms/Fit-v1.html#excluding-data-from-fit" rel="noopener nofollow ugc">https://docs.mantidproject.org/nightly/algorithms/Fit-v1.html#excluding-data-from-fit</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/mducle'><span itemprop='name'>mducle</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-17T16:46:07Z' class='post-time'>
+                    July 17, 2021,  4:46pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-17T16:46:07Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Jensen,</p>
+<p>your original data looks very noisy - is the integration range correct? Note that you can’t do a Q/2theta integration on the <code>nxspe</code> file directly, you have to use either <code>ConvertSpectrumAxis</code> (to <code>theta</code>) or <code>SofQWNormalisedPolygon</code> (to |Q|) and then use <code>Rebin2D</code> or the SliceViewer to rebin the data. I would expect the CF peaks to show up better than the spikes that you showed despite the large elastic line.</p>
+<p>Also, your energy spectrum seems to be at very high energies (300-400 meV) which implies that the lower |Q| measured is also quite high, so the magnetic form factor will affect the relative intensities of the mode at 180 meV and the modes at ~340 and 390 meV significantly (and possibly between the 300 meV modes depending on spectrometer configuration). However, Mantid doesn’t really have a robust mechanism for correcting for the form factor at the moment.</p>
+<p>If you carry on with the simulated Gaussians, then you should calculate the mean |Q| range for each peak and scale them by the formfactor at those positions. If you’re going this route, the other thing I would advise is to forget about using the Fit algorithm in Mantid with peaks - this just adds the complications of peak widths etc, and just fit the peak position and <strong>area</strong> (not height) directly - you can get the calculated peak position and cross-section using the <code>getPeakList</code> method of the <code>CrystalField</code> object - this returns a 2-row numpy array where the first row is the list of peak centres and the second is the corresponding cross-sections, ordered by the most intense (highest cross-section) peak first. You can then write a Python function to calculate a cost function for your set of peaks and then use a scipy minimiser to optimise the parameters.</p>
+<p>If you go with fitting the measured spectra instead, you might try to use the <code>MagFormFactorCorrection</code> algorithm but this has issues if you have strong phonon scattering in your data, which you imply you do.</p>
+<p>In any case I might be able to give you further advice if you give some details of what system you’re trying to fit. The best strategy depends a lot on the details of the system.</p>
+<p>Cheers,</p>
+<p>Duc.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

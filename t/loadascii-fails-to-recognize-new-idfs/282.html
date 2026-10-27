@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>LoadAscii fails to recognize &quot;new&quot; IDFs - General - Mantid Help Forum</title>
+    <meta name="description" content="The algorithm in LoadAscii2 seems to have some problems (or seems to have at least uncovered some problems) related to reading instrument definition files. In an attempt to not-reinvent-the-wheel, I have created a local &amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="282.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;LoadAscii fails to recognize &quot;new&quot; IDFs&#39;" href="https://forum.mantidproject.org/t/loadascii-fails-to-recognize-new-idfs/282.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/loadascii-fails-to-recognize-new-idfs/282" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/loadascii-fails-to-recognize-new-idfs/282" />
+<meta property="og:title" content="LoadAscii fails to recognize &quot;new&quot; IDFs" />
+<meta name="twitter:title" content="LoadAscii fails to recognize &quot;new&quot; IDFs" />
+<meta property="og:description" content="The algorithm in LoadAscii2 seems to have some problems (or seems to have at least uncovered some problems) related to reading instrument definition files. In an attempt to not-reinvent-the-wheel, I have created a local directory in the Mantid installation directory, and then I have copied over various existing instrument definition files (and the Schema directory, as well).  Symptom:  (1) If I merely copy the IDF from the ‘instrument’ folder to my local folder, when I use Workspace → Load → Fil..." />
+<meta name="twitter:description" content="The algorithm in LoadAscii2 seems to have some problems (or seems to have at least uncovered some problems) related to reading instrument definition files. In an attempt to not-reinvent-the-wheel, I have created a local directory in the Mantid installation directory, and then I have copied over various existing instrument definition files (and the Schema directory, as well).  Symptom:  (1) If I merely copy the IDF from the ‘instrument’ folder to my local folder, when I use Workspace → Load → Fil..." />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="article:published_time" content="2017-06-30T20:14:29+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="282.html">LoadAscii fails to recognize &quot;new&quot; IDFs</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/6.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='LoadAscii fails to recognize &quot;new&quot; IDFs'>
+      <link itemprop='url' href='282.html'>
+      <meta itemprop='datePublished' content='2017-06-30T20:14:29Z'>
+        <meta itemprop='articleSection' content='General'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Peter_Norgard'><span itemprop='name'>Peter_Norgard</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="282.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2017-06-30T20:14:29Z' class='post-time'>
+                    June 30, 2017,  8:14pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-06-30T20:14:29Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The algorithm in LoadAscii2 seems to have some problems (or seems to have at least uncovered some problems) related to reading instrument definition files. In an attempt to not-reinvent-the-wheel, I have created a local directory in the Mantid installation directory, and then I have copied over various existing instrument definition files (and the Schema directory, as well).</p>
+<p><strong>Symptom:</strong><br>
+(1) If I merely copy the IDF from the ‘instrument’ folder to my local folder, when I use Workspace → Load → File, the IDF loads correctly.</p>
+<p>(2) If I make changes to the IDF, as long as I maintain the correct format as defined under the Instrument Definition File wiki, I am able to create any geometry I like, save the file (with the original filename) and the IDF loads correctly.</p>
+<p>(3) If I attempt to copy my newly created IDF (the one from (2) above) into a new blank text file, save it as xml, and attempt to load it, I receive the error code below.</p>
+<p>(4) If I attempt to <em>rename</em> the original IDF (from (1) above) to anything else, I receive the error code below.</p>
+<p><strong>Error Code:</strong><br>
+Failed to read as ASCII this file: 'D:\MantidInstall\local_inst\something.xml, error description: No valid data in file, check separator settings or number of columns per bin.<br>
+Error in execution of algorithm LoadAscii:<br>
+Failed to recognize this file as an ASCII file, cannot continue.<br>
+Error in execution of algorithm Load:<br>
+Failed to recognize this file as an ASCII file, cannot continue.</p>
+<p><strong>What I have Done:</strong></p>
+<ul>
+<li>
+<p>I converted the Windows CR/LF to LF. No differences.</p>
+</li>
+<li>
+<p>I converted \tabs to spaces. No difference.</p>
+</li>
+<li>
+<p>I used the Windows command line utility [fc original.xml renamed.xml] and [fc /b original.xml renamed.xml]. Both indicated the files are identical (/b == binary file compare).</p>
+</li>
+</ul>
+<p>I am using Windows 10 (but also on my Mac running Yosemite) and have received the errors on both. These errors occurred on both 3.10 and 3.8 versions of Mantid (Windows) and version 3.8 (OSX).</p>
+<p>Looking at the source, it seems that header parsing throws its exception in the vicinity of line 400 of LoadAscii2.cpp; ‘numCols’ isn’t getting the proper value. I cannot understand why renaming a file locally would cause the problems I’m encountering, however…</p>
+<p>Is there some sort of registry where IDF’s names and versions get stored? Any advice?</p>
+<p>Peter</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/NickDraper'><span itemprop='name'>NickDraper</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-07-07T09:27:53Z' class='post-time'>
+                    July 7, 2017,  9:27am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-07-07T09:27:53Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><strong>Solution:</strong><br>
+Either</p>
+<ul>
+<li>Make sure the file name follows the format “[instrument_name] Definition [anything else you want].xml”</li>
+<li>Use the LoadEmptyInstrument algorithm directly</li>
+</ul>
+<p><strong>Explanation:</strong></p>
+<p>The Load algorithm (which is what clicking on Load-&gt;File uses) tries to automatically decide on the specific file loader to use based on the contents of he file it is trying to Load.</p>
+<p>Here the problem is that in one case the Load is picking LoadEmptyIntrument correctly to do the job, and in the other it is picking LoadAscii which expects columns of ascii data.</p>
+<p>The code that selects which file to load can be based on that filename and the start of the file contents, but in this case it is just using the filename.   Specifically it is checking for a text file, with an .xml extension, and the word “Definition” in the filename.</p>
+<pre><code class="lang-auto">  if (descriptor.isAscii()) // Only consider an Ascii file
+  {
+    // Filename must contain "Definition"
+    std::string::size_type stripPath = filePath.find_last_of("\\/");
+    if (stripPath == std::string::npos)
+      stripPath = 0;
+    if (filePath.find("Definition", stripPath) != std::string::npos) {
+      // We have some confidence and it depends on the filetype.
+      if (descriptor.extension() == "xml") {
+        confidence = 80;
+      } else {
+        confidence = 20;
+      }
+    } // Has "Definition"
+  }   // Ascii file
+</code></pre>
+<p>The need for Definition in the filename is a holdover from when we first decided that instrument definitions should follow a standard format of instrument_name Definition.xml to allow us to find the correct file quickly from the filename alone.  This expanded later to allow for multiple files per instrument, but the files still need to include the instrument name at the start and the word “Definition” as well as the xml extension.</p>
+<p>The other option is to bypass the selection of which loader to use by using the algorithm LoadEmptyInstrument directly.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/NickDraper'><span itemprop='name'>NickDraper</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/1a57e8a07d74363a9ddcc6cbf27dbb435ef1d559.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-07-07T09:49:42Z' class='post-time'>
+                    July 7, 2017,  9:49am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-07-07T09:49:42Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>In answer to your other question of Where does Mantid load instrument definition files from when loading data, well it can be a bit complicated, because Mantid has a list of location to use, partially to handle multi user installations, but also to handle downloaded instrument files that have updated since your installation of Mantid.</p>
+<p>So let’s start by saying this only applies when you are loading a data file and Mantid it trying to decide which instrument file it should load to match the data.</p>
+<p>For any loaded data file you can always see where it loaded the instrument from by expanding the Workspace in the workspaces list and looking at the instrument.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../uploads/default/original/1X/1a57e8a07d74363a9ddcc6cbf27dbb435ef1d559.png" data-download-href="https://forum.mantidproject.org/uploads/default/1a57e8a07d74363a9ddcc6cbf27dbb435ef1d559" title="Instrument Location.png"><img src="../../uploads/default/original/1X/1a57e8a07d74363a9ddcc6cbf27dbb435ef1d559.png" width="690" height="279" data-small-upload="https://forum.mantidproject.org/uploads/default/optimized/1X/1a57e8a07d74363a9ddcc6cbf27dbb435ef1d559_2_10x10.png"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use xlink:href="#far-image"></use></svg><span class="filename">Instrument Location.png</span><span class="informations">705×286 9.8 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>In selecting which file Mantid follows this in order:</p>
+<ol>
+<li>If the file is a Nexus file and has an embedded Mantid instrument definition it will use that</li>
+<li>Mantid will search all of it’s instrument definition directories for files that match the name of the instrument (and the word Definitionn and “.xml”)</li>
+<li>Mantid will then pick the file that has the Valid_From date that best matches the start date in the data file.</li>
+<li>You can use the python command below to see which directories Mantid is searching on your system.</li>
+</ol>
+<pre><code class="lang-python">print ConfigService.getInstrumentDirectories()
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Peter_Norgard'><span itemprop='name'>Peter_Norgard</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-07-07T13:26:55Z' class='post-time'>
+                    July 7, 2017,  1:26pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-07-07T13:26:55Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks Nick,<br>
+I think my problem was that my understanding of the GUI was not complete. The second option was the golden ticket. As you pointed out, there is an option to run algorithms directly (under, oddly enough, <em>Algorithms</em>), and after I located <em>LoadEmptyInstrument</em> I was able to load the IDF directly and with no trouble whatsoever.</p>
+<p>For the edification of anyone reading this in frustration, the <em>LoadAscii</em> algorithm executed by running Load-&gt;File on a home-built IDF did <em>not</em> work until <em>LoadEmptyInstrument</em> was called. Once the IDF was loaded using the empty instrument algorithm, it then became possible to simply run the Load-&gt;File-&gt;MyIDF.xml (replace MyIDF with whatever).</p>
+<p>It seems there is more than one road to Rome…</p>
+<p>Peter</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

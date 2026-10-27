@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sample environment log timestamps wrong - Bugs - Mantid Help Forum</title>
+    <meta name="description" content="Expected behavior
+Time stamps of log values (seen by the Python API) should be correct! 
+Actual behaviour
+For runs measured in the (UK) summer, time stamps are an extra hour ahead of local time so all the log points appe&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="409.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Sample environment log timestamps wrong&#39;" href="https://forum.mantidproject.org/t/sample-environment-log-timestamps-wrong/409.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/sample-environment-log-timestamps-wrong/409" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/sample-environment-log-timestamps-wrong/409" />
+<meta property="og:title" content="Sample environment log timestamps wrong" />
+<meta name="twitter:title" content="Sample environment log timestamps wrong" />
+<meta property="og:description" content="Expected behavior Time stamps of log values (seen by the Python API) should be correct!  Actual behaviour For runs measured in the (UK) summer, time stamps are an extra hour ahead of local time so all the log points appear to be during or more likely after the run. Winter times are OK.  Steps to reproduce the behaviour Try the following:   LR=LoadMuonNexus(Filename=&quot;HIFI00134470&quot;,OutputWorkspace=&quot;exampleRun&quot;) ws=LR.OutputWorkspace[0] # grouped, was in period mode print &quot;run begin=&quot;,ws.getRun().g..." />
+<meta name="twitter:description" content="Expected behavior Time stamps of log values (seen by the Python API) should be correct!  Actual behaviour For runs measured in the (UK) summer, time stamps are an extra hour ahead of local time so all the log points appear to be during or more likely after the run. Winter times are OK.  Steps to reproduce the behaviour Try the following:   LR=LoadMuonNexus(Filename=&quot;HIFI00134470&quot;,OutputWorkspace=&quot;exampleRun&quot;) ws=LR.OutputWorkspace[0] # grouped, was in period mode print &quot;run begin=&quot;,ws.getRun().g..." />
+<meta property="og:article:section" content="Bugs" />
+<meta property="og:article:section:color" content="ED207B" />
+<meta property="article:published_time" content="2018-06-26T13:52:03+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="409.html">Sample environment log timestamps wrong</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/if-you-want-to-report-a-bug-within-mantid-heres-the-place-to-do-it/12.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #ED207B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Bugs</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Sample environment log timestamps wrong'>
+      <link itemprop='url' href='409.html'>
+      <meta itemprop='datePublished' content='2018-06-26T13:52:03Z'>
+        <meta itemprop='articleSection' content='Bugs'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="409.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2018-06-26T13:52:03Z' class='post-time'>
+                    June 26, 2018,  1:52pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-06-26T13:52:03Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <h3><a name="expected-behavior-1" class="anchor" href="409.html#expected-behavior-1"></a>Expected behavior</h3>
+<p>Time stamps of log values (seen by the Python API) should be correct!</p>
+<h3><a name="actual-behaviour-2" class="anchor" href="409.html#actual-behaviour-2"></a>Actual behaviour</h3>
+<p>For runs measured in the (UK) summer, time stamps are an extra hour ahead of local time so all the log points appear to be during or more likely after the run. Winter times are OK.</p>
+<h3><a name="steps-to-reproduce-the-behaviour-3" class="anchor" href="409.html#steps-to-reproduce-the-behaviour-3"></a>Steps to reproduce the behaviour</h3>
+<p>Try the following:</p>
+<blockquote>
+<pre><code>LR=LoadMuonNexus(Filename="HIFI00134470",OutputWorkspace="exampleRun")
+ws=LR.OutputWorkspace[0] # grouped, was in period mode
+print "run begin=",ws.getRun().getProperty("run_start").value
+print "run end=",ws.getRun().getProperty("run_end").value
+t=ws.getRun().getProperty("Temp_Sample").times
+print "first log timestamp",repr(t[0])
+print "last log timestamp",repr(t[-1])
+</code></pre>
+</blockquote>
+<p>I get:</p>
+<blockquote>
+<pre><code>run begin= 2018-06-25T09:14:57
+run end= 2018-06-25T09:26:59
+first log timestamp numpy.datetime64('2018-06-25T09:57:16.000000000+0100')
+last log timestamp numpy.datetime64('2018-06-25T10:27:00.000000000+0100')
+</code></pre>
+</blockquote>
+<p>This example run chosen as I was in the cabin at the time. The run begin and end times are correct (in BST), and the same as in the Nexus file as viewed by HDFview, where they are stored as strings. The Nexus file time stamps for log points are integer seconds, running from -1061 to +723. (The script changed temperature after the previous run and before this one started, so I expect log points before run_begin)</p>
+<h3><a name="platforms-affected-4" class="anchor" href="409.html#platforms-affected-4"></a>Platforms affected</h3>
+<p>Muon data taken by SECI during daylight savings time, saved in Nexus version 1 format. Possibly also affects neutron data, and that acquired by IBEX (we have no IBEX muon instruments yet)<br>
+The bug may have appeared with the change to numpy.datetime64 from the previous Mantid-own time format.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-06-27T10:32:04Z' class='post-time'>
+                    June 27, 2018, 10:32am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-06-27T10:32:04Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I note that the FloatTimeSeriesProperty also has method nthTime(index) which returns a mantid.kernel.DateAndTime object. These are correct. So I have an option for a work around (for now).</p>
+<p>The recipe to convert mantid.kernel.DateAndTime to numpy.datetime64 on this page reproduces the bug:<br>
+<a href="http://docs.mantidproject.org/nightly/api/python/mantid/kernel/DateAndTime.html" class="onebox" target="_blank" rel="noopener nofollow ugc">http://docs.mantidproject.org/nightly/api/python/mantid/kernel/DateAndTime.html</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/peterfpeterson'><span itemprop='name'>peterfpeterson</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-07-03T12:48:58Z' class='post-time'>
+                    July 3, 2018, 12:48pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-07-03T12:48:58Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I created an <a href="https://github.com/mantidproject/mantid/issues/22739">issue in github</a> and expect to have a fix in time for the release.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/peterfpeterson'><span itemprop='name'>peterfpeterson</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-07-03T15:08:20Z' class='post-time'>
+                    July 3, 2018,  3:08pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-07-03T15:08:20Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Looking at this more, it is significantly more subtle than your example suggests. The string representation of <code>numpy.datetime64</code> is the correct value if you notice the timestamp. The value found in <code>ws.getRun().getProperty("run_start").value</code> is a time stamp in “local time” which is ambiguous (not in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO8601 format</a>) because it does not have a time-zone designation. The times stored in <code>ws.getRun().getProperty("run_end").value</code> are proper time stamps (absolute time) and the <code>repr</code> and <code>str</code> functions will have them print their value using the operating system’s current time zone. For me in eastern USA during daylight savings (time-zone is <code>EDT</code> or <code>-04:00</code>) I get</p>
+<pre><code class="lang-python">first log timestamp numpy.datetime64('2018-06-25T04:57:16.000000000-0400')
+last log timestamp numpy.datetime64('2018-06-25T05:27:00.000000000-0400')
+</code></pre>
+<p>The “better” way to print the times from a <code>ndarray</code> of <code>datetime64</code> is to use <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.datetime_as_string.html"><code>numpy.datetime_as_string</code></a> which allows specifying a timezone using <code>pytz</code>. I haven’t been able to confirm, but it appears to use the daylight savings appropriate for the datetime itself</p>
+<pre><code class="lang-python">import numpy as np
+import pytz
+print np.datetime_as_string(t[0], timezone=pytz.timezone('US/Eastern'))
+print np.datetime_as_string(t[0], timezone=pytz.timezone('Europe/London'))
+print np.datetime_as_string(t[0], timezone=pytz.timezone('Europe/Copenhagen'))
+print np.datetime_as_string(t[0], timezone=pytz.timezone('Europe/Paris'))
+</code></pre>
+<p>gives the “proper” ISO8601 strings</p>
+<pre><code class="lang-python">'2018-06-25T04:57:16.000000000-0400'
+'2018-06-25T09:57:16.000000000+0100'
+'2018-06-25T10:57:16.000000000+0200'
+'2018-06-25T10:57:16.000000000+0200'
+</code></pre>
+<p>Numpy decided that including the timezone designation was clarifying behavior as <a href="https://docs.scipy.org/doc/numpy/reference/arrays.datetime.html#changes-with-numpy-1-11">documented here</a>. Mantid doesn’t currently have a mechanism for inquiring where (geographically) data was measured which would be required for determining if the particular datetime was during daylight savings.</p>
+<p>I will update the documentation, but a “fix” for the issue is not going change the behavior you see with <code>str(t[0])</code>. The “best” solution I can think of is to add a method to the <code>Facility</code> object to return the correct <code>pytz</code> object to simplify using <code>np.datetime_as_string</code>.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-07-03T15:55:25Z' class='post-time'>
+                    July 3, 2018,  3:55pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-07-03T15:55:25Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I think the problem is not in the final string representation of the numpy.datetime64 values but the initial creation of them. The end time of the previous run, and therefore the approximate time of the first log point in this one (I was in the cabin and witnessed it!) was 08:57:16+0100 (BST) or 07:57:16+0000 (UTC). Mantid might assume that the ambiguous string for run_start “2018-06-24T09:14:57” was in UTC and then convert it to numpy.datetime64 which when converted back in the Europe/London locale gives 10:14:57+0100 (and slightly earlier times for the first log points).</p>
+<p>Your comments highlight that there may be more traps awaiting our users when they get back to their home institution in another time zone and look at their data with a script that isn’t very carefully written.</p>
+<p>Originally, the Nexus file contains the ambiguous local times for “start” and “end”, and all the logs are then in seconds offset from “start”. The most important requirement for most scripts is to tell which log values were taken while the run was counting, and which were before (or after). Next, is that times of runs and logs agree with things the users note down in their lab notebook while here, or messages in the ISIS MCR news “beam off at 15:30”. So things should be consistent.</p>
+<p>I think the proper fix ought to be:</p>
+<ul>
+<li>have a flag in the facilities file to give the “default” time zone for ambiguous data from that facility/instrument</li>
+<li>convert <code>ws.getRun().getProperty("run_start").value</code> and <code>ws.getRun().getProperty("run_end").value</code> from strings to the same time data type as <code>ws.getRun().getProperty(any_log).times</code> (using the above flag if they don’t have a time zone included).  Use these converted values as the base for the time stamps of other logs. If returning something other than strings would break things, have another method such as “.value_as_datetime64”.</li>
+<li>the experimental control software should write <code>run_start</code> and <code>run_end</code> in ISO8601 format from now on.</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-07-04T11:24:50Z' class='post-time'>
+                    July 4, 2018, 11:24am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-07-04T11:24:50Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>As a comparison, the “Sample Logs” dialog creates tables with:</p>
+<ul>
+<li>Numeric log values: the “time” column is numeric in seconds from run_start, i.e. not converted to a date/time at all.</li>
+<li>String log values: the “time” column is a string or similar shown as hh:mm:ss with no date or timezone information. These values agree with the “run_start”, at least for me in the same time zone as the instrument. Some care is needed for runs that were in progress at midnight. For example look at ICPEVENT.</li>
+</ul>
+<p>These tables only exist at the QTIplot level and aren’t accessible from Python.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/peterfpeterson'><span itemprop='name'>peterfpeterson</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-07-05T15:44:03Z' class='post-time'>
+                    July 5, 2018,  3:44pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-07-05T15:44:03Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I agree that the absolute best fix would be for the data acquisition to write proper datetime strings into the files (including for the <code>start</code> attribute of the logs which you’ll see below) that remove the ambiguity.</p>
+<p>This is also a good time to point out that numpy changed the behavior of how it interprets ambiguous datetime strings (without timezone designation). One version assumes that ambiguous datetime strings are in local timezone, the other version assumes it is UTC. <a href="https://github.com/mantidproject/mantid/blob/master/Framework/PythonInterface/test/python/mantid/kernel/DateAndTimeTest.py">DateAndTimeTest.py</a> shows this off.</p>
+<p>Using <a href="http://download.nexusformat.org/doc/html/introduction-napi.html#how-do-i-browse-a-nexus-file">nxbrowse</a> to look at the contents of <code>HIFI00134470</code> you’ll see that the datetime strings from both the start time and log are ambiguous:</p>
+<pre><code class="lang-auto">NX/run&gt; read start_time 
+  start_time[19] (NX_CHAR) = 2018-06-25T09:14:57
+NX/run&gt; cd temperature_log_1/ 
+NX/run/temperature_log_1&gt; read name
+  name[11] (NX_CHAR) = Temp_Sample
+
+    available = 320 
+NX/run/temperature_log_1&gt; read time 
+  time[320] (NX_FLOAT32) = [ -1061.000000 -1055.000000 -1050.000000 ...]
+    units = seconds
+    start = 2018-06-25T09:14:57
+</code></pre>
+<p>This points out that the first log value is 1061 before the start of the run. Mantid uses the <code>start</code> attribute of the log as the epoch for generating all of the times. Once mantid has read in a log, it is stored as a proper timestamp and converted to strings as appropriate. The <code>times</code> method of a log returns a <code>ndarray</code> of <code>datetime64</code> as that is used significantly more than the string version of the datetimes. The <a href="http://docs.mantidproject.org/nightly/api/python/mantid/kernel/DateAndTime.html">DateAndTime</a> documentation isn’t explicit, but you can convert the times to the seconds from the start of the log in one line:</p>
+<pre><code class="lang-python">time = (times - times[0])/np.timedelta64(1, 's')
+</code></pre>
+<p>If you want seconds from the start of the run, you’ll have to decide how to interpret that ambiguous datetime string.</p>
+<p>I will be adding better timezone functionality for the facilities in the PR I’m working on for the  release. Changing how the logs are initially read in require a bit more discussion. Another question is if we should convert the <code>run_start</code> and <code>run_end</code> to <code>DateAndTime</code> objects on load in order to make manipulating things easier.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

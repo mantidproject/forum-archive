@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>How to find UB matrix from TOF nxspe file - General - Mantid Help Forum</title>
+    <meta name="description" content="I have a series of data from ARCS. However, I did not find a good UB matrix when conducting experiment. Now, I would like to try hunting for accurate UB-matrix from these data. My problem are here: 
+1、Does mantid can get&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="702.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;How to find UB matrix from TOF nxspe file&#39;" href="https://forum.mantidproject.org/t/how-to-find-ub-matrix-from-tof-nxspe-file/702.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/how-to-find-ub-matrix-from-tof-nxspe-file/702" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/how-to-find-ub-matrix-from-tof-nxspe-file/702" />
+<meta property="og:title" content="How to find UB matrix from TOF nxspe file" />
+<meta name="twitter:title" content="How to find UB matrix from TOF nxspe file" />
+<meta property="og:description" content="I have a series of data from ARCS. However, I did not find a good UB matrix when conducting experiment. Now, I would like to try hunting for accurate UB-matrix from these data. My problem are here:  1、Does mantid can get a UB matrix from nxpse data,which were from ARCS(auto reduced)?  2、I tried to use below code, but it cannot find any peak. And thus , it returns error “ValueError: Find_UB(): Four or more indexed peaks needed to find UB”.  Thanks for you if you can help me to solve this probelm,..." />
+<meta name="twitter:description" content="I have a series of data from ARCS. However, I did not find a good UB matrix when conducting experiment. Now, I would like to try hunting for accurate UB-matrix from these data. My problem are here:  1、Does mantid can get a UB matrix from nxpse data,which were from ARCS(auto reduced)?  2、I tried to use below code, but it cannot find any peak. And thus , it returns error “ValueError: Find_UB(): Four or more indexed peaks needed to find UB”.  Thanks for you if you can help me to solve this probelm,..." />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="article:published_time" content="2020-11-27T06:38:02+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="702.html">How to find UB matrix from TOF nxspe file</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/6.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='How to find UB matrix from TOF nxspe file'>
+      <link itemprop='url' href='702.html'>
+      <meta itemprop='datePublished' content='2020-11-27T06:38:02Z'>
+        <meta itemprop='articleSection' content='General'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DavyLi'><span itemprop='name'>DavyLi</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="702.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2020-11-27T06:38:02Z' class='post-time'>
+                    November 27, 2020,  6:38am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-11-27T06:42:21Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I have a series of data from ARCS. However, I did not find a good UB matrix when conducting experiment. Now, I would like to try hunting for accurate UB-matrix from these data. My problem are here:<br>
+1、Does mantid can get a UB matrix from nxpse data,which were from ARCS(auto reduced)?<br>
+2、I tried to use below code, but it cannot find any peak. And thus , it returns error “ValueError: Find_UB(): Four or more indexed peaks needed to find UB”.</p>
+<p>Thanks for you if you can help me to solve this probelm, which confuse me about one month.</p>
+<p>#######<span class="hashtag">#code</span> for find UB ,<strong>Bold</strong> means that they are circulation ##############<br>
+from mantid.simpleapi import *<br>
+runs = range(103253,103255)<br>
+<strong>for r in runs:</strong><br>
+**      print ‘Processing run : %s’ %r**<br>
+**      filename=‘F:\APS-ORNL\arcs\ARCS_%d_autoreduced.nxspe’ % r**<br>
+**      data=LoadEventNexus(Filename=filename)**<br>
+**      MaskBTP(data,Pixel=‘1-16,241-256’)**<br>
+**      LoadInstrument(data, InstrumentName=‘ARCS’,RewriteSpectraMap=False)**<br>
+**      SetGoniometer(data,Axis0=“omega,1,0,1,1”)    **<br>
+**      ConvertToMD(InputWorkspace=data,OutputWorkspace=‘md3’,QDimensions=‘Q3D’,**<br>
+**      dEAnalysisMode=‘Elastic’,QConversionScales=‘Q in A^-1’,LorentzCorrection=‘0’, **<br>
+**      MinValues=’-25,-25,-25’,MaxValues=‘25.1,25.1,25.1’)**<br>
+**      FindPeaksMD(InputWorkspace=‘md3’,SignalThresholdFactor=1.5,** OutputWorkspace=‘peaks3’,AppendPeaks=True)<br>
+FindUBUsingFFT(PeaksWorkspace=‘peaks3’, MinD=4.013, MaxD=10.682)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/RichardWaiteSTFC'><span itemprop='name'>RichardWaiteSTFC</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-11-30T14:52:49Z' class='post-time'>
+                    November 30, 2020,  2:52pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-11-30T15:04:51Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi, I am not familiar with the ARCS instrument but I do not believe the autoreduced data will find a UB.<br>
+In principle you only need to index two non-collinear Bragg peaks to find a UB if you already know your lattice parameters and the angles between them - this can be done by running the algorithm <code>CalculateUMatrix</code>. The peaks can be identified manually by looking at the instrument view of the data (output of <code>LoadEventNexus</code>): right-click the workspace &gt; show instrument &gt; ‘Pick’ tab &gt;  click the ‘Add single crystal tool’ (icon blue arrow above a red spectrum) &gt; click the detector pixel in the peak centre &gt; click on the peak centre in the spectrum that is plotted in the bottom left. This will create a peak table called <code>SingleCrystalPeakTable</code> in which you can then edit the H,K,L.<br>
+If you don’t feel confident indexing the peaks from their d-spacing and/or you do not know your lattice parameters very well, then you will need to identify more peaks (typically &gt;=6) and use one of the <code>FindUBUsingXXX</code> algorithms (e.g. <code>FindUBUsingFFT</code> in your script, or <code>FindUBUsingIndexedPeaks</code> - see related algorithms in the mantid docs for others). In fact FingUBUsingFFT will probably require many more than 6 peaks as you don’t give the algorithm any additional information and you need to give it enough frequencies (Bragg pekas) to do the FFT. If you use a method that doesn’t take H,K,L indices then be careful if your crystal has any form of centering etc. the algorithm may index them in the primitive rather than conventional cell.<br>
+In general, the more peaks you find the better constrained the UB will be, which means that you may want to find the peaks in an automated way. There are two algorithms to find peaks, <code>FindPeaksMD</code> which you have in your script which acts on an MD workspace (I believe it should only be a diffraction workspace, e.g. only Q dimension, no energy transfer), or <code>FindSXPeaks</code> which acts on the matrix workspace (that you viewed with show instrument). Both of these algorithms require some background tolerances to identify the peaks which may need some optimising. I tend to use <code>FindSXPeaks</code> because it is easier to determine an appropriate background level (from the plot of each spectrum in the instrument view). I recommend using the ‘AllPeaks’ finding strategy and using absolute resolution values (tolerances by which to merge peaks that are close together). Once you have a UB you can use the same for all your runs at different goniometer angles if you use <code>SetGoniometer</code> as in your script.<br>
+Hope that helps, let me know if you any additional help or clarification.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DavyLi'><span itemprop='name'>DavyLi</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-12-02T07:28:02Z' class='post-time'>
+                    December 2, 2020,  7:28am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-12-02T07:28:02Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="RichardWaiteSTFC" data-post="2" data-topic="702">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="../../user_avatar/forum.mantidproject.org/richardwaitestfc/48/137_2.png" class="avatar"> RichardWaiteSTFC:</div>
+<blockquote>
+<p>e, which means that you may want to find the peaks in an automated way. There are two algorithms to find peaks, <code>FindPeaksMD</code> which you have in your script which acts on an MD workspace (I believe it should only be a diffraction workspace, e.g. only Q dimension, no energy transfer),</p>
+</blockquote>
+</aside>
+<p>Thak you for your reply. It help me a lot.<br>
+I have checked my data. I do not have diffraction data.My data is from inelastic neutron measurement(ARCS). I think I should extract peak information near 0 meV, which I want to use to replace diffraction data.<br>
+My probelm is that:<br>
+**1,I do not know whether my idea is feasible to get UB from inelastic measurement data?<br>
+2,I do not know whether Mantid have this fuction(extract peak information near 0 meV from *.nxspe) **.</p>
+<p>THANK YOU VERY MUCH FOR YOUR REPLYING.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/RichardWaiteSTFC'><span itemprop='name'>RichardWaiteSTFC</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-12-02T09:43:35Z' class='post-time'>
+                    December 2, 2020,  9:43am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-12-02T09:54:09Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi, although the data are inelastic, because the instrument has such a large detector array even with a fixed Ei you should still see multiple peaks that can be used to make a UB. I think it is best to try identifying the peaks in the matrix workspace - the output of LoadEventNexus before you make the MD object. Perhaps you could show a screenshot of what the instrument view looks like?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DavyLi'><span itemprop='name'>DavyLi</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/06df85d1bee33902445a2564ae93c6b3497c86cc.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-12-14T01:35:46Z' class='post-time'>
+                    December 14, 2020,  1:35am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-12-14T01:35:46Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thank you for your replying. I adopted your suggestion though I did not totally understand.<br>
+Actually, I am a greenhand for coping with neutron scattering data. I tried to understand how to identifying the peaks . <div class="lightbox-wrapper"><a class="lightbox" href="../../uploads/default/original/1X/06df85d1bee33902445a2564ae93c6b3497c86cc.png" data-download-href="https://forum.mantidproject.org/uploads/default/06df85d1bee33902445a2564ae93c6b3497c86cc" title="image"><img src="../../uploads/default/original/1X/06df85d1bee33902445a2564ae93c6b3497c86cc.png" alt="image" data-base62-sha1="YNL7HbHVxNhvHgtKChd0m63GcQ" width="690" height="361" data-small-upload="https://forum.mantidproject.org/uploads/default/optimized/1X/06df85d1bee33902445a2564ae93c6b3497c86cc_2_10x10.png"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1919×1006 31.5 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div>  However, just like in above picture, there are  E value and many other data(I am not sure the the leftmost column sp-** is detector id),  It looks like that I can not find peak in this maxtrix workspace directly(I think I did not find correct method for doing that).<br>
+I tried another way to find peak. just like below picture.<div class="lightbox-wrapper"><a class="lightbox" href="../../uploads/default/original/1X/9aae38ab7fc2ed5f0860ac80ca5ae6e149516a10.png" data-download-href="https://forum.mantidproject.org/uploads/default/9aae38ab7fc2ed5f0860ac80ca5ae6e149516a10" title="image"><img src="../../uploads/default/optimized/1X/9aae38ab7fc2ed5f0860ac80ca5ae6e149516a10_2_690x288.png" alt="image" data-base62-sha1="m4mNtxdpoGgfyU15ZVS1tdARf0s" width="690" height="288" srcset="../../uploads/default/optimized/1X/9aae38ab7fc2ed5f0860ac80ca5ae6e149516a10_2_690x288.png, ../../uploads/default/optimized/1X/9aae38ab7fc2ed5f0860ac80ca5ae6e149516a10_2_1035x432.png 1.5x, ../../uploads/default/optimized/1X/9aae38ab7fc2ed5f0860ac80ca5ae6e149516a10_2_1380x576.png 2x" data-small-upload="https://forum.mantidproject.org/uploads/default/optimized/1X/9aae38ab7fc2ed5f0860ac80ca5ae6e149516a10_2_10x10.png"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1447×605 57.2 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div> <div class="lightbox-wrapper"><a class="lightbox" href="../../uploads/default/original/1X/e5838358f47daf870f0dd2247ee4df390e46a9ab.png" data-download-href="https://forum.mantidproject.org/uploads/default/e5838358f47daf870f0dd2247ee4df390e46a9ab" title="image"><img src="../../uploads/default/original/1X/e5838358f47daf870f0dd2247ee4df390e46a9ab.png" alt="image" data-base62-sha1="wKn6Aealw49tDEEZumJMQvW1nLR" width="690" height="342" data-small-upload="https://forum.mantidproject.org/uploads/default/optimized/1X/e5838358f47daf870f0dd2247ee4df390e46a9ab_2_10x10.png"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1920×954 63.9 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div>  I used Mslice and tranfer data to 2theta~Energy, and then I cut data around 0meV. Finally, I got picture this picture. It is like data from X-ray in which there are some peaks at specific angle. <strong>However,I do not kown how to get UB from this picture.</strong>  <strong>Can Mantid identify these peaks by some ways?</strong></p>
+<p>Looking forward to your reply. Thanks.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DavyLi'><span itemprop='name'>DavyLi</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-12-24T02:23:34Z' class='post-time'>
+                    December 24, 2020,  2:23am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-12-24T02:23:34Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Is there someone who can help me <img src="../../images/emoji/twitter/hugs.png%3Fv=9" title=":hugs:" class="emoji" alt=":hugs:">It confuse me for a long time. <img src="../../images/emoji/twitter/zipper_mouth_face.png%3Fv=9" title=":zipper_mouth_face:" class="emoji" alt=":zipper_mouth_face:">Thanks</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/RichardWaiteSTFC'><span itemprop='name'>RichardWaiteSTFC</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-01-04T10:41:06Z' class='post-time'>
+                    January 4, 2021, 10:41am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-01-04T10:41:06Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Sorry for the delay over the Christmas period. Your first screenshot shows the raw data. I suggest looking at the data in `instrument view’ - here is a link to a tutorial on using instrument view.<br>
+<a href="https://docs.mantidproject.org/nightly/tutorials/mantid_basic_course/connecting_data_to_instruments/index.html#connecting-data-to-instruments" class="onebox" target="_blank" rel="noopener nofollow ugc">https://docs.mantidproject.org/nightly/tutorials/mantid_basic_course/connecting_data_to_instruments/index.html#connecting-data-to-instruments</a><br>
+Viewing the data like this it is possible to add the location of Bragg peaks on the detector and from there make a UB (see my previous messages). Perhaps we could arrange a video chat where we can share screens?</p>
+<p>If you are still stuck you might ask your local contact on ARCS, presumably this is something that is done quite often?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

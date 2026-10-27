@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Updates for Week 33 of 2019 - Developer - Mantid Help Forum</title>
+    <meta name="description" content="NeXus style geometry support for JSON
+
+SpectrumInfo and DetectorInfo can calculate the azimuthal angle
+
+
+Detailed Merges for Aug 12 to 18, 2019
+on github 
+
+
+PR26489 - Fix ILLDetectorEfficiencyCorUser from being skipped &amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="561.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Updates for Week 33 of 2019&#39;" href="https://forum.mantidproject.org/t/updates-for-week-33-of-2019/561.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/updates-for-week-33-of-2019/561" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/updates-for-week-33-of-2019/561" />
+<meta property="og:title" content="Updates for Week 33 of 2019" />
+<meta name="twitter:title" content="Updates for Week 33 of 2019" />
+<meta property="og:description" content="NeXus style geometry support for JSON  SpectrumInfo and DetectorInfo can calculate the azimuthal angle   Detailed Merges for Aug 12 to 18, 2019 on github    PR26489 - Fix ILLDetectorEfficiencyCorUser from being skipped on system test package builds  PR26491 - JSON Geometry Parser for Nexus-style Geometry  PR26501 - Trivially Citable Citations: Base Class  PR26510 - Add main window tests for reflectometry GUI  PR26518 - Add unit tests for merging rows into the reflectometry GUI  PR26548 - Add a ..." />
+<meta name="twitter:description" content="NeXus style geometry support for JSON  SpectrumInfo and DetectorInfo can calculate the azimuthal angle   Detailed Merges for Aug 12 to 18, 2019 on github    PR26489 - Fix ILLDetectorEfficiencyCorUser from being skipped on system test package builds  PR26491 - JSON Geometry Parser for Nexus-style Geometry  PR26501 - Trivially Citable Citations: Base Class  PR26510 - Add main window tests for reflectometry GUI  PR26518 - Add unit tests for merging rows into the reflectometry GUI  PR26548 - Add a ..." />
+<meta property="og:article:section" content="News" />
+<meta property="og:article:section:color" content="0E76BD" />
+<meta property="og:article:section" content="Developer" />
+<meta property="og:article:section:color" content="AB9364" />
+<meta property="article:published_time" content="2019-08-21T13:27:14+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="561.html">Updates for Week 33 of 2019</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/news/dev-news/15.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0E76BD'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>News</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/news/dev-news/15.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #AB9364'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Developer</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Updates for Week 33 of 2019'>
+      <link itemprop='url' href='561.html'>
+      <meta itemprop='datePublished' content='2019-08-21T13:27:14Z'>
+        <meta itemprop='articleSection' content='Developer'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/peterfpeterson'><span itemprop='name'>peterfpeterson</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="561.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2019-08-21T13:27:14Z' class='post-time'>
+                    August 21, 2019,  1:27pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-08-21T13:27:14Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <ul>
+<li>NeXus style geometry support for JSON</li>
+<li>
+<code>SpectrumInfo</code> and <code>DetectorInfo</code> can calculate the azimuthal angle</li>
+</ul>
+<h2>
+<a name="detailed-merges-for-aug-12-to-18-2019-1" class="anchor" href="561.html#detailed-merges-for-aug-12-to-18-2019-1"></a>Detailed Merges for Aug 12 to 18, 2019</h2>
+<p><a href="https://github.com/mantidproject/mantid/pulls?q=is%3Apr+merged%3A2019-08-13..2019-08-18">on github</a></p>
+<ul>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/26489">PR26489</a> - Fix ILLDetectorEfficiencyCorUser from being skipped on system test package builds</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/26491">PR26491</a> - JSON Geometry Parser for Nexus-style Geometry</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/26501">PR26501</a> - Trivially Citable Citations: Base Class</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/26510">PR26510</a> - Add main window tests for reflectometry GUI</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/26518">PR26518</a> - Add unit tests for merging rows into the reflectometry GUI</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/26548">PR26548</a> - Add a namespace for the ISISReflectometry GUI</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/26561">PR26561</a> - Elemental Analysis color function now returns same color for same element</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/26565">PR26565</a> - Workbench: make closing the save and overwrite dialog behave correctly</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/26566">PR26566</a> - New method to get azimuthal angle</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/26567">PR26567</a> - added support for lambda on two mode (no ticket)</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/26579">PR26579</a> - Sample Transmission Calculator no longer accepts negative wavelength values</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/26615">PR26615</a> - Elemental analysis plot correct lines when changing peak data file</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/26619">PR26619</a> - Fix issue with indexing peaks in HB3A interface.</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/26622">PR26622</a> - <a href="https://docs.mantidproject.org/nightly/algorithms/EQSANSCorrectFrame-v1.html">EQSANSCorrectFrame</a>: Use either path to individual pixel or to the center of the detector</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/26623">PR26623</a> - Workbench fixing table validation</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/26626">PR26626</a> - Delete the documentation for LatticeErrors function</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/26634">PR26634</a> - Update Indirect Output Plotting Documentations</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/26645">PR26645</a> - JSON Instrument Builder</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/26651">PR26651</a> - Tests for FDA</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

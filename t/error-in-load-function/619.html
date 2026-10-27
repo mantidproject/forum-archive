@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Error in Load function - Python - Mantid Help Forum</title>
+    <meta name="description" content="Hello, I am trying to loop through and collect data from some older ISIS instrument run files. When I try and loop through the raw files for HRPD cycle 98_0 I get this error 
+Error in execution of algorithm LoadRaw: 
+byt&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="619.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Error in Load function&#39;" href="https://forum.mantidproject.org/t/error-in-load-function/619.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/error-in-load-function/619" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/error-in-load-function/619" />
+<meta property="og:title" content="Error in Load function" />
+<meta name="twitter:title" content="Error in Load function" />
+<meta property="og:description" content="Hello, I am trying to loop through and collect data from some older ISIS instrument run files. When I try and loop through the raw files for HRPD cycle 98_0 I get this error  Error in execution of algorithm LoadRaw:  byte rel comp error: nin &lt;= 0  Error in execution of algorithm Load:  byte rel comp error: nin &lt;= 0  I use a try/except block to skip over files that don’t load properly but after a while of getting the above error python crashes. Does anyone know what causes this error? Is there an..." />
+<meta name="twitter:description" content="Hello, I am trying to loop through and collect data from some older ISIS instrument run files. When I try and loop through the raw files for HRPD cycle 98_0 I get this error  Error in execution of algorithm LoadRaw:  byte rel comp error: nin &lt;= 0  Error in execution of algorithm Load:  byte rel comp error: nin &lt;= 0  I use a try/except block to skip over files that don’t load properly but after a while of getting the above error python crashes. Does anyone know what causes this error? Is there an..." />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="og:article:section" content="Python" />
+<meta property="og:article:section:color" content="9EB83B" />
+<meta property="article:published_time" content="2019-12-16T15:33:13+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="619.html">Error in Load function</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #9EB83B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Python</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Error in Load function'>
+      <link itemprop='url' href='619.html'>
+      <meta itemprop='datePublished' content='2019-12-16T15:33:13Z'>
+        <meta itemprop='articleSection' content='Python'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/KhalilPierre'><span itemprop='name'>KhalilPierre</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="619.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2019-12-16T15:33:13Z' class='post-time'>
+                    December 16, 2019,  3:33pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-12-16T15:33:13Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello, I am trying to loop through and collect data from some older ISIS instrument run files. When I try and loop through the raw files for HRPD cycle 98_0 I get this error<br>
+Error in execution of algorithm LoadRaw:<br>
+byte rel comp error: nin &lt;= 0<br>
+Error in execution of algorithm Load:<br>
+byte rel comp error: nin &lt;= 0<br>
+I use a try/except block to skip over files that don’t load properly but after a while of getting the above error python crashes. Does anyone know what causes this error? Is there anyway I could check the files before I try loading them?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-12-19T11:00:09Z' class='post-time'>
+                    December 19, 2019, 11:00am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-12-19T11:00:09Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi,<br>
+I’m not familiar with this error. Do you only get it after having loaded in a certain number of files or everytime? If it’s everytime then you could check if this error comes up just loading one file (from script or the GUI).<br>
+Can I ask what information you are looking to extract? It seems like you’re trying to Load in every file in one cycle! That is a lot. Is it possible that something like Journalviewer would be more approriate for the job? I know this is an Old Cycle so not sure if that’s possible.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-12-19T11:16:25Z' class='post-time'>
+                    December 19, 2019, 11:16am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-12-19T11:16:25Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>To Load in a sensible number of files you could use something like this: I looked up the run numbers in this cycle (69-16446). As long as “Search Data Archive” is set to all in Manage User Directories then this should work!</p>
+<pre><code>import numpy as np
+cycle98 = np.arange(69,101) #Run numbers in cycle 98_0, really should end at 16446
+print cycle98
+for index, value in enumerate(cycle98):
+    filename = "HRP{0}.RAW".format(cycle98[index])
+    WSname = "HRP{0}".format(cycle98[index])
+    print filename
+    try:
+        Load(filename, OutputWorkspace = WSname)
+        print "Complete"
+    except: 
+        print "File Not Found"</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/KhalilPierre'><span itemprop='name'>KhalilPierre</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-12-19T14:57:27Z' class='post-time'>
+                    December 19, 2019,  2:57pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-12-19T14:57:27Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am trying to get the normalised integrated count for every cycle for every instrument in TS1 as well as some other parameters. I have been able to get the data from nearly every instrument but am running into some problems with ALF, SURF and HRPD.<br>
+The code you showed is essentially what I am using to load the files except I am using glob to get the full paths instead and I am clearing all mantid workspaces after every loop.</p>
+<p>For HRPD I always encounter the error written above for a large number of files in the directory before mantid workbench crashes. Initially it was crashing at file 2939 so I changed my script to skip this file but then mantid workbench crashed at file 2940. Maybe whatever the error is, it is building up and then crashing. I dunno. I tried loading the file 2940 and those before it in mantid plot and got the same error as before but it didnt cause mantid plot to crash.</p>
+<p>For surf file 76634 causes mantid workbench and Plot to crash and I cant figure out why their is no warning it just crashes every time I try and load it.</p>
+<p>For ALF I can’t remember what the exact error was but mantid wasn’t crashing at the same file each time I ran the script but was crashing around the same area, cycle 9.2. It always caused my computer to slow down massively before the crash. I looked at the raw file sizes in cycle 9.2 and there wasnt anything out of the ordinary. I also tried loading the nxs files instead of the RAW files but that didnt work it still slowed down and then crashed.</p>
+<p>Sorry I know this is a lot but if you can help with any of the crashes it would be helpful.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-12-19T15:43:39Z' class='post-time'>
+                    December 19, 2019,  3:43pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-12-19T15:43:39Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi, Can you send me your script, either on here or to <a href="mailto:daniel.murphy@stfc.ac.uk">daniel.murphy@stfc.ac.uk</a></p>
+<p>I’ve been trying to play around and make a script that works for you but I may as well be doing this on your actual script!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-12-19T16:24:36Z' class='post-time'>
+                    December 19, 2019,  4:24pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-12-19T16:24:36Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>My attempt to recreate your script is:</p>
+<pre><code>from mantid.simpleapi import *
+import numpy as np
+cycle98 = np.arange(2938,3000) #Run numbers in cycle 98_0, really should end at 16446
+print cycle98
+Count = 0
+for index, value in enumerate(cycle98):
+    filename = "HRP{0}.RAW".format(cycle98[index])
+    WSname = "HRP{0}".format(cycle98[index])
+    print filename
+    try:
+        ws = Load(filename, OutputWorkspace = WSname)
+        ws = Integration(ws)
+        ws = SumSpectra(ws)
+        Count += ws.readY(0)[0]
+        DeleteWorkspace(ws)
+        DeleteWorkspace(WSname)
+        print "Count = ", Count
+    except: 
+        print "File Not Found"
+</code></pre>
+<p>I’ve not found it crashing on relatively short runs but I’ll try it overnight and see what happens!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

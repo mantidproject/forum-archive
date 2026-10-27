@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Error: &#39;Bad Quality package&#39; while installation in Ubuntu 14.04 - Installation - Mantid Help Forum</title>
+    <meta name="description" content="I have an old package of mantid (v. 3.9.0), I am having trouble to update this to the latest version. While trying to update the mantid package via apt, I get the following error message when I am trying the wget 
+
+wget &amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="373.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Error: &#39;Bad Quality package&#39; while installation in Ubuntu 14.04&#39;" href="https://forum.mantidproject.org/t/error-bad-quality-package-while-installation-in-ubuntu-14-04/373.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/optimized/1X/d0bce2fbd11065927bec3dd82cfb3a8f6e52e9a2_2_1024x640.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/optimized/1X/d0bce2fbd11065927bec3dd82cfb3a8f6e52e9a2_2_1024x640.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/error-bad-quality-package-while-installation-in-ubuntu-14-04/373" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/error-bad-quality-package-while-installation-in-ubuntu-14-04/373" />
+<meta property="og:title" content="Error: &#39;Bad Quality package&#39; while installation in Ubuntu 14.04" />
+<meta name="twitter:title" content="Error: &#39;Bad Quality package&#39; while installation in Ubuntu 14.04" />
+<meta property="og:description" content="I have an old package of mantid (v. 3.9.0), I am having trouble to update this to the latest version. While trying to update the mantid package via apt, I get the following error message when I am trying the wget   wget --proxy-user=harishs --proxy-password=fail+Word+92 -O - http://apt.isis.rl.ac.uk/2E10C193726B7213.asc | sudo apt-key add -  –2018-03-16 10:54:39--  http://apt.isis.rl.ac.uk/2E10C193726B7213.asc  Connecting to 192.168.2.16:8080… connected.  Proxy request sent, awaiting response… 4..." />
+<meta name="twitter:description" content="I have an old package of mantid (v. 3.9.0), I am having trouble to update this to the latest version. While trying to update the mantid package via apt, I get the following error message when I am trying the wget   wget --proxy-user=harishs --proxy-password=fail+Word+92 -O - http://apt.isis.rl.ac.uk/2E10C193726B7213.asc | sudo apt-key add -  –2018-03-16 10:54:39--  http://apt.isis.rl.ac.uk/2E10C193726B7213.asc  Connecting to 192.168.2.16:8080… connected.  Proxy request sent, awaiting response… 4..." />
+<meta property="og:article:section" content="Installation" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="article:published_time" content="2018-03-16T05:37:25+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="373.html">Error: &#39;Bad Quality package&#39; while installation in Ubuntu 14.04</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/installation/7.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Installation</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Error: &#39;Bad Quality package&#39; while installation in Ubuntu 14.04'>
+      <link itemprop='url' href='373.html'>
+      <meta itemprop='datePublished' content='2018-03-16T05:37:25Z'>
+        <meta itemprop='articleSection' content='Installation'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Harish_Srinivasan'><span itemprop='name'>Harish_Srinivasan</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="373.html">
+
+                <link itemprop="image" href="../../uploads/default/original/1X/d0bce2fbd11065927bec3dd82cfb3a8f6e52e9a2.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2018-03-16T05:37:25Z' class='post-time'>
+                    March 16, 2018,  5:37am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-16T05:37:25Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I have an old package of mantid (v. 3.9.0), I am having trouble to update this to the latest version. While trying to update the mantid package via apt, I get the following error message when I am trying the wget</p>
+<blockquote>
+<p>wget --proxy-user=harishs --proxy-password=fail+Word+92 -O - <a href="http://apt.isis.rl.ac.uk/2E10C193726B7213.asc" rel="noopener nofollow ugc">http://apt.isis.rl.ac.uk/2E10C193726B7213.asc</a> | sudo apt-key add -<br>
+–2018-03-16 10:54:39--  <a href="http://apt.isis.rl.ac.uk/2E10C193726B7213.asc" rel="noopener nofollow ugc">http://apt.isis.rl.ac.uk/2E10C193726B7213.asc</a><br>
+Connecting to 192.168.2.16:8080… connected.<br>
+Proxy request sent, awaiting response… 403 Forbidden<br>
+2018-03-16 10:54:39 ERROR 403: Forbidden.</p>
+<p>gpg: no valid OpenPGP data found.</p>
+</blockquote>
+<p>Another method I tried was to download the Debian file and install it through Software Centre, but it shows an error message saying ‘Bad Quality package’ error. Although, I can install the ‘.deb’ file by running dpkg, I am concerned that it might break some functionalities in my OS.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="../../uploads/default/original/1X/d0bce2fbd11065927bec3dd82cfb3a8f6e52e9a2.png" data-download-href="https://forum.mantidproject.org/uploads/default/d0bce2fbd11065927bec3dd82cfb3a8f6e52e9a2" title="mantid_upgrade_error"><img src="../../uploads/default/optimized/1X/d0bce2fbd11065927bec3dd82cfb3a8f6e52e9a2_2_690x431.png" alt="mantid_upgrade_error" data-base62-sha1="tMA06k5tWVDz4DEZzhyBl8kf2xk" width="690" height="431" srcset="../../uploads/default/optimized/1X/d0bce2fbd11065927bec3dd82cfb3a8f6e52e9a2_2_690x431.png, ../../uploads/default/optimized/1X/d0bce2fbd11065927bec3dd82cfb3a8f6e52e9a2_2_1035x646.png 1.5x, ../../uploads/default/optimized/1X/d0bce2fbd11065927bec3dd82cfb3a8f6e52e9a2_2_1380x862.png 2x" data-dominant-color="E0DDDE"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">mantid_upgrade_error</span><span class="informations">1440×900 182 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/martyngigg'><span itemprop='name'>martyngigg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-16T09:30:33Z' class='post-time'>
+                    March 16, 2018,  9:30am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-16T09:30:33Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi,</p>
+<p>Sorry your having issues with this.</p>
+<aside class="quote no-group quote-modified" data-username="Harish_Srinivasan" data-post="1" data-topic="373" data-full="true">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="../../letter_avatar_proxy/v4/letter/h/f17d59/48.png" class="avatar"> Harish_Srinivasan:</div>
+<blockquote>
+<p>I have an old package of mantid (v. 3.9.0), I am having trouble to update this to the latest version. While trying to update the mantid package via apt, I get the following error message when I am trying the wget</p>
+<blockquote>
+<p>wget --proxy-user=harishs --proxy-password=***-O - <a href="http://apt.isis.rl.ac.uk/2E10C193726B7213.asc">http://apt.isis.rl.ac.uk/2E10C193726B7213.asc</a> | sudo apt-key add -<br>
+–2018-03-16 10:54:39--  <a href="http://apt.isis.rl.ac.uk/2E10C193726B7213.asc">http://apt.isis.rl.ac.uk/2E10C193726B7213.asc</a><br>
+Connecting to 192.168.2.16:8080… connected.<br>
+Proxy request sent, awaiting response… 403 Forbidden<br>
+2018-03-16 10:54:39 ERROR 403: Forbidden.</p>
+<p>gpg: no valid OpenPGP data found.</p>
+</blockquote>
+</blockquote>
+</aside>
+<p>From the error above it suggests that the wget failed because of the proxy server and could not provide the data to <code>apt-key-add</code>. What does <code>wget --quiet --proxy-user=harishs --proxy-password=*** -O - http://apt.isis.rl.ac.uk/2E10C193726B7213.asc</code> give you. It should give:</p>
+<pre><code class="lang-auto">-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mQENBFmBjZgBCACt2zmEYlk89D6s1w3MsQgQyuIfeyJo73C32qnySpwQlPtNoM0B
+lewZW2lSGhdjN2UoLw1d9k8VjIvsbqApTpzN6g1MamY8XzamNdNw4uZMENbmBYjp
+QMD7o4MWtO6iPHuF7nNx9oGCnziM4QQRRvNl9w13Lhs/9ZuDawjIVqbQgwWipPRJ
+eX+nCCzeCsr/1XnPS6kvn0QZmDurS3lQ43UsLOR6E9WUXC/dEnOeCZXSb6joEk4C
+XUl6qLC/F6zsh+z0Y4/nziZxgxDKBDnnNgaia8m6H0WPqZR/8k6NrCkHhr82+l1u
+f1yIrpOW1jBVmufs1QTcNEKC4jbG8VaJ7xsNABEBAAG0Lk1hbnRpZCBQcm9qZWN0
+IDxtYW50aWQtaGVscEBtYW50aWRwcm9qZWN0Lm9yZz6JATgEEwECACIFAlmBjZgC
+GwMGCwkIBwMCBhUIAgkKCwQWAgMBAh4BAheAAAoJEC4QwZNya3ITsboIAJ0ArfVi
+ZhRhhufHAckHLcTIRLFUb5RMeDml1/BatpTLFTUE90bykKdy80522uAv39ul4qzL
+hB++y4Phl+r/m9xWwYtO0/jb7ILCntgi6MglGg3dl0tGnxqCOFbgznXwT2P1/w8V
+SC0vk9bUsSN0zHs9WvvxOCEzajd8A7gjm087nA2TJQjQQ3Ch9nffcpRTNw0Trli/
+URhegx/of5nJ/b+pgzV5xulm2TXK+EmWt32T2JdTaOKUpwtCtbxcKVkzfJF6H9Gz
+6cxbysAbawkyEBechMnV5lgHmFBnydxcMv+g20dx6HyHafEE/MUjgWihMU3NOF5G
+dbwXJ9WgITWbmXu5AQ0EWYGNmAEIAMPF7zoNDBB6SbBeSt52n254mhPn2ClWdvda
+Z339Uuu19ZbZImqKHSvUZpXNVrsYT9VO8aWvE5TT5zAJzEXBvllcT33wiVq6X/3s
+GLBIfbDP2qwC9sCbPtcXIB0JFxsLq40b7L3NY/SPWYvQuEOOsDUYeRtY3/rOfhS3
+Q04aeg6SEpf2z6sQCkcWWFrlrzFbeDTkdVhuwS3lAnZil8fr/2q6YZQ2HkCHtjMY
+QiloiGOidcqod/ORJpWDu6QdZtdr+b0QykI6TyvIxA/oyOGEvufbOIUiUB5TGF0c
+2Xiww4rCliE9rVXA3mZnHeWQn/eYq8cOXjgG9Bmm5Ak6MlrOhXcAEQEAAYkBHwQY
+AQIACQUCWYGNmAIbDAAKCRAuEMGTcmtyE54iB/9RizONeQzXCoKh0gwi1XpT09Gt
+qLZClignHaHWYLXD2qwljdNpI6ooZFJbGzWyB0364HDP76F+vDBA0Zuj/1GPSq/u
+9BWkAa7lhyTVV7qLIE7SFhaf4TSwayKrXJHUytIzxQJqgufC49xo7ogmMlRyZy75
+RI6Vwl8ZSsyXfRllK/McyGz6qmXFg4CfNSKeyeBurQjNSt2GQs7E7ePkPMffGifd
+O11oAZKBpcxKf+iEjNUjPaxzHa61Ej9WodI/Y2YWZsCc7VTPebf5hN4ehh+lAxdC
+L+Dkj62ojuczz6kw2S6d3OrZ9E7GkTrkWf+BS2Uo8TDUbW/iOvVhS1aftzH5
+=YsFZ
+-----END PGP PUBLIC KEY BLOCK-----
+</code></pre>
+<p>If you can’t get the <code>wget</code> coomand to work then you can paste the above content into  a file, <code>key.asc</code>, and run <code>sudo apt-add-key key.asc</code>.</p>
+<br>
+<aside class="quote no-group quote-modified" data-username="Harish_Srinivasan" data-post="1" data-topic="373" data-full="true">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="../../letter_avatar_proxy/v4/letter/h/f17d59/48.png" class="avatar"> Harish_Srinivasan:</div>
+<blockquote>
+<p>Another method I tried was to download the Debian file and install it through Software Centre, but it shows an error message saying ‘Bad Quality package’ error. Although, I can install the ‘.deb’ file by running dpkg, I am concerned that it might break some functionalities in my OS.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="../../uploads/default/original/1X/d0bce2fbd11065927bec3dd82cfb3a8f6e52e9a2.png" data-download-href="https://forum.mantidproject.org/uploads/default/d0bce2fbd11065927bec3dd82cfb3a8f6e52e9a2" title="mantid_upgrade_error"><img src="../../uploads/default/optimized/1X/d0bce2fbd11065927bec3dd82cfb3a8f6e52e9a2_2_690x431.png" alt="mantid_upgrade_error" data-base62-sha1="tMA06k5tWVDz4DEZzhyBl8kf2xk" width="690" height="431" srcset="../../uploads/default/optimized/1X/d0bce2fbd11065927bec3dd82cfb3a8f6e52e9a2_2_690x431.png, ../../uploads/default/optimized/1X/d0bce2fbd11065927bec3dd82cfb3a8f6e52e9a2_2_1035x646.png 1.5x, ../../uploads/default/optimized/1X/d0bce2fbd11065927bec3dd82cfb3a8f6e52e9a2_2_1380x862.png 2x" data-dominant-color="E0DDDE"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">mantid_upgrade_error</span><span class="informations">1440×900 182 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+</blockquote>
+</aside>
+<p>The tool we use to create our debian packages unfortunately has some known issues with older versions so these warnings are expected but can be ignored safely.</p>
+<p>Martyn</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Harish_Srinivasan'><span itemprop='name'>Harish_Srinivasan</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-16T09:33:52Z' class='post-time'>
+                    March 16, 2018,  9:33am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-16T09:43:22Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="martyngigg" data-post="2" data-topic="373">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="../../user_avatar/forum.mantidproject.org/martyngigg/48/18_2.png" class="avatar"> martyngigg:</div>
+<blockquote>
+<p>From the error above it suggests that the wget failed because of the proxy server and could not provide the data to apt-key-add. What does wget --quiet --proxy-user=harishs --proxy-password=*** -O - <a href="http://apt.isis.rl.ac.uk/2E10C193726B7213.asc" rel="noopener nofollow ugc">http://apt.isis.rl.ac.uk/2E10C193726B7213.asc</a> give you. It should give:</p>
+</blockquote>
+</aside>
+<p>This shows no messages, does it mean the key is added? Nevertheless, while trying to upgrade it with apt-get fails once again:</p>
+<pre><code>&gt; harish@harish-desktop:~$ sudo apt-get install mantid
+&gt; Reading package lists... Done
+&gt; Building dependency tree       
+&gt; Reading state information... Done
+&gt; The following extra packages will be installed:
+&gt;   librdkafka++1 librdkafka1
+&gt; The following NEW packages will be installed:
+&gt;   librdkafka++1 librdkafka1
+&gt; The following packages will be upgraded:
+&gt;   mantid
+&gt; 1 upgraded, 2 newly installed, 0 to remove and 5 not upgraded.
+&gt; Need to get 230 MB/230 MB of archives.
+&gt; After this operation, 14.5 MB of additional disk space will be used.
+&gt; Do you want to continue? [Y/n] y
+&gt; WARNING: The following packages cannot be authenticated!
+&gt;   mantid
+&gt; Install these packages without verification? [y/N] y
+&gt; Err httpapt.isis.rl.ac.uk/ trusty/main mantid amd64 3.11.0
+&gt;   403  Forbidden
+&gt; W: Duplicate sources.list entry httpapt.isis.rl.ac.uk/ trusty/main amd64 Packages (/var/lib/apt/lists/apt.isis.rl.ac.uk_dists_trusty_main_binary-amd64_Packages)
+&gt; W: You may want to run apt-get update to correct these problems
+&gt; E: Failed to fetch httpapt.isis.rl.ac.uk/pool/main/m/mantid/mantid_3.11.0-0ubuntu1~trusty1_amd64.deb  403  Forbidden
+&gt; 
+&gt; E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+</code></pre>
+<p>PS: I removed :// after every http, since I can’t post links being a new user. I also tried adding the key manually and tried updating and installing, still doesn’t work, it pops up the same error.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/martyngigg'><span itemprop='name'>martyngigg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-16T10:23:33Z' class='post-time'>
+                    March 16, 2018, 10:23am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-16T10:23:33Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group quote-modified" data-username="Harish_Srinivasan" data-post="3" data-topic="373" data-full="true">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="../../letter_avatar_proxy/v4/letter/h/f17d59/48.png" class="avatar"> Harish_Srinivasan:</div>
+<blockquote>
+<aside class="quote no-group" data-username="martyngigg" data-post="2" data-topic="373">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="../../user_avatar/forum.mantidproject.org/martyngigg/48/18_2.png" class="avatar"> martyngigg:</div>
+<blockquote>
+<p>From the error above it suggests that the wget failed because of the proxy server and could not provide the data to apt-key-add. What does wget --quiet --proxy-user=harishs --proxy-password=*** -O - <a href="http://apt.isis.rl.ac.uk/2E10C193726B7213.asc">http://apt.isis.rl.ac.uk/2E10C193726B7213.asc</a> give you. It should give:</p>
+</blockquote>
+</aside>
+<p>This shows no messages, does it mean the key is added? Nevertheless, while trying to upgrade it with apt-get fails once again:</p>
+</blockquote>
+</aside>
+<p>I would have expected that to output the block of text I posted above and not nothing. It looks like you have a proxy that might be causing an issue for some reason. Could you try running <code> curl -v -U user:pass -x proxy:port --url http://apt.isis.rl.ac.uk/2E10C193726B7213.asc</code> where you relace <code>user:pass</code> with your proxy login and <code>proxy:port</code> with your proxy address and port and see what happens?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Harish_Srinivasan'><span itemprop='name'>Harish_Srinivasan</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-16T10:26:58Z' class='post-time'>
+                    March 16, 2018, 10:26am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-16T10:26:58Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>But even adding the key manually (as you had suggest right below that) and trying to install doesn’t work</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/martyngigg'><span itemprop='name'>martyngigg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-16T10:29:54Z' class='post-time'>
+                    March 16, 2018, 10:29am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-16T10:29:54Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I don’t think the key has been added given the warning from <code>apt install</code>. I was hoping to get more verbose detail from that last curl command on the error it is running into.</p>
+<p>The other option here is to go with the graphical based installer and ignore the warnings as it is installing the same package.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Harish_Srinivasan'><span itemprop='name'>Harish_Srinivasan</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-16T10:35:49Z' class='post-time'>
+                    March 16, 2018, 10:35am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-16T10:35:49Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <pre><code>* Hostname was NOT found in DNS cache
+*   Trying 192.168.2.16...
+* Connected to 192.168.2.16 (192.168.2.16) port 8080 (#0)
+* Proxy auth using Basic with user 'harishs'
+&gt; GET http://apt.isis.rl.ac.uk/2E10C193726B7213.asc HTTP/1.1
+&gt; Proxy-Authorization: Basic aGFyaXNoczpmYWlsK1dvcmQrOTI=
+&gt; User-Agent: curl/7.35.0
+&gt; Host: apt.isis.rl.ac.uk
+&gt; Accept: */*
+&gt; Proxy-Connection: Keep-Alive
+&gt; 
+&lt; HTTP/1.1 403 Forbidden
+* Server squid is not blacklisted
+&lt; Server: squid
+&lt; Mime-Version: 1.0
+&lt; Date: Fri, 16 Mar 2018 10:20:30 GMT
+&lt; Content-Type: text/html
+&lt; Content-Length: 3275
+&lt; X-Squid-Error: ERR_ACCESS_DENIED 0
+&lt; X-Cache: MISS from none
+&lt; Via: 1.1 none (squid)
+&lt; Connection: keep-alive
+&lt; 
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+&lt;title&gt;ERROR: The requested URL could not be retrieved&lt;/title&gt;
+&lt;style type="text/css"&gt;&lt;!--
+ /*
+ Stylesheet for Squid Error pages
+ Adapted from design by Free CSS Templates
+ http://www.freecsstemplates.org
+ Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+/* Page basics */
+* {
+	font-family: verdana, sans-serif;
+}
+
+html body {
+	margin: 0;
+	padding: 0;
+	background: #efefef;
+	font-size: 12px;
+	color: #1e1e1e;
+}
+
+/* Page displayed title area */
+#titles {
+	margin-left: 15px;
+	padding: 10px;
+	padding-left: 100px;
+	background: url('http://www.squid-cache.org/Artwork/SN.png') no-repeat left;
+}
+
+/* initial title */
+#titles h1 {
+	color: #000000;
+}
+#titles h2 {
+	color: #000000;
+}
+
+/* special event: FTP success page titles */
+#titles ftpsuccess {
+	background-color:#00ff00;
+	width:100%;
+}
+
+/* Page displayed body content area */
+#content {
+	padding: 10px;
+	background: #ffffff;
+}
+
+/* General text */
+p {
+}
+
+/* error brief description */
+#error p {
+}
+
+/* some data which may have caused the problem */
+#data {
+}
+
+/* the error message received from the system or other software */
+#sysmsg {
+}
+
+pre {
+    font-family:sans-serif;
+}
+
+/* special event: FTP / Gopher directory listing */
+#dirmsg {
+    font-family: courier;
+    color: black;
+    font-size: 10pt;
+}
+#dirlisting {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+#dirlisting tr.entry td.icon,td.filename,td.size,td.date {
+    border-bottom: groove;
+}
+#dirlisting td.size {
+    width: 50px;
+    text-align: right;
+    padding-right: 5px;
+}
+
+/* horizontal lines */
+hr {
+	margin: 0;
+}
+
+/* page displayed footer area */
+#footer {
+	font-size: 9px;
+	padding-left: 10px;
+}
+
+
+body
+:lang(fa) { direction: rtl; font-size: 100%; font-family: Tahoma, Roya, sans-serif; float: right; }
+:lang(he) { direction: rtl; }
+ --&gt;&lt;/style&gt;
+&lt;/head&gt;&lt;body id=ERR_ACCESS_DENIED&gt;
+&lt;div id="titles"&gt;
+&lt;h1&gt;ERROR&lt;/h1&gt;
+&lt;h2&gt;The requested URL could not be retrieved&lt;/h2&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div id="content"&gt;
+&lt;p&gt;The following error was encountered while trying to retrieve the URL: &lt;a href="http://apt.isis.rl.ac.uk/2E10C193726B7213.asc"&gt;http://apt.isis.rl.ac.uk/2E10C193726B7213.asc&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote id="error"&gt;
+&lt;p&gt;&lt;b&gt;Access Denied.&lt;/b&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Access control configuration prevents your request from being allowed at this time. Please contact your service provider if you feel this is incorrect.&lt;/p&gt;
+
+&lt;p&gt;Your cache administrator is &lt;a href="mailto:webmaster?subject=CacheErrorInfo%20-%20ERR_ACCESS_DENIED&amp;amp;body=CacheHost%3A%20none%0D%0AErrPage%3A%20ERR_ACCESS_DENIED%0D%0AErr%3A%20%5Bnone%5D%0D%0ATimeStamp%3A%20Fri,%2016%20Mar%202018%2010%3A20%3A30%20GMT%0D%0A%0D%0AClientIP%3A%2031.44.3.60%0D%0A%0D%0AHTTP%20Request%3A%0D%0AGET%20%2F2E10C193726B7213.asc%20HTTP%2F1.1%0AProxy-Authorization%3A%20Basic%20aGFyaXNoczpmYWlsK1dvcmQrOTI%3D%0D%0AUser-Agent%3A%20curl%2F7.35.0%0D%0AHost%3A%20apt.isis.rl.ac.uk%0D%0AAccept%3A%20*%2F*%0D%0AProxy-Connection%3A%20Keep-Alive%0D%0A%0D%0A%0D%0A"&gt;webmaster&lt;/a&gt;.&lt;/p&gt;
+&lt;br&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;div id="footer"&gt;
+&lt;p&gt;Generated Fri, 16 Mar 2018 10:20:30 GMT by none (squid)&lt;/p&gt;
+&lt;!-- ERR_ACCESS_DENIED --&gt;
+&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;
+* Connection #0 to host 192.168.2.16 left intact
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/martyngigg'><span itemprop='name'>martyngigg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-16T10:43:47Z' class='post-time'>
+                    March 16, 2018, 10:43am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-16T10:43:47Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The error message at the bottom seems to suggest an access control problem by the service provider. I’ve tried this from RAL and someone from ILL has also tried without error. Would you be able to contact your network administrator as it looks like something is blocking it at your end?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Harish_Srinivasan'><span itemprop='name'>Harish_Srinivasan</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-16T11:48:13Z' class='post-time'>
+                    March 16, 2018, 11:48am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-16T11:48:13Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Ok, I will try to contact them and let you know. Thank you, meanwhile, Will it be fine if I install using the Debian file by ignoring the error messages?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/martyngigg'><span itemprop='name'>martyngigg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-16T12:18:42Z' class='post-time'>
+                    March 16, 2018, 12:18pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-16T12:18:42Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It will be fine to ignore the messages. That is what will happen if you install on the command line anyway.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

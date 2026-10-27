@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Calling Mantid from Python - Python - Mantid Help Forum</title>
+    <meta name="description" content="I am running OSX 10.10.5 and MantidPlot 3.4. I have python installed and I added the following path to the PYTHONPATH: 
+/Applications/MantidPlot.app/Contents/MacOS/
+
+When I try to import the Mantid module into python (2.&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="67.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Calling Mantid from Python&#39;" href="https://forum.mantidproject.org/t/calling-mantid-from-python/67.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/calling-mantid-from-python/67" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/calling-mantid-from-python/67" />
+<meta property="og:title" content="Calling Mantid from Python" />
+<meta name="twitter:title" content="Calling Mantid from Python" />
+<meta property="og:description" content="I am running OSX 10.10.5 and MantidPlot 3.4. I have python installed and I added the following path to the PYTHONPATH:  /Applications/MantidPlot.app/Contents/MacOS/  When I try to import the Mantid module into python (2.7.9) I get the following error:  &gt;&gt;&gt; from mantid.simpleapi import * Fatal Python error: PyThreadState_Get: no current thread Abort trap: 6  Then Python crashes.  Any idea what could be the problem?  Thanks,  Sándor" />
+<meta name="twitter:description" content="I am running OSX 10.10.5 and MantidPlot 3.4. I have python installed and I added the following path to the PYTHONPATH:  /Applications/MantidPlot.app/Contents/MacOS/  When I try to import the Mantid module into python (2.7.9) I get the following error:  &gt;&gt;&gt; from mantid.simpleapi import * Fatal Python error: PyThreadState_Get: no current thread Abort trap: 6  Then Python crashes.  Any idea what could be the problem?  Thanks,  Sándor" />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="og:article:section" content="Python" />
+<meta property="og:article:section:color" content="9EB83B" />
+<meta property="article:published_time" content="2015-10-05T07:58:36+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="67.html">Calling Mantid from Python</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #9EB83B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Python</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Calling Mantid from Python'>
+      <link itemprop='url' href='67.html'>
+      <meta itemprop='datePublished' content='2015-10-05T07:58:36Z'>
+        <meta itemprop='articleSection' content='Python'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/tothsa'><span itemprop='name'>tothsa</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="67.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2015-10-05T07:58:36Z' class='post-time'>
+                    October 5, 2015,  7:58am
+                  </time>
+                  <meta itemprop='dateModified' content='2015-10-05T07:58:36Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am running OSX 10.10.5 and MantidPlot 3.4. I have python installed and I added the following path to the PYTHONPATH:</p>
+<pre><code>/Applications/MantidPlot.app/Contents/MacOS/
+</code></pre>
+<p>When I try to import the Mantid module into python (2.7.9) I get the following error:</p>
+<pre><code>&gt;&gt;&gt; from mantid.simpleapi import *
+Fatal Python error: PyThreadState_Get: no current thread
+Abort trap: 6
+</code></pre>
+<p>Then Python crashes.<br>
+Any idea what could be the problem?</p>
+<p>Thanks,<br>
+Sándor</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/mythicalJon'><span itemprop='name'>mythicalJon</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2015-10-05T13:34:52Z' class='post-time'>
+                    October 5, 2015,  1:34pm
+                  </time>
+                  <meta itemprop='dateModified' content='2015-10-05T13:34:52Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Sandor<br>
+to import into ipython i use this method rather than appending the pythonpath</p>
+<p><strong>import sys</strong><br>
+<strong>sys.path.append(r’/Applications/MantidPlot.app/Contents/MacOS’)</strong><br>
+<strong>from mantid.simpleapi import</strong> *</p>
+<p>i then get the message:<br>
+<strong>FrameworkManager-[Notice] Welcome to Mantid 3.5.0</strong><br>
+<strong>FrameworkManager-[Notice] Please cite: <a href="http://dx.doi.org/10.1016/j.nima.2014.07.029" rel="noopener nofollow ugc">http://dx.doi.org/10.1016/j.nima.2014.07.029</a> and this release: <a href="http://dx.doi.org/10.5286/Software/Mantid3.5" rel="noopener nofollow ugc">http://dx.doi.org/10.5286/Software/Mantid3.5</a></strong><br>
+<strong>DownloadInstrument-[Notice] All instrument definitions up to date</strong></p>
+<p>let me know how this goes<br>
+all the best<br>
+Jon</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/tothsa'><span itemprop='name'>tothsa</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2015-10-05T13:57:04Z' class='post-time'>
+                    October 5, 2015,  1:57pm
+                  </time>
+                  <meta itemprop='dateModified' content='2015-10-05T13:57:04Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Dear Jon,</p>
+<p>Thank you for the quick answer! I get the same error message as before (after running your lines in python). Is there any debugging I could do to figure out what could be the problem? (the MantidPlot.app runs fine)</p>
+<p>Thanks,<br>
+Sandor</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/mythicalJon'><span itemprop='name'>mythicalJon</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2015-10-06T07:00:30Z' class='post-time'>
+                    October 6, 2015,  7:00am
+                  </time>
+                  <meta itemprop='dateModified' content='2015-10-06T07:00:30Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Sandor,<br>
+a couple of questions are you using the python 2.7 that is installed with osx and have you installed anything using brew or another mac package manager?<br>
+cheers<br>
+jon</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/tothsa'><span itemprop='name'>tothsa</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2015-10-06T07:30:52Z' class='post-time'>
+                    October 6, 2015,  7:30am
+                  </time>
+                  <meta itemprop='dateModified' content='2015-10-06T07:30:52Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I use python installed with brew, beside many other unrelated packages:</p>
+<pre><code>autoconf		hdf5			p7zip
+automake		hicolor-icon-theme	pango
+boost			icu4c			pixman
+boost-python		intltool		pkg-config
+brew-cask		jasper			poco147p1
+cabextract		jpeg			pyqt
+cairo			jsoncpp			python
+cmake			libffi			python3
+docbook			libgphoto2		qscintilla2
+fontconfig		libicns			qt
+freeimage		libmxml			qwt5
+freetype		libpng			qwtplot3d
+ftgl			libtiff			readline
+gd			libtool			sane-backends
+gdbm			libusb			sip
+gettext			libusb-compat		sqlite
+gl2ps			libxml2			szip
+glib			little-cms2		unrar
+gobject-introspection	makedepend		wine
+gperftools		muparser		winetricks
+gsl			nexusformat		xz
+harfbuzz		oce0p16p1
+hdf4			openssl
+</code></pre>
+<p>I also have a long list of python modules installed by pip:</p>
+<pre><code>alabaster (0.7.6)
+appnope (0.1.0)
+Babel (2.1.1)
+backports.ssl-match-hostname (3.4.0.2)
+BeautifulSoup (3.2.1)
+certifi (2015.9.6.2)
+decorator (4.0.4)
+docutils (0.12)
+funcsigs (0.4)
+functools32 (3.2.3.post2)
+gnureadline (6.3.3)
+ipykernel (4.0.3)
+ipython (4.0.0)
+ipython-genutils (0.1.0)
+ipywidgets (4.0.3)
+Jinja2 (2.8)
+jsonschema (2.5.1)
+jupyter (1.0.0)
+jupyter-client (4.0.0)
+jupyter-console (4.0.2)
+jupyter-core (4.0.6)
+MarkupSafe (0.23)
+matplotlib (1.4.3)
+mistune (0.7.1)
+mock (1.3.0)
+nbconvert (4.0.0)
+nbformat (4.0.0)
+nose (1.3.7)
+notebook (4.0.5)
+numpy (1.9.3)
+path.py (8.1.1)
+pbr (1.8.0)
+pexpect (3.3)
+phonopy (1.9.6.2)
+pickleshare (0.5)
+pip (7.1.2)
+psutil (3.2.2)
+ptyprocess (0.5)
+Pygments (2.0.2)
+pyparsing (2.0.3)
+python-dateutil (2.4.2)
+pytz (2015.6)
+PyYAML (3.11)
+pyzmq (14.7.0)
+qtconsole (4.0.1)
+scipy (0.16.0)
+setuptools (18.3.2)
+simplegeneric (0.8.1)
+six (1.9.0)
+snowballstemmer (1.2.0)
+Sphinx (1.3.1)
+sphinx-bootstrap-theme (0.4.7)
+sphinx-rtd-theme (0.1.9)
+terminado (0.5)
+tornado (4.2.1)
+traitlets (4.0.0)
+vboxapi (1.0)
+wheel (0.26.0)
+</code></pre>
+<p>Cheers,<br>
+Sandor</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/mythicalJon'><span itemprop='name'>mythicalJon</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2015-10-06T07:34:25Z' class='post-time'>
+                    October 6, 2015,  7:34am
+                  </time>
+                  <meta itemprop='dateModified' content='2015-10-06T07:34:25Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi<br>
+so it turned out that i had the same issue when running a python shell &amp; homebrew python 2.7 (normally i use ipython notebook linked to the osx system python2.7)<br>
+could you try importing the module using python at /usr/bin/python which points to the osx system python.</p>
+<p>with brew installed the python that gets picked up is /usr/local/Cellar/python which gets a sym link in /usr/local/bin.<br>
+if you could check that things work with the system python first I’ll ask people who use brew more than me what to do<br>
+cheers<br>
+jon</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/tothsa'><span itemprop='name'>tothsa</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2015-10-12T09:47:21Z' class='post-time'>
+                    October 12, 2015,  9:47am
+                  </time>
+                  <meta itemprop='dateModified' content='2015-10-12T09:47:21Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Dear Jon,</p>
+<p>thank you for the quick answer! Removing the brew python installation helped. Now I can import the mantid.simpleapi module.</p>
+<p>Best,<br>
+Sandor</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

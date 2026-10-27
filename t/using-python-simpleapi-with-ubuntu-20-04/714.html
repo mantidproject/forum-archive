@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Using python simpleapi with Ubuntu 20.04 - Installation - Mantid Help Forum</title>
+    <meta name="description" content="Hi All, 
+I recently followed the instructions for building from source on Ubuntu 20.04. 
+Unfortunately I have found that the $BUILD_DIR/lib directory is not populated. When I’ve installed this on 18.x before, this was wh&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="714.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Using python simpleapi with Ubuntu 20.04&#39;" href="https://forum.mantidproject.org/t/using-python-simpleapi-with-ubuntu-20-04/714.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/using-python-simpleapi-with-ubuntu-20-04/714" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/using-python-simpleapi-with-ubuntu-20-04/714" />
+<meta property="og:title" content="Using python simpleapi with Ubuntu 20.04" />
+<meta name="twitter:title" content="Using python simpleapi with Ubuntu 20.04" />
+<meta property="og:description" content="Hi All,  I recently followed the instructions for building from source on Ubuntu 20.04.  Unfortunately I have found that the $BUILD_DIR/lib directory is not populated. When I’ve installed this on 18.x before, this was where the simpleapi module was stored.  Can someone give me a hint as to whether this has been moved / I’m not using the right options when running cmake / it has been missed out of the make file?  Thanks,  Andrew  Some information:  Version:  alister@SCLT118:/opt/Mantid$ lsb_relea..." />
+<meta name="twitter:description" content="Hi All,  I recently followed the instructions for building from source on Ubuntu 20.04.  Unfortunately I have found that the $BUILD_DIR/lib directory is not populated. When I’ve installed this on 18.x before, this was where the simpleapi module was stored.  Can someone give me a hint as to whether this has been moved / I’m not using the right options when running cmake / it has been missed out of the make file?  Thanks,  Andrew  Some information:  Version:  alister@SCLT118:/opt/Mantid$ lsb_relea..." />
+<meta property="og:article:section" content="Installation" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="article:published_time" content="2021-02-02T18:08:13+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="714.html">Using python simpleapi with Ubuntu 20.04</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/installation/7.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Installation</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Using python simpleapi with Ubuntu 20.04'>
+      <link itemprop='url' href='714.html'>
+      <meta itemprop='datePublished' content='2021-02-02T18:08:13Z'>
+        <meta itemprop='articleSection' content='Installation'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/AndrewLister'><span itemprop='name'>AndrewLister</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="714.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2021-02-02T18:08:13Z' class='post-time'>
+                    February 2, 2021,  6:08pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-02T18:11:53Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi All,</p>
+<p>I recently followed the <a href="https://developer.mantidproject.org/GettingStarted.html#ubuntu-20-04" rel="noopener nofollow ugc">instructions</a> for building from source on Ubuntu 20.04.</p>
+<p>Unfortunately I have found that the $BUILD_DIR/lib directory is not populated. When I’ve installed this on 18.x before, this was where the simpleapi module was stored.</p>
+<p>Can someone give me a hint as to whether this has been moved / I’m not using the right options when running cmake / it has been missed out of the make file?</p>
+<p>Thanks,<br>
+Andrew</p>
+<p>Some information:</p>
+<p>Version:</p>
+<pre><code class="lang-auto">alister@SCLT118:/opt/Mantid$ lsb_release -a
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 20.04.2 LTS
+Release:        20.04
+Codename:       focal
+</code></pre>
+<p>History:</p>
+<pre><code class="lang-auto">2105  cd /opt/Mantid/
+2106  ls ~/mantid/
+2107  apt-get install -y   git   g++   clang-format-6.0   cmake   dvipng   doxygen   libtbb-dev   libgoogle-perftools-dev   libboost-all-dev   libpoco-dev   libnexus-dev   libhdf5-dev   libhdf4-dev   libjemalloc-dev   libgsl-dev   liboce-visualization-dev   libmuparser-dev   libssl-dev   libjsoncpp-dev   librdkafka-dev   qtbase5-dev   qttools5-dev   qttools5-dev-tools   libqt5webkit5-dev   libqt5x11extras5-dev   libqt5opengl5-dev   libqscintilla2-qt5-dev   libpython3-dev   ninja-build   python3-setuptools   python3-sip-dev   python3-pyqt5   pyqt5-dev   pyqt5-dev-tools   python3-qtpy   python3-numpy   python3-scipy   python3-sphinx   python3-sphinx-bootstrap-theme   python3-pycifrw   python3-dateutil   python3-matplotlib   python3-qtconsole   python3-h5py   python3-mock   python3-psutil   python3-requests   python3-toml   python3-yaml
+2108  sudo apt-get install -y   git   g++   clang-format-6.0   cmake   dvipng   doxygen   libtbb-dev   libgoogle-perftools-dev   libboost-all-dev   libpoco-dev   libnexus-dev   libhdf5-dev   libhdf4-dev   libjemalloc-dev   libgsl-dev   liboce-visualization-dev   libmuparser-dev   libssl-dev   libjsoncpp-dev   librdkafka-dev   qtbase5-dev   qttools5-dev   qttools5-dev-tools   libqt5webkit5-dev   libqt5x11extras5-dev   libqt5opengl5-dev   libqscintilla2-qt5-dev   libpython3-dev   ninja-build   python3-setuptools   python3-sip-dev   python3-pyqt5   pyqt5-dev   pyqt5-dev-tools   python3-qtpy   python3-numpy   python3-scipy   python3-sphinx   python3-sphinx-bootstrap-theme   python3-pycifrw   python3-dateutil   python3-matplotlib   python3-qtconsole   python3-h5py   python3-mock   python3-psutil   python3-requests   python3-toml   python3-yaml
+2109  export QT_API=pyqt5
+2110  sudo apt install ccache
+2111  ccache  --max-size=20G
+2112  cmake ~/mantid/ -DENABLE_MANTIDPLOT=OFF
+2113  sudo chown alister /opt/Mantid
+2114  cmake ~/mantid/ -DENABLE_MANTIDPLOT=OFF
+</code></pre>
+<p>Out of source build dir:</p>
+<pre><code class="lang-auto">alister@SCLT118:/opt/Mantid$ ls -l
+total 272
+-rw-r--r--  1 alister alister 58168 Feb  2 17:46 CMakeCache.txt
+-rw-r--r--  1 alister alister 14305 Feb  2 17:45 CMakeDoxyfile.in
+-rw-r--r--  1 alister alister 19712 Feb  2 17:45 CMakeDoxygenDefaults.cmake
+drwxr-xr-x 13 alister alister  4096 Feb  2 17:46 CMakeFiles
+-rw-r--r--  1 alister alister   468 Feb  2 17:46 CTestTestfile.cmake
+drwxr-xr-x 32 alister alister  4096 Feb  2 17:46 Framework
+-rw-r--r--  1 alister alister 67437 Feb  2 17:46 Makefile
+drwxr-xr-x  4 alister alister  4096 Feb  2 17:46 PyStoG-download
+-rw-r--r--  1 alister alister   480 Feb  2 17:45 StandardTestData_config.cmake
+-rw-r--r--  1 alister alister   480 Feb  2 17:45 SystemTestData_config.cmake
+drwxr-xr-x  3 alister alister  4096 Feb  2 17:46 Testing
+drwxr-xr-x  8 alister alister  4096 Feb  2 17:45 _deps
+drwxr-xr-x  3 alister alister  4096 Feb  2 17:46 bin
+-rw-r--r--  1 alister alister  4909 Feb  2 17:46 cmake_install.cmake
+drwxr-xr-x  3 alister alister  4096 Feb  2 17:46 dev-docs
+drwxr-xr-x  3 alister alister  4096 Feb  2 17:46 docs
+drwxr-xr-x  7 alister alister  4096 Feb  2 17:45 extern-eigen
+-rw-r--r--  1 alister alister  2032 Feb  2 17:45 launch_mantidworkbench.sh.install
+drwxr-xr-x  2 alister alister  4096 Feb  2 17:46 lib
+-rw-r--r--  1 alister alister    57 Feb  2 17:45 mantid.csh
+-rw-r--r--  1 alister alister    48 Feb  2 17:45 mantid.pth.install
+-rw-r--r--  1 alister alister    57 Feb  2 17:45 mantid.sh
+-rwxr-xr-x  1 alister alister  1716 Feb  2 17:45 mantidpython.install
+-rw-r--r--  1 alister alister   350 Feb  2 17:46 mantidworkbenchunstable.desktop.install
+-rw-r--r--  1 alister alister  1865 Feb  2 17:45 postinst
+-rw-r--r--  1 alister alister  1281 Feb  2 17:45 preinst
+-rw-r--r--  1 alister alister  1418 Feb  2 17:45 prerm
+drwxr-xr-x  8 alister alister  4096 Feb  2 17:46 qt
+drwxr-xr-x  9 alister alister  4096 Feb  2 17:46 scripts
+-rwxr-xr-x  1 alister alister  2394 Feb  2 17:46 systemtest
+
+alister@SCLT118:/opt/Mantid$ ls -l bin lib
+bin:
+total 32
+-rwxr-xr-x 1 alister alister  2863 Feb  2 17:45 AddPythonPath.py
+-rw-r--r-- 1 alister alister 12382 Feb  2 17:46 Mantid.properties
+drwxr-xr-x 2 alister alister  4096 Feb  2 17:45 Testing
+-rwxr-xr-x 1 alister alister  2021 Feb  2 17:45 launch_mantidworkbench.sh
+-rwxr-xr-x 1 alister alister  1763 Feb  2 17:45 mantidpython
+
+lib:
+total 0
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/AndrewLister'><span itemprop='name'>AndrewLister</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-02T18:16:50Z' class='post-time'>
+                    February 2, 2021,  6:16pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-02T18:16:50Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>We use mantid through other python scripts as detailed in <a href="../using-mantid-from-command-line-system-python-after-4-2-0-release/604.html">this post</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-11T11:36:53Z' class='post-time'>
+                    February 11, 2021, 11:36am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-11T11:36:53Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi,<br>
+This seems to be the same for Ubuntu 18.04 and 20.04, and I don’t think it’s a problem that lib is empty. Adding the <code>build_mantid/bin</code> directory to the PYTHONPATH should be fine.</p>
+<p>Tell me if this works for you!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/AndrewLister'><span itemprop='name'>AndrewLister</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-11T16:21:04Z' class='post-time'>
+                    February 11, 2021,  4:21pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-11T16:21:04Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="https://forum.mantidproject.org/u/danielmurphy22">@DanielMurphy22</a>,</p>
+<p>Thanks for getting back to me, when I try it on my Ubuntu20.04 machine I get the following:</p>
+<pre><code class="lang-auto">(fitbenchmarking) alister@SCLT118:~$ echo $PYTHONPATH
+/home/alister/fitbenchmarking:/home/alister/cutest/pycutest_cache:/opt/Mantid/lib:/opt/Mantid/bin:
+(fitbenchmarking) alister@SCLT118:~$ python
+Python 3.8.5 (default, Jul 28 2020, 12:59:40)
+[GCC 9.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt; from mantid import simpleapi
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+ImportError: cannot import name 'simpleapi' from 'mantid' (unknown location)
+</code></pre>
+<p>It works fine on my Ubuntu18.04 machine (which I installed via the apt instructions rather than from source):</p>
+<pre><code class="lang-auto">alister@SCLT118:/mnt/c/Users/eel23943$ echo $PYTHONPATH
+/home/alister/fitbenchmarking/pycutest_cache::/opt/Mantid/lib:/opt/Mantid/bin:/opt/Mantid/lib:/opt/Mantid/bin
+alister@SCLT118:/mnt/c/Users/eel23943$ python3
+Python 3.6.9 (default, Oct  8 2020, 12:12:24)
+[GCC 8.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt; from mantid import simpleapi
+FrameworkManager-[Notice] Welcome to Mantid 5.1.1
+FrameworkManager-[Notice] Please cite: http://dx.doi.org/10.1016/j.nima.2014.07.029 and this release: http://dx.doi.org/10.5286/Software/Mantid5.1.1
+GitHubApiHelper-[Warning] Authentication failed and anonymous access refused
+
+GitHubApiHelper-[Warning] Authentication failed and anonymous access refused
+
+GitHubApiHelper-[Warning] Authentication failed and anonymous access refused
+
+DownloadInstrument-[Error] Error in execution of algorithm DownloadInstrument:
+DownloadInstrument-[Error] Unable to parse server JSON file "/home/alister/.mantid/instrument/github.json"
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-12T11:06:34Z' class='post-time'>
+                    February 12, 2021, 11:06am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-12T11:06:34Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I think launching with mantidpython should work. Can you check if mantidpython at <code>/opt/Mantid/bin/mantidpython</code><br>
+or<br>
+<code>/usr/local/bin/mantidpython</code> ?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-12T11:11:20Z' class='post-time'>
+                    February 12, 2021, 11:11am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-12T11:11:20Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Also I assume you did build after running those cmake lines in your history (with <code>ninja</code> or <code>cmake --build</code>)?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/AndrewLister'><span itemprop='name'>AndrewLister</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-12T15:00:56Z' class='post-time'>
+                    February 12, 2021,  3:00pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-12T15:00:56Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Ahh… I thought I was probably missing something stupid! I guess this falls into the second part of my original q, “I’m not using the right options when running cmake”.</p>
+<p>I think I’ve gotten too used to working in python. Thanks for the help, I’ve set that off now.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

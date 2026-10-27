@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Compiling error with source code at Ubuntu 20.04 - Installation - Mantid Help Forum</title>
+    <meta name="description" content="Dear all, 
+I got an compiling error when I do &amp;quot;make &amp;quot; with the mantid in ubuntu 20.04(master branch in github): 
+[62%] —  “mantid/qt/widgets/common/inc/MantidQtWidgets/Common/Python/Sip.h:41:36: error: ‘struct _sipSimple&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="762.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Compiling error with source code at Ubuntu 20.04&#39;" href="https://forum.mantidproject.org/t/compiling-error-with-source-code-at-ubuntu-20-04/762.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/compiling-error-with-source-code-at-ubuntu-20-04/762" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/compiling-error-with-source-code-at-ubuntu-20-04/762" />
+<meta property="og:title" content="Compiling error with source code at Ubuntu 20.04" />
+<meta name="twitter:title" content="Compiling error with source code at Ubuntu 20.04" />
+<meta property="og:description" content="Dear all,  I got an compiling error when I do &quot;make &quot; with the mantid in ubuntu 20.04(master branch in github):  [62%] —  “mantid/qt/widgets/common/inc/MantidQtWidgets/Common/Python/Sip.h:41:36: error: ‘struct _sipSimpleWrapper’ has no member named ‘u’ &quot; (line 41 of Sip.h: “return static_cast&lt;T *&gt;(wrapper-&gt;u.cppPtr);”)  I don’t know how to fix this and would be very grateful if anyone can help me. Thanks a lot!  Best regards,  Jiyizi" />
+<meta name="twitter:description" content="Dear all,  I got an compiling error when I do &quot;make &quot; with the mantid in ubuntu 20.04(master branch in github):  [62%] —  “mantid/qt/widgets/common/inc/MantidQtWidgets/Common/Python/Sip.h:41:36: error: ‘struct _sipSimpleWrapper’ has no member named ‘u’ &quot; (line 41 of Sip.h: “return static_cast&lt;T *&gt;(wrapper-&gt;u.cppPtr);”)  I don’t know how to fix this and would be very grateful if anyone can help me. Thanks a lot!  Best regards,  Jiyizi" />
+<meta property="og:article:section" content="Installation" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="article:published_time" content="2021-08-17T15:33:45+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="762.html">Compiling error with source code at Ubuntu 20.04</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/installation/7.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Installation</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Compiling error with source code at Ubuntu 20.04'>
+      <link itemprop='url' href='762.html'>
+      <meta itemprop='datePublished' content='2021-08-17T15:33:45Z'>
+        <meta itemprop='articleSection' content='Installation'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Jiyizi'><span itemprop='name'>Jiyizi</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="762.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2021-08-17T15:33:45Z' class='post-time'>
+                    August 17, 2021,  3:33pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-08-17T15:33:45Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Dear all,</p>
+<p>I got an compiling error when I do "make " with the mantid in ubuntu 20.04(master branch in github):</p>
+<p>[62%] —  “mantid/qt/widgets/common/inc/MantidQtWidgets/Common/Python/Sip.h:41:36: error: ‘struct _sipSimpleWrapper’ has no member named ‘u’ " (line 41 of Sip.h: “return static_cast&lt;T *&gt;(wrapper-&gt;u.cppPtr);”)</p>
+<p>I don’t know how to fix this and would be very grateful if anyone can help me. Thanks a lot!</p>
+<p>Best regards,<br>
+Jiyizi</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DavidFair'><span itemprop='name'>DavidFair</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-08-17T16:16:29Z' class='post-time'>
+                    August 17, 2021,  4:16pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-08-17T16:16:29Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Jiyizi,</p>
+<p>First off, the usual disclaimer. Ubuntu 20.04 isn’t officially supported yet by the project, as we’re waiting for our <a href="../feedback-request-conda-packaging-strategy/757.html">Conda packaging strategy</a> . So the usual warnings apply, this is ad-hoc, things might break, your data might be invalid…etc.</p>
+<p>That being said I personally develop on 20.04 and I’ve built master correctly today and it works 99% of the time.</p>
+<p>Looking at the lines in question this code is conditionally compiled depending on <a href="https://github.com/mantidproject/mantid/blob/b9b5962bf32094f88c95eb849daeb96a0440b610/qt/widgets/common/inc/MantidQtWidgets/Common/Python/Sip.h#L36" rel="noopener nofollow ugc">your sip version</a>. It looks like your hitting the code for SIP &lt; 7 which shouldn’t be happening on 20.04 IMO, but should be an easy fix once we work out where this older package is coming from.</p>
+<p>I have a couple of questions:</p>
+<ul>
+<li>
+<p>How did you get the dependencies to build to project? E.g. the .deb developer package available on Sourceforge or something else?</p>
+</li>
+<li>
+<p>If you have installed the dependencies through apt or dpkg, could you post what sip version you have (from <code>apt-cache show python-sip</code>)? Locally I have 4.19.21+dfsg-1build1 which provides <code>sip-api-12.x</code></p>
+</li>
+<li>
+<p>If you are using Conda or similar, could you check what version of sip packaging you are using?</p>
+</li>
+<li>
+<p>Could you post the sections related to sip from your CMakeCache.txt by going to your build folder, running the following and pasting the output?<br>
+<code>grep -i sip CMakeCache.txt</code></p>
+</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Jiyizi'><span itemprop='name'>Jiyizi</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-08-18T01:26:45Z' class='post-time'>
+                    August 18, 2021,  1:26am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-08-18T02:13:59Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Dear DavidFair,</p>
+<p>Thanks for you help, I‘m new to the SIP and I will check it’s installationt. Here are the information for    your questions.</p>
+<ol>
+<li>
+<p>I just install the dependencies by hand (apt and pip), maybe I should use the .deb package on Sourceforge.</p>
+</li>
+<li>
+<p>The “apt-cache show python-sip” cmd gets:</p>
+</li>
+</ol>
+<pre><code class="lang-auto">jiyizi@Dolores:~$ apt-cache show python-sip
+Package: python-sip
+Architecture: amd64
+Version: 4.19.21+dfsg-1build1
+Priority: optional
+Section: universe/python
+Source: sip4
+Origin: Ubuntu
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;
+Original-Maintainer: Debian Python Modules Team &lt;python-modules-team@lists.alioth.debian.org&gt;
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 298
+Provides: sip-api-12.0, sip-api-12.1, sip-api-12.2, sip-api-12.3, sip-api-12.4, sip-api-12.5, sip-api-12.6, sip-api-12.7
+Depends: python-enum34, python2 (&lt;&lt; 2.8), python2 (&gt;= 2.7~), python2:any (&lt;&lt; 2.8), python2:any (&gt;= 2.7~), libc6 (&gt;= 2.4)
+</code></pre>
+<ol start="3">
+<li>The results from “grep -i sip CMakeCache.txt” are:</li>
+</ol>
+<pre><code class="lang-auto">jiyizi@Dolores:build$ grep -i sip CMakeCache.txt 
+PYQT5_SIP_DIR:PATH=/usr/local/share/sip/PyQt5
+//The SIP flags used to build PyQt5
+PYQT5_SIP_FLAGS:STRING=-n sip -t WS_X11 -t Qt_5_12_4
+//The Qt version tag used by PyQt5's .sip files
+SIP_BUILD_EXECUTABLE:FILEPATH=/usr/local/bin/sip-build
+SIP_MODULE_EXECUTABLE:FILEPATH=/usr/local/bin/sip-module
+SIP_PROJECT_PY_TEMPLATE:FILEPATH=/home/jiyizi/Software/MyMantid/mantid/buildconfig/CMake/sip-build/project.py.in
+SIP_PYPROJECT_TOML_TEMPLATE:FILEPATH=/home/jiyizi/Software/MyMantid/mantid/buildconfig/CMake/sip-build/pyproject.toml.in
+FIND_PACKAGE_MESSAGE_DETAILS_PyQt5:INTERNAL=[5.14.1][Qt_5_12_4][/usr/local/share/sip/PyQt5][-n sip -t WS_X11 -t Qt_5_12_4][/usr/lib/python3/dist-packages/PyQt5/uic/pyuic.py][v()]
+//Details about finding SIP
+FIND_PACKAGE_MESSAGE_DETAILS_SIP:INTERNAL=[/usr/local/bin/sip-build][/usr/local/bin/sip-module][/home/jiyizi/Software/MyMantid/mantid/buildconfig/CMake/sip-build/pyproject.toml.in][/home/jiyizi/Software/MyMantid/mantid/buildconfig/CMake/sip-build/project.py.in][v6.1.1()]
+//ADVANCED property for variable: PYQT5_SIP_DIR
+PYQT5_SIP_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PYQT5_SIP_FLAGS
+PYQT5_SIP_FLAGS-ADVANCED:INTERNAL=1
+</code></pre>
+<p>Best regards,<br>
+Jiyizi</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Jiyizi'><span itemprop='name'>Jiyizi</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-08-18T04:50:24Z' class='post-time'>
+                    August 18, 2021,  4:50am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-08-18T04:50:24Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Dear DavidFair,</p>
+<p>I re-install the build dependencies with the .dev developer package and degrade the sip to 4.19.25 (The original one is 6.1.1). Now the mantid project is built  on Ubuntu 18.04 and 20.04 successfully.</p>
+<p>Thanks for you Help!</p>
+<p>Best regards,<br>
+Jiyizi</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DavidFair'><span itemprop='name'>DavidFair</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-08-18T08:57:45Z' class='post-time'>
+                    August 18, 2021,  8:57am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-08-18T08:57:45Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Glad to hear it’s working for you Jiyizi <img src="../../images/emoji/twitter/slightly_smiling_face.png%3Fv=10" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:"></p>
+<p>I think 6.1.1 a particularly old sip, whilst the Ubuntu meta package is only at 4.19.25 but provides 12.x inside. I guess someone felt like having clear release numbering would make it too easy…</p>
+<p>Thanks,<br>
+David</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

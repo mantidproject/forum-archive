@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Crystal field fit - General - Mantid Help Forum</title>
+    <meta name="description" content="(version 3.11.0 Win 7 or MacOS) 
+Dear all, 
+First of all, I understand the crystal field (CF) fits are currently under development in Mantid and maybe the issues below are related to that, though as I found some examples&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="378.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Crystal field fit&#39;" href="https://forum.mantidproject.org/t/crystal-field-fit/378.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/crystal-field-fit/378" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/crystal-field-fit/378" />
+<meta property="og:title" content="Crystal field fit" />
+<meta name="twitter:title" content="Crystal field fit" />
+<meta property="og:description" content="(version 3.11.0 Win 7 or MacOS)  Dear all,  First of all, I understand the crystal field (CF) fits are currently under development in Mantid and maybe the issues below are related to that, though as I found some examples (e.g. http://www.mantidproject.org/Crystal_Field_Examples) for INS data, I have tried to run the same scripts with my data with no success until now.  I have tried using both the Python script interpreter and the Fit windows in Mantid. Using the fit windows, with a composite fun..." />
+<meta name="twitter:description" content="(version 3.11.0 Win 7 or MacOS)  Dear all,  First of all, I understand the crystal field (CF) fits are currently under development in Mantid and maybe the issues below are related to that, though as I found some examples (e.g. http://www.mantidproject.org/Crystal_Field_Examples) for INS data, I have tried to run the same scripts with my data with no success until now.  I have tried using both the Python script interpreter and the Fit windows in Mantid. Using the fit windows, with a composite fun..." />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="article:published_time" content="2018-03-21T07:57:50+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="378.html">Crystal field fit</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/6.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Crystal field fit'>
+      <link itemprop='url' href='378.html'>
+      <meta itemprop='datePublished' content='2018-03-21T07:57:50Z'>
+        <meta itemprop='articleSection' content='General'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Raimundo_Serrano'><span itemprop='name'>Raimundo_Serrano</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="378.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2018-03-21T07:57:50Z' class='post-time'>
+                    March 21, 2018,  7:57am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-21T07:57:50Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>(version 3.11.0 Win 7 or MacOS)</p>
+<p>Dear all,<br>
+First of all, I understand the crystal field (CF) fits are currently under development in Mantid and maybe the issues below are related to that, though as I found some examples (e.g. <a href="http://www.mantidproject.org/Crystal_Field_Examples" rel="noopener nofollow ugc">http://www.mantidproject.org/Crystal_Field_Examples</a>) for INS data, I have tried to run the same scripts with my data with no success until now.</p>
+<p>I have tried using both the Python script interpreter and the Fit windows in Mantid. Using the fit windows, with a composite function: adding Lorentzian peaks, polynomial backgound + CrystalFieldSpectrum function, the program crashes and has to be closed. Withing the Python script interpreter I’m following exactly the same procedure as suggested in the example above though I couldn’t fit all the data:</p>
+<ul>
+<li>My INS data contain CF excitations upon a Dy3+ ion in an intermetallic compound (C3h point symmetry). The data file is energy transfer vs. intensity (x,y), the latter in arb units (counts per seconds);</li>
+<li>I have the Bmn CF parameters as extracted from fitting susceptibility, MxH and specific heat data and use them as input in Mantid;</li>
+<li>The Bmn’s I use as input don’t reproduce all the INS experimental peaks. Simulating the spectrum for that set of Bmn just gives one of 3 observed peaks for the measured DeltaE range. Therefore, back in the fit procedure, I need to add the positions from the remaining peaks (as one can do for fitting any function in the Fit windows) and fit the data to get new Bmn parameters set.</li>
+</ul>
+<ol>
+<li>
+<p>How can I add new peaks in a CF fit using the Python script interpreter?</p>
+</li>
+<li>
+<p>For the Fit window: is the fitting with a composite function done by the convoluting a backg function + 3 lorentzians (3 peaks) + CF spectrum function already available in Mantid?</p>
+</li>
+<li>
+<p>For the Fit window: If I tried to use the CrystalFieldFunction Mantid gives the error: "You have to set first the Ion ". However, no options to insert the ion + the Bmn parameters are allowed.</p>
+</li>
+</ol>
+<p>Sorry if this topic was posted before but I haven’t found it.</p>
+<p>Many thanks for your help.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/keeeto'><span itemprop='name'>keeeto</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-27T14:13:10Z' class='post-time'>
+                    March 27, 2018,  2:13pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-27T14:13:10Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Raimundo,</p>
+<p>How large is your data file? If can send it to me I can try to re-create your problems and see if I can find a way to fix this.</p>
+<p>All the best,</p>
+<p>Keith</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Raimundo_Serrano'><span itemprop='name'>Raimundo_Serrano</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-04-03T09:29:10Z' class='post-time'>
+                    April 3, 2018,  9:29am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-04-03T09:29:10Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Keith,</p>
+<p>I have tested the same simulations in Mcphase with the help of a colleague. The problems appear to be related with my expt data.</p>
+<p>Thanks for asking.<br>
+R</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/keeeto'><span itemprop='name'>keeeto</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-04-09T13:54:38Z' class='post-time'>
+                    April 9, 2018,  1:54pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-04-09T13:54:38Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Raimundo,</p>
+<p>Many thanks for letting us know!</p>
+<p>All the best,</p>
+<p>Keith</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Stitching monochromatic SANS workspaces in 1D and 2D - Python - Mantid Help Forum</title>
+    <meta name="description" content="Dear all, 
+For the past few months, I have been developing a Mantid-based data reduction system for the new SANS instrument at Reactor Institute Delft. Thanks again to @jpcstfc for pointing me the right way at the start!&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="949.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Stitching monochromatic SANS workspaces in 1D and 2D&#39;" href="https://forum.mantidproject.org/t/stitching-monochromatic-sans-workspaces-in-1d-and-2d/949.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/stitching-monochromatic-sans-workspaces-in-1d-and-2d/949" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/stitching-monochromatic-sans-workspaces-in-1d-and-2d/949" />
+<meta property="og:title" content="Stitching monochromatic SANS workspaces in 1D and 2D" />
+<meta name="twitter:title" content="Stitching monochromatic SANS workspaces in 1D and 2D" />
+<meta property="og:description" content="Dear all,  For the past few months, I have been developing a Mantid-based data reduction system for the new SANS instrument at Reactor Institute Delft. Thanks again to @jpcstfc for pointing me the right way at the start! The software is almost complete and mostly needs to be verified using reference samples now.  There are two things however that I have not managed to get to work in Mantid that I hoped you could help me with. The first is stitching of 2D workspaces. As we have a 2D detector, it ..." />
+<meta name="twitter:description" content="Dear all,  For the past few months, I have been developing a Mantid-based data reduction system for the new SANS instrument at Reactor Institute Delft. Thanks again to @jpcstfc for pointing me the right way at the start! The software is almost complete and mostly needs to be verified using reference samples now.  There are two things however that I have not managed to get to work in Mantid that I hoped you could help me with. The first is stitching of 2D workspaces. As we have a 2D detector, it ..." />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="og:article:section" content="Python" />
+<meta property="og:article:section:color" content="9EB83B" />
+<meta property="article:published_time" content="2025-05-04T19:50:54+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="949.html">Stitching monochromatic SANS workspaces in 1D and 2D</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #9EB83B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Python</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Stitching monochromatic SANS workspaces in 1D and 2D'>
+      <link itemprop='url' href='949.html'>
+      <meta itemprop='datePublished' content='2025-05-04T19:50:54Z'>
+        <meta itemprop='articleSection' content='Python'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/tbvanderwoude'><span itemprop='name'>tbvanderwoude</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="949.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-05-04T19:50:54Z' class='post-time'>
+                    May 4, 2025,  7:50pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-05-04T19:50:54Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Dear all,</p>
+<p>For the past few months, I have been developing a Mantid-based data reduction system for the new SANS instrument at Reactor Institute Delft. Thanks again to <a class="mention" href="https://forum.mantidproject.org/u/jpcstfc">@jpcstfc</a> for <a href="../support-for-monochromatic-sans/905.html">pointing me the right way at the start</a>! The software is almost complete and mostly needs to be verified using reference samples now.<br>
+There are two things however that I have not managed to get to work in Mantid that I hoped you could help me with. The first is stitching of 2D workspaces. As we have a 2D detector, it is important that we can reduce our data to dSigma/dOmega maps as function of (Qx,Qy) in addition to the usual 1D reduction. The basic reduction step using the <a href="https://docs.mantidproject.org/nightly/algorithms/Qxy-v1.html" rel="noopener nofollow ugc">Qxy</a> algorithm for each Q-range separately works fine but I have not managed to stitch these 2D workspaces together. Is there an algorithm for this in Mantid’s library? I suspected there should be an existing way as this is a quite standard operation.<br>
+I have managed to get <em>a</em> stitching algorithm, <a href="https://docs.mantidproject.org/nightly/algorithms/Stitch1DMany-v1.html" rel="noopener nofollow ugc">Stitch1DMany</a>, to work for the 1D case. It does not seem to be optimized for this application however and users report difficulties with it and coefficients that are far from unity. It appears this could be related to how it averages values. Overlap areas with very high errors (i.e. due to poor counting statistics) result in poor stitching different from what you would expect from the data, which seems to suggest that a flat average of values is used rather than one that scales as 1/error to make values with high error matter less. Is there an alternative algorithm that scales values like this and preferably optimizes coefficients for all input workspaces at once? More generally, I would be interested to learn which stitching algorithms are used for SANS stitching at other facilities as I didn’t manage to figure this out myself using the mantid repository.</p>
+<p>For your reference, the latest version of our reduction code can be found <a href="https://github.com/tbvanderwoude/ridsans" rel="noopener nofollow ugc">here</a>, it is a Python package built on top of Mantid’s Python interface.</p>
+<p>Thank you in advance!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/adriazalvarez'><span itemprop='name'>adriazalvarez</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-05-07T08:03:14Z' class='post-time'>
+                    May 7, 2025,  8:03am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-05-07T08:03:14Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Thom,<br>
+Thanks for contacting us.<br>
+I’m glad you have been able to integrate the Mantid API into your reduction workflow.</p>
+<p>I believe the scientist at ILL are using the <a href="https://docs.mantidproject.org/nightly/algorithms/Stitch-v1.html" rel="noopener nofollow ugc">Stitch</a> algorithm for 2D workspaces. Would you be able to test it with your workspaces?</p>
+<p>Regarding the 1D stitching, the optimized version for sans is <a href="https://docs.mantidproject.org/nightly/algorithms/SANSStitch-v1.html" rel="noopener nofollow ugc">SANSStitch</a>, which stitches HAB and LAB detectors, would that be compatible with your setup?</p>
+<p>Hope it helps, let us know if you need further help.<br>
+Adri</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/tbvanderwoude'><span itemprop='name'>tbvanderwoude</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/6de23fcb46e44c4d17a5e2008bd015564a94eecc.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-05-07T16:08:46Z' class='post-time'>
+                    May 7, 2025,  4:08pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-05-07T16:08:46Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Adri,</p>
+<p>Thank you for your input. I have previously looked at the Stitch algorithm but I think this stitches I(Q)-type workspaces rather than I(Qx, Qy) data which is what I mean by 2D (i.e. data from a 2D detector). Perhaps in Mantid terminology this would more properly be called 3D data.</p>
+<p>Our setup is somewhat simple in that there is just one 2D detector. We use repeated measurements at different sample-to-detector distances to probe a complete Q range giving us currently four individual workspaces. This gives individual dSigma/dOmega’s that look as follows:<br>
+<img src="../../uploads/default/original/1X/6de23fcb46e44c4d17a5e2008bd015564a94eecc.png" alt="image" data-base62-sha1="fG4MpWZWAQJDjsRZoQY7ve34CDO" width="678" height="473"><br>
+Do you think SANSStitch could be used to stitch pairs of such measurements by inputting them as HAB/LAB detector workspaces or would this break due to some logic specific to a HAB + LAB setup?</p>
+<p>Thank you for your time!<br>
+Thom</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/adriazalvarez'><span itemprop='name'>adriazalvarez</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-05-08T07:51:44Z' class='post-time'>
+                    May 8, 2025,  7:51am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-05-08T07:51:44Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi,</p>
+<p>The HAB/LAB or front/rear detectors at ISIS Instruments are effectively doing the same as your setup (Accessing different Q ranges). So, in principle I would say it should be possible to merge the data using such algorithms, what I don’t know is if the scaling would be the same in your setup, sorry.</p>
+<p>For reference, most ISIS scientists use the SANS Command Interface to perform the reductions with different instruments (including IQxQy data). You can check the <a href="https://docs.mantidproject.org/nightly/techniques/ScriptingSANSReductions.html" rel="noopener nofollow ugc">docs</a> . The function <code>WavRangeReduction</code> does the reduction, there is an option to merge the detectors <code>front</code> and <code>rear</code> that internally calls <a href="https://github.com/mantidproject/mantid/blob/0610c90edda94f8bd288faab5a05c3ed61ac2fa8/scripts/SANS/ISISCommandInterface.py#L533" rel="noopener nofollow ugc">SANSStitch</a> . Could this be useful?</p>
+<p>Best,<br>
+Adri</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

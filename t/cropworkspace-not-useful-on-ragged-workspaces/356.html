@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CropWorkspace not useful on ragged workspaces - Bugs - Mantid Help Forum</title>
+    <meta name="description" content="Suppose I have a workspace where the X values don’t quite match between spectra, and I want to crop based on Xmin, Xmax: 
+
+Expected behavior
+CropWorkspace includes only those data points in the range, perhaps with paddin&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="356.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;CropWorkspace not useful on ragged workspaces&#39;" href="https://forum.mantidproject.org/t/cropworkspace-not-useful-on-ragged-workspaces/356.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/cropworkspace-not-useful-on-ragged-workspaces/356" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/cropworkspace-not-useful-on-ragged-workspaces/356" />
+<meta property="og:title" content="CropWorkspace not useful on ragged workspaces" />
+<meta name="twitter:title" content="CropWorkspace not useful on ragged workspaces" />
+<meta property="og:description" content="Suppose I have a workspace where the X values don’t quite match between spectra, and I want to crop based on Xmin, Xmax:   Expected behavior CropWorkspace includes only those data points in the range, perhaps with padding if the spectra would be of different lengths. Bins where all X values are out of range will be removed. Preferably, the workspace should be no longer (in number of bins) than the longest good portion of any spectrum, with spectra being shifted with respect to each other (in ter..." />
+<meta name="twitter:description" content="Suppose I have a workspace where the X values don’t quite match between spectra, and I want to crop based on Xmin, Xmax:   Expected behavior CropWorkspace includes only those data points in the range, perhaps with padding if the spectra would be of different lengths. Bins where all X values are out of range will be removed. Preferably, the workspace should be no longer (in number of bins) than the longest good portion of any spectrum, with spectra being shifted with respect to each other (in ter..." />
+<meta property="og:article:section" content="Bugs" />
+<meta property="og:article:section:color" content="ED207B" />
+<meta property="article:published_time" content="2018-01-30T10:16:41+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="356.html">CropWorkspace not useful on ragged workspaces</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/if-you-want-to-report-a-bug-within-mantid-heres-the-place-to-do-it/12.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #ED207B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Bugs</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='CropWorkspace not useful on ragged workspaces'>
+      <link itemprop='url' href='356.html'>
+      <meta itemprop='datePublished' content='2018-01-30T10:16:40Z'>
+        <meta itemprop='articleSection' content='Bugs'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="356.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2018-01-30T10:16:41Z' class='post-time'>
+                    January 30, 2018, 10:16am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-01-30T10:16:41Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Suppose I have a workspace where the X values don’t quite match between spectra, and I want to crop based on Xmin, Xmax:</p>
+<h3>
+<a name="expected-behavior-1" class="anchor" href="356.html#expected-behavior-1"></a>Expected behavior</h3>
+<p>CropWorkspace includes only those data points in the range, perhaps with padding if the spectra would be of different lengths. Bins where all X values are out of range will be removed. Preferably, the workspace should be no longer (in number of bins) than the longest good portion of any spectrum, with spectra being shifted with respect to each other (in terms of bin numbers) if necessary.<br>
+Padding bins should be set to E=Inf or masked or some similar value such that a weighted average, integral, etc of the spectrum ignores them.</p>
+<h3>
+<a name="actual-behaviour-2" class="anchor" href="356.html#actual-behaviour-2"></a>Actual behaviour</h3>
+<p>The workspace is not cropped. The X values are copied across in their entirety including those below Xmin or above Xmax. The Y and E values outside the range are all set to zero.</p>
+<h3>
+<a name="steps-to-reproduce-the-behavior-3" class="anchor" href="356.html#steps-to-reproduce-the-behavior-3"></a>Steps to reproduce the behavior</h3>
+<p>Try this (as shown it crops a Point workspace but is easily modified to generate a histogram workspace which shows the same behaviour):<br>
+<code>ws=WorkspaceFactory.create("Workspace2D",NVectors=2,XLength=6,YLength=6)</code><br>
+<code>ws.dataX(0)[:]=[1.0,2.0,3.0,4.0,5.0,6.0]</code><br>
+<code>ws.dataX(1)[:]=[1.0,2.0,3.0,4.0,5.1,6.2]</code><br>
+<code>ws.dataY(0)[:]=[3.0,6.0,9.0,12.0,8.0,4.0]</code><br>
+<code>ws.dataY(1)[:]=[3.1,6.1,9.1,12.1,8.1,4.1]</code><br>
+<code>AnalysisDataService.addOrReplace("Uncropped",ws)</code><br>
+<code>CropWorkspace(InputWorkspace="Uncropped",XMin=1.5,XMax=3.5,OutputWorkspace="Cropped")</code></p>
+<p>In this example the cropped workspace ought to include only the points at x=2 and x=3.</p>
+<h3>
+<a name="platforms-affected-4" class="anchor" href="356.html#platforms-affected-4"></a>Platforms affected</h3>
+<p>Using the “Muon Nightly Build” from the Download page (3.11.20180103.1049) on Windows 7: may affect others</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-03-11T17:20:32Z' class='post-time'>
+                    March 11, 2020,  5:20pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-03-11T17:20:32Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’ve been caught out by this one again. The use case being using FFT with only real input data, then cropping to select only the real part and a subset of frequencies (where I might expect a peak). I still get a long workspace with a single spectrum and a lot of bins with y=0.</p>
+<p>The work around is to do the crop in two stages, first the subset of spectra and then the X range, but this shouldn’t really be necessary.</p>
+<p>(Recent nightly 4.2.20200229.709)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-03-23T11:13:12Z' class='post-time'>
+                    March 23, 2020, 11:13am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-03-23T11:13:12Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>For ragged workspaces, setting bins outisde the range to 0 is the intended behaviour of <a href="https://docs.mantidproject.org/nightly/algorithms/CropWorkspace-v1.html" rel="noopener nofollow ugc">CropWorkspace</a>. Out of interest can I ask what you are then using the cropped workspace for that makes this behaviour undesirable?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-03-23T11:31:00Z' class='post-time'>
+                    March 23, 2020, 11:31am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-03-23T11:31:00Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The procedure is: load runs in turn, group and pre process data, do FFT on them, crop to a frequency range where I expected a signal, conjoin the spectra with a log value such as temperature as the Y axis, then do a 2D colour plot which should not have blank areas at the sides. There are work arounds such as the double crop, or conjoining the time spectra first and then using ExtractFFTSpectrum.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

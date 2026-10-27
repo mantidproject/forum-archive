@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Problem in installing Mantid environment on Windows - Installation - Mantid Help Forum</title>
+    <meta name="description" content="Hello, I installed Anaconda3 (Ver. 2021.05, Python 3.8.8 64bit) and tried to install Mantid package using conda command but failed. The information is as below: 
+(base) PS C:\Windows\system32&amp;gt;  conda install -c mantid ma&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="839.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Problem in installing Mantid environment on Windows&#39;" href="https://forum.mantidproject.org/t/problem-in-installing-mantid-environment-on-windows/839.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/problem-in-installing-mantid-environment-on-windows/839" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/problem-in-installing-mantid-environment-on-windows/839" />
+<meta property="og:title" content="Problem in installing Mantid environment on Windows" />
+<meta name="twitter:title" content="Problem in installing Mantid environment on Windows" />
+<meta property="og:description" content="Hello, I installed Anaconda3 (Ver. 2021.05, Python 3.8.8 64bit) and tried to install Mantid package using conda command but failed. The information is as below:  (base) PS C:\Windows\system32&gt;  conda install -c mantid mantid Collecting package metadata (current_repodata.json): done Solving environment: / The environment is inconsistent, please check the package plan carefully The following packages are causing the inconsistency:    - &lt;unknown&gt;/linux-64::mantid==6.5.0=py38hea6597a_0 failed with i..." />
+<meta name="twitter:description" content="Hello, I installed Anaconda3 (Ver. 2021.05, Python 3.8.8 64bit) and tried to install Mantid package using conda command but failed. The information is as below:  (base) PS C:\Windows\system32&gt;  conda install -c mantid mantid Collecting package metadata (current_repodata.json): done Solving environment: / The environment is inconsistent, please check the package plan carefully The following packages are causing the inconsistency:    - &lt;unknown&gt;/linux-64::mantid==6.5.0=py38hea6597a_0 failed with i..." />
+<meta property="og:article:section" content="Installation" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="article:published_time" content="2023-01-12T11:46:48+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="839.html">Problem in installing Mantid environment on Windows</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/installation/7.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Installation</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Problem in installing Mantid environment on Windows'>
+      <link itemprop='url' href='839.html'>
+      <meta itemprop='datePublished' content='2023-01-12T11:46:48Z'>
+        <meta itemprop='articleSection' content='Installation'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/ghc'><span itemprop='name'>ghc</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="839.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2023-01-12T11:46:48Z' class='post-time'>
+                    January 12, 2023, 11:46am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-12T11:46:48Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello, I installed Anaconda3 (Ver. 2021.05, Python 3.8.8 64bit) and tried to install Mantid package using conda command but failed. The information is as below:</p>
+<pre><code class="lang-auto">(base) PS C:\Windows\system32&gt;  conda install -c mantid mantid
+Collecting package metadata (current_repodata.json): done
+Solving environment: /
+The environment is inconsistent, please check the package plan carefully
+The following packages are causing the inconsistency:
+
+  - &lt;unknown&gt;/linux-64::mantid==6.5.0=py38hea6597a_0
+failed with initial frozen solve. Retrying with flexible solve.
+Solving environment: failed with repodata from current_repodata.json, will retry with next repodata source.
+Collecting package metadata (repodata.json): done
+Solving environment: |
+The environment is inconsistent, please check the package plan carefully
+The following packages are causing the inconsistency:
+
+  - &lt;unknown&gt;/linux-64::mantid==6.5.0=py38hea6597a_0
+failed with initial frozen solve. Retrying with flexible solve.
+Solving environment: /
+Found conflicts! Looking for incompatible packages.
+This can take several minutes.  Press CTRL-C to abort.
+failed
+
+UnsatisfiableError: The following specifications were found to be incompatible with each other:
+
+Output in format: Requested package -&gt; Available versions
+
+(base) PS C:\Windows\system32&gt;
+</code></pre>
+<p>I also tried other Anaconda versions, but failed again.<br>
+I just want to know how to use Mantid package on Windows without Mantid Workbench.<br>
+Thanks.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/thomashampson'><span itemprop='name'>thomashampson</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-01-12T12:28:45Z' class='post-time'>
+                    January 12, 2023, 12:28pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-12T12:28:45Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi,</p>
+<p>It looks like you are trying to install mantid into your base conda environment. You will need to create a new conda enviornment and activate it before installing mantid. e.g:</p>
+<pre><code class="lang-auto">conda create -n mantid_env
+conda activate mantid_env
+conda install -c mantid mantid
+</code></pre>
+<p>where mantid_env is the name of your new conda environment.</p>
+<p>Thanks,<br>
+Tom</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/ghc'><span itemprop='name'>ghc</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-01-12T12:56:32Z' class='post-time'>
+                    January 12, 2023, 12:56pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-12T12:56:32Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi, Tom. Thank you for your reply. I created a new conda environment and tried to install Mantid, but failed again.</p>
+<pre><code class="lang-auto">(base) PS C:\Windows\system32&gt; conda activate mantid_env
+(mantid_env) PS C:\Windows\system32&gt; conda install -c mantid mantid
+Collecting package metadata (current_repodata.json): done
+Solving environment: failed with initial frozen solve. Retrying with flexible solve.
+Solving environment: failed with repodata from current_repodata.json, will retry with next repodata source.
+Collecting package metadata (repodata.json): done
+Solving environment: failed with initial frozen solve. Retrying with flexible solve.
+Solving environment: \
+Found conflicts! Looking for incompatible packages.
+This can take several minutes.  Press CTRL-C to abort.
+                                                                                                                       |failed
+
+UnsatisfiableError:
+
+(mantid_env) PS C:\Windows\system32&gt;
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/thomashampson'><span itemprop='name'>thomashampson</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-01-13T09:20:53Z' class='post-time'>
+                    January 13, 2023,  9:20am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-13T09:20:53Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi,</p>
+<p>Can you update your Conda with:</p>
+<p><code>conda update conda</code></p>
+<p>and try again? It worked for me after Conda updates to version 22.11.1, otherwise I think I was having the same problem as you.</p>
+<p>Thanks,<br>
+Tom</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/ghc'><span itemprop='name'>ghc</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-01-18T07:30:10Z' class='post-time'>
+                    January 18, 2023,  7:30am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-18T07:30:10Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi, Tom. Thank you very much for your replies. I tried again and failed. Maybe there are some problems in my Windows. I have given up to install Mantid environment in Windows and I am using a Linux system in a virtual machine instead.<br>
+Thanks again.<br>
+Haichuan</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/thomashampson'><span itemprop='name'>thomashampson</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-01-19T15:22:13Z' class='post-time'>
+                    January 19, 2023,  3:22pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-19T15:22:13Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Haichuan,</p>
+<p>Sorry to hear that you’re still having trouble installing Mantid into a Conda environment. If you wanted to attempt to use Windows again, we have found that mamba (download and install mambaforge <a href="https://github.com/conda-forge/miniforge#mambaforge">here</a>) is a lot faster and more reliable when attempting to resolve all of the dependencies.</p>
+<p>Thanks,<br>
+Tom</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/fengex'><span itemprop='name'>fengex</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/0a61b55172952a6b02efd30a6d9418ec28fced6f.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-03-27T09:24:57Z' class='post-time'>
+                    March 27, 2023,  9:24am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-03-27T09:24:57Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Tom<br>
+I’ve meet similar problem when I install Mantid in my anaconda env “py38”. Followed you suggestions, I use mamba to detect the dependencies of mantid, then install them using “conda install”, and finally get mantid installed successfully.<br>
+mantid                    6.6.0            py38hec61f87_0    mantid<br>
+markupsafe                2.1.1            py38h2bbff1b_0    defaults<br>
+matplotlib                3.5.2            py38haa95532_0    defaults</p>
+<p>However, it is still not ok to import in a jupyter notebook, or Ipython kernel. have you meet similar problem? or any idea to solve it?<br>
+from mantid.simpleapi import *<br>
+Got error: ImportError                               Traceback (most recent call last)<br>
+File C:\anaconda3\envs\py38\lib\site-packages\mantid\utils_utils.py:37, in import_mantid_cext(modulename, package, caller_globals)<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../uploads/default/original/1X/0a61b55172952a6b02efd30a6d9418ec28fced6f.png" data-download-href="https://forum.mantidproject.org/uploads/default/0a61b55172952a6b02efd30a6d9418ec28fced6f" title="image"><img src="../../uploads/default/optimized/1X/0a61b55172952a6b02efd30a6d9418ec28fced6f_2_690x232.png" alt="image" data-base62-sha1="1tQ737KeR6badntBNFEh849j8Cz" width="690" height="232" srcset="../../uploads/default/optimized/1X/0a61b55172952a6b02efd30a6d9418ec28fced6f_2_690x232.png, ../../uploads/default/optimized/1X/0a61b55172952a6b02efd30a6d9418ec28fced6f_2_1035x348.png 1.5x, ../../uploads/default/optimized/1X/0a61b55172952a6b02efd30a6d9418ec28fced6f_2_1380x464.png 2x" data-dominant-color="F0F1EB"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1495×504 71.4 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div><br>
+Thanks<br>
+Erxi</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="../problem-in-install-mantid-6-6-0-environment-on-windows-10/852.html">Problem in install Mantid 6.6.0 environment on Windows-10</a>
+                        <meta itemprop='position' content='2'>
+                      </div>
+                </div>
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

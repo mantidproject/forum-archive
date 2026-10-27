@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Subprocess calls failing on Windows - Miscellaneous - Mantid Help Forum</title>
+    <meta name="description" content="A while ago I wrote a script/algorithm to load a non standard data file with the help of another executable, which basically did: 
+import subprocess 
+datafilename=self.getProperty(“File”).value 
+s=subprocess.check_output&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="88.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Subprocess calls failing on Windows&#39;" href="https://forum.mantidproject.org/t/subprocess-calls-failing-on-windows/88.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/subprocess-calls-failing-on-windows/88" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/subprocess-calls-failing-on-windows/88" />
+<meta property="og:title" content="Subprocess calls failing on Windows" />
+<meta name="twitter:title" content="Subprocess calls failing on Windows" />
+<meta property="og:description" content="A while ago I wrote a script/algorithm to load a non standard data file with the help of another executable, which basically did:  import subprocess  datafilename=self.getProperty(“File”).value  s=subprocess.check_output([“command”,datafilename])  #process string s and extract data into a new workspace  It worked OK then (Nov 2014) but fails now with “[Error 6] The handle is invalid”.  On investigation this seems to be a general Windows/Python bug and there is a work around using  s=subprocess.c..." />
+<meta name="twitter:description" content="A while ago I wrote a script/algorithm to load a non standard data file with the help of another executable, which basically did:  import subprocess  datafilename=self.getProperty(“File”).value  s=subprocess.check_output([“command”,datafilename])  #process string s and extract data into a new workspace  It worked OK then (Nov 2014) but fails now with “[Error 6] The handle is invalid”.  On investigation this seems to be a general Windows/Python bug and there is a work around using  s=subprocess.c..." />
+<meta property="og:article:section" content="Miscellaneous" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="article:published_time" content="2015-12-07T16:49:12+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="88.html">Subprocess calls failing on Windows</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/miscellaneous/9.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Miscellaneous</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Subprocess calls failing on Windows'>
+      <link itemprop='url' href='88.html'>
+      <meta itemprop='datePublished' content='2015-12-07T16:49:12Z'>
+        <meta itemprop='articleSection' content='Miscellaneous'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="88.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2015-12-07T16:49:12Z' class='post-time'>
+                    December 7, 2015,  4:49pm
+                  </time>
+                  <meta itemprop='dateModified' content='2015-12-07T16:49:12Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>A while ago I wrote a script/algorithm to load a non standard data file with the help of another executable, which basically did:<br>
+import subprocess<br>
+datafilename=self.getProperty(“File”).value<br>
+s=subprocess.check_output([“command”,datafilename])<br>
+<span class="hashtag">#process</span> string s and extract data into a new workspace</p>
+<p>It worked OK then (Nov 2014) but fails now with “[Error 6] The handle is invalid”.</p>
+<p>On investigation this seems to be a general Windows/Python bug and there is a work around using<br>
+s=subprocess.check_output([“command”,datafilename],stdin=subprocess.PIPE, stderr=subprocess.PIPE)</p>
+<p>There’s still a problem: it pops up a console window (which is blank as the output goes elsewhere) and the window then disappears once the subprocess finishes. This is most annoying as it also grabs keyboard focus, especially if I embed that algorithm in another longer running script and let it get on with processing while I do something else. Is there a better way to do this?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/martyngigg'><span itemprop='name'>martyngigg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2015-12-18T11:04:49Z' class='post-time'>
+                    December 18, 2015, 11:04am
+                  </time>
+                  <meta itemprop='dateModified' content='2015-12-18T11:04:49Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi James,</p>
+<p>There is a suggestion <a href="http://code.activestate.com/recipes/409002-launching-a-subprocess-without-a-console-window/">here</a> that it is possible to use the <code>startupinfo</code> argument to <code>check_output</code> (the Python docs page suggests that <code>check_output</code> takes most arguments that <code>Popen</code> does and pass a flag to turn off the window.</p>
+<p>Does something like this work for you situation:</p>
+<p><code>startupinfo = subprocess.STARTUPINFO() startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW s=subprocess.check_output(["command",datafilename],stdin=subprocess.PIPE, stderr=subprocess.PIPE, startupinfo=startupinfo)</code></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2015-12-18T11:14:28Z' class='post-time'>
+                    December 18, 2015, 11:14am
+                  </time>
+                  <meta itemprop='dateModified' content='2015-12-18T11:14:28Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I had already found a rather similar looking workaround elsewhere on the web:<br>
+import win32con<br>
+listing=subprocess.check_output([“command”,datafilename],stdin=subprocess.PIPE,stderr=subprocess.PIPE,creationflags=win32con.CREATE_NO_WINDOW)<br>
+That works and doesn’t pop up windows. It’s Windows only of course - might yours be portable, assuming of course that “command” is available on the other platforms?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/martyngigg'><span itemprop='name'>martyngigg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2015-12-18T11:29:06Z' class='post-time'>
+                    December 18, 2015, 11:29am
+                  </time>
+                  <meta itemprop='dateModified' content='2015-12-18T11:29:06Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I think this unfortunately gets into the realm of operating system specifics and it looks like the whole <code>startupinfo</code> structure is a Windows-only feature so it looks like there isn’t a cross-platform way to do this in Python. However, I believe the default on the other platforms is not to create a separate window to run the command.</p>
+<p>I can confirm that this is the case on Linux with the following code:</p>
+<pre><code>import subprocess as subp
+import sys
+
+if sys.platform == "win32":
+    startupinfo = subp.STARTUPINFO()
+    startupinfo.dwFlags |= subp.STARTF_USESHOWWINDOW
+else:
+    startupinfo = None
+
+s = subp.check_output(["ls", "bin"], stdin=subp.PIPE, stderr=subp.PIPE, startupinfo=None)</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

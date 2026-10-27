@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Hamiltonian represent in hermitian - Python - Mantid Help Forum</title>
+    <meta name="description" content="Dear all, 
+I would like to get the cf.getHamiltonian() output in hermitian form. How can I do that? 
+Thank you!">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="397.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Hamiltonian represent in hermitian&#39;" href="https://forum.mantidproject.org/t/hamiltonian-represent-in-hermitian/397.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/hamiltonian-represent-in-hermitian/397" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/hamiltonian-represent-in-hermitian/397" />
+<meta property="og:title" content="Hamiltonian represent in hermitian" />
+<meta name="twitter:title" content="Hamiltonian represent in hermitian" />
+<meta property="og:description" content="Dear all,  I would like to get the cf.getHamiltonian() output in hermitian form. How can I do that?  Thank you!" />
+<meta name="twitter:description" content="Dear all,  I would like to get the cf.getHamiltonian() output in hermitian form. How can I do that?  Thank you!" />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="og:article:section" content="Python" />
+<meta property="og:article:section:color" content="9EB83B" />
+<meta property="article:published_time" content="2018-05-21T15:40:45+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="397.html">Hamiltonian represent in hermitian</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #9EB83B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Python</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Hamiltonian represent in hermitian'>
+      <link itemprop='url' href='397.html'>
+      <meta itemprop='datePublished' content='2018-05-21T15:40:45Z'>
+        <meta itemprop='articleSection' content='Python'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Arima'><span itemprop='name'>Arima</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="397.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2018-05-21T15:40:45Z' class='post-time'>
+                    May 21, 2018,  3:40pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-05-21T15:40:45Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Dear all,</p>
+<p>I would like to get the cf.getHamiltonian() output in hermitian form. How can I do that?<br>
+Thank you!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/mducle'><span itemprop='name'>mducle</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-05-21T16:35:26Z' class='post-time'>
+                    May 21, 2018,  4:35pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-05-21T16:35:26Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Arima,</p>
+<p>I don’t understand what you mean - the Hamiltonian is by definition Hermitian. For example:</p>
+<pre><code class="lang-auto">from CrystalField import CrystalField
+
+cf = CrystalField('Ce', 'C2', IB22=0.01, B20=0.02, B22=0.03)
+np.set_printoptions(suppress=True, precision=3, linewidth=100)
+Hcf = cf.getHamiltonian()
+print Hcf
+print
+print np.sum(Hcf - Hcf.conj().T)
+</code></pre>
+<p>gives:</p>
+<pre><code class="lang-auto">[[ 0.200+0.j     0.000+0.j     0.095+0.032j  0.000+0.j     0.000+0.j     0.000+0.j   ]
+ [ 0.000+0.j    -0.040+0.j     0.000+0.j     0.127+0.042j  0.000+0.j     0.000+0.j   ]
+ [ 0.095-0.032j  0.000+0.j    -0.160+0.j     0.000+0.j     0.127+0.042j  0.000+0.j   ]
+ [ 0.000+0.j     0.127-0.042j  0.000+0.j    -0.160+0.j     0.000+0.j     0.095+0.032j]
+ [ 0.000+0.j     0.000+0.j     0.127-0.042j  0.000+0.j    -0.040+0.j     0.000+0.j   ]
+ [ 0.000+0.j     0.000+0.j     0.000+0.j     0.095-0.032j  0.000+0.j     0.200+0.j   ]]
+
+0j
+</code></pre>
+<p>which is a Hermitian matrix.</p>
+<p>Do you mean to output it in some kind of packed form (for example just the upper or lower triangle)? In which case you would have to do this manually - we use <code>numpy</code> for most of the numerical calculations and <code>numpy</code> doesn’t support converting matrices from densed to packed format.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Arima'><span itemprop='name'>Arima</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-05-21T16:48:46Z' class='post-time'>
+                    May 21, 2018,  4:48pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-05-21T16:48:46Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello Mducle,</p>
+<p>Thank you for your speedy reply!<br>
+Now I see my problem. It might come from the wrong B values from the fitting. My output looks like this<br>
+[[ 0.00000000+0.j  0.00000000+0.j  0.12592968+0.j  0.00000000+0.j  0.99203917+0.j  0.00000000+0.j]<br>
+[ 0.00000000+0.j  0.00000000+0.j  0.00000000+0.j -0.99203917+0.j  0.00000000+0.j -0.12592968+0.j]<br>
+[ 1.00000000+0.j  0.00000000+0.j  0.00000000+0.j  0.00000000+0.j  0.00000000+0.j  0.00000000+0.j]<br>
+[ 0.00000000+0.j  1.00000000+0.j  0.00000000+0.j  0.00000000+0.j  0.00000000+0.j  0.00000000+0.j]<br>
+[ 0.00000000+0.j  0.00000000+0.j -0.99203917+0.j  0.00000000+0.j  0.12592968+0.j  0.00000000+0.j]<br>
+[ 0.00000000+0.j  0.00000000+0.j  0.00000000+0.j  0.12592968+0.j  0.00000000+0.j -0.99203917+0.j]]<br>
+which confuses me previously.</p>
+<p>Thanks again!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/mducle'><span itemprop='name'>mducle</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-05-22T08:35:33Z' class='post-time'>
+                    May 22, 2018,  8:35am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-05-22T08:35:33Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Arima,</p>
+<p>what you get looks like the eigenvectors matrix (which is obtained from <code>cf.getEigenvectors()</code>) rather than the Hamiltonian.</p>
+<p>In this case each column represents the eigenvector of a particular eigenvalue, in the |J, mJ&gt; (where J=5/2 here) basis with the top row being the coefficient of |mJ=J&gt; (|mJ=5/2&gt;), the next row is for |mJ=J-1&gt; (|mJ=3/2&gt;) etc until the last row which is |mJ=-J&gt; (|mJ=-3/2&gt;). The columns are sorted in the order of the eigenvalues from left to right, so the leftmost column is for the ground state, etc.</p>
+<p>For your output, J=5/2 is a Kramers state so you’ve got 3 doublets, with the ground state being |mJ=+/- 1/2&gt;, the first excited state is: 0.126|+/- 5/2&gt; - 0.992|+/- 3/2&gt;, and the second excited state is 0.992|+/-5/2&gt; -/+ 0.126|+/-3/2&gt;</p>
+<p>Could you send me the script which is used to post this output? If you get this output from <code>cf.getHamiltonian()</code> then there’s a bug in the Python code, which we’ll try to fix.</p>
+<p>All the best,</p>
+<p>Duc.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Arima'><span itemprop='name'>Arima</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-05-22T09:30:19Z' class='post-time'>
+                    May 22, 2018,  9:30am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-05-22T09:30:19Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Duc,</p>
+<p>You are right! I printed the wrong matrix [facepalm]…<br>
+Thank you <img src="../../images/emoji/twitter/slight_smile.png%3Fv=9" title=":slight_smile:" class="emoji" alt=":slight_smile:"></p>
+<p>Arima</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/mducle'><span itemprop='name'>mducle</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-05-24T15:47:58Z' class='post-time'>
+                    May 24, 2018,  3:47pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-05-24T15:47:58Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Arima,</p>
+<p>Could you sent me the error message?</p>
+<p>Or do you mean that the fit runs but that the fit result is not satisfactory? Note that for <code>cgs</code> units, the magnetic field <code>Hmag</code> is in units of <strong>Gauss</strong> rather than Tesla. So if you used a 1T field for the measurement, you need to put <code>Hmag=10000</code> instead of <code>Hmag=1</code>.</p>
+<p>I hope this helps,</p>
+<p>Duc.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Arima'><span itemprop='name'>Arima</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-05-24T15:53:51Z' class='post-time'>
+                    May 24, 2018,  3:53pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-05-24T15:53:51Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Duc,</p>
+<p>The script runs without error msg, but strangely the value of the fitting parameters stays the same.</p>
+<p>Thank you.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/mducle'><span itemprop='name'>mducle</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-06-04T13:28:34Z' class='post-time'>
+                    June 4, 2018,  1:28pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-06-04T13:28:34Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Arima,</p>
+<p>in addition to our PM, I’d just like to note here for others to know that this is due to a bug in the Python part of the crystal field calculations which also affected another user: <a href="https://github.com/mantidproject/mantid/issues/22466" class="inline-onebox" rel="noopener nofollow ugc">Crystal field parameters not updating in fitting procedure · Issue #22466 · mantidproject/mantid · GitHub</a></p>
+<p>This should be fixed by the next Mantid release, and hopefully will be in the nightly version shortly. I’ll edit this message to note when the fixed in incorporated into Mantid nightly.</p>
+<p>Duc.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

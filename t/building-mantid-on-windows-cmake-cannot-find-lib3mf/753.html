@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Building Mantid on Windows cmake cannot find Lib3mf - Mantid Help Forum</title>
+    <meta name="description" content="Hi I am trying to build Mantidworkbench on Windows 10x64. 
+I followed the getting started guide, I am using cmake 3.20.5. 
+But I get an error message, that Lib3mf  cannot be found. 
+I tried to give the path to it manuall&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="753.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Building Mantid on Windows cmake cannot find Lib3mf&#39;" href="https://forum.mantidproject.org/t/building-mantid-on-windows-cmake-cannot-find-lib3mf/753.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/building-mantid-on-windows-cmake-cannot-find-lib3mf/753" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/building-mantid-on-windows-cmake-cannot-find-lib3mf/753" />
+<meta property="og:title" content="Building Mantid on Windows cmake cannot find Lib3mf" />
+<meta name="twitter:title" content="Building Mantid on Windows cmake cannot find Lib3mf" />
+<meta property="og:description" content="Hi I am trying to build Mantidworkbench on Windows 10x64.  I followed the getting started guide, I am using cmake 3.20.5.  But I get an error message, that Lib3mf  cannot be found.  I tried to give the path to it manually in cmake gui, but this did not work.  Any idea how I can fix this?  CMake Error at C:/Program Files/CMake/share/cmake-3.20/Modules/FindPackageHandleStandardArgs.cmake:230 (message):  Could NOT find Lib3mf (missing: LIB3MF_INCLUDE_DIR)  Call Stack (most recent call first):  C:/P..." />
+<meta name="twitter:description" content="Hi I am trying to build Mantidworkbench on Windows 10x64.  I followed the getting started guide, I am using cmake 3.20.5.  But I get an error message, that Lib3mf  cannot be found.  I tried to give the path to it manually in cmake gui, but this did not work.  Any idea how I can fix this?  CMake Error at C:/Program Files/CMake/share/cmake-3.20/Modules/FindPackageHandleStandardArgs.cmake:230 (message):  Could NOT find Lib3mf (missing: LIB3MF_INCLUDE_DIR)  Call Stack (most recent call first):  C:/P..." />
+<meta property="article:published_time" content="2021-07-08T13:49:28+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="753.html">Building Mantid on Windows cmake cannot find Lib3mf</a>
+    </h1>
+
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Building Mantid on Windows cmake cannot find Lib3mf'>
+      <link itemprop='url' href='753.html'>
+      <meta itemprop='datePublished' content='2021-07-08T13:49:28Z'>
+        <meta itemprop='articleSection' content='Uncategorized'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/thomas'><span itemprop='name'>thomas</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="753.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2021-07-08T13:49:28Z' class='post-time'>
+                    July 8, 2021,  1:49pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-08T13:49:28Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi I am trying to build Mantidworkbench on Windows 10x64.<br>
+I followed the getting started guide, I am using cmake 3.20.5.<br>
+But I get an error message, that Lib3mf  cannot be found.<br>
+I tried to give the path to it manually in cmake gui, but this did not work.<br>
+Any idea how I can fix this?</p>
+<p>CMake Error at C:/Program Files/CMake/share/cmake-3.20/Modules/FindPackageHandleStandardArgs.cmake:230 (message):<br>
+Could NOT find Lib3mf (missing: LIB3MF_INCLUDE_DIR)<br>
+Call Stack (most recent call first):<br>
+C:/Program Files/CMake/share/cmake-3.20/Modules/FindPackageHandleStandardArgs.cmake:594 (_FPHSA_FAILURE_MESSAGE)<br>
+buildconfig/CMake/FindLib3mf.cmake:21 (find_package_handle_standard_args)<br>
+Framework/DataHandling/CMakeLists.txt:646 (find_package)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-08T14:03:05Z' class='post-time'>
+                    July 8, 2021,  2:03pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-08T14:03:05Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Thomas,</p>
+<p>Out of interest are you building from the latest master on GitHub?<br>
+You could set DENABLE_LIB3MF=OFF in the Cmake gui and see if it still builds successfully?</p>
+<p>I believe Lib3MF is only used for loading mesh files of Sample Shapes for absorption corrections, so you may not need it enabled. Tell me how you get on!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/thomas'><span itemprop='name'>thomas</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-09T05:23:11Z' class='post-time'>
+                    July 9, 2021,  5:23am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-09T05:23:11Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Dear Daniel, thanks for your help.<br>
+I am using the latest master from github. I also tried it out on a different computer today with the same problem.<br>
+I tried to set DENABLE_LIB3MF=OFF and ENABLE_LIB3MF=OFF (guess the D was a typo), but this seems to have no effect at all.<br>
+But I found out why manual setting the path did not work. I set the wrong path.<br>
+I tried setting it to: /external/src/ThirdParty/include/lib3mf<br>
+But it should only be set to: /external/src/ThirdParty/include<br>
+With that everything works.<br>
+It is really amazing how easy it is to build mantid, I have never build anything before on windows.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-09T09:35:14Z' class='post-time'>
+                    July 9, 2021,  9:35am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-09T09:35:14Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Well done for figuring this out! The path should be automatically set-up and you found a bug in our code, so thanks for that! I believe the fix is up and should be merged in a few working days.</p>
+<p>Hmm, that’s odd that setting ENABLE_LIB3MF=OFF didn’t work.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

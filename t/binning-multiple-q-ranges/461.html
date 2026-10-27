@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Binning multiple Q ranges - General - Mantid Help Forum</title>
+    <meta name="description" content="Attempting to reduce data in multiple Q bins from SANS2D and using the exact user file commands (under “L”) http://www.mantidproject.org/SANS_User_File_Commands#SANS2D 
+Keep receiving the same ValueError 
+ValueError: Inv&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="461.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Binning multiple Q ranges&#39;" href="https://forum.mantidproject.org/t/binning-multiple-q-ranges/461.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/binning-multiple-q-ranges/461" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/binning-multiple-q-ranges/461" />
+<meta property="og:title" content="Binning multiple Q ranges" />
+<meta name="twitter:title" content="Binning multiple Q ranges" />
+<meta property="og:description" content="Attempting to reduce data in multiple Q bins from SANS2D and using the exact user file commands (under “L”) http://www.mantidproject.org/SANS_User_File_Commands#SANS2D  Keep receiving the same ValueError  ValueError: Invalid value for property OutputBinning (dbl list) &quot; 0.005,0.1,0.03,0.08,1.0 [/LOG]]&quot;: Could not set property OutputBinning. Can not convert &quot; 0.005,0.1,0.03,0.08,1.0 [/LOG]]&quot; to dbl list  at line 50 in ‘&lt;Interface&gt;’  caused by line 463 in ‘C:/MantidInstall/scripts/SANS\ISISCommand..." />
+<meta name="twitter:description" content="Attempting to reduce data in multiple Q bins from SANS2D and using the exact user file commands (under “L”) http://www.mantidproject.org/SANS_User_File_Commands#SANS2D  Keep receiving the same ValueError  ValueError: Invalid value for property OutputBinning (dbl list) &quot; 0.005,0.1,0.03,0.08,1.0 [/LOG]]&quot;: Could not set property OutputBinning. Can not convert &quot; 0.005,0.1,0.03,0.08,1.0 [/LOG]]&quot; to dbl list  at line 50 in ‘&lt;Interface&gt;’  caused by line 463 in ‘C:/MantidInstall/scripts/SANS\ISISCommand..." />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="article:published_time" content="2018-12-20T08:10:26+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="461.html">Binning multiple Q ranges</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/6.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Binning multiple Q ranges'>
+      <link itemprop='url' href='461.html'>
+      <meta itemprop='datePublished' content='2018-12-20T08:10:25Z'>
+        <meta itemprop='articleSection' content='General'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/ws216'><span itemprop='name'>ws216</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="461.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2018-12-20T08:10:26Z' class='post-time'>
+                    December 20, 2018,  8:10am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-12-20T08:10:26Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Attempting to reduce data in multiple Q bins from SANS2D and using the exact user file commands (under “L”) <a href="http://www.mantidproject.org/SANS_User_File_Commands#SANS2D" rel="noopener nofollow ugc">http://www.mantidproject.org/SANS_User_File_Commands#SANS2D</a></p>
+<p>Keep receiving the same ValueError</p>
+<p>ValueError: Invalid value for property OutputBinning (dbl list) " 0.005,0.1,0.03,0.08,1.0 [/LOG]]": Could not set property OutputBinning. Can not convert " 0.005,0.1,0.03,0.08,1.0 [/LOG]]" to dbl list</p>
+<p>at line 50 in ‘&lt;Interface&gt;’</p>
+<p>caused by line 463 in ‘C:/MantidInstall/scripts/SANS\ISISCommandInterface.py’</p>
+<p>caused by line 731 in ‘C:/MantidInstall/scripts/SANS\ISISCommandInterface.py’</p>
+<p>caused by line 727 in ‘C:/MantidInstall/scripts/SANS\ISISCommandInterface.py’</p>
+<p>caused by line 531 in ‘C:/MantidInstall/scripts/SANS\isis_reducer.py’</p>
+<p>caused by line 2764 in ‘C:/MantidInstall/scripts/SANS\isis_reduction_steps.py’</p>
+<p>caused by line 1094 in ‘C:\MantidInstall\bin\mantid\simpleapi.py’</p>
+<p>caused by line 1032 in ‘C:\MantidInstall\bin\mantid\simpleapi.py’</p>
+<p>caused by line 1016 in ‘C:\MantidInstall\bin\mantid\simpleapi.py’</p>
+<p>when attempting to use the “/LOG” term despite where this appears. If i remove it, the data reduces but only bins in linear spacings.</p>
+<p>Any help here would be much appreciated!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/TTitcombe'><span itemprop='name'>TTitcombe</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-12-20T09:29:02Z' class='post-time'>
+                    December 20, 2018,  9:29am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-12-20T09:29:02Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi, just looking into this issue for you.<br>
+Can I just confirm whether you see this issue as soon as you try to load the user file, or when you attempt to process the data?</p>
+<p>Thanks,<br>
+Tom</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/ws216'><span itemprop='name'>ws216</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-12-20T09:35:27Z' class='post-time'>
+                    December 20, 2018,  9:35am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-12-20T09:35:27Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It crops up after attempting to 1D reduce, the user file loads file.</p>
+<p>Thanks,</p>
+<p>Will</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/TTitcombe'><span itemprop='name'>TTitcombe</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-12-20T10:09:09Z' class='post-time'>
+                    December 20, 2018, 10:09am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-12-20T10:09:09Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Can I ask:</p>
+<ol>
+<li>What is the version number and the release date for the Mantid you are using? (Main MantidPlot window → Help → About MantidPlot)<br>
+2a. Is the exact line in your user file “L/Q 0.005,0.1,0.03,0.08,1.0 [/LOG]]”?<br>
+2b. If it is, does “L/Q 0.005,0.1,0.03,0.08,1.0 /LOG” throw an issue?</li>
+</ol>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/ws216'><span itemprop='name'>ws216</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-12-20T10:20:33Z' class='post-time'>
+                    December 20, 2018, 10:20am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-12-20T10:20:33Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Mantid is 3.13.0 and released on 24/07/18</p>
+<p>I have tried all variations of adding /log - in square brackets, at the end of the line, or next to the dq parts. Whenever ‘/log’ or some string is present it throws up the error, whereas if I leave it out there is no error. The issue is that the default if i leave it out is to bin the data in linear steps not logarithmic steps.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/TTitcombe'><span itemprop='name'>TTitcombe</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-12-20T11:19:06Z' class='post-time'>
+                    December 20, 2018, 11:19am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-12-20T11:25:38Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Can I just get you to try changing the step sizes to negative values: “L/Q 0.005,-0.1,0.03,-0.08,1.0” would be your new string (under the hood, negative steps should be interpreted as logarithmic).</p>
+<p>When I run this I don’t get an error, so if you can just check you get the output you expect.</p>
+<p>Thanks</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/ws216'><span itemprop='name'>ws216</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-12-20T11:57:58Z' class='post-time'>
+                    December 20, 2018, 11:57am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-12-20T11:57:58Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I don’t get the error either and works as expected! Thanks Tom, much appreciated!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

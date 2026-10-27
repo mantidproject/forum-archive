@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Updates for Week 5 of 2019 - Developer - Mantid Help Forum</title>
+    <meta name="description" content="Allow materials to not have chemical compositions
+Various improvements to the muon gui
+Python plotting now handles twinx and twiny axes for workspaces
+New CNCS geometry for 2019
+Improved developer documentation around p&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="478.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Updates for Week 5 of 2019&#39;" href="https://forum.mantidproject.org/t/updates-for-week-5-of-2019/478.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/updates-for-week-5-of-2019/478" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/updates-for-week-5-of-2019/478" />
+<meta property="og:title" content="Updates for Week 5 of 2019" />
+<meta name="twitter:title" content="Updates for Week 5 of 2019" />
+<meta property="og:description" content="Allow materials to not have chemical compositions Various improvements to the muon gui Python plotting now handles twinx and twiny axes for workspaces New CNCS geometry for 2019 Improved developer documentation around pull request reviews  PyStoG added as an external project   Detailed Merges for Jan 28 to Feb 3, 2019 on github    PR23653 - Muon - Widget; Grouping Tab  PR23656 - Muon - Widget; Home Tab Plot and Run Info Widgets  PR23658 - Muon - Widget; Muon Help Widget  PR24357 - Autocomplete ..." />
+<meta name="twitter:description" content="Allow materials to not have chemical compositions Various improvements to the muon gui Python plotting now handles twinx and twiny axes for workspaces New CNCS geometry for 2019 Improved developer documentation around pull request reviews  PyStoG added as an external project   Detailed Merges for Jan 28 to Feb 3, 2019 on github    PR23653 - Muon - Widget; Grouping Tab  PR23656 - Muon - Widget; Home Tab Plot and Run Info Widgets  PR23658 - Muon - Widget; Muon Help Widget  PR24357 - Autocomplete ..." />
+<meta property="og:article:section" content="News" />
+<meta property="og:article:section:color" content="0E76BD" />
+<meta property="og:article:section" content="Developer" />
+<meta property="og:article:section:color" content="AB9364" />
+<meta property="article:published_time" content="2019-02-06T19:17:05+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="478.html">Updates for Week 5 of 2019</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/news/dev-news/15.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0E76BD'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>News</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/news/dev-news/15.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #AB9364'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Developer</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Updates for Week 5 of 2019'>
+      <link itemprop='url' href='478.html'>
+      <meta itemprop='datePublished' content='2019-02-06T19:17:05Z'>
+        <meta itemprop='articleSection' content='Developer'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/peterfpeterson'><span itemprop='name'>peterfpeterson</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="478.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2019-02-06T19:17:05Z' class='post-time'>
+                    February 6, 2019,  7:17pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-02-06T19:17:05Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <ul>
+<li>Allow materials to not have chemical compositions</li>
+<li>Various improvements to the muon gui</li>
+<li>Python plotting now handles <code>twinx</code> and <code>twiny</code> axes for workspaces</li>
+<li>New CNCS geometry for 2019</li>
+<li>Improved <a href="https://developer.mantidproject.org/GitWorkflow.html">developer documentation</a> around pull request reviews</li>
+<li>
+<a href="https://github.com/neutrons/pystog">PyStoG</a> added as an external project</li>
+</ul>
+<h2>
+<a name="detailed-merges-for-jan-28-to-feb-3-2019-1" class="anchor" href="478.html#detailed-merges-for-jan-28-to-feb-3-2019-1"></a>Detailed Merges for Jan 28 to Feb 3, 2019</h2>
+<p><a href="https://github.com/mantidproject/mantid/pulls?q=is%3Apr+merged%3A2019-01-29..2019-02-03">on github</a></p>
+<ul>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/23653">PR23653</a> - Muon - Widget; Grouping Tab</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/23656">PR23656</a> - Muon - Widget; Home Tab Plot and Run Info Widgets</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/23658">PR23658</a> - Muon - Widget; Muon Help Widget</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24357">PR24357</a> - Autocomplete SampleShape in SANS Table</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24384">PR24384</a> - Reflectometry GUI restructuring 5: presenter communication</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24440">PR24440</a> - Centre on <a href="http://docs.mantidproject.org/nightly/algorithms/SANSLoad-v1.html">SANSLoad</a>
+</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24517">PR24517</a> - Added Script Version of Engineering diffraction</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24518">PR24518</a> - Get Correct Default Name for Summed Runs</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24526">PR24526</a> - Indirect - ElasticWindowMultiple doesn’t propagate errors</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24545">PR24545</a> - Indirect Data Analysis - FABADA PDF plotting options</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24556">PR24556</a> - Enable materials with unknown chemical compositions</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24573">PR24573</a> - Improve default output names in RROA</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24587">PR24587</a> - Fix <a href="http://docs.mantidproject.org/nightly/algorithms/SaveReflections-v1.html">SaveReflections</a> for Fullprof format</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24596">PR24596</a> - TableWorkspaceDisplay column sort changes the workspace in the ADS</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24599">PR24599</a> - Fix issue with writetosignal tests failing</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24604">PR24604</a> - Improve <a href="https://developer.mantidproject.org/GitWorkflow.html">developer documentation</a> around pull request reviews</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24605">PR24605</a> - Add Python API docs for <code>RebinParamsValidator</code>
+</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24608">PR24608</a> - Fix transient imports, destroy toolbar on widgetclosed</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24614">PR24614</a> - Indirect IqtFit - Prevent a crash with Plot Current Preview</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24619">PR24619</a> - Prevent crash when deleting workspace with an open plot</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24620">PR24620</a> - Doctest info concepts</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24623">PR24623</a> - Save reflections with modulated indexing in Jana format</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24624">PR24624</a> - Moved the place where sample <code>closeGroup</code> was called</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24627">PR24627</a> - Adding to run info in muon analysis</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24631">PR24631</a> - Stop traceback suppression for <code>KeyboardInterrupt</code>
+</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24635">PR24635</a> - DirectILLCollectData: handle broken monitors gracefully</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24639">PR24639</a> - Only process or load rows if not empty</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24650">PR24650</a> - Indirect Unit tests for fitting models</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24651">PR24651</a> - Reset SANS user file on loading failure</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24654">PR24654</a> - Add <a href="https://github.com/neutrons/pystog">PyStoG</a> as an external project</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24667">PR24667</a> - Pass <code>GroupingWorkspace</code> information to <a href="http://docs.mantidproject.org/nightly/algorithms/CreateCacheFilename-v1.html">CreateCacheFilename</a> in <a href="http://docs.mantidproject.org/nightly/algorithms/AlignAndFocusPowderFromFiles-v1.html">AlignAndFocusPowderFromFiles</a>
+</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24668">PR24668</a> - Uniform space separation for Limit strings in user file</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24672">PR24672</a> - Twin axes</li>
+<li>
+<a href="https://github.com/mantidproject/mantid/pull/24679">PR24679</a> - 2019 CNCS geometry</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

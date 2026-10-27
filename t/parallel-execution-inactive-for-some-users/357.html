@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Parallel execution inactive for some users - General - Mantid Help Forum</title>
+    <meta name="description" content="We are running Mantid 3.11 on Windows Server 2008 R2, via MantidPlot. 
+The same data analysis script (inelastic neutron scattering: rebinnning, conversion to MD and making cuts) can take 4 minutes or 25 minutes depending&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="357.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Parallel execution inactive for some users&#39;" href="https://forum.mantidproject.org/t/parallel-execution-inactive-for-some-users/357.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/parallel-execution-inactive-for-some-users/357" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/parallel-execution-inactive-for-some-users/357" />
+<meta property="og:title" content="Parallel execution inactive for some users" />
+<meta name="twitter:title" content="Parallel execution inactive for some users" />
+<meta property="og:description" content="We are running Mantid 3.11 on Windows Server 2008 R2, via MantidPlot.  The same data analysis script (inelastic neutron scattering: rebinnning, conversion to MD and making cuts) can take 4 minutes or 25 minutes depending on who is running it. The system monitor shows that, when the script is running slowly, a single CPU is used throughout. For most users, the same Mantid algorithms run in parallel.  Summing up, we use the same binaries, the same Python script, the same computer, and we get the s..." />
+<meta name="twitter:description" content="We are running Mantid 3.11 on Windows Server 2008 R2, via MantidPlot.  The same data analysis script (inelastic neutron scattering: rebinnning, conversion to MD and making cuts) can take 4 minutes or 25 minutes depending on who is running it. The system monitor shows that, when the script is running slowly, a single CPU is used throughout. For most users, the same Mantid algorithms run in parallel.  Summing up, we use the same binaries, the same Python script, the same computer, and we get the s..." />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="article:published_time" content="2018-01-30T16:34:29+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="357.html">Parallel execution inactive for some users</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/6.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Parallel execution inactive for some users'>
+      <link itemprop='url' href='357.html'>
+      <meta itemprop='datePublished' content='2018-01-30T16:34:28Z'>
+        <meta itemprop='articleSection' content='General'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Maciej'><span itemprop='name'>Maciej</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="357.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2018-01-30T16:34:29Z' class='post-time'>
+                    January 30, 2018,  4:34pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-01-30T16:34:29Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>We are running Mantid 3.11 on Windows Server 2008 R2, via MantidPlot.<br>
+The same data analysis script (inelastic neutron scattering: rebinnning, conversion to MD and making cuts) can take 4 minutes or 25 minutes depending on who is running it. The system monitor shows that, when the script is running slowly, a single CPU is used throughout. For most users, the same Mantid algorithms run in parallel.<br>
+Summing up, we use the same binaries, the same Python script, the same computer, and we get the same results in the end. But for some users it runs only on one CPU.</p>
+<p>Could you think of a reason why Mantid should behave like this?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-03-19T16:34:42Z' class='post-time'>
+                    March 19, 2020,  4:34pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-03-19T16:34:42Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Sorry to resurrect an old thread, but I seem to have a similar observation. Some of my scripts make much use of numpy routines on large arrays which should be easily spread over as many cores as available. This used to happen on my old Windows 7 PC with earlier Mantids.<br>
+Now with Mantid 5 on my desktop Windows 10 PC it’s only using one core and so running much more slowly than necessary. It’s the same with Mantid 4.2 on a Windows 10 laptop, and also running the numpy code stand-alone under a separate Python 3 installation on the desktop PC.<br>
+Is there an option I have to use, to re-enable parallel processing?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-03-23T11:07:03Z' class='post-time'>
+                    March 23, 2020, 11:07am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-03-23T11:07:03Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>There isn’t an option related to enabling parallel processing. Some of our processes use it and some as yet do not, such as simple fitting. Do you have an example of when you think Mantid is using one core and could be using more?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Maciej'><span itemprop='name'>Maciej</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-04-09T10:24:10Z' class='post-time'>
+                    April 9, 2020, 10:24am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-04-09T10:24:10Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am not sure if it is going to be of interest, but I did a lot of testing back then, on the same Windows Server 2008 R2, using the official Mantid builds (3.11, 3.13, 4.0). The findings were:</p>
+<ol>
+<li>The performance drop was not related to any specific version of Mantid. It seems to have started with a Windows system update. That is, from a certain point in time it was not possible to get back to the original performance by installing an older release of Mantid, that was known to work fine in the past.</li>
+<li>I was using a Python-based data loader (LoadEXED), using numpy. For smaller files (&lt; 50 MB), there was no significant change of performance. Above a certain file size there was a saturation effect: I read the same file many times in a row. This is how long it took:<br>
+1st time: 4 seconds<br>
+2nd time: 20 seconds<br>
+3rd time: over 1 minute<br>
+4th time: 1 minute 30 seconds<br>
+5th time: 1 minute 32 seconds,<br>
+every consecutive read: under 1 minute 40 seconds.<br>
+From then on, the entire Mantid operation remained slow.</li>
+<li>After I loaded a few large files, like in the previous point, the computer in question still had over 40 GB free RAM, no CPU activity, no intense hard disk activity and no significant network traffic. However, the scripts which would normally run fast and in parallel, from that moment would only run on 1 CPU core and take much longer than before. The only way to solve it was to restart Mantid.</li>
+<li>I re-wrote the data loader, so that it loaded the file in chunks, using many small numpy arrays. It did NOT solve the problem.</li>
+<li>For reference, I ran the same scripts on the same data files using Mantid 4.0 under Ubuntu 18.04. The problem did not occur.<br>
+I do not know if anything can be concluded from these observations.</li>
+</ol>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

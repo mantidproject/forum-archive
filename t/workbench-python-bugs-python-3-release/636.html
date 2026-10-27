@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Workbench Python bugs (Python 3 release) - Bugs - Mantid Help Forum</title>
+    <meta name="description" content="Expected behavior
+Scripts should work in the Script Editor pane! 
+
+Actual behavior
+A number of faults: 
+
+“Syntax error: unexpected indent”, at arbitrary places inside indented blocks of code (which works fine in Mantid &amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="636.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Workbench Python bugs (Python 3 release)&#39;" href="https://forum.mantidproject.org/t/workbench-python-bugs-python-3-release/636.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/workbench-python-bugs-python-3-release/636" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/workbench-python-bugs-python-3-release/636" />
+<meta property="og:title" content="Workbench Python bugs (Python 3 release)" />
+<meta name="twitter:title" content="Workbench Python bugs (Python 3 release)" />
+<meta property="og:description" content="Expected behavior Scripts should work in the Script Editor pane!   Actual behavior A number of faults:   “Syntax error: unexpected indent”, at arbitrary places inside indented blocks of code (which works fine in Mantid Plot Python 3, etc) and after having executed some of the code before that point (such syntax errors are normally thrown only on starting to run a script). Often can be made to work by deleting extra blank lines. Variables persist in a script from one run to the next. So it’s pos..." />
+<meta name="twitter:description" content="Expected behavior Scripts should work in the Script Editor pane!   Actual behavior A number of faults:   “Syntax error: unexpected indent”, at arbitrary places inside indented blocks of code (which works fine in Mantid Plot Python 3, etc) and after having executed some of the code before that point (such syntax errors are normally thrown only on starting to run a script). Often can be made to work by deleting extra blank lines. Variables persist in a script from one run to the next. So it’s pos..." />
+<meta property="og:article:section" content="Bugs" />
+<meta property="og:article:section:color" content="ED207B" />
+<meta property="article:published_time" content="2020-01-29T10:50:40+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="636.html">Workbench Python bugs (Python 3 release)</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/if-you-want-to-report-a-bug-within-mantid-heres-the-place-to-do-it/12.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #ED207B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Bugs</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Workbench Python bugs (Python 3 release)'>
+      <link itemprop='url' href='636.html'>
+      <meta itemprop='datePublished' content='2020-01-29T10:50:39Z'>
+        <meta itemprop='articleSection' content='Bugs'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="636.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2020-01-29T10:50:40Z' class='post-time'>
+                    January 29, 2020, 10:50am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-01-29T10:50:40Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <h3>
+<a name="expected-behavior-1" class="anchor" href="636.html#expected-behavior-1"></a>Expected behavior</h3>
+<p>Scripts should work in the Script Editor pane!</p>
+<h3>
+<a name="actual-behavior-2" class="anchor" href="636.html#actual-behavior-2"></a>Actual behavior</h3>
+<p>A number of faults:</p>
+<ul>
+<li>“Syntax error: unexpected indent”, at arbitrary places inside indented blocks of code (which works fine in Mantid Plot Python 3, etc) and after having executed some of the code before that point (such syntax errors are normally thrown only on starting to run a script). Often can be made to work by deleting extra blank lines.</li>
+<li>Variables persist in a script from one run to the next. So it’s possible to have a script which does something different on the second run, or which (after careless editing, deleting the initialisation of some variable) will run in the window now but not if saved and reloaded later</li>
+<li>On saving a freshly typed in script, it double spaces itself in the window! (Except the standard set of import statements at the top)</li>
+<li>Tabs are still being converted to spaces in string literals.</li>
+</ul>
+<h3>
+<a name="steps-to-reproduce-the-behavior-3" class="anchor" href="636.html#steps-to-reproduce-the-behavior-3"></a>Steps to reproduce the behavior</h3>
+<p>The following script can be tried: delete the default include statements (which aren’t relevant) and paste it in.</p>
+<pre><code>print ("already defined:",dir())
+try:
+    x=UndefinedFunction4()
+except:
+    print ("need to define my own UndefinedFunction4")
+    def UndefinedFunction4(a=0.0):
+        return a*2
+print(UndefinedFunction4(3))
+</code></pre>
+<p>To trigger the Syntax Error, insert a blank line after the “except” statement.</p>
+<p>For the tab/space bug:</p>
+<pre><code>spaces="        " # some spaces
+tabs="			" # some tabs (paste in)
+print ("spaces", list(ord(x) for x in spaces))
+print ("tabs", list(ord(x) for x in tabs))
+</code></pre>
+<h3>
+<a name="platforms-affected-4" class="anchor" href="636.html#platforms-affected-4"></a>Platforms affected</h3>
+<p>Nightly Mantid Workbench with Python 3 (Mantid 4.2.20200127.2045) on Windows</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-01-29T13:19:00Z' class='post-time'>
+                    January 29, 2020,  1:19pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-01-29T13:19:00Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi James,</p>
+<p>Thanks for pointing out these problems. I’m not sure how specific to Python 3 they are. I believe we have an issue open for each of them:<br>
+1 Unexpected Indent: <a href="https://github.com/mantidproject/mantid/issues/27713" rel="noopener nofollow ugc">#27713</a><br>
+2 Persistent Variables: <a href="https://github.com/mantidproject/mantid/issues/27185" rel="noopener nofollow ugc">#27185</a><br>
+3 Double spacing: <a href="https://github.com/mantidproject/mantid/issues/27558" rel="noopener nofollow ugc">#27558</a><br>
+4 Tabs to Spaces: <a href="https://github.com/mantidproject/mantid/issues/27557" rel="noopener nofollow ugc">#27557</a></p>
+<p>On point 3, I haven’t myself seen a new script double space within the editor upon saving.<br>
+I will add some info to the above issues relevant to your suggestions.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-01-29T13:54:10Z' class='post-time'>
+                    January 29, 2020,  1:54pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-01-29T13:54:10Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks. For point 2 (persistent variables) the issue seems to have been closed with two copies of it each marked as a duplicate of the other, and without an obvious pull request or actual bug fix. Does it need to be reopened?<br>
+Double spacing works for me every time. Just do “+ (new tab)”, then <em>type</em> (don’t paste) <em>several lines</em> of single spaced code below the default import statements, then “Save Script As”. Watch!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-01-29T14:00:59Z' class='post-time'>
+                    January 29, 2020,  2:00pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-01-29T14:00:59Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The issue for point 2: at the time, myself and Phil from the Mantid team both made raised the issue from your forum post. It is bad for us to have duplicates, so the duplicate issue was closed, but one is still open (<span class="hashtag">#27185</span> is still marked as open at the top) as it hasn’t been worked on yet.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-01-29T14:11:28Z' class='post-time'>
+                    January 29, 2020,  2:11pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-01-29T14:11:28Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I can now see it double space in the script editor. Surprisingly, the way I was doing it was saving the file by pressing Ctrl+S, also brings up the Save As Dialog (as does selecting “Save Script As” in the File drop-down menu, BUT my way doesn’t double space the script in the editor. The saved out file however IS still double spaced when its reloaded back in.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/NickDraper'><span itemprop='name'>NickDraper</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-02-18T09:03:24Z' class='post-time'>
+                    February 18, 2020,  9:03am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-02-18T09:03:24Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="https://forum.mantidproject.org/u/jameslord">@jameslord</a> We have tracked down the double spacing issue on saving, it was an awkward newline “correction” that a module in python was doing for us behind the scenes, and the default for that was a very poor choice for windows, leading to the double spacing.</p>
+<p>That has now been fixed, and nightly build from Tomorrow and the release of version 5.0 will include this fix.</p>
+<p>I’m also working on a fix to resolve the unexpected indent and tabs to spaces issues as well, but that might take a few more days., but I’m confident that it will make the code freeze for release 5.0 as well.</p>
+<p>Regards,<br>
+Nick Draper</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Mantid 5.1 crash at start on unbuntu 18.04 - Installation - Mantid Help Forum</title>
+    <meta name="description" content="No way to run mantid 5.1 on unbuntu 18.04 
+mantid 5.1.x was installed with an usual apt-get on Ubuntu 18.04. 
+At start it crashes systematically with the following errors: 
+ /opt/mantidnightly/bin/mantidworkbench
+Setup t&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="703.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Mantid 5.1 crash at start on unbuntu 18.04&#39;" href="https://forum.mantidproject.org/t/mantid-5-1-crash-at-start-on-unbuntu-18-04/703.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/mantid-5-1-crash-at-start-on-unbuntu-18-04/703" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/mantid-5-1-crash-at-start-on-unbuntu-18-04/703" />
+<meta property="og:title" content="Mantid 5.1 crash at start on unbuntu 18.04" />
+<meta name="twitter:title" content="Mantid 5.1 crash at start on unbuntu 18.04" />
+<meta property="og:description" content="No way to run mantid 5.1 on unbuntu 18.04  mantid 5.1.x was installed with an usual apt-get on Ubuntu 18.04.  At start it crashes systematically with the following errors:   /opt/mantidnightly/bin/mantidworkbench Setup tools is &gt;= 49. You may run into issues with a clean build. If you are failing to launch with missing modules see https://github.com/mantidproject/mantid/issues/29010 FrameworkManager-[Notice] Welcome to Mantid 5.1.20201126.1329 FrameworkManager-[Notice] Please cite: http://dx.doi..." />
+<meta name="twitter:description" content="No way to run mantid 5.1 on unbuntu 18.04  mantid 5.1.x was installed with an usual apt-get on Ubuntu 18.04.  At start it crashes systematically with the following errors:   /opt/mantidnightly/bin/mantidworkbench Setup tools is &gt;= 49. You may run into issues with a clean build. If you are failing to launch with missing modules see https://github.com/mantidproject/mantid/issues/29010 FrameworkManager-[Notice] Welcome to Mantid 5.1.20201126.1329 FrameworkManager-[Notice] Please cite: http://dx.doi..." />
+<meta property="og:article:section" content="Installation" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="article:published_time" content="2020-11-27T18:19:19+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="703.html">Mantid 5.1 crash at start on unbuntu 18.04</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/installation/7.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Installation</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Mantid 5.1 crash at start on unbuntu 18.04'>
+      <link itemprop='url' href='703.html'>
+      <meta itemprop='datePublished' content='2020-11-27T18:19:19Z'>
+        <meta itemprop='articleSection' content='Installation'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/ollivier'><span itemprop='name'>ollivier</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="703.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2020-11-27T18:19:19Z' class='post-time'>
+                    November 27, 2020,  6:19pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-11-27T18:19:19Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>No way to run mantid 5.1 on unbuntu 18.04</p>
+<p><code>mantid 5.1.x</code> was installed with an usual <code>apt-get</code> on Ubuntu 18.04.</p>
+<p>At start it crashes systematically with the following errors:</p>
+<pre><code class="lang-auto"> /opt/mantidnightly/bin/mantidworkbench
+Setup tools is &gt;= 49. You may run into issues with a clean build.
+If you are failing to launch with missing modules see https://github.com/mantidproject/mantid/issues/29010
+FrameworkManager-[Notice] Welcome to Mantid 5.1.20201126.1329
+FrameworkManager-[Notice] Please cite: http://dx.doi.org/10.1016/j.nima.2014.07.029 and this release: http://dx.doi.org/10.5286/Software/Mantid
+DownloadInstrument-[Notice] All instrument definitions up to date
+Traceback (most recent call last):
+  File "/opt/mantidnightly/lib/workbench/app/start.py", line 195, in start
+    exit_value = start_workbench(app, options)
+  File "/opt/mantidnightly/lib/workbench/app/start.py", line 130, in start_workbench
+    main_window.setup()
+  File "/opt/mantidnightly/lib/workbench/app/mainwindow.py", line 164, in setup
+    self.ipythonconsole = JupyterConsole(self)
+  File "/opt/mantidnightly/lib/workbench/plugins/jupyterconsole.py", line 46, in __init__
+    font_family=font.family(), font_size=font.pointSize())
+  File "/opt/mantidnightly/lib/mantidqt/widgets/jupyterconsole.py", line 60, in __init__
+    shell.ex(startup_code)
+  File "/usr/local/lib/python3.6/dist-packages/IPython/core/interactiveshell.py", line 2675, in ex
+    exec(cmd, self.user_global_ns, self.user_ns)
+  File "&lt;string&gt;", line 3, in &lt;module&gt;
+  File "/usr/local/lib/python3.6/dist-packages/matplotlib/pyplot.py", line 2336, in &lt;module&gt;
+    switch_backend(rcParams["backend"])
+  File "/usr/local/lib/python3.6/dist-packages/matplotlib/pyplot.py", line 296, in switch_backend
+    getattr(backend_mod, func_name))
+  File "/usr/lib/python3.6/inspect.py", line 3065, in signature
+    return Signature.from_callable(obj, follow_wrapped=follow_wrapped)
+  File "/usr/lib/python3.6/inspect.py", line 2815, in from_callable
+    follow_wrapper_chains=follow_wrapped)
+  File "/usr/lib/python3.6/inspect.py", line 2372, in _signature_from_callable
+    return _signature_bound_method(sig)
+  File "/usr/lib/python3.6/inspect.py", line 1795, in _signature_bound_method
+    raise ValueError('invalid method signature')
+ValueError: invalid method signature
+errorreports-[Error] Continue working.
+
+</code></pre>
+<p>Is there a fix to this?</p>
+<pre><code class="lang-auto">Python 3.6.9
+setuptools==50.3.2
+matplotlib==3.3.2
+ipython==7.16.1
+pyqtgraph==0.10.0
+qtconsole==4.7.7
+QtPy==1.9.0
+
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-11-30T14:20:36Z' class='post-time'>
+                    November 30, 2020,  2:20pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-11-30T14:20:36Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi,</p>
+<p>The first thing to try is downgrading setuptools as there is an issue with versions 49 and above.</p>
+<p>Can you downgrade using:</p>
+<pre><code>python3 -m pip install setuptools==48.0.0 
+</code></pre>
+<p>Tell me if that solves the problem or not!</p>
+<p>Presumably, you updated it for some other piece of software. If this other version is required then you could consider using virtual envirnoments for different projects: <a href="https://docs.python.org/3.6/tutorial/venv.html" class="inline-onebox" rel="noopener nofollow ugc">12. Virtual Environments and Packages — Python 3.6.13 documentation</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DavidFair'><span itemprop='name'>DavidFair</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-11-30T15:17:06Z' class='post-time'>
+                    November 30, 2020,  3:17pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-11-30T15:17:06Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>In this case I suspect its Matplot lib looking at the stack trace, specifically when it’s switching it’s back end.</p>
+<p>Locally I have 2.1.1, which was installed with my local Ubuntu.<br>
+<a class="mention" href="https://forum.mantidproject.org/u/ollivier">@ollivier</a> Have you upgraded / installed MPL 3.3, or installed another pip package that brought it along?</p>
+<p>Could you try <code>pip3 install matplotlib==2.1.1</code> and restarting Mantid?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/ollivier'><span itemprop='name'>ollivier</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-12-01T13:29:55Z' class='post-time'>
+                    December 1, 2020,  1:29pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-12-01T13:29:55Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks for your kind help <a class="mention" href="https://forum.mantidproject.org/u/davidfair">@DavidFair</a> and <a class="mention" href="https://forum.mantidproject.org/u/danielmurphy22">@danielmurphy22</a>.</p>
+<p>The <code>setuptools</code> is not an issue since another machine with the same Ubuntu flavor has a <code>setuptools</code> version <code>39.0.1</code> despite the same crash problem.</p>
+<p>Finally the solution of David was the working one. I found even that on our virtual linux Ubuntu 18.04 machines (accessible through <a href="http://visa.ill.fr" rel="noopener nofollow ugc">visa.ill.fr</a>), where the 5.1.x Mantid works, have even a more recent version of <code>matplotlib</code>, i.e., <code>matplotlib==3.0.3</code>.</p>
+<p>After downgrading to Mpl 3.0.3 <code>sudo -E -H pip3 install matplotlib==3.0.3</code>, Mantid  ‘5.1.20201126.1329’ <code>workbench</code> runs nicelly.</p>
+<p>I’m not reluctant in enclosing each application into a “bundle” (a term from Mac OSX world) as suggested but if <code>Mantid</code> provides somewhere a (minimal) <code>requirement.txt</code> list out of <code>pip3 freeze</code> this could be a safe solution.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DavidFair'><span itemprop='name'>DavidFair</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-12-01T13:41:22Z' class='post-time'>
+                    December 1, 2020,  1:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-12-01T13:41:22Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Ah, that makes sense. Looking at <a href="https://launchpad.net/ubuntu/+source/matplotlib" rel="noopener nofollow ugc">Launchpad</a> we have likely started workbench with 3.1.2, but 3.3 is only shipping with 20.10 which I don’t think anyone has tested as far as I know.</p>
+<p><a class="mention" href="https://forum.mantidproject.org/u/danielmurphy22">@DanielMurphy22</a> is it worth opening an issue about MPL 3.3 causing issues? I’m sure were going to have more people run into it once 20.04 is officially supported by Mantid and people start trying out 20.10, or latest versions of Fedora</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-12-01T18:25:21Z' class='post-time'>
+                    December 1, 2020,  6:25pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-12-01T18:25:21Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="https://forum.mantidproject.org/u/davidfair">@DavidFair</a> Sure, threw together this: <a href="https://github.com/mantidproject/mantid/issues/30098" class="inline-onebox" rel="noopener nofollow ugc">Workbench won't launch on Linux with MPL 3.3 · Issue #30098 · mantidproject/mantid · GitHub</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

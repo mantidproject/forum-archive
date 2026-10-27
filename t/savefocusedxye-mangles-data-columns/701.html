@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SaveFocusedXYE mangles data columns - Bugs - Mantid Help Forum</title>
+    <meta name="description" content="Expected behavior
+Text file written with XYE format… 
+  495.72436        0.00000000        0.00000000
+  495.97222        0.00000000        0.00000000
+  496.22020        0.00000000        0.00000000
+  496.46831        0.&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="701.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;SaveFocusedXYE mangles data columns&#39;" href="https://forum.mantidproject.org/t/savefocusedxye-mangles-data-columns/701.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/savefocusedxye-mangles-data-columns/701" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/savefocusedxye-mangles-data-columns/701" />
+<meta property="og:title" content="SaveFocusedXYE mangles data columns" />
+<meta name="twitter:title" content="SaveFocusedXYE mangles data columns" />
+<meta property="og:description" content="Expected behavior Text file written with XYE format…    495.72436        0.00000000        0.00000000   495.97222        0.00000000        0.00000000   496.22020        0.00000000        0.00000000   496.46831        0.00000000        0.00000000   496.71655        0.00000000        0.00000000   496.96491        0.00000000        0.00000000   497.21339        0.00000000        0.00000000   497.46200        0.00000000        0.00000000   Actual behavior Oh No!    519.83329        0.00000000      ..." />
+<meta name="twitter:description" content="Expected behavior Text file written with XYE format…    495.72436        0.00000000        0.00000000   495.97222        0.00000000        0.00000000   496.22020        0.00000000        0.00000000   496.46831        0.00000000        0.00000000   496.71655        0.00000000        0.00000000   496.96491        0.00000000        0.00000000   497.21339        0.00000000        0.00000000   497.46200        0.00000000        0.00000000   Actual behavior Oh No!    519.83329        0.00000000      ..." />
+<meta property="og:article:section" content="Bugs" />
+<meta property="og:article:section:color" content="ED207B" />
+<meta property="article:published_time" content="2020-11-02T22:22:18+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="701.html">SaveFocusedXYE mangles data columns</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/if-you-want-to-report-a-bug-within-mantid-heres-the-place-to-do-it/12.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #ED207B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Bugs</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='SaveFocusedXYE mangles data columns'>
+      <link itemprop='url' href='701.html'>
+      <meta itemprop='datePublished' content='2020-11-02T22:22:18Z'>
+        <meta itemprop='articleSection' content='Bugs'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/PetMetz'><span itemprop='name'>PetMetz</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="701.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2020-11-02T22:22:18Z' class='post-time'>
+                    November 2, 2020, 10:22pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-11-03T15:12:13Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <h3>
+<a name="expected-behavior-1" class="anchor" href="701.html#expected-behavior-1"></a>Expected behavior</h3>
+<p>Text file written with XYE format…</p>
+<pre><code>  495.72436        0.00000000        0.00000000
+  495.97222        0.00000000        0.00000000
+  496.22020        0.00000000        0.00000000
+  496.46831        0.00000000        0.00000000
+  496.71655        0.00000000        0.00000000
+  496.96491        0.00000000        0.00000000
+  497.21339        0.00000000        0.00000000
+  497.46200        0.00000000        0.00000000
+</code></pre>
+<h3>
+<a name="actual-behavior-2" class="anchor" href="701.html#actual-behavior-2"></a>Actual behavior</h3>
+<p>Oh No!</p>
+<pre><code>  519.83329        0.00000000        0.00000000
+  520.09321        0.43168354        0.61049276
+  520.35325        0.44957668        0.63579745
+  520.61343        0.00000000        0.00000000
+  520.87374        0.20619035        0.29159575
+  521.13418      217.30827084 37635096.50433181
+  521.39474        0.00000000        0.00000000
+  521.6554471598028800.000000008845396037556458.00000000
+  521.91627        0.00000000        0.00000000
+  522.17723   462333.1250000080234663609.31842041
+  522.43831        0.00000000        0.00000000
+</code></pre>
+<h3>
+<a name="steps-to-reproduce-the-behavior-3" class="anchor" href="701.html#steps-to-reproduce-the-behavior-3"></a>Steps to reproduce the behavior</h3>
+<p>Load EventWorkspaces…<br>
+Rebin to Workspace2Ds…</p>
+<pre><code># smooth incoherent
+if verbose: print('&gt;&gt;&gt; smoothing incoherent data ...')
+SmoothData(
+    InputWorkspace='incoherent',
+    OutputWorkspace='incoherent',
+    NPoints=101
+    )
+ReplaceSpecialValues(
+    InputWorkspace='incoherent',
+    OutputWorkspace='incoherent',
+    NaNValue=0,
+    NaNError=0,
+    InfinityValue=0,
+    InfinityError=0,
+    SmallNumberValue=1e-03, # &lt;-- I appear to have misread the docs here
+    SmallNumberError=1e-03   # &lt;-- I should have set 'SmallNumberThreshold' 
+    )
+
+# divide
+if verbose: print('&gt;&gt;&gt; normalizing data ...')
+Divide(
+    LHSWorkspace='coherent',
+    RHSWorkspace='incoherent',
+    OutputWorkspace='norm'
+    )
+ResetNegatives(
+    InputWorkspace='norm',
+    OutputWorkspace='norm',
+    AddMinimum=False,
+    ResetValue=0
+    )
+ReplaceSpecialValues(
+    InputWorkspace='norm',
+    OutputWorkspace='norm',
+    NaNValue=0,
+    NaNError=0,
+    InfinityValue=0,
+    InfinityError=0
+    )
+</code></pre>
+<h3>
+<a name="platforms-affected-4" class="anchor" href="701.html#platforms-affected-4"></a>Platforms affected</h3>
+<p>Windows 10 / Python 3.8 / Mantid 5.0.0<br>
+Windows 10 / Python 3.8 / Mantid 5.1.1</p>
+<h3>
+<a name="summary-5" class="anchor" href="701.html#summary-5"></a>Summary</h3>
+<p>I can work around this bug by masking values using ReplaceSpecialValues, but I still consider this a bug. It forces me to mask values larger than 9E+08 because of the fixed column width, and thus a user with this workaround might silently pass over data anomalies or quash other data problems and hide them as zeros (as I’ve written it here).</p>
+<p>A simple solution would be to use scientific notation generally or for large numbers.</p>
+<p>Happy scattering!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-11-04T10:40:34Z' class='post-time'>
+                    November 4, 2020, 10:40am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-11-04T10:40:34Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’m always amazed how many different Save algorithms there are in Mantid. While I can reproduce the problem you are having with <code>SaveFocusedXYE</code> (where there aren’t any spaces b/w large data columns)…</p>
+<p>using the algorithm <code>SaveAscii</code> seems to work! I used the separator: “Space” and got data like:</p>
+<pre><code># X   Y   E
+1
+1 1.23457e+13 0
+2 1.23457e+13 0
+3 1.23457e+13 0
+</code></pre>
+<p>SaveAscii data like this can definitely be reloaded back into Mantid, but does this algorithm work for your further analysis outside of Mantid?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/PetMetz'><span itemprop='name'>PetMetz</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-11-05T02:01:50Z' class='post-time'>
+                    November 5, 2020,  2:01am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-11-05T02:01:50Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks for the tip-- yes that should do it.</p>
+<p>In my case “.xye” is the specific file extension for a three-column x-y-error ascii file recognized by the Rietveld software Topas.</p>
+<p>On the topic of the milieu of <code>Save</code> functions, it would be convenient if they all supported user input for comment character. <code>#</code> is a classic but Topas uses the single quote <code>'</code> to denote comment lines, and I’m currently making a second pass on <code>SaveFocusedXYE</code> written files to clean them up for my purposes. I see SaveAscii ticks this box as well.</p>
+<p>Thanks!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>plotSpectrum doesn&#39;t take a range() object - Bugs - Mantid Help Forum</title>
+    <meta name="description" content="Just noticed this change in the latest nightly build (3.8.20170207.2221). My script wants to plot multiple spectra from a workspace. 
+w=mtd[“workspacename”] # this workspace has 5 spectra or more 
+plotSpectrum(w,range(5)&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="214.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;plotSpectrum doesn&#39;t take a range() object&#39;" href="https://forum.mantidproject.org/t/plotspectrum-doesnt-take-a-range-object/214.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/plotspectrum-doesnt-take-a-range-object/214" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/plotspectrum-doesnt-take-a-range-object/214" />
+<meta property="og:title" content="plotSpectrum doesn&#39;t take a range() object" />
+<meta name="twitter:title" content="plotSpectrum doesn&#39;t take a range() object" />
+<meta property="og:description" content="Just noticed this change in the latest nightly build (3.8.20170207.2221). My script wants to plot multiple spectra from a workspace.  w=mtd[“workspacename”] # this workspace has 5 spectra or more  plotSpectrum(w,range(5))   Expected behavior Plot appears with several spectra   Actual behavior Error message:  TypeError: Incorrect type passed as index argument “xrange(5)”  at line 2 in ‘New script’  caused by line 249 in ‘C:\MantidInstall\bin\pymantidplot_init_.py’  caused by line 1156 in ‘C:\Mant..." />
+<meta name="twitter:description" content="Just noticed this change in the latest nightly build (3.8.20170207.2221). My script wants to plot multiple spectra from a workspace.  w=mtd[“workspacename”] # this workspace has 5 spectra or more  plotSpectrum(w,range(5))   Expected behavior Plot appears with several spectra   Actual behavior Error message:  TypeError: Incorrect type passed as index argument “xrange(5)”  at line 2 in ‘New script’  caused by line 249 in ‘C:\MantidInstall\bin\pymantidplot_init_.py’  caused by line 1156 in ‘C:\Mant..." />
+<meta property="og:article:section" content="Bugs" />
+<meta property="og:article:section:color" content="ED207B" />
+<meta property="article:published_time" content="2017-02-08T11:28:09+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="214.html">plotSpectrum doesn&#39;t take a range() object</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/if-you-want-to-report-a-bug-within-mantid-heres-the-place-to-do-it/12.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #ED207B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Bugs</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='plotSpectrum doesn&#39;t take a range() object'>
+      <link itemprop='url' href='214.html'>
+      <meta itemprop='datePublished' content='2017-02-08T11:28:09Z'>
+        <meta itemprop='articleSection' content='Bugs'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="214.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2017-02-08T11:28:09Z' class='post-time'>
+                    February 8, 2017, 11:28am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-02-08T11:28:09Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Just noticed this change in the latest nightly build (3.8.20170207.2221). My script wants to plot multiple spectra from a workspace.</p>
+<p>w=mtd[“workspacename”] # this workspace has 5 spectra or more<br>
+plotSpectrum(w,range(5))</p>
+<h3>
+<a name="expected-behavior-1" class="anchor" href="214.html#expected-behavior-1"></a>Expected behavior</h3>
+<p>Plot appears with several spectra</p>
+<h3>
+<a name="actual-behavior-2" class="anchor" href="214.html#actual-behavior-2"></a>Actual behavior</h3>
+<p>Error message:<br>
+TypeError: Incorrect type passed as index argument “xrange(5)”<br>
+at line 2 in ‘New script’<br>
+caused by line 249 in ‘C:\MantidInstall\bin\pymantidplot_<em>init</em>_.py’<br>
+caused by line 1156 in ‘C:\MantidInstall\bin\pymantidplot_<em>init</em>_.py’</p>
+<h3>
+<a name="steps-to-reproduce-the-behavior-3" class="anchor" href="214.html#steps-to-reproduce-the-behavior-3"></a>Steps to reproduce the behavior</h3>
+<p>See above</p>
+<p>Note if I use list(range(5)) or tuple(range(5)) then it works as intended. Something is being picky about the exact types of list objects.</p>
+<h3>
+<a name="platforms-affected-4" class="anchor" href="214.html#platforms-affected-4"></a>Platforms affected</h3>
+<p>Tried on Windows, maybe others?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/NickDraper'><span itemprop='name'>NickDraper</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-02-08T11:47:43Z' class='post-time'>
+                    February 8, 2017, 11:47am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-02-08T11:47:43Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks for this, it appears in some of our early preparations to move to python 3, one of our changes that should not have leaked out has done and affected backward compatibility.  Sorry about this, we will fix it before the release on Friday.</p>
+<p>The issue for this in github is:</p><aside class="onebox githubissue">
+  <header class="source">
+      <a href="https://github.com/mantidproject/mantid/issues/18746" target="_blank" rel="noopener">github.com/mantidproject/mantid</a>
+  </header>
+  <article class="onebox-body">
+    <div class="github-row">
+  <div class="github-icon-container" title="Issue">
+	  <svg width="60" height="60" class="github-icon" viewbox="0 0 14 16" aria-hidden="true"><path d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg>
+  </div>
+
+  <div class="github-info-container">
+    <h4>
+      <a href="https://github.com/mantidproject/mantid/issues/18746" target="_blank" rel="noopener">plotSpectrum doesn’t take a range() object</a>
+    </h4>
+
+    <div class="github-info">
+      <div class="date">
+        opened <span class="discourse-local-date" data-format="ll" data-date="2017-02-08" data-time="11:47:16" data-timezone="UTC">11:47AM - 08 Feb 17 UTC</span>
+      </div>
+
+        <div class="date">
+          closed <span class="discourse-local-date" data-format="ll" data-date="2017-02-09" data-time="08:36:34" data-timezone="UTC">08:36AM - 09 Feb 17 UTC</span>
+        </div>
+
+      <div class="user">
+        <a href="https://github.com/NickDraper" target="_blank" rel="noopener">
+          <img alt="NickDraper" src="https://avatars.githubusercontent.com/u/1017173?v=4" class="onebox-avatar-inline" width="20" height="20">
+          NickDraper
+        </a>
+      </div>
+    </div>
+
+    <div class="labels">
+    </div>
+  </div>
+</div>
+
+  <div class="github-row">
+    <p class="github-body-container">from james lord:
+
+Just noticed this change in the latest nightly build (3.8.20<span class="show-more-container"><a href="214.html" rel="noopener" class="show-more">…</a></span><span class="excerpt hidden">170207.2221). My script wants to plot multiple spectra from a workspace.
+
+w=mtd["workspacename"] # this workspace has 5 spectra or more
+plotSpectrum(w,range(5))
+
+Expected behavior
+
+Plot appears with several spectra
+
+Actual behavior
+
+Error message:
+TypeError: Incorrect type passed as index argument "xrange(5)"
+ at line 2 in 'New script'
+caused by line 249 in 'C:\MantidInstall\bin\pymantidplot__init__.py'
+ caused by line 1156 in 'C:\MantidInstall\bin\pymantidplot__init__.py'
+
+Steps to reproduce the behavior
+
+See above
+
+Note if I use list(range(5)) or tuple(range(5)) then it works as intended. Something is being picky about the exact types of list objects.
+
+Platforms affected
+
+Tried on Windows, maybe others?</span></p>
+  </div>
+
+  </article>
+  <div class="onebox-metadata">
+    
+    
+  </div>
+  <div style="clear: both"></div>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-02-08T12:06:39Z' class='post-time'>
+                    February 8, 2017, 12:06pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-02-08T12:06:39Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks Nick.</p>
+<p>Is there a timetable somewhere for the move to Python 3, from the point of view of users and scientists? We need a suitable opportunity to check and modify our existing scripts, test them with Python 3 inside Mantid, upload the modified versions to the Script Repository and tell the users to download the updates, before they upgrade their Mantid installation to one where Python 3 is the default.</p>
+<p>An option somewhere in the Preferences to choose Python 2 or 3 (followed by restarting Mantid) might be appropriate…</p>
+<p>James.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/NickDraper'><span itemprop='name'>NickDraper</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-02-08T13:58:58Z' class='post-time'>
+                    February 8, 2017,  1:58pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-02-08T13:58:58Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I absolutely agree that you will need plenty of warning before we made a change like that!</p>
+<p>At the moment we are just making sure that our internal python code is python 3 compatible, we are not moving to python 3 itself yet.</p>
+<p>I agree that the next step would be to add a python 3 compatability option for all scripts, and we would also offer to happily update anyones scripts for them if they don’t want to do it themselves.</p>
+<p>Please rest assured that we would give 3-4 months notice of any change like that.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

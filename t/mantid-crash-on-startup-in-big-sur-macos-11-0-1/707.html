@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Mantid crash on startup in Big Sur (MacOS 11.0.1) - Bugs - Mantid Help Forum</title>
+    <meta name="description" content="Hi, I’ve got a fancy new mac with the new M1 chip. Mantid does not seem to like it. In a similar way the crash reporter crashes on startup. 
+
+Expected behavior
+Mantid starts up nicely 
+
+Actual behavior
+Spinning beachball&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="707.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Mantid crash on startup in Big Sur (MacOS 11.0.1)&#39;" href="https://forum.mantidproject.org/t/mantid-crash-on-startup-in-big-sur-macos-11-0-1/707.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/mantid-crash-on-startup-in-big-sur-macos-11-0-1/707" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/mantid-crash-on-startup-in-big-sur-macos-11-0-1/707" />
+<meta property="og:title" content="Mantid crash on startup in Big Sur (MacOS 11.0.1)" />
+<meta name="twitter:title" content="Mantid crash on startup in Big Sur (MacOS 11.0.1)" />
+<meta property="og:description" content="Hi, I’ve got a fancy new mac with the new M1 chip. Mantid does not seem to like it. In a similar way the crash reporter crashes on startup.   Expected behavior Mantid starts up nicely   Actual behavior Spinning beachball/unresponsive application   Steps to reproduce the behavior Start mantid   Platforms affected MacOS Big Sur 11.0.01 new mac mini with M1 processor  Mantid 5.1.0 &amp; 5.1.20201202.1608" />
+<meta name="twitter:description" content="Hi, I’ve got a fancy new mac with the new M1 chip. Mantid does not seem to like it. In a similar way the crash reporter crashes on startup.   Expected behavior Mantid starts up nicely   Actual behavior Spinning beachball/unresponsive application   Steps to reproduce the behavior Start mantid   Platforms affected MacOS Big Sur 11.0.01 new mac mini with M1 processor  Mantid 5.1.0 &amp; 5.1.20201202.1608" />
+<meta property="og:article:section" content="Bugs" />
+<meta property="og:article:section:color" content="ED207B" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="4 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="2 ❤" />
+<meta property="article:published_time" content="2020-12-09T10:38:16+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="707.html">Mantid crash on startup in Big Sur (MacOS 11.0.1)</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/if-you-want-to-report-a-bug-within-mantid-heres-the-place-to-do-it/12.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #ED207B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Bugs</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Mantid crash on startup in Big Sur (MacOS 11.0.1)'>
+      <link itemprop='url' href='707.html'>
+      <meta itemprop='datePublished' content='2020-12-09T10:38:16Z'>
+        <meta itemprop='articleSection' content='Bugs'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Ian'><span itemprop='name'>Ian</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="707.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2020-12-09T10:38:16Z' class='post-time'>
+                    December 9, 2020, 10:38am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-12-09T10:38:16Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi, I’ve got a fancy new mac with the new M1 chip. Mantid does not seem to like it. In a similar way the crash reporter crashes on startup.</p>
+<h3>
+<a name="expected-behavior-1" class="anchor" href="707.html#expected-behavior-1"></a>Expected behavior</h3>
+<p>Mantid starts up nicely</p>
+<h3>
+<a name="actual-behavior-2" class="anchor" href="707.html#actual-behavior-2"></a>Actual behavior</h3>
+<p>Spinning beachball/unresponsive application</p>
+<h3>
+<a name="steps-to-reproduce-the-behavior-3" class="anchor" href="707.html#steps-to-reproduce-the-behavior-3"></a>Steps to reproduce the behavior</h3>
+<p>Start mantid</p>
+<h3>
+<a name="platforms-affected-4" class="anchor" href="707.html#platforms-affected-4"></a>Platforms affected</h3>
+<p>MacOS Big Sur 11.0.01 new mac mini with M1 processor<br>
+Mantid 5.1.0 &amp; 5.1.20201202.1608</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-12-09T11:02:25Z' class='post-time'>
+                    December 9, 2020, 11:02am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-12-09T11:02:25Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>As far as I know, no one has tried to install Mantid on a new Mac with Big Sur yet!</p>
+<p>Was there a “Problem Report for Python” when Mantid failed to launch?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Ian'><span itemprop='name'>Ian</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-12-09T11:09:12Z' class='post-time'>
+                    December 9, 2020, 11:09am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-12-09T11:09:12Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Nothing obvious popped up. I can have a dig about for logs etc. if you let me know where to look.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-12-09T11:25:57Z' class='post-time'>
+                    December 9, 2020, 11:25am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-12-09T11:25:57Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>That’s fine for the moment. You would have seen the Python report pop-up if it was created.</p>
+<p>To be honest, for the moment, we’re very unlikely to get Mantid to work with the M1 chip without some code changes. As we currently don’t have an M1 Mac in the development team, we’re not going to be able to support it. I’m sure as Big Sur and newer Macs become more common we’ll be able to support them, but for the meantime I’m not sure there’s much we can do, sadly.</p>
+<p>I’ll update you if we start trying to support M1 devices.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Ian'><span itemprop='name'>Ian</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-12-09T13:35:04Z' class='post-time'>
+                    December 9, 2020,  1:35pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-12-09T13:35:04Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks Daniel. I was expecting that it would work easily enough due to the chips x86 emulation. Sounds like a good excuse to do some shopping to me…</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-12-09T14:24:25Z' class='post-time'>
+                    December 9, 2020,  2:24pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-12-09T14:24:25Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Haha I agree it’s a good exciuse for some shopping. Later in the week, I might have a look at Big Sur on the Mac I’ve got, but can you try launching from terminal:</p>
+<pre><code>/Applications/MantidWorkbench.app/Contents/MacOS/MantidWorkbench
+</code></pre>
+<p>I assume that won’t work, but is there any useful ouput?</p>
+<p>Also, try:</p>
+<pre><code>cd /Applications/MantidWorkbench.app/Contents/MacOS
+export QT_PLUGIN_PATH=$PWD/../PlugIns/
+export PYTHONPATH=$PWD:$PYTHONPATH
+python3 -m workbench.app.main
+</code></pre>
+<p>And:</p>
+<pre><code>/Applications/MantidWorkbench.app/Contents/MacOS/mantidpython --classic
+import qtpy.QtCore
+</code></pre>
+<p>If we can get some more info then we might not be flying so blind.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Ian'><span itemprop='name'>Ian</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-12-09T14:48:07Z' class='post-time'>
+                    December 9, 2020,  2:48pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-12-09T14:48:07Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello again,</p>
+<p>launching from terminal causes hanging as before, with no output.</p>
+<p>The second test:</p>
+<pre><code>cd /Applications/MantidWorkbench.app/Contents/MacOS
+export QT_PLUGIN_PATH=$PWD/../PlugIns/
+export PYTHONPATH=$PWD:$PYTHONPATH
+python3 -m workbench.app.main 
+</code></pre>
+<p>gives a lot of output:</p>
+<pre><code class="lang-auto">Traceback (most recent call last):
+  File "/Applications/MantidWorkbench.app/Contents/MacOS/mantid/utils.py", line 35, in import_mantid_cext
+    lib = import_module(modulename, package)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1014, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 991, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 975, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 657, in _load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 556, in module_from_spec
+  File "&lt;frozen importlib._bootstrap_external&gt;", line 1101, in create_module
+  File "&lt;frozen importlib._bootstrap&gt;", line 219, in _call_with_frames_removed
+ImportError: dlopen(/Applications/MantidWorkbench.app/Contents/MacOS/mantid/kernel/_kernel.so, 2): no suitable image found.  Did find:
+	/Applications/MantidWorkbench.app/Contents/MacOS/mantid/kernel/_kernel.so: mach-o, but wrong architecture
+	/Applications/MantidWorkbench.app/Contents/MacOS/mantid/kernel/_kernel.so: mach-o, but wrong architecture
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Applications/MantidWorkbench.app/Contents/MacOS/mantid/utils.py", line 39, in import_mantid_cext
+    lib = import_module(modulename.lstrip('.'))
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1014, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 991, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '_kernel'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/runpy.py", line 193, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/Applications/MantidWorkbench.app/Contents/MacOS/workbench/app/main.py", line 55, in &lt;module&gt;
+    main()
+  File "/Applications/MantidWorkbench.app/Contents/MacOS/workbench/app/main.py", line 46, in main
+    start(options)
+  File "/Applications/MantidWorkbench.app/Contents/MacOS/workbench/app/main.py", line 50, in start
+    from workbench.app.start import start
+  File "/Applications/MantidWorkbench.app/Contents/MacOS/workbench/app/start.py", line 15, in &lt;module&gt;
+    from mantid.api import FrameworkManagerImpl
+  File "/Applications/MantidWorkbench.app/Contents/MacOS/mantid/__init__.py", line 105, in &lt;module&gt;
+    from mantid import kernel as _kernel
+  File "/Applications/MantidWorkbench.app/Contents/MacOS/mantid/kernel/__init__.py", line 36, in &lt;module&gt;
+    import_mantid_cext('._kernel', 'mantid.kernel', globals())
+  File "/Applications/MantidWorkbench.app/Contents/MacOS/mantid/utils.py", line 44, in import_mantid_cext
+    raise ImportError(msg)
+ImportError: First import of "._kernel" failed with "dlopen(/Applications/MantidWorkbench.app/Contents/MacOS/mantid/kernel/_kernel.so, 2): no suitable image found.  Did find:
+	/Applications/MantidWorkbench.app/Contents/MacOS/mantid/kernel/_kernel.so: mach-o, but wrong architecture
+	/Applications/MantidWorkbench.app/Contents/MacOS/mantid/kernel/_kernel.so: mach-o, but wrong architecture". Second import of "_kernel" failed with "No module named '_kernel'"
+</code></pre>
+<pre><code>/Applications/MantidWorkbench.app/Contents/MacOS/mantidpython --classic
+</code></pre>
+<p>gives</p>
+<pre><code class="lang-auto">Python 3.8.4 (default, Jul 14 2020, 01:58:29)
+[Clang 10.0.0 (clang-1000.11.45.5)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+</code></pre>
+<p>then</p>
+<pre><code>import qtpy.QtCore
+</code></pre>
+<p>executes without errors or output</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-12-09T15:20:23Z' class='post-time'>
+                    December 9, 2020,  3:20pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-12-09T15:20:23Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks for trying those. Can you try a slightly amended version of the second test, as it seems to be using your system Python rather than the version we have bundled with Mantid.</p>
+<pre><code>cd /Applications/MantidWorkbench.app/Contents/MacOS
+export QT_PLUGIN_PATH=$PWD/../PlugIns/
+export PYTHONPATH=$PWD:$PYTHONPATH
+./python -m workbench.app.main</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Ian'><span itemprop='name'>Ian</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-12-09T15:53:25Z' class='post-time'>
+                    December 9, 2020,  3:53pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-12-09T15:55:41Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Same as previous - hangs on startup</p>
+<p>It offers me an error report - I’ve clipped the start and added at the bottom, but can add the rest if you want. It’s pretty long.</p>
+<p>I’d be happy  if I can get the mantid algorithms working in standalone python.<br>
+if I try:</p>
+<pre><code class="lang-auto">import sys
+import os
+os.environ.update({'MANTIDPATH': '/Applications/MantidPlot.app/Contents/MacOS'})
+sys.path.append(os.environ['MANTIDPATH'])
+from mantid.simpleapi import *
+</code></pre>
+<p>I get</p>
+<pre><code>ModuleNotFoundError: No module named 'mantid'
+</code></pre>
+<p>Is it possible that the installer is not properly setting MANTIDPATH? Should it be</p>
+<pre><code>'/Applications/MantidPlot.app/Contents/MacOS'
+</code></pre>
+<p>or is there some other directory I should point it at?</p>
+<p>Thanks</p>
+<pre><code class="lang-auto">Date/Time:        2020-12-09 15:28:20.083 +0000
+End time:         2020-12-09 15:35:36.282 +0000
+OS Version:       macOS 11.0.1 (Build 20B29)
+Architecture:     arm64e
+Report Version:   32
+
+Data Source:      Stackshots
+Shared Cache:     5B214DF8-6286-3F23-9467-D8050EA7AF75 slid base address 0x19b8c4000, slide 0x1b8c4000
+Shared Cache:     37FEA16C-BED8-3B52-974D-F87051F072C8 slid base address 0x7fff20084000, slide 0x84000
+
+Command:          Python
+Path:             /Applications/MantidWorkbench.app/Contents/Frameworks/Python.framework/Versions/3.8/Resources/Python.app/Contents/MacOS/Python
+Version:          ??? (???)
+Parent:           zsh [5612]
+Responsible:      Terminal [559]
+PID:              5617
+Time Since Fork:  437s
+
+Event:            hang
+Duration:         436.20s
+Duration Sampled: 1.10s (process was unresponsive for 435 seconds before sampling)
+Steps:            11 (100ms sampling interval)
+
+Hardware model:   Macmini9,1
+Active cpus:      8
+
+Time Awake Since Boot: 59569s
+Time Since Wake:  27549s
+
+Fan speed:        1694 rpm
+
+--------------------------------------------------
+Timeline format: stacks are sorted chronologically
+Use -i and -heavy to re-report with count sorting
+--------------------------------------------------
+
+
+Heaviest stack for the main thread of the target process:
+  2  -[NSImage _usingRepresentationsPerformBlock:] + 77 (AppKit + 91175) [0x7fff22bae427]
+  2  ??? [0x7ffe95e3ec7c]
+  2  -[NSArray mutableCopyWithZone:] + 0 (CoreFoundation + 458305) [0x7fff20478e41]
+ *2  ??? (kernel.release.t8101 + 578552) [0xfffffe0007dc53f8]
+
+
+Process:          Python [5617]
+UUID:             676A015B-EA5E-3D18-B7CE-BC2FE2286D8D
+Shared Cache:     37FEA16C-BED8-3B52-974D-F87051F072C8 slid base address 0x7fff20084000, slide 0x84000
+Path:             /Applications/MantidWorkbench.app/Contents/Frameworks/Python.framework/Versions/3.8/Resources/Python.app/Contents/MacOS/Python
+Architecture:     x86_64 (translated)
+Parent:           zsh [5612]
+Responsible:      Terminal [559]
+UID:              501
+Footprint:        2222.64 MB
+Time Since Fork:  437s
+Num samples:      11 (1-11)
+CPU Time:         0.806s (2.4G cycles, 7.7G instructions, 0.32c/i)
+Note:             Suspended for 2 samples
+Note:             Unresponsive for 435 seconds before sampling
+Note:             2 idle work queue threads omitted
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Ian'><span itemprop='name'>Ian</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-12-14T07:56:28Z' class='post-time'>
+                    December 14, 2020,  7:56am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-12-14T07:56:28Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Oops - problem in previous post all my fault:<br>
+I used  <code>'/Applications/MantidPlot.app/Contents/MacOS'</code> instead of <code>'/Applications/MantidWorkbench.app/Contents/MacOS'</code>.</p>
+<p>Using the right path gives same error as</p>
+<pre><code class="lang-auto">cd /Applications/MantidWorkbench.app/Contents/MacOS
+export QT_PLUGIN_PATH=$PWD/../PlugIns/
+export PYTHONPATH=$PWD:$PYTHONPATH
+python3 -m workbench.app.main
+</code></pre>
+<p>(3 posts up)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/ThomasILL'><span itemprop='name'>ThomasILL</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-12-20T19:17:11Z' class='post-time'>
+                    December 20, 2020,  7:17pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-12-20T19:17:11Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Same (?) problem here: Big Sur, but still the good (?) old Intel processor (MB16"):</p>
+<details>
+<summary>
+Summary</summary>
+<p>[marenair:~] hansen% setenv MANTIDPATH /Applications/MantidWorkbench.app/Contents/MacOS/<br>
+[marenair:~] hansen% python3<br>
+Python 3.8.2 (default, Nov  4 2020, 21:23:28)<br>
+[Clang 12.0.0 (clang-1200.0.32.28)] on darwin<br>
+Type “help”, “copyright”, “credits” or “license” for more information.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>import sys<br>
+import os<br>
+sys.path.append(os.environ[‘MANTIDPATH’])<br>
+from mantid.simpleapi import *<br>
+Traceback (most recent call last):<br>
+File “”, line 1, in <br>
+File “/Applications/MantidWorkbench.app/Contents/MacOS/mantid/<strong>init</strong>.py”, line 105, in <br>
+from mantid import kernel as _kernel<br>
+File “/Applications/MantidWorkbench.app/Contents/MacOS/mantid/kernel/<strong>init</strong>.py”, line 36, in <br>
+import_mantid_cext(‘._kernel’, ‘mantid.kernel’, globals())<br>
+File “/Applications/MantidWorkbench.app/Contents/MacOS/mantid/utils.py”, line 35, in import_mantid_cext<br>
+lib = import_module(modulename, package)<br>
+File “/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/importlib/<strong>init</strong>.py”, line 127, in import_module<br>
+return _bootstrap._gcd_import(name[level:], package, level)<br>
+SystemError: initialization of _kernel raised unreported exception</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</details>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/ChrisR'><span itemprop='name'>ChrisR</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-01-28T11:01:06Z' class='post-time'>
+                    January 28, 2021, 11:01am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-01-28T11:01:06Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Wish I’d seen this before updating to Big Sur… there’s always something! I’m having the same issue, have tried this with latest stable version, and yesterday’s (27/01) nightly build. Still hanging on launch.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/ChrisR'><span itemprop='name'>ChrisR</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-02T09:26:08Z' class='post-time'>
+                    February 2, 2021,  9:26am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-02T09:26:08Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Quick update on this. Tried with most recent nightly build again (5.1.202010201.855) and some progress, actually getting to the stage where an error message appears before everything completely crashes!</p>
+<blockquote>
+<p>Blockquote<br>
+Process:               MantidWorkbenchNightly [49402]<br>
+Path:                  /Applications/MantidWorkbenchNightly.app/Contents/MacOS/MantidWorkbenchNightly<br>
+Identifier:            org.mantidproject.MantidWorkbenchNightly<br>
+Version:               5.1.20210201.855 (5.1.20210201.855)<br>
+Code Type:             X86-64 (Native)<br>
+Parent Process:        ??? [1]<br>
+Responsible:           MantidWorkbenchNightly [49402]<br>
+User ID:               503<br>
+Date/Time:             2021-02-02 09:21:04.372 +0000<br>
+OS Version:            macOS 11.1 (20C69)<br>
+Report Version:        12<br>
+Bridge OS Version:     5.1 (18P3030)<br>
+Anonymous UUID:        DC8DD0A4-5ADE-2242-ADD7-8AE7A617FC82<br>
+Sleep/Wake UUID:       FE40B694-AC30-4FB6-9A12-7F7E4DD4736B<br>
+Time Awake Since Boot: 210000 seconds<br>
+Time Since Wake:       1000 seconds<br>
+System Integrity Protection: enabled<br>
+Crashed Thread:        0<br>
+Exception Type:        EXC_CRASH (SIGABRT)<br>
+Exception Codes:       0x0000000000000000, 0x0000000000000000<br>
+Exception Note:        EXC_CORPSE_NOTIFY<br>
+Termination Reason:    DYLD, [0x1] Library missing<br>
+Application Specific Information:<br>
+dyld: launch, loading dependent libraries<br>
+Dyld Error Message:<br>
+dyld: Using shared cache: 467A83CB-BA86-3F07-B652-B9256C74080A<br>
+Library not loaded: /usr/local/opt/libomp/lib/libomp.dylib<br>
+Referenced from: /Applications/MantidWorkbenchNightly.app/Contents/MacOS/MantidWorkbenchNightly<br>
+Reason: image not found<br>
+Binary Images:<br>
+0x101217000 -        0x101229fff +org.mantidproject.MantidWorkbenchNightly (5.1.20210201.855 - 5.1.20210201.855) &lt;068D2B5F-2944-31AB-B755-5674153E0CB6&gt; /Applications/MantidWorkbenchNightly.app/Contents/MacOS/MantidWorkbenchNightly<br>
+0x101239000 -        0x10124cfff +libboost_filesystem-mt.dylib (0)  /usr/local/opt/boost/lib/libboost_filesystem-mt.dylib<br>
+0x10c6c5000 -        0x10c760fff  dyld (832.7.1)  /usr/lib/dyld</p>
+</blockquote>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/mincentatties'><span itemprop='name'>mincentatties</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-04T12:47:00Z' class='post-time'>
+                    February 4, 2021, 12:47pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-04T12:52:19Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi All</p>
+<p>Same for me with Workbench and and M1 Big Sur Mac.<br>
+Interestingly, “end-of-life” mantidplot works fine.</p>
+<p>Getting the same missing dynamic library message as ChrisR.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-11T12:59:40Z' class='post-time'>
+                    February 11, 2021, 12:59pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-11T12:59:40Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’ve <a href="https://github.com/mantidproject/mantid/issues/30681" rel="noopener nofollow ugc">raised an issue</a> and we’ll see if we can get a solution to this. I’ll update here if we do!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-11T17:24:50Z' class='post-time'>
+                    February 11, 2021,  5:24pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-11T17:24:50Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>As mentioned on the issue, there seems to be a workaround, so you should be able to launch from terminal with:</p>
+<pre><code>export QT_MAC_WANTS_LAYER=1
+/Applications/MantidWorkbench.app/Contents/MacOS/MantidWorkbench</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Ian'><span itemprop='name'>Ian</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-11T21:43:19Z' class='post-time'>
+                    February 11, 2021,  9:43pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-11T21:43:19Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks Daniel - can confirm that works for me on M1.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/mincentatties'><span itemprop='name'>mincentatties</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-02-12T14:00:42Z' class='post-time'>
+                    February 12, 2021,  2:00pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-02-12T14:00:42Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Works for me too - thanks</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

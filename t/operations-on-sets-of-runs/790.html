@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Operations on sets of runs - General - Mantid Help Forum</title>
+    <meta name="description" content="I’d like to write some Python code that works with sets of run numbers, doing things like taking the union or intersection of sets, iterating over them, or loading them into a Workspace Group. The sets of runs will in ge&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="790.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Operations on sets of runs&#39;" href="https://forum.mantidproject.org/t/operations-on-sets-of-runs/790.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/operations-on-sets-of-runs/790" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/operations-on-sets-of-runs/790" />
+<meta property="og:title" content="Operations on sets of runs" />
+<meta name="twitter:title" content="Operations on sets of runs" />
+<meta property="og:description" content="I’d like to write some Python code that works with sets of run numbers, doing things like taking the union or intersection of sets, iterating over them, or loading them into a Workspace Group. The sets of runs will in general be too large to load at once into Mantid until I specifically choose to do so. I could probably implement something like this with a subclass of Python’s set object, but before I do, does anything like this exist in Mantid already that could help me?  Also, at some point I’..." />
+<meta name="twitter:description" content="I’d like to write some Python code that works with sets of run numbers, doing things like taking the union or intersection of sets, iterating over them, or loading them into a Workspace Group. The sets of runs will in general be too large to load at once into Mantid until I specifically choose to do so. I could probably implement something like this with a subclass of Python’s set object, but before I do, does anything like this exist in Mantid already that could help me?  Also, at some point I’..." />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="2 ❤" />
+<meta property="article:published_time" content="2021-11-15T13:57:59+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="790.html">Operations on sets of runs</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/6.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Operations on sets of runs'>
+      <link itemprop='url' href='790.html'>
+      <meta itemprop='datePublished' content='2021-11-15T13:57:59Z'>
+        <meta itemprop='articleSection' content='General'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/JoeKelleher'><span itemprop='name'>JoeKelleher</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="790.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2021-11-15T13:57:59Z' class='post-time'>
+                    November 15, 2021,  1:57pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-11-15T13:57:59Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’d like to write some Python code that works with sets of run numbers, doing things like taking the union or intersection of sets, iterating over them, or loading them into a Workspace Group. The sets of runs will in general be too large to load at once into Mantid until I specifically choose to do so. I could probably implement something like this with a subclass of Python’s set object, but before I do, does anything like this exist in Mantid already that could help me?</p>
+<p>Also, at some point I’ll need a human-readable notation for the sets of runs, e.g. “123456-999;125000;125750-6000”. Does any existing algorithm in Mantid (or other part of Mantid) use a notation like this, that I could also adopt myself for consistency?</p>
+<p>Any comments or suggestions gratefully received!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-11-15T16:30:33Z' class='post-time'>
+                    November 15, 2021,  4:30pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-11-15T16:30:33Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Joe!</p>
+<p>Mantid has a <a href="https://docs.mantidproject.org/nightly/api/python/mantid/api/FileFinderImpl.html#mantid.api.FileFinderImpl.findRuns" rel="noopener nofollow ugc">filefinder</a> for locating runs with strings like you have given. This is a <a href="https://doxygen.mantidproject.org/nightly/df/d28/classMantid_1_1API_1_1FileFinderImpl.html#a79c70bcf9160524969b50eac20559063" rel="noopener nofollow ugc">C++ method</a> that is exposed to Python. See if you can get <code>FileFinder.findRuns(run_string)</code> to work for you:</p>
+<pre><code class="lang-auto">from mantid.api import FileFinder
+from typing import List
+runs: List[int] = FileFinder.findRuns(runs_str)
+</code></pre>
+<p>Note this will separate with <code>,</code> rather than <code>;</code><br>
+Tell me if you need any help or have more questions!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/JoeKelleher'><span itemprop='name'>JoeKelleher</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-11-15T16:48:33Z' class='post-time'>
+                    November 15, 2021,  4:48pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-11-15T16:48:33Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>That’s really helpful, thanks! I’ll use the same format in anything I do. Does this syntax have any extensions (in any API call not just FileFinder) for skipping over all but every kth run, or applying a default grouping file when loaded, or anything like that? Also, if I make a set of runs somehow, is it possible for Mantid to generate a string like this, e.g. if I add runs individually, can it look for continuous run ranges and use the dash character in its response?</p>
+<p>In general, I’ve so far found Mantid overall generally lacks capabilities for doing anything like this with large run ranges, but some of the individual technique APIs do offer some ability to work with run ranges. Is there any longer term plan to unify everything here?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-11-16T13:39:03Z' class='post-time'>
+                    November 16, 2021,  1:39pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-11-16T13:39:03Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’m not sure about skipping run numbers. I’d like to point out that the Load algorithm can take :,± for run ranges and will group or sum these workspaces: <a href="https://docs.mantidproject.org/nightly/tutorials/mantid_basic_course/loading_and_displaying_data/01_loading_data.html#loading-lots-of-data-files" class="inline-onebox" rel="noopener nofollow ugc">Loading Data</a></p>
+<p>Also, IntArrayProperty seem to do the reverse of what you’ve asked, so I’ll tell you if I can find something that turns run numbers into ranges. IntArrayProperty turn ranges into run numbers:</p>
+<pre><code class="lang-auto">import mantid.kernel as mk
+ia=mk.IntArrayProperty('test','123-155,200,300-301')
+print(ia.value)
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

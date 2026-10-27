@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Module &quot;_commonqt5&quot; not found error with Ubuntu 20.04 - Installation - Mantid Help Forum</title>
+    <meta name="description" content="Hi everyone, 
+I got the workbench running on Ubuntu 20.04 for some time, then I did not use it for a while and when I canted to reopen the workbench again, I got an “ImportError” (see below). 
+I tried to build again Mant&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="768.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Module &quot;_commonqt5&quot; not found error with Ubuntu 20.04&#39;" href="https://forum.mantidproject.org/t/module-commonqt5-not-found-error-with-ubuntu-20-04/768.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/module-commonqt5-not-found-error-with-ubuntu-20-04/768" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/module-commonqt5-not-found-error-with-ubuntu-20-04/768" />
+<meta property="og:title" content="Module &quot;_commonqt5&quot; not found error with Ubuntu 20.04" />
+<meta name="twitter:title" content="Module &quot;_commonqt5&quot; not found error with Ubuntu 20.04" />
+<meta property="og:description" content="Hi everyone,  I got the workbench running on Ubuntu 20.04 for some time, then I did not use it for a while and when I canted to reopen the workbench again, I got an “ImportError” (see below).  I tried to build again Mantid with different versions but I still get this error.  It looks to me I have all the necessary libraries installed (Qt5, qtpy, PyQt5) and I can figure out what header is missing exactly.  Does anyone have some ideas about this?  Thanks in advance.  The error message:  Traceback ..." />
+<meta name="twitter:description" content="Hi everyone,  I got the workbench running on Ubuntu 20.04 for some time, then I did not use it for a while and when I canted to reopen the workbench again, I got an “ImportError” (see below).  I tried to build again Mantid with different versions but I still get this error.  It looks to me I have all the necessary libraries installed (Qt5, qtpy, PyQt5) and I can figure out what header is missing exactly.  Does anyone have some ideas about this?  Thanks in advance.  The error message:  Traceback ..." />
+<meta property="og:article:section" content="Installation" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="article:published_time" content="2021-08-25T06:52:00+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="768.html">Module &quot;_commonqt5&quot; not found error with Ubuntu 20.04</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/installation/7.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Installation</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Module &quot;_commonqt5&quot; not found error with Ubuntu 20.04'>
+      <link itemprop='url' href='768.html'>
+      <meta itemprop='datePublished' content='2021-08-25T06:52:00Z'>
+        <meta itemprop='articleSection' content='Installation'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/kpounot'><span itemprop='name'>kpounot</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="768.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2021-08-25T06:52:00Z' class='post-time'>
+                    August 25, 2021,  6:52am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-08-25T06:52:00Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi everyone,</p>
+<p>I got the workbench running on Ubuntu 20.04 for some time, then I did not use it for a while and when I canted to reopen the workbench again, I got an “ImportError” (see below).<br>
+I tried to build again Mantid with different versions but I still get this error.</p>
+<p>It looks to me I have all the necessary libraries installed (Qt5, qtpy, PyQt5) and I can figure out what header is missing exactly.</p>
+<p>Does anyone have some ideas about this?</p>
+<p>Thanks in advance.</p>
+<p>The error message:</p>
+<pre><code class="lang-auto">Traceback (most recent call last):
+  File "/opt/mantidunstable/lib/mantidqt/utils/qt/__init__.py", line 55, in import_qt
+    lib = import_module(modulename + LIB_SUFFIX, package)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1014, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 991, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 975, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 657, in _load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 556, in module_from_spec
+  File "&lt;frozen importlib._bootstrap_external&gt;", line 1166, in create_module
+  File "&lt;frozen importlib._bootstrap&gt;", line 219, in _call_with_frames_removed
+ImportError: /lib/x86_64-linux-gnu/libQt5Quick.so.5: undefined symbol: _ZNK11QFontEngine10glyphCacheEPKvNS_11GlyphFormatERK10QTransformRK6QColor, version Qt_5_PRIVATE_API
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/mantidunstable/lib/mantidqt/utils/qt/__init__.py", line 58, in import_qt
+    lib = import_module(modulename.lstrip('.') + LIB_SUFFIX)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1014, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 991, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '_commonqt5'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/mantidunstable/bin/workbench", line 11, in &lt;module&gt;
+    load_entry_point('MantidWorkbench==6.1.20210726.628', 'gui_scripts', 'workbench')()
+  File "/opt/mantidunstable/lib/workbench/app/main.py", line 62, in main
+    start(options)
+  File "/opt/mantidunstable/lib/workbench/app/main.py", line 86, in start
+    from workbench.app.start import start
+  File "/opt/mantidunstable/lib/workbench/app/start.py", line 30, in &lt;module&gt;
+    from workbench.plugins.exception_handler import exception_logger  # noqa
+  File "/opt/mantidunstable/lib/workbench/plugins/exception_handler/__init__.py", line 12, in &lt;module&gt;
+    from mantidqt.dialogs.errorreports.report import CrashReportPage
+  File "/opt/mantidunstable/lib/mantidqt/dialogs/errorreports/report.py", line 12, in &lt;module&gt;
+    from mantidqt.interfacemanager import InterfaceManager
+  File "/opt/mantidunstable/lib/mantidqt/interfacemanager.py", line 12, in &lt;module&gt;
+    InterfaceManager = import_qt('._common', 'mantidqt', 'InterfaceManager')
+  File "/opt/mantidunstable/lib/mantidqt/utils/qt/__init__.py", line 63, in import_qt
+    raise ImportError(msg)
+ImportError: First import of "._commonqt5" failed with "/lib/x86_64-linux-gnu/libQt5Quick.so.5: undefined symbol: _ZNK11QFontEngine10glyphCacheEPKvNS_11GlyphFormatERK10QTransformRK6QColor, version Qt_5_PRIVATE_API". Second import of "_commonqt5" failed with "No module named '_commonqt5'"
+Traceback (most recent call last):
+  File "/opt/mantidunstable/lib/mantidqt/utils/qt/__init__.py", line 55, in import_qt
+    lib = import_module(modulename + LIB_SUFFIX, package)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1014, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 991, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 975, in _find_and_load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 657, in _load_unlocked
+  File "&lt;frozen importlib._bootstrap&gt;", line 556, in module_from_spec
+  File "&lt;frozen importlib._bootstrap_external&gt;", line 1166, in create_module
+  File "&lt;frozen importlib._bootstrap&gt;", line 219, in _call_with_frames_removed
+ImportError: /lib/x86_64-linux-gnu/libQt5Quick.so.5: undefined symbol: _ZNK11QFontEngine10glyphCacheEPKvNS_11GlyphFormatERK10QTransformRK6QColor, version Qt_5_PRIVATE_API
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/mantidunstable/lib/mantidqt/utils/qt/__init__.py", line 58, in import_qt
+    lib = import_module(modulename.lstrip('.') + LIB_SUFFIX)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "&lt;frozen importlib._bootstrap&gt;", line 1014, in _gcd_import
+  File "&lt;frozen importlib._bootstrap&gt;", line 991, in _find_and_load
+  File "&lt;frozen importlib._bootstrap&gt;", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '_commonqt5'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/opt/mantidunstable/lib/mantidqt/dialogs/errorreports/main.py", line 16, in &lt;module&gt;
+    from mantidqt.dialogs.errorreports.report import CrashReportPage
+  File "/opt/mantidunstable/lib/mantidqt/dialogs/errorreports/report.py", line 12, in &lt;module&gt;
+    from mantidqt.interfacemanager import InterfaceManager
+  File "/opt/mantidunstable/lib/mantidqt/interfacemanager.py", line 12, in &lt;module&gt;
+    InterfaceManager = import_qt('._common', 'mantidqt', 'InterfaceManager')
+  File "/opt/mantidunstable/lib/mantidqt/utils/qt/__init__.py", line 63, in import_qt
+    raise ImportError(msg)
+ImportError: First import of "._commonqt5" failed with "/lib/x86_64-linux-gnu/libQt5Quick.so.5: undefined symbol: _ZNK11QFontEngine10glyphCacheEPKvNS_11GlyphFormatERK10QTransformRK6QColor, version Qt_5_PRIVATE_API". Second import of "_commonqt5" failed with "No module named '_commonqt5'"
+
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DavidFair'><span itemprop='name'>DavidFair</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-08-25T09:38:54Z' class='post-time'>
+                    August 25, 2021,  9:38am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-08-25T09:38:54Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi kpounot,</p>
+<p>First to cover the usual disclaimers, 20.04 isn’t officially supported - might produce errors or incorrect data …etc…etc.</p>
+<p>Also I notice you’ve got a Mantid unstable build? Is this something you’ve built for yourself?<br>
+The reason I ask is nightlies generally work fine, but a unstable build tends to be bespoke which makes it hard to know how far it’s deviated from the original source code.</p>
+<p>Assuming it’s fairly close, this looks like Qt dependencies has changed since you’ve last built. Running <code>_ZNK11QFontEngine10glyphCacheEPKvNS_11GlyphFormatERK10QTransformRK6QColor</code> through a name <a href="https://demangler.com/" rel="noopener nofollow ugc">demangler</a> we get <code>QFontEngine::glyphCache(void const*, QFontEngine::GlyphFormat, QTransform const&amp;, QColor const&amp;) const</code>.</p>
+<p>Some obvious ones:</p>
+<ul>
+<li>Do you have a Conda env activated with Qt? this can cause problems where it will see the Conda version despite being built with the system (or vice-versa)</li>
+<li>Have you re-built Mantid since updating your dependencies? If your looking to move off the unstable I would simply build Mantid locally without installing unstable packages, it’s relatively simple and I’m happy to explain how.</li>
+<li>If you don’t want to mess too much and have the option of waiting potentially 3-6 months (as unlikely as that is) we will have 20.04 support through Conda with the work currently going on</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

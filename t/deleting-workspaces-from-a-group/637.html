@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Deleting workspaces from a group - Python - Mantid Help Forum</title>
+    <meta name="description" content="Interesting behaviour here which may have changed a bit recently.  What’s supposed to happen? 
+# tidy up a temporary WorkspaceGroup, for example a loaded run taken in period mode
+for w in wg:
+    DeleteWorkspace(w)
+
+This&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="637.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Deleting workspaces from a group&#39;" href="https://forum.mantidproject.org/t/deleting-workspaces-from-a-group/637.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/deleting-workspaces-from-a-group/637" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/deleting-workspaces-from-a-group/637" />
+<meta property="og:title" content="Deleting workspaces from a group" />
+<meta name="twitter:title" content="Deleting workspaces from a group" />
+<meta property="og:description" content="Interesting behaviour here which may have changed a bit recently.  What’s supposed to happen?  # tidy up a temporary WorkspaceGroup, for example a loaded run taken in period mode for w in wg:     DeleteWorkspace(w)  This deletes MyWorkspace_1, MyWorkspace_3 etc and then fails trying to delete “None”.  The nearly equivalent code  for i in range(N):     w= wg[i]     DeleteWorkspace(w)  deletes 1,3 etc and then throws an exception that the index into the workspace group is out of range (which is mo..." />
+<meta name="twitter:description" content="Interesting behaviour here which may have changed a bit recently.  What’s supposed to happen?  # tidy up a temporary WorkspaceGroup, for example a loaded run taken in period mode for w in wg:     DeleteWorkspace(w)  This deletes MyWorkspace_1, MyWorkspace_3 etc and then fails trying to delete “None”.  The nearly equivalent code  for i in range(N):     w= wg[i]     DeleteWorkspace(w)  deletes 1,3 etc and then throws an exception that the index into the workspace group is out of range (which is mo..." />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="og:article:section" content="Python" />
+<meta property="og:article:section:color" content="9EB83B" />
+<meta property="article:published_time" content="2020-01-29T16:15:08+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="637.html">Deleting workspaces from a group</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #9EB83B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Python</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Deleting workspaces from a group'>
+      <link itemprop='url' href='637.html'>
+      <meta itemprop='datePublished' content='2020-01-29T16:15:08Z'>
+        <meta itemprop='articleSection' content='Python'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="637.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2020-01-29T16:15:08Z' class='post-time'>
+                    January 29, 2020,  4:15pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-01-29T16:15:08Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Interesting behaviour here which may have changed a bit recently.  What’s supposed to happen?</p>
+<pre><code># tidy up a temporary WorkspaceGroup, for example a loaded run taken in period mode
+for w in wg:
+    DeleteWorkspace(w)
+</code></pre>
+<p>This deletes MyWorkspace_1, MyWorkspace_3 etc and then fails trying to delete “None”.</p>
+<p>The nearly equivalent code</p>
+<pre><code>for i in range(N):
+    w= wg[i]
+    DeleteWorkspace(w)
+</code></pre>
+<p>deletes 1,3 etc and then throws an exception that the index into the workspace group is out of range (which is more obvious why it’s wrong).<br>
+A correct solution is of course</p>
+<pre><code>for w in list(wg):
+    DeleteWorkspace(w)
+</code></pre>
+<p>or just <code>DeleteWorkspaces(wg)</code>.</p>
+<p>Also is it intended that deleting the last member of a workspace group automatically deletes the group itself in a tidy manner? It does seem to disappear from the ADS.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-01-30T11:58:55Z' class='post-time'>
+                    January 30, 2020, 11:58am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-01-30T11:58:55Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I put your 3 ways into one script (which doesn’t run in its entirety, but each section will run):</p>
+<pre><code>from mantid.simpleapi import *
+N = 5
+
+'''A Deletes Odd Indices - Property "WORKSPACE" is not set to a valid value'''
+for i in range(N):
+    CreateSampleWorkspace(OutputWorkspace = 'wsa_{}'.format(i+1))
+wgA = GroupWorkspaces(GlobExpression= 'wsa_?')
+
+for w in wgA:            
+    DeleteWorkspace(w)
+
+
+'''B Deletes Odd Indices - IndexError: index out of range'''
+for i in range(N):
+    CreateSampleWorkspace(OutputWorkspace = 'wsb_{}'.format(i+1))
+
+wgB = GroupWorkspaces(GlobExpression= 'wsb_?')
+
+for i in range(N):        
+    w= wgB[i]
+    DeleteWorkspace(w)
+
+
+'''C This way works'''
+for i in range(N):
+    CreateSampleWorkspace(OutputWorkspace = 'wsc_{}'.format(i+1))
+wgC = GroupWorkspaces(GlobExpression= 'wsc_?')
+
+for w in list(wgC):
+    DeleteWorkspace(w)
+</code></pre>
+<p>In A and B, Python is deleting the first workspace index, then looking for the second, but it has shuffled to being the first and so the third gets deleted. In this way it ends up looking for indices outside its range!</p>
+<p>In C it works correctly as the list of the workspace names to delete is fixed and so it can’t go wrong.</p>
+<p>This is a useful thing to be aware of! As it relates to Python iteration I’m not sure that a change within Mantid would be appropriate. This behavior works the same in 4.2 and the Nightly (even though they are different Python versions) as far as I can tell.</p>
+<p>Yes deleting the final workspace from a group also deletes the group as it would be annoying to have an empty group lying around.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-01-30T12:26:51Z' class='post-time'>
+                    January 30, 2020, 12:26pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-01-30T12:26:51Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks. There’s no need to change Mantid, but perhaps add a bit to the documentation to clarify that a WorkspaceGroup is a sort of iterator in this context and (as elsewhere in Python) iterating over a group while adding or removing items is a bad idea.<br>
+As for deleting, the converse is that overwriting a WorkspaceGroup with a smaller group leaves the excess members orphaned at the top level of the ADS. But DeleteWorkspace iterates over the group members and tidies up.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-01-31T15:16:31Z' class='post-time'>
+                    January 31, 2020,  3:16pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-01-31T15:16:31Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’ve created a pull request to reflect this in the Documentation: <a href="https://github.com/mantidproject/mantid/pull/27844" class="inline-onebox" rel="noopener nofollow ugc">Edit WorkspaceGroup docs by DanielMurphy22 · Pull Request #27844 · mantidproject/mantid · GitHub</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

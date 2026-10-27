@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Import error caused by numpy v1.22.4 - Developer - Mantid Help Forum</title>
+    <meta name="description" content="The latest release of numpy (1.22.4) has caused an import issue in some of our Bayes algorithms. Please avoid installing numpy v1.22.4 inside your conda development enviornments while we work on a fix. For the time being&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="810.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Import error caused by numpy v1.22.4&#39;" href="https://forum.mantidproject.org/t/import-error-caused-by-numpy-v1-22-4/810.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/import-error-caused-by-numpy-v1-22-4/810" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/import-error-caused-by-numpy-v1-22-4/810" />
+<meta property="og:title" content="Import error caused by numpy v1.22.4" />
+<meta name="twitter:title" content="Import error caused by numpy v1.22.4" />
+<meta property="og:description" content="The latest release of numpy (1.22.4) has caused an import issue in some of our Bayes algorithms. Please avoid installing numpy v1.22.4 inside your conda development enviornments while we work on a fix. For the time being, we have updated the numpy pinning in our mantid-developer developer environment files:   and our conda-build recipe:   Thanks,  Tom" />
+<meta name="twitter:description" content="The latest release of numpy (1.22.4) has caused an import issue in some of our Bayes algorithms. Please avoid installing numpy v1.22.4 inside your conda development enviornments while we work on a fix. For the time being, we have updated the numpy pinning in our mantid-developer developer environment files:   and our conda-build recipe:   Thanks,  Tom" />
+<meta property="og:article:section" content="News" />
+<meta property="og:article:section:color" content="0E76BD" />
+<meta property="og:article:section" content="Developer" />
+<meta property="og:article:section:color" content="AB9364" />
+<meta property="article:published_time" content="2022-05-30T10:41:56+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="810.html">Import error caused by numpy v1.22.4</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/news/dev-news/15.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0E76BD'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>News</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/news/dev-news/15.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #AB9364'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Developer</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Import error caused by numpy v1.22.4'>
+      <link itemprop='url' href='810.html'>
+      <meta itemprop='datePublished' content='2022-05-30T10:41:56Z'>
+        <meta itemprop='articleSection' content='Developer'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/thomashampson'><span itemprop='name'>thomashampson</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="810.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2022-05-30T10:41:56Z' class='post-time'>
+                    May 30, 2022, 10:41am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-30T10:41:56Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The latest release of numpy (1.22.4) has caused an import issue in some of our Bayes algorithms. Please avoid installing numpy v1.22.4 inside your conda development enviornments while we work on a fix. For the time being, we have updated the numpy pinning in our mantid-developer developer environment files:</p><aside class="onebox githubblob" data-onebox-src="https://github.com/mantidproject/mantid/blob/86b32b004b85ad3b8dd1ad66166d206f0a2d26d1/mantid-developer-linux.yml#L25">
+  <header class="source">
+
+      <a href="https://github.com/mantidproject/mantid/blob/86b32b004b85ad3b8dd1ad66166d206f0a2d26d1/mantid-developer-linux.yml#L25" target="_blank" rel="noopener nofollow ugc">github.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <h4><a href="https://github.com/mantidproject/mantid/blob/86b32b004b85ad3b8dd1ad66166d206f0a2d26d1/mantid-developer-linux.yml#L25" target="_blank" rel="noopener nofollow ugc">mantidproject/mantid/blob/86b32b004b85ad3b8dd1ad66166d206f0a2d26d1/mantid-developer-linux.yml#L25</a></h4>
+
+
+
+    <pre class="onebox">      <code class="lang-yml">
+        <ol class="start lines" start="15" style="counter-reset: li-counter 14 ;">
+            <li>- h5py&gt;=2.10.0,&lt;3 # Pinned back due to api differences</li>
+            <li>- hdf5=1.10.*</li>
+            <li>- ipykernel&lt;6 # Added as hard dependency only to deal with an issue with ipykernel v6 and incompatibility with qtconsole/workbench, was previously a soft dependency that was allowed to update to v6 by qtconsole, at present it stops workbench from loading.</li>
+            <li>- jemalloc&gt;=5.2.1</li>
+            <li>- jsoncpp&gt;=1.9.4,&lt;2</li>
+            <li>- librdkafka&gt;=1.6.0</li>
+            <li>- matplotlib=3.5.*</li>
+            <li>- muparser&gt;=2.3.2</li>
+            <li>- nexus=4.4.*</li>
+            <li>- ninja&gt;=1.10.2</li>
+            <li class="selected">- numpy&gt;=1.20.2, &lt;1.22.4</li>
+            <li>- occt&gt;=7.4.0</li>
+            <li>- pip&gt;=21.0.1</li>
+            <li>- poco=1.10.*</li>
+            <li>- psutil&gt;=5.8.0</li>
+            <li>- pycifrw==4.4.1 # Force to 4.4.1 as later versions cause issues with loading CIF files</li>
+            <li>- pyqt&gt;=5.12.3,&lt;6</li>
+            <li>- python-dateutil&gt;=2.8.1</li>
+            <li>- python=3.8.*</li>
+            <li>- pyyaml&gt;=5.4.1</li>
+            <li>- qscintilla2&gt;=2.11.2</li>
+        </ol>
+      </code>
+    </pre>
+
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+<p>
+and our conda-build recipe:</p><aside class="onebox githubblob" data-onebox-src="https://github.com/mantidproject/conda-recipes/blob/8f83fb4fe744d0340a3dd763d0e599280122e1e2/recipes/mantid/meta.yaml#L58">
+  <header class="source">
+
+      <a href="https://github.com/mantidproject/conda-recipes/blob/8f83fb4fe744d0340a3dd763d0e599280122e1e2/recipes/mantid/meta.yaml#L58" target="_blank" rel="noopener nofollow ugc">github.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <h4><a href="https://github.com/mantidproject/conda-recipes/blob/8f83fb4fe744d0340a3dd763d0e599280122e1e2/recipes/mantid/meta.yaml#L58" target="_blank" rel="noopener nofollow ugc">mantidproject/conda-recipes/blob/8f83fb4fe744d0340a3dd763d0e599280122e1e2/recipes/mantid/meta.yaml#L58</a></h4>
+
+
+
+    <pre class="onebox">      <code class="lang-yaml">
+        <ol class="start lines" start="48" style="counter-reset: li-counter 47 ;">
+            <li>    - zlib</li>
+            <li>    - pip</li>
+            <li>    - openssl {{ openssl }}</li>
+            <li>  run:</li>
+            <li>    - {{ pin_compatible("boost", max_pin="x.x") }}</li>
+            <li>    - {{ pin_compatible("gsl", max_pin="x.x") }}</li>
+            <li>    - h5py</li>
+            <li>    - {{ pin_compatible("hdf5", max_pin="x.x") }}</li>
+            <li>    - lib3mf  # [win]</li>
+            <li>    - nexus</li>
+            <li class="selected">    - numpy &gt;={{ numpy }},&lt;=1.22.3|&gt;=1.23</li>
+            <li>    - {{ pin_compatible("occt", max_pin="x.x.x") }}</li>
+            <li>    - python</li>
+            <li>    - python-dateutil</li>
+            <li>    - pyyaml</li>
+            <li>    - scipy</li>
+            <li>    - openssl {{ openssl }}</li>
+            <li>
+            </li>
+<li>about:</li>
+            <li>  home: https://github.com/mantidproject/mantid</li>
+            <li>  license: GPL-3.0-or-later</li>
+        </ol>
+      </code>
+    </pre>
+
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>Thanks,<br>
+Tom</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

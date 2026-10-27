@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Using mantid through conda installation - Python - Mantid Help Forum</title>
+    <meta name="description" content="Dear all, 
+I would like to give a try to mantid through conda. To do so, I did the following: 
+conda create -n test_mantid
+conda activate test_mantid
+conda install -c mantid - c conda-forge mantid-framework
+
+once install&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="524.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Using mantid through conda installation&#39;" href="https://forum.mantidproject.org/t/using-mantid-through-conda-installation/524.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/using-mantid-through-conda-installation/524" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/using-mantid-through-conda-installation/524" />
+<meta property="og:title" content="Using mantid through conda installation" />
+<meta name="twitter:title" content="Using mantid through conda installation" />
+<meta property="og:description" content="Dear all,  I would like to give a try to mantid through conda. To do so, I did the following:  conda create -n test_mantid conda activate test_mantid conda install -c mantid - c conda-forge mantid-framework  once installed when doing:   ipython  import mantid   I get the following error:  --------------------------------------------------------------------------- ImportError                               Traceback (most recent call last) &lt;ipython-input-1-002efd284d2a&gt; in &lt;module&gt; ----&gt; 1 import ..." />
+<meta name="twitter:description" content="Dear all,  I would like to give a try to mantid through conda. To do so, I did the following:  conda create -n test_mantid conda activate test_mantid conda install -c mantid - c conda-forge mantid-framework  once installed when doing:   ipython  import mantid   I get the following error:  --------------------------------------------------------------------------- ImportError                               Traceback (most recent call last) &lt;ipython-input-1-002efd284d2a&gt; in &lt;module&gt; ----&gt; 1 import ..." />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="og:article:section" content="Python" />
+<meta property="og:article:section:color" content="9EB83B" />
+<meta property="article:published_time" content="2019-04-17T11:30:57+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="524.html">Using mantid through conda installation</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #9EB83B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Python</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Using mantid through conda installation'>
+      <link itemprop='url' href='524.html'>
+      <meta itemprop='datePublished' content='2019-04-17T11:30:57Z'>
+        <meta itemprop='articleSection' content='Python'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/ericpellegrini'><span itemprop='name'>ericpellegrini</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="524.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2019-04-17T11:30:57Z' class='post-time'>
+                    April 17, 2019, 11:30am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-17T11:30:57Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Dear all,</p>
+<p>I would like to give a try to mantid through conda. To do so, I did the following:</p>
+<pre><code>conda create -n test_mantid
+conda activate test_mantid
+conda install -c mantid - c conda-forge mantid-framework
+</code></pre>
+<p>once installed when doing:</p>
+<blockquote>
+<p>ipython<br>
+import mantid</p>
+</blockquote>
+<p>I get the following error:</p>
+<pre><code>---------------------------------------------------------------------------
+ImportError                               Traceback (most recent call last)
+&lt;ipython-input-1-002efd284d2a&gt; in &lt;module&gt;
+----&gt; 1 import mantid
+
+~/.conda/envs/test_mantid/lib/python3.6/site-packages/mantid/__init__.py in &lt;module&gt;
+     72 ###############################################################################
+     73 import mantid.kernel as kernel
+---&gt; 74 import mantid.geometry as geometry
+     75 import mantid.api as api
+     76 import mantid.dataobjects as dataobjects
+
+~/.conda/envs/test_mantid/lib/python3.6/site-packages/mantid/geometry/__init__.py in &lt;module&gt;
+     12 # Load the C++ library
+     13 ###############################################################################
+---&gt; 14 from ._geometry import *
+     15 
+     16 ###############################################################################
+
+ImportError: /home/pellegrini/.conda/envs/test_mantid/lib/python3.6/site-packages/mantid/geometry/../../../../libMantidGeometry.so: undefined symbol: _ZNK2mu11ParserError6GetMsgEv
+</code></pre>
+<p>Am I doing something wrong or is that something related to mantd/conda installation ?</p>
+<p>Thanks in advance</p>
+<p>Eric</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/NickDraper'><span itemprop='name'>NickDraper</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-04-17T13:37:38Z' class='post-time'>
+                    April 17, 2019,  1:37pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-17T13:37:38Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="https://forum.mantidproject.org/u/peterfpeterson">@peterfpeterson</a>  Could you or Jiao help out here?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/linjiao'><span itemprop='name'>linjiao</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-04-17T17:34:39Z' class='post-time'>
+                    April 17, 2019,  5:34pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-17T18:05:52Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Could you please install the latest nightly build and let me know if that works for you?</p>
+<pre><code class="lang-auto">$ conda install -c mantid/label/nightly mantid-framework
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/ericpellegrini'><span itemprop='name'>ericpellegrini</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-04-18T07:32:18Z' class='post-time'>
+                    April 18, 2019,  7:32am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-18T07:32:18Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>thanks for the quick answer. I tried from the nightly build and it works. Great. This brings me to a last question. As I would like to provide mantid in a production environment, relying on a nightly build would not be that safe. Would you have any idea  when a conda-stable production release will be available ? thx. Eric</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/NickDraper'><span itemprop='name'>NickDraper</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-04-18T08:24:28Z' class='post-time'>
+                    April 18, 2019,  8:24am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-18T08:24:28Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The next planned Mantid release is July the 22nd.</p><aside class="onebox githubfolder">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+      <a href="https://github.com/mantidproject/mantid/milestones" target="_blank" rel="noopener">github.com</a>
+  </header>
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/345;"><img src="https://opengraph.githubassets.com/a132c0eeb9904f175e1d83da8ac8865d3edd8baa1365ad1c54d9e049e99399fa/mantidproject/mantid" class="thumbnail" width="690" height="345"></div>
+
+<h3><a href="https://github.com/mantidproject/mantid/milestones" target="_blank" rel="noopener">mantidproject/mantid</a></h3>
+
+<p><a href="https://github.com/mantidproject/mantid/milestones" target="_blank" rel="noopener">tones</a></p>
+
+  <p><span class="label1">Main repository for Mantid code. Contribute to mantidproject/mantid development by creating an account on GitHub.</span></p>
+
+  </article>
+  <div class="onebox-metadata">
+    
+    
+  </div>
+  <div style="clear: both"></div>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/linjiao'><span itemprop='name'>linjiao</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-04-18T11:48:25Z' class='post-time'>
+                    April 18, 2019, 11:48am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-18T11:48:25Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>A new build of Mantid 4.0.0 was just uploaded. It should fix the problem. The problem was caused by a recent build of conda muparser. As long as you install a particular earlier conda build of muparser, mantid won’t complain. The new build just uploaded and recent nightly builds pinned the muparser version so they should be good. Please give it  a try and let me know if there are problems. Thanks</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/ericpellegrini'><span itemprop='name'>ericpellegrini</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-04-18T12:51:57Z' class='post-time'>
+                    April 18, 2019, 12:51pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-18T12:51:57Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>On which channel was it uploaded ? When trying from the stable one by doing:</p>
+<p><code>conda install -c mantid mantid-framework</code></p>
+<p>I get again the error that I did not have anymore using the nightly channel. The version installed is the 3.1. I am quite new to conda so maybe I misunderstood something.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/ericpellegrini'><span itemprop='name'>ericpellegrini</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-04-18T13:47:29Z' class='post-time'>
+                    April 18, 2019,  1:47pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-18T13:47:29Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>OK, I checked, the nightly build <strong>is</strong> the 4.0. Forget my last reply. Thanks for your help.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/linjiao'><span itemprop='name'>linjiao</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-04-18T17:08:13Z' class='post-time'>
+                    April 18, 2019,  5:08pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-18T17:08:13Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Sometimes you may need to clean up your environment and install again:</p>
+<p>$ conda deactivate<br>
+$ conda remove -n test_mantid --all<br>
+$ conda create -n test_mantid<br>
+$ conda activate test_mantid<br>
+$ conda install -c mantid mantid-framework</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/ericpellegrini'><span itemprop='name'>ericpellegrini</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-04-23T07:41:08Z' class='post-time'>
+                    April 23, 2019,  7:41am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-23T08:09:44Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Dear Jiao,</p>
+<p>I am still facing issue with conda/mantid. Indeed, when doing:</p>
+<pre><code>conda create -n conda_mantid
+conda activate conda_mantid
+conda install -c mantid/label/nightly -c conda-forge mantid-framework
+</code></pre>
+<p>I get the following error:</p>
+<pre><code>Collecting package metadata: done
+Solving environment: failed
+
+UnsatisfiableError: The following specifications were found to be in conflict:
+      - mantid-framework
+Use "conda search &lt;package&gt; --info" to see the dependencies for each package.
+</code></pre>
+<p>surprisingly conda does not give me more information than this (e.g. which package or underlying dependencies mantid-framework is conflicting with).</p>
+<p>Would you like me to create a new issue for that new problem ?</p>
+<p><strong>EDIT:</strong></p>
+<pre><code class="lang-auto">conda create -n conda_mantid
+conda activate conda_mantid
+conda install -c mantid -c conda-forge mantid-framework
+</code></pre>
+<p>does not detect any conflict and install mantid-framework (with the import error mentionned in an earlier post)</p>
+<p>Thanks for your help</p>
+<p>Eric</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/linjiao'><span itemprop='name'>linjiao</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-04-23T12:59:17Z' class='post-time'>
+                    April 23, 2019, 12:59pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-23T12:59:17Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>You will need</p>
+<p>$ conda install -c mantid/label/nightly -c mantid -c conda-forge mantid-framework</p>
+<p>to get it working since some dependencies only exist in mantid, not mantid/label/nightly.</p>
+<p>Usually we add mantid and conda-forge to default conda channels like this:</p>
+<p>$ conda config --add channels conda-forge<br>
+$ conda config --add channels mantid</p>
+<p>This way you don’t need to have so many “-c” in the command line</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/ericpellegrini'><span itemprop='name'>ericpellegrini</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-04-23T13:19:58Z' class='post-time'>
+                    April 23, 2019,  1:19pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-23T13:19:58Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>ok, thanks for the info</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/ericpellegrini'><span itemprop='name'>ericpellegrini</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-04-24T11:03:22Z' class='post-time'>
+                    April 24, 2019, 11:03am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-24T11:03:22Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Dear Jiao,</p>
+<p>here is a synthesis of the different trials I did so far with mantid-framework and conda. The idea behind is to use mantid-framework in a wider scientific context using jupyterhub and many others standard scientific packages (R, julia, scipy …). I tried several configurations:</p>
+<ul>
+<li>config 1: installing only mantid 4.0.0 production release</li>
+<li>config 2: installing only mantid nightly release</li>
+<li>config 3: installing mantid nightly release + others packages</li>
+<li>config 4: installing mantid 4.0.0 production release + others packages</li>
+</ul>
+<p>Before trying <strong>all</strong> configs, I did:</p>
+<pre><code>conda config --add channels conda-forge
+conda config --add channels r
+conda config --add channels mantid
+</code></pre>
+<p>Environment file for config1:</p>
+<pre><code>name: mantid_production
+
+dependencies:
+  - mantid-framework
+</code></pre>
+<p><strong>Result: OK (see below)</strong></p>
+<pre><code>root@test-conda:~# conda activate mantid_production
+(mantid_production) root@test-conda:~# python3
+Python 3.6.7 | packaged by conda-forge | (default, Feb 20 2019, 02:51:38) 
+[GCC 7.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt; import mantid
+&gt;&gt;&gt; mantid.__version__
+'4.0.0'
+&gt;&gt;&gt; exit()
+</code></pre>
+<p>Environment file for config2:</p>
+<pre><code>name: mantid_nightly
+
+dependencies:
+    - mantid/label/nightly::mantid-framework
+</code></pre>
+<p><strong>Result: OK (see below)</strong></p>
+<pre><code>root@test-conda:~# conda activate mantid_nightly
+(mantid_nightly) root@test-conda:~# python3
+Python 3.6.7 | packaged by conda-forge | (default, Feb 20 2019, 02:51:38) 
+[GCC 7.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt; import mantid
+&gt;&gt;&gt; mantid.__version__
+'4.0.20190423.2004'
+&gt;&gt;&gt; exit()
+</code></pre>
+<p>Environment file for config3:</p>
+<pre><code>name: mantid_nightly_and_others
+
+dependencies:
+  - git
+
+  - python
+
+  - numpy
+  - matplotlib
+  - h5py
+  - scipy
+  - pandas
+  - scikit-learn
+  - sympy
+
+  - notebook
+  - jupyterlab
+  - jupyterhub
+  - oauthenticator
+  - configurable-http-proxy
+
+  - gfortran_linux-64
+  - openmpi
+
+  - eigen
+  - boost
+  - xeus-cling
+
+  - cmake
+
+  - pip
+
+  - r-essentials
+  - r-base
+
+  - mantid/label/nightly::mantid-framework
+</code></pre>
+<p><strong>Result: OK (see below)</strong></p>
+<pre><code>root@test-conda:~# conda activate mantid_nightly_and_others
+(mantid_nightly_and_others) root@test-conda:~# ipython3
+Python 3.6.7 | packaged by conda-forge | (default, Feb 20 2019, 02:51:38) 
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.4.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: import mantid                                                                                                                                                    
+
+In [2]: mantid.__version__                                                                                                                                               
+Out[2]: '4.0.20190423.2004'
+
+In [3]: exit       
+</code></pre>
+<p>Environment file for config4:</p>
+<pre><code>name: mantid_production_and_others
+
+dependencies:
+  - git
+
+  - python
+
+  - numpy
+  - matplotlib
+  - h5py
+  - scipy
+  - pandas
+  - scikit-learn
+  - sympy
+
+  - notebook
+  - jupyterlab
+  - jupyterhub
+  - oauthenticator
+  - configurable-http-proxy
+
+  - gfortran_linux-64
+  - openmpi
+
+  - eigen
+  - boost
+  - xeus-cling
+
+  - cmake
+
+  - pip
+
+  - r-essentials
+  - r-base
+
+  - mantid-framework
+</code></pre>
+<p><strong>Result: Error (see below):</strong></p>
+<pre><code>root@test-conda:~# conda activate mantid_production_and_others
+(mantid_production_and_others) root@test-conda:~# ipython3
+Python 3.6.7 | packaged by conda-forge | (default, Feb 28 2019, 09:07:38) 
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.4.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: import mantid                                                                                                                                                            
+---------------------------------------------------------------------------
+ImportError                               Traceback (most recent call last)
+&lt;ipython-input-1-002efd284d2a&gt; in &lt;module&gt;
+----&gt; 1 import mantid
+
+/opt/miniconda3/envs/mantid_production_and_others/lib/python3.6/site-packages/mantid/__init__.py in &lt;module&gt;
+     72 ###############################################################################
+     73 import mantid.kernel as kernel
+---&gt; 74 import mantid.geometry as geometry
+     75 import mantid.api as api
+     76 import mantid.dataobjects as dataobjects
+
+/opt/miniconda3/envs/mantid_production_and_others/lib/python3.6/site-packages/mantid/geometry/__init__.py in &lt;module&gt;
+     12 # Load the C++ library
+     13 ###############################################################################
+---&gt; 14 from ._geometry import *
+     15 
+     16 ###############################################################################
+
+ImportError: /opt/miniconda3/envs/mantid_production_and_others/lib/python3.6/site-packages/mantid/geometry/../../../../libMantidGeometry.so: undefined symbol: _ZNK2mu11ParserError6GetMsgEv
+
+In [2]: exit  
+</code></pre>
+<p>The problem is related to muParser as you mentionned in an earlier message. What I do not understand is that all configs install the same version of muParser (2.2.5) as indicated by the conda log and a <code>ldd</code> on <code>libMantidGeometry.so</code>. More puzzling, why the production version fails when installed with other packages while the nightly succeeds with the same packages ? I guess that I misunderstood something about conda and/or your previous explanations. Would you have any idea ? Sorry for the long message.</p>
+<p>Eric</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/linjiao'><span itemprop='name'>linjiao</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-04-24T12:25:52Z' class='post-time'>
+                    April 24, 2019, 12:25pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-24T12:25:52Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Eric,</p>
+<p>Sorry for the trouble. In the last environment, could you please run</p>
+<p>$ conda list mantid<br>
+$ conda list muparser</p>
+<p>and let me know the output?</p>
+<p>Thanks,<br>
+Jiao</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/ericpellegrini'><span itemprop='name'>ericpellegrini</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-04-24T14:15:15Z' class='post-time'>
+                    April 24, 2019,  2:15pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-24T14:15:15Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Jiao,</p>
+<p>sorry for the delay. Here is the output of the two commands:</p>
+<pre><code>(mantid_production_and_others) root@test-conda-1:~# conda list mantid
+# packages in environment at /opt/miniconda3/envs/mantid_production_and_others:
+#
+# Name                    Version                   Build  Channel
+mantid-framework          3.12.1           py36ha18e881_0    mantid
+(mantid_production_and_others) root@test-conda-1:~# conda list muparser
+# packages in environment at /opt/miniconda3/envs/mantid_production_and_others:
+#
+# Name                    Version                   Build  Channel
+muparser                  2.2.5             hf484d3e_2005    conda-forge</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/linjiao'><span itemprop='name'>linjiao</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-04-24T15:18:58Z' class='post-time'>
+                    April 24, 2019,  3:18pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-24T15:18:58Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>So it seems that when you install all the packages together conda determined that it has to install mantid-framework 3.12. Maybe you can try to force it to install 4+:</p>
+<p>$ conda install -c mantid/label/nightly mantid-framework=4 …other packages…</p>
+<p>Jiao</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/ericpellegrini'><span itemprop='name'>ericpellegrini</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-04-26T08:52:26Z' class='post-time'>
+                    April 26, 2019,  8:52am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-26T08:52:26Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I hardcoded the version of mantid to be installed as you suggested and everything seems ok right now. It seems that conda does not fetch the latest version by default when the version number is not specified. Good to know. Many thanks for your help Jiao.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/PetMetz'><span itemprop='name'>PetMetz</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-11-26T16:26:54Z' class='post-time'>
+                    November 26, 2019,  4:26pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-11-26T16:46:12Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I just wanted to comment that I had similar problems installing mantid-framework from conda. Even after adding the mantid and conda-forge channels, without pointing <code>conda install ...</code> explicitly towards both <code>-c mantid</code> and <code>-c conda-forge</code> conda would raise a <code>UnsatisfiableError</code>.</p>
+<p>(Python 3.6.9 environment on a linux 64 (Mint Mate) virtual machine).</p>
+<p>I’m not very familiar with how Anaconda solves environments… could this be an issue with an install script? And is there any reason to restrict Python &lt; 3.7.0a0 ?</p>
+<p>[quote=“ericpellegrini, post:10, topic:524”]<br>
+conda create -n conda_mantid<br>
+conda activate conda_mantid<br>
+conda install -c mantid -c conda-forge mantid-framework<br>
+[/quote][mantid_framework_conda.txt|attachment]</p>
+<p>(upload://jMdvrQ6B4YfzhNCtE1Ws6iYCMUL.txt) (14.9 KB)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

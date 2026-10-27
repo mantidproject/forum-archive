@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Plot aspect ratio control - Suggestion and Feature Requests - Mantid Help Forum</title>
+    <meta name="description" content="If a plot has the same units on both X and Y axes, could there be an option to ensure that the scale factors on the axes are the same and a curve, or colour plot, maintains its correct aspect ratio? This would ideally ap&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="160.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Plot aspect ratio control&#39;" href="https://forum.mantidproject.org/t/plot-aspect-ratio-control/160.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/plot-aspect-ratio-control/160" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/plot-aspect-ratio-control/160" />
+<meta property="og:title" content="Plot aspect ratio control" />
+<meta name="twitter:title" content="Plot aspect ratio control" />
+<meta property="og:description" content="If a plot has the same units on both X and Y axes, could there be an option to ensure that the scale factors on the axes are the same and a curve, or colour plot, maintains its correct aspect ratio? This would ideally apply both on screen and when printed. This could be either by rescaling one axis or by changing the layer shape/size, introducing extra blank space on the data’s short axis rather than cropping the long one.  My present use case is for beam camera images (cm on both axes).  Better..." />
+<meta name="twitter:description" content="If a plot has the same units on both X and Y axes, could there be an option to ensure that the scale factors on the axes are the same and a curve, or colour plot, maintains its correct aspect ratio? This would ideally apply both on screen and when printed. This could be either by rescaling one axis or by changing the layer shape/size, introducing extra blank space on the data’s short axis rather than cropping the long one.  My present use case is for beam camera images (cm on both axes).  Better..." />
+<meta property="og:article:section" content="Suggestion and Feature Requests" />
+<meta property="og:article:section:color" content="92278F" />
+<meta property="article:published_time" content="2016-09-21T10:25:28+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="160.html">Plot aspect ratio control</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/suggestion-and-feature-requests/10.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #92278F'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Suggestion and Feature Requests</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Plot aspect ratio control'>
+      <link itemprop='url' href='160.html'>
+      <meta itemprop='datePublished' content='2016-09-21T10:25:27Z'>
+        <meta itemprop='articleSection' content='Suggestion and Feature Requests'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="160.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2016-09-21T10:25:28Z' class='post-time'>
+                    September 21, 2016, 10:25am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-09-21T10:25:28Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If a plot has the same units on both X and Y axes, could there be an option to ensure that the scale factors on the axes are the same and a curve, or colour plot, maintains its correct aspect ratio? This would ideally apply both on screen and when printed. This could be either by rescaling one axis or by changing the layer shape/size, introducing extra blank space on the data’s short axis rather than cropping the long one.</p>
+<p>My present use case is for beam camera images (cm on both axes).</p>
+<p>Better still, could we optionally set an absolute scale factor in printed cm / screen pixels per 1 axis unit, so I can print the image at its actual size or magnified/reduced by a known amount? Or be able to export a Colour Fill plot at exactly one image pixel per workspace bin?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/tom-perkins'><span itemprop='name'>tom-perkins</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/5e98f11bb6a484f2cff8512ff0f010a83fc275de.PNG">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-09-21T12:19:12Z' class='post-time'>
+                    September 21, 2016, 12:19pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-09-21T12:19:12Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi James,</p>
+<p>There’s an option on the <code>Format/Plot</code> dialog called “Keep aspect ratio on window resize” (below), which maintains the image’s aspect ratio on resizing. Is this similar to what you need, or did you mean an option on the plot command to ensure the scale factors of X and Y are the same when the graph is first plotted? (It could then automatically set the option below to ensure the aspect ratio stays the same).</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="../../uploads/default/original/1X/5e98f11bb6a484f2cff8512ff0f010a83fc275de.PNG" data-download-href="https://forum.mantidproject.org/uploads/default/5e98f11bb6a484f2cff8512ff0f010a83fc275de" title="aspectratio.PNG"><img src="../../uploads/default/optimized/1X/5e98f11bb6a484f2cff8512ff0f010a83fc275de_2_690x245.PNG" width="690" height="245" srcset="../../uploads/default/optimized/1X/5e98f11bb6a484f2cff8512ff0f010a83fc275de_2_690x245.PNG, ../../uploads/default/original/1X/5e98f11bb6a484f2cff8512ff0f010a83fc275de.PNG 1.5x, ../../uploads/default/original/1X/5e98f11bb6a484f2cff8512ff0f010a83fc275de.PNG 2x" data-small-upload="https://forum.mantidproject.org/uploads/default/optimized/1X/5e98f11bb6a484f2cff8512ff0f010a83fc275de_2_10x10.png"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use xlink:href="#far-image"></use></svg><span class="filename">aspectratio.PNG</span><span class="informations">832×296 20.7 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>When exporting an image, there’s an option for “Keep aspect ratio” when exporting to PDF, EPS and PS formats (under “advanced” in the save dialog from right click/Export). The only page sizes available under “Custom page size” are standard A0-9, B0-9 though. Would adding an option for “actual size” help here? It could have a box to enter the magnification factor (fractional for reduction).</p>
+<p>This would still need a way of setting a scale factor for the axes, though, so that one unit was a set length or number of pixels. Perhaps if it was possible to set the layer size (as above) in cm as well as pixels - then if the axes were 0-10 cm, the layer size could be set to 10x10 cm?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-09-22T16:23:12Z' class='post-time'>
+                    September 22, 2016,  4:23pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-09-22T16:23:12Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Tom,</p>
+<p>I meant the second option, so it chooses the same data units/pixel ratio on both axes and keeps them equal following subsequent resizing of the window.</p>
+<p>I note that on the Mantid I have on my PC (3.7.20160725.927) I don’t have the option you highlighted. The other “Keep aspect ratio” is ticked but only enforces keeping the ratio when adjusting the size numbers next to it, not window resizing.</p>
+<p>The layer size in pixels here includes border space for axis ticks, tick numbers and titles, and (for example) changing the precision of the Y tick labels moves the left axis in or out to make space, changing the data’s scale factor. Resizing, with a fixed aspect ratio for the outer frame, would change the data’s aspect ratio if the axis fonts require a constant number of pixels. A better option would be to specify the size, position and aspect ratio of the axes frame and let the ticks, etc. stick out beyond the edges. Origin does it that way.</p>
+<p>I can imagine being able to choose three options for what happens on resizing:<br>
+1: As now, no aspect ratio set. The axes cover the same numeric range and everything stretches.<br>
+2. The axes keep their units/pixel equal to each other and either the layer no longer fills the window, leaving blank space top+bottom or left+right as the case may be, or the range of one axis extends so that the layer still fills the window, so showing more of the data in one direction. Opening the axis dialog “scale” tab in this state should have a message implying “display axis extended to fix aspect ratio” as changes to the numbers might not affect the graph.<br>
+3. The units/pixel is fixed to a specified number. Either the layer doesn’t fill the window, or is cropped at the edges / has scroll bars, or the data axes adjust to show more or less of the data at the same scale. The axis scale tab would only have the “From” value editable, with “To” calculated from the window size.</p>
+<p>Now we come to the problem of printing, and guessing the size of the plot. Should Mantid assume a certain number of pixels/cm, or ask the OS for a value, or can I enter a units/cm value for printing as well as a units/pixel one for on screen use? And how do I ensure the plot is laid out correctly for printing (e.g. legends not overlapping any data points) if working on a small laptop screen?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/tom-perkins'><span itemprop='name'>tom-perkins</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-09-23T15:28:27Z' class='post-time'>
+                    September 23, 2016,  3:28pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-09-23T15:28:27Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi James,</p>
+<p>Thanks. The box I highlighted is only visible for <code>Spectrogram</code>s (2D color fill plots) and ticking it does something like your option 2. This option isn’t exposed to Python yet, though, so doing this might be a good first step - in this case we would also need a way to specify in the plot command that the scales should be the same for both axes.</p>
+<p>I think that using matplotlib might be an easier way to do this, as there is an <code>aspect='equal'</code> option you can pass to the plot command, and you can specify the figure size. I tweaked the script in another forum post <a href="../export-publication-quality-images/147/3.html" class="inline-onebox">Export publication quality images - #3 by Nina</a> to plot a workspace with the right aspect ratio and export the figure at the right size (from which it can be printed). Let me know if this helps, or if it would be better to add the ability to do this to Mantidplot:</p>
+<pre><code>import numpy as np
+import matplotlib.pyplot as plt
+
+CM = 0.393701 # inches
+PAD = 1.08 # for axis labels etc
+DPI = 170 # change this for your monitor
+
+# ------------------------------------------------------------------------------
+# Create figure
+# ------------------------------------------------------------------------------
+def CreateFigure3D(wksp, title, xlabel, ylabel,
+                   rasterized=False, aspect='auto'):
+    # prepare data for treatment by matplotlib
+    # Signal values (really the Z axis)
+    intensity = wksp.extractY()
+    xmin, xmax = wksp.readX(0)[0], wksp.readX(0)[-1]
+    xstep = wksp.readX(0)[1] - xmin
+    x = np.arange(xmin, xmax + xstep/2.,xstep)
+    ymin, ymax = wksp.getAxis(1).getMin(), wksp.getAxis(1).getMax()
+    ystep = wksp.getAxis(1).getValue(1) - ymin
+    y = np.arange(ymin, ymax + ystep/2.,ystep)
+    xx, yy = np.meshgrid(x, y)
+
+    fig, ax1 = gui_cmd(plt.subplots, 1, 1, dpi=DPI)
+    ax1.set_aspect(aspect)
+    cmesh = gui_cmd(ax1.pcolormesh, xx, yy, intensity)
+    cmesh.set_rasterized(rasterized)
+    ax1.set_title(title)
+    ax1.set_xlabel(xlabel)
+    ax1.set_ylabel(ylabel)
+    return fig
+
+# ------------------------------------------------------------------------------
+# Create a test workspace for demo - replace with actual workspace
+# ------------------------------------------------------------------------------
+def createTestWS(nPoints):
+    ws=WorkspaceFactory.create("Workspace2D", XLength=nPoints + 1, YLength=nPoints, NVectors=nPoints)
+    for i in range(nPoints):
+        for j in range(nPoints):
+            ws.dataX(i)[j]=(j - 2.0)*1.0
+            ws.dataY(i)[j]=(i - 2.0)**2 + (j - 2.0)**2
+        ws.dataX(i)[nPoints] = 3.0
+
+    # X axis
+    xAxis = ws.getAxis(0)
+    xAxis.setUnit("Label").setLabel('X', 'cm')
+
+    # Y axis
+    ba = BinEdgeAxis.create(nPoints + 1)
+    for i in range(nPoints + 1):
+        ba.setValue(i, (i - 2.0))
+    ws.replaceAxis(1, ba)
+    ws.setYUnitLabel("Y")
+    ws.setYUnit("cm")
+
+    return ws
+# ------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
+# Get x axis units
+# ------------------------------------------------------------------------------
+def getXUnits(workspace):
+    unit = workspace.getAxis(0).getUnit()
+    label_x = unit.caption()
+    if label_x != "":
+        label_x = label_x + " (" + unit.symbol().ascii() + ")"
+    return label_x
+
+# ------------------------------------------------------------------------------
+# Get y axis units
+# ------------------------------------------------------------------------------
+def getYUnits(workspace):
+    return workspace.YUnitLabel() + " (" + workspace.YUnit() + ")"
+# ------------------------------------------------------------------------------
+
+# Create workspace
+histo = createTestWS(5)
+
+# Plot using matplotlib
+fig = CreateFigure3D(histo, xlabel=getXUnits(histo),
+                     ylabel=getYUnits(histo), title=histo.name(),
+                     rasterized=False, aspect='equal') # equal aspect ratio
+
+# Set the figure to the correct size.
+# Size includes axis labels etc so must include "padding" space for these.
+fig.set_size_inches(5*CM + PAD, 5*CM + PAD, forward=True)
+fig.tight_layout(pad=PAD)
+
+# To display the plot:
+gui_cmd(fig.show)
+# To save to file
+fig.savefig(filename=r'C:\test_save3d.eps', dpi=fig.dpi)`</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-09-23T16:59:20Z' class='post-time'>
+                    September 23, 2016,  4:59pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-09-23T16:59:20Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Tom,</p>
+<p>Yes, the “Keep aspect ratio on window resize” is there on my 2D plots. If I tick it, then on the next resize the window snaps to 1:1 aspect ratio, whatever it had been, and maintains that when subsequently resized, using the X range only so either cropped top/bottom or white space top/bottom. That’s good. Could we have the option on all plot types?</p>
+<p>But if I overlay line data on a colour plot, the resulting graph no longer has the tick box and resizing it squashes the data (keeping the lines and image aligned with each other):<br>
+g=plot2D(img)<br>
+g2=plotSpectrum(EllipseCurves,[0,1,2])<br>
+mergePlots(g,g2)<br>
+(note the reverse merge option mergePlots(g2,g) hides the colour fill image leaving just the lines)</p>
+<p>I tried your matplotlib code with one of my beam camera images (520 spectra of 696 bins, 80 pixels/cm on both axes). It came out with a 1:1 aspect ratio on the printer but scaled down by a factor 0.63. I then modified the line<br>
+fig.set_size_inches(696.0/80.0<em>CM + PAD, 520.0/80.0</em>CM + PAD, forward=True)<br>
+and it looks fairly close to actual size. (I printed the .eps from Ghostscript and used the WIndows GDI driver the first time and Postscript printer the second, but the preview images in the Ghostscript window looked different).</p>
+<p>However the .eps file is 71 Mbytes and took ages to generate and print!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/tom-perkins'><span itemprop='name'>tom-perkins</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-09-26T12:20:59Z' class='post-time'>
+                    September 26, 2016, 12:20pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-09-26T12:20:59Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi James,</p>
+<p>I’ve opened an <a href="https://github.com/mantidproject/mantid/issues/17601" rel="noopener nofollow ugc">issue</a> to add the “keep aspect ratio on window resize” option for all plot types, and also expose it to Python.</p>
+<p>When merging data from a color fill plot into a 1D graph, I think the result is still treated as a 1D graph and so the box is not shown. If the option is made available for all plot types then that should fix that problem.</p>
+<p>For the large EPS file, you could try using <code>rasterized=True</code> in the <code>CreateFigure3D</code> command, as I’ve seen this can reduce the file size in some cases - though I think this makes more difference for a set of lines than a plot of pixels. Sometimes converting to PDF using something like epstopdf can reduce the file size - is there a particular file format you need the output to be in?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-09-28T08:13:54Z' class='post-time'>
+                    September 28, 2016,  8:13am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-09-28T08:13:54Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks for opening the issue.</p>
+<p>I don’t need any specific format just yet. Your example code happened to generate .eps and I then wanted to find out the scale when printed.</p>
+<p>Two use cases are getting a publication quality image in a format that can be included in a journal article or other document (most likely written in LaTeX in my case) and getting a bitmap, ideally with pixels matching data bins, that can then be processed further, for example making a movie. For the first, eps or pdf are suitable. The colour fill plot’s data could be converted to an “image” of one pixel to one cell to be included on the page at an appropriate scale factor while the axes, titles, etc are included as lines and text. At the moment it’s probably drawing each cell in the bitmap as an individual coloured square or rectangle. What I don’t want is for Mantid or matplotlib to render the whole page into a bitmap at some arbitrary resolution and then export that in what claims to be a vector file.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

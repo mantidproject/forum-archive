@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Real space crystallography - Suggestion and Feature Requests - Mantid Help Forum</title>
+    <meta name="description" content="Mantid has a lot of helpful looking functions to work with space and point groups and unit cells. However all the documentation seems to be biased towards reciprocal space, which is of course useful in diffraction. With &amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="118.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Real space crystallography&#39;" href="https://forum.mantidproject.org/t/real-space-crystallography/118.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/real-space-crystallography/118" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/real-space-crystallography/118" />
+<meta property="og:title" content="Real space crystallography" />
+<meta name="twitter:title" content="Real space crystallography" />
+<meta property="og:description" content="Mantid has a lot of helpful looking functions to work with space and point groups and unit cells. However all the documentation seems to be biased towards reciprocal space, which is of course useful in diffraction. With muons for example we’re much more interested in real space - such as what are the locations on Cartesian axes of atoms with reduced coordinates (x,y,z) in this and adjacent cells or what are the equivalent directions in real space of a magnetic moment oriented in some arbitrary d..." />
+<meta name="twitter:description" content="Mantid has a lot of helpful looking functions to work with space and point groups and unit cells. However all the documentation seems to be biased towards reciprocal space, which is of course useful in diffraction. With muons for example we’re much more interested in real space - such as what are the locations on Cartesian axes of atoms with reduced coordinates (x,y,z) in this and adjacent cells or what are the equivalent directions in real space of a magnetic moment oriented in some arbitrary d..." />
+<meta property="og:article:section" content="Suggestion and Feature Requests" />
+<meta property="og:article:section:color" content="92278F" />
+<meta property="article:published_time" content="2016-05-11T08:59:09+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="118.html">Real space crystallography</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/suggestion-and-feature-requests/10.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #92278F'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Suggestion and Feature Requests</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Real space crystallography'>
+      <link itemprop='url' href='118.html'>
+      <meta itemprop='datePublished' content='2016-05-11T08:59:09Z'>
+        <meta itemprop='articleSection' content='Suggestion and Feature Requests'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="118.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2016-05-11T08:59:09Z' class='post-time'>
+                    May 11, 2016,  8:59am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-05-11T08:59:09Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Mantid has a lot of helpful looking functions to work with space and point groups and unit cells. However all the documentation seems to be biased towards reciprocal space, which is of course useful in diffraction. With muons for example we’re much more interested in real space - such as what are the locations on Cartesian axes of atoms with reduced coordinates (x,y,z) in this and adjacent cells or what are the equivalent directions in real space of a magnetic moment oriented in some arbitrary direction in a fairly high symmetry structure.</p>
+<p>It may be that the same maths works just the same for real and reciprocal spaces, or there could be some space groups for which there are subtle catches to beware of. So the documentation ought to be updated, or perhaps just put links to existing documentation elsewhere on the web if it uses the same notation as Mantid. And are there missing algorithms or functions?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/MichaelWedel'><span itemprop='name'>MichaelWedel</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-05-12T14:29:49Z' class='post-time'>
+                    May 12, 2016,  2:29pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-05-12T14:29:49Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>In terms of things that are exposed to Python, there are ways to use unit cells, space- and point groups directly. With space group objects you can find equivalent positions of an atom in reduced coordinates with a script like this:</p>
+<pre><code>from mantid.geometry import SpaceGroupFactory
+
+space_group = SpaceGroupFactory.createSpaceGroup('F m -3 m')
+equivalents = space_group.getEquivalentPositions([0.15, 0.25, 0.11])
+
+print equivalents
+</code></pre>
+<p>To get the reduced coordinated for the positions in cells in other directions you could add <code>mantid.kernel.V3D</code>-instances to each element of the list and then they could also be transformed to cartesian coordinates in Angstrom using <code>UnitCell</code>. The group-related things are currently documented as concept pages:</p>
+<ul>
+<li><a href="http://docs.mantidproject.org/nightly/concepts/SymmetryGroups.html">http://docs.mantidproject.org/nightly/concepts/SymmetryGroups.html</a></li>
+<li><a href="http://docs.mantidproject.org/nightly/concepts/PointAndSpaceGroups.html">http://docs.mantidproject.org/nightly/concepts/PointAndSpaceGroups.html</a></li>
+</ul>
+<p>I agree that there are some pitfalls when it comes to transforming real space vs. reciprocal space coordinates and vectors, especially for everything that is hexagonal (or trigonal in hexagonal setting). Maybe we could have a discussion about what would be useful additions for your use cases.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-05-12T14:33:11Z' class='post-time'>
+                    May 12, 2016,  2:33pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-05-12T14:33:11Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Those algorithms work in “real detector space” whereas I’d like to work in “real crystal space” given a space group, lattice parameters and cell contents already determined. Perhaps putting “crystallography” in the title was misleading.</p>
+<p>So far, from experimentation. I can do:<br>
+u=UnitCell(a,b,c,alpha,beta,gamma)<br>
+m=numpy.linalg.inv(u.getB())<br>
+ijk=[0,0.5,0.25] # an atom (or muon!) position in the cell<br>
+xyz=numpy.dot(ijk,m) # coords in Angstroms</p>
+<p>The documentation in “Concepts - Lattice” hints at the existence of a “u.getBinv()” method but that doesn’t seem to exist in reality, hence the explicit inversion.</p>
+<p>p.s. Mantid’s “V3D” type is fiddly to convert to a plain 3 element list or array. Should there be a method v.xyz() that returns a three element list, or even that it behaves as such if used in a list context such as nv=numpy.array(v) ?</p>
+<p>pps. Is there an algorithm or method to verify that a (user supplied) unit cell and space group are compatible (e.g. angles 90 or 120 degrees, a=b, etc) before my routine goes ahead and produces junk output?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/MichaelWedel'><span itemprop='name'>MichaelWedel</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-05-12T14:57:09Z' class='post-time'>
+                    May 12, 2016,  2:57pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-05-12T14:57:09Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>While trying out the script I posted before I also noticed that <code>V3D</code> is a bit hard to convert. On the C++ level it already has a method to convert to a <code>std::vector</code>, I think it should be possible to expose that to Python so that a numpy array is returned.</p>
+<p>I opened an issue for this: <a href="https://github.com/mantidproject/mantid/issues/16160" class="inline-onebox">Export std::vector conversion from Kernel::V3D to Python · Issue #16160 · mantidproject/mantid · GitHub</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/MichaelWedel'><span itemprop='name'>MichaelWedel</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-05-13T15:30:34Z' class='post-time'>
+                    May 13, 2016,  3:30pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-05-13T15:30:34Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I looked into the <code>V3D</code> issue this afternoon and it turned out that it was possible to make it behave as you suggested.</p>
+<p>As soon as the pull request is checked and merged the behaviour you requested will be available in the nightly build and then also in the upcoming release:</p><aside class="onebox githubpullrequest">
+  <header class="source">
+      <a href="https://github.com/mantidproject/mantid/pull/16200" target="_blank" rel="noopener">github.com/mantidproject/mantid</a>
+  </header>
+  <article class="onebox-body">
+    <div class="github-row">
+  <div class="github-icon-container" title="Pull Request">
+    <svg width="60" height="60" class="github-icon" viewbox="0 0 12 16" aria-hidden="true"><path d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+  </div>
+
+  <div class="github-info-container">
+    <h4>
+      <a href="https://github.com/mantidproject/mantid/pull/16200" target="_blank" rel="noopener">Make Kernel::V3D behave like a list in Python</a>
+    </h4>
+
+    <div class="branches">
+      <code>mantidproject:master</code> ← <code>mantidproject:16160_v3d_to_numpy_array</code>
+    </div>
+
+    <div class="github-info">
+      <div class="date">
+        opened <span class="discourse-local-date" data-format="ll" data-date="2016-05-13" data-time="15:26:14" data-timezone="UTC">03:26PM - 13 May 16 UTC</span>
+      </div>
+
+      <div class="user">
+        <a href="https://github.com/MichaelWedel" target="_blank" rel="noopener">
+          <img alt="MichaelWedel" src="https://avatars.githubusercontent.com/u/6361996?v=4" class="onebox-avatar-inline" width="20" height="20">
+          MichaelWedel
+        </a>
+      </div>
+
+      <div class="lines" title="2 commits changed 3 files with 133 additions and 26 deletions">
+        <a href="https://github.com/mantidproject/mantid/pull/16200/files" target="_blank" rel="noopener">
+          <span class="added">+133</span>
+          <span class="removed">-26</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="github-row">
+    <p class="github-body-container">This fixes #16160.
+
+As described in the [forum](http://forum.mantidproject.org/t<span class="show-more-container"><a href="https://github.com/mantidproject/mantid/pull/16200" target="_blank" rel="noopener" class="show-more">…</a></span><span class="excerpt hidden">/real-space-crystallography/118/3), it's complicated to use `Kernel::V3D` in connection with other Python objects or libraries (numpy).
+
+This adds `__getitem__`, `__setitem__` and `__len__` to `V3D` in Python so that it behaves like a list. Iterators are generated automatically, so that it's possible to do these things now:
+
+```
+v = V3D(1, 2, 3)
+new_list = [2 * x for x in v]
+
+for x in v:
+   print x
+
+import numpy as np
+as_np = np.array(v)
+```
+
+Not sure if this needs to be in the release notes.
+
+**To test:**
+
+Code review. If you like you could play around with the new functionality a bit. There are a few new unit tests that cover this behaviour. 
+
+&lt;!-- RELEASE NOTES
+Either edit the file in docs/source/release/... and it will be in your pull request or state
+*Does not need to be in the release notes.*
+--&gt;
+
+---
+#### Reviewer
+
+Please comment on the following ([full description](http://www.mantidproject.org/Individual_Ticket_Testing)):
+##### Code Review
+- [x] Is the code of an acceptable quality?
+- [x] Does the code conform to the coding standards? Is it well structured with small focussed classes/methods/functions?
+- [x] Are there unit/system tests in place? Are the unit tests small and test the a class in isolation?
+- [ ] If there are changes in the release notes then do they describe the changes appropriately?
+##### Functional Tests
+- [x] Do changes function as described? Add comments below that describe the tests performed?
+- [ ] How do the changes handle unexpected situations, e.g. bad input?
+- [ ] Has the relevant documentation been added/updated?
+- [ ] Is user-facing documentation written in a user-friendly manner?
+- [ ] Has developer documentation been updated if required?
+- Does everything look good? Comment with the ship it emoji but don't merge. A member of `@mantidproject/gatekeepers` will take care of it.</span></p>
+  </div>
+
+  </article>
+  <div class="onebox-metadata">
+    
+    
+  </div>
+  <div style="clear: both"></div>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/MichaelWedel'><span itemprop='name'>MichaelWedel</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-05-16T05:48:47Z' class='post-time'>
+                    May 16, 2016,  5:48am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-05-16T05:48:47Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The above pull request has made it into the master branch, the new V3D-bahvior will be part of the upcoming release.</p>
+<p>With respect to checking space group and unit cell compatibility, there is now a second pull request where this functionality has been implemented.</p>
+<aside class="onebox githubpullrequest">
+  <header class="source">
+      <a href="https://github.com/mantidproject/mantid/pull/16207" target="_blank" rel="noopener">github.com/mantidproject/mantid</a>
+  </header>
+  <article class="onebox-body">
+    <div class="github-row">
+  <div class="github-icon-container" title="Pull Request">
+    <svg width="60" height="60" class="github-icon" viewbox="0 0 12 16" aria-hidden="true"><path d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+  </div>
+
+  <div class="github-info-container">
+    <h4>
+      <a href="https://github.com/mantidproject/mantid/pull/16207" target="_blank" rel="noopener">Enable SpaceGroup to check if unit cell is compatible with symmetry</a>
+    </h4>
+
+    <div class="branches">
+      <code>mantidproject:master</code> ← <code>mantidproject:16206_check_tensor_symmetry_compatibility</code>
+    </div>
+
+    <div class="github-info">
+      <div class="date">
+        opened <span class="discourse-local-date" data-format="ll" data-date="2016-05-15" data-time="10:29:08" data-timezone="UTC">10:29AM - 15 May 16 UTC</span>
+      </div>
+
+      <div class="user">
+        <a href="https://github.com/MichaelWedel" target="_blank" rel="noopener">
+          <img alt="MichaelWedel" src="https://avatars.githubusercontent.com/u/6361996?v=4" class="onebox-avatar-inline" width="20" height="20">
+          MichaelWedel
+        </a>
+      </div>
+
+      <div class="lines" title="8 commits changed 13 files with 285 additions and 16 deletions">
+        <a href="https://github.com/mantidproject/mantid/pull/16207/files" target="_blank" rel="noopener">
+          <span class="added">+285</span>
+          <span class="removed">-16</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="github-row">
+    <p class="github-body-container">This fixes #16206.
+
+The feature is implemented as described in the ticket. The b<span class="show-more-container"><a href="https://github.com/mantidproject/mantid/pull/16207" target="_blank" rel="noopener" class="show-more">…</a></span><span class="excerpt hidden">ase functionality is in `Group`, which now has a function that checks whether a tensor changes under any of the symmetry operations contained in the group.
+
+SpaceGroup contains a convenience method that takes a unit cell and returns true if the cell metric is compatible with the group's symmetry. There is a system test that checks that this works for all space groups.
+
+Both levels of functionality are exposed to Python.
+
+**To test:**
+Code review. Read the updated documentation and try the new usage examples and some variations.
+
+Release notes have been updated.
+
+---
+#### Reviewer
+
+Please comment on the following ([full description](http://www.mantidproject.org/Individual_Ticket_Testing)):
+##### Code Review
+- [x] Is the code of an acceptable quality?
+- [x] Does the code conform to the coding standards? Is it well structured with small focussed classes/methods/functions?
+- [x] Are there unit/system tests in place? Are the unit tests small and test the a class in isolation?
+- [x] If there are changes in the release notes then do they describe the changes appropriately?
+##### Functional Tests
+- [x] Do changes function as described? Add comments below that describe the tests performed?
+- [x] How do the changes handle unexpected situations, e.g. bad input?
+- [x] Has the relevant documentation been added/updated?
+- [x] Is user-facing documentation written in a user-friendly manner?
+- [x] Has developer documentation been updated if required?
+- Does everything look good? Comment with the ship it emoji but don't merge. A member of `@mantidproject/gatekeepers` will take care of it.</span></p>
+  </div>
+
+  </article>
+  <div class="onebox-metadata">
+    
+    
+  </div>
+  <div style="clear: both"></div>
+</aside>
+
+<p>After these changes you can simply do this:</p>
+<pre><code>cell = UnitCell(5, 5, 6, 90, 90, 120)
+
+sg_cubic = SpaceGroupFactory.createSpaceGroup("P m -3 m")
+sg_hexagonal = SpaceGroupFactory.createSpaceGroup("P 6/m")
+
+print "Metric compatible with cubic symmetry:", sg_cubic.isAllowedUnitCell(cell)
+print "Metric compatible with hexagonal symmetry:", sg_hexagonal.isAllowedUnitCell(cell)
+</code></pre>
+<p>The documentation in the point and space group concept page is also updated as part of that pull request to describe this feature.</p>
+<p>I hope this matches what you had in mind.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/MichaelWedel'><span itemprop='name'>MichaelWedel</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-05-16T20:42:51Z' class='post-time'>
+                    May 16, 2016,  8:42pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-05-16T20:49:01Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>To make this small series of fixes complete, adding the Python export for UnitCell::<code>getBinv</code>:</p>
+<aside class="onebox githubpullrequest">
+  <header class="source">
+      <a href="https://github.com/mantidproject/mantid/pull/16237" target="_blank" rel="noopener">github.com/mantidproject/mantid</a>
+  </header>
+  <article class="onebox-body">
+    <div class="github-row">
+  <div class="github-icon-container" title="Pull Request">
+    <svg width="60" height="60" class="github-icon" viewbox="0 0 12 16" aria-hidden="true"><path d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+  </div>
+
+  <div class="github-info-container">
+    <h4>
+      <a href="https://github.com/mantidproject/mantid/pull/16237" target="_blank" rel="noopener">Added Python export for UnitCell::getBinv()</a>
+    </h4>
+
+    <div class="branches">
+      <code>mantidproject:master</code> ← <code>mantidproject:16236_add_get_b_inv_to_unitcell_export</code>
+    </div>
+
+    <div class="github-info">
+      <div class="date">
+        opened <span class="discourse-local-date" data-format="ll" data-date="2016-05-16" data-time="19:57:16" data-timezone="UTC">07:57PM - 16 May 16 UTC</span>
+      </div>
+
+      <div class="user">
+        <a href="https://github.com/MichaelWedel" target="_blank" rel="noopener">
+          <img alt="MichaelWedel" src="https://avatars.githubusercontent.com/u/6361996?v=4" class="onebox-avatar-inline" width="20" height="20">
+          MichaelWedel
+        </a>
+      </div>
+
+      <div class="lines" title="1 commits changed 1 files with 1 additions and 0 deletions">
+        <a href="https://github.com/mantidproject/mantid/pull/16237/files" target="_blank" rel="noopener">
+          <span class="added">+1</span>
+          <span class="removed">-0</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="github-row">
+    <p class="github-body-container">This fixes #16236.
+
+It doesn't need to be in the release notes, because it's in <span class="show-more-container"><a href="https://github.com/mantidproject/mantid/pull/16237" target="_blank" rel="noopener" class="show-more">…</a></span><span class="excerpt hidden">the documentation already.
+
+**To test:**
+
+Run the following script:
+
+```
+import numpy as np
+
+u = UnitCell(2,3,5)
+ijk=[0,0.5,0.25]
+print np.dot(ijk, u.getBinv()) # Should print [0, 1.5, 1.25]
+```
+
+---
+#### Reviewer
+
+Please comment on the following ([full description](http://www.mantidproject.org/Individual_Ticket_Testing)):
+##### Code Review
+- [x] Is the code of an acceptable quality?
+- [x] Does the code conform to the coding standards? Is it well structured with small focussed classes/methods/functions?
+- [ ] Are there unit/system tests in place? Are the unit tests small and test the a class in isolation?
+- [ ] If there are changes in the release notes then do they describe the changes appropriately?
+##### Functional Tests
+- [x] Do changes function as described? Add comments below that describe the tests performed?
+- [ ] How do the changes handle unexpected situations, e.g. bad input?
+- [ ] Has the relevant documentation been added/updated?
+- [ ] Is user-facing documentation written in a user-friendly manner?
+- [ ] Has developer documentation been updated if required?
+- Does everything look good? Comment with the ship it emoji but don't merge. A member of `@mantidproject/gatekeepers` will take care of it.</span></p>
+  </div>
+
+  </article>
+  <div class="onebox-metadata">
+    
+    
+  </div>
+  <div style="clear: both"></div>
+</aside>
+
+<p>With that last change it is possible to write a function like this:</p>
+<pre><code>import numpy as np
+
+def get_atom_coordinates_in_angstrom(position, space_group, cell):
+    if not space_group.isAllowedUnitCell(cell):
+        raise RuntimeError('The supplied unit cell is not compatible with space group {0}.'.format(space_group.getHMSymbol()))
+    
+    return [np.dot(eq, cell.getBinv()) for eq in space_group.getEquivalentPositions(position)]
+    
+sg = SpaceGroupFactory.createSpaceGroup('P m m m')
+cell = UnitCell(4, 6, 8, 90, 90, 90)
+
+print get_atom_coordinates_in_angstrom([0.0, 0.25, 0.125], sg, cell)
+</code></pre>
+<p>It takes a position in reduced coordinates and returns a list of all equivalent coordinates in the cell in Angstrom, using the procedure you outlined above.</p>
+<p>Given that release 3.7 is very close now, we could add more functionality (better support for working with real space directions, etc.) in the next release 3.8. If you have any suggestions I’d be happy to hear about them.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-05-23T14:13:54Z' class='post-time'>
+                    May 23, 2016,  2:13pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-05-23T14:13:54Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks. That does what I need. It’s now easy to process a lot of sites in one go with a NumPy array:</p>
+<pre><code>import numpy
+
+NN=1 # nearest neighbour cells to consider in each direction
+NN21=2*NN+1
+indx=numpy.indices([NN21,NN21,NN21]).reshape((3,-1)).transpose()-NN # unit cell offsets in 3D, reduced coordinates
+
+uc=UnitCell(5,5,6,90,90,120)
+try:
+	sg=SpaceGroupFactory.createSpaceGroup('P 63/m')
+except:
+	print SpaceGroupFactory.getAllSpaceGroupSymbols()
+	raise
+if not sg.isAllowedUnitCell(uc):
+	raise RuntimeError('The supplied unit cell is not compatible with space group {0}.'.format(sg.getHMSymbol()))
+
+contents2=numpy.array(sg.getEquivalentPositions([0.25,0,0.25])) # one unit cell
+
+bigcontents=(contents2[:,numpy.newaxis,:]+indx[numpy.newaxis,:,:]).reshape((-1,3)) # many unit cells, reduced coords[site, coordinate xyz]
+
+bigcontentsA=numpy.dot(bigcontents, uc.getBinv()) # coords in A[site, coordinate xyz]
+
+loc0=numpy.dot([0.2,0.2,0.1], uc.getBinv()) # muon or other site of interest
+
+d=loc0-bigcontentsA # displacement vectors
+r=numpy.linalg.norm(d,axis=1)
+print numpy.sort(r) # list of nearest neighbour distances</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

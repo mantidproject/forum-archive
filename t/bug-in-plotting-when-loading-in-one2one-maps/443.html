@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bug in plotting when loading in one2one maps - MSlice - Mantid Help Forum</title>
+    <meta name="description" content="Issue: when taking a cut through data reduced with a one to one mapping and trying to switch between workspaces with different incident energies mslice seems to get stuck on the first data file. 
+Steps to reproduce: 
+
+lo&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="443.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Bug in plotting when loading in one2one maps&#39;" href="https://forum.mantidproject.org/t/bug-in-plotting-when-loading-in-one2one-maps/443.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/bug-in-plotting-when-loading-in-one2one-maps/443" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/bug-in-plotting-when-loading-in-one2one-maps/443" />
+<meta property="og:title" content="Bug in plotting when loading in one2one maps" />
+<meta name="twitter:title" content="Bug in plotting when loading in one2one maps" />
+<meta property="og:description" content="Issue: when taking a cut through data reduced with a one to one mapping and trying to switch between workspaces with different incident energies mslice seems to get stuck on the first data file.  Steps to reproduce:   load in two nxspe files reduced with one to one mapping (here I have been using LET data). calculate projections for both files. take a cut (not slice) through the data. I dont think it matters which one you use first select the second data file and apply the same cut. The plot wil..." />
+<meta name="twitter:description" content="Issue: when taking a cut through data reduced with a one to one mapping and trying to switch between workspaces with different incident energies mslice seems to get stuck on the first data file.  Steps to reproduce:   load in two nxspe files reduced with one to one mapping (here I have been using LET data). calculate projections for both files. take a cut (not slice) through the data. I dont think it matters which one you use first select the second data file and apply the same cut. The plot wil..." />
+<meta property="og:article:section" content="Interfaces" />
+<meta property="og:article:section:color" content="AB9364" />
+<meta property="og:article:section" content="MSlice" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="article:published_time" content="2018-10-25T15:58:48+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="443.html">Bug in plotting when loading in one2one maps</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/interfaces/mslice/13.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #AB9364'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Interfaces</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/interfaces/mslice/13.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>MSlice</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Bug in plotting when loading in one2one maps'>
+      <link itemprop='url' href='443.html'>
+      <meta itemprop='datePublished' content='2018-10-25T15:58:48Z'>
+        <meta itemprop='articleSection' content='MSlice'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/dvoneshen'><span itemprop='name'>dvoneshen</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="443.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2018-10-25T15:58:48Z' class='post-time'>
+                    October 25, 2018,  3:58pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-10-25T15:58:48Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Issue: when taking a cut through data reduced with a one to one mapping and trying to switch between workspaces with different incident energies mslice seems to get stuck on the first data file.</p>
+<p>Steps to reproduce:</p>
+<ol>
+<li>load in two nxspe files reduced with one to one mapping (here I have been using LET data).</li>
+<li>calculate projections for both files.</li>
+<li>take a cut (not slice) through the data. I dont think it matters which one you use first</li>
+<li>select the second data file and apply the same cut. The plot will appear not to change.</li>
+<li>If you plot a slice on the second data file the x and y limits will update but the data will be from the first data file<br>
+6)all subsequent plots and cuts will only be of the first data file<br>
+7)the recovery is to delete all data files from memory and reload them.</li>
+<li>this does not happen with LET data reduced with a rings mapping.</li>
+</ol>
+<p>David</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/mducle'><span itemprop='name'>mducle</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-10-25T21:02:57Z' class='post-time'>
+                    October 25, 2018,  9:02pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-10-25T21:02:57Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi David,</p>
+<p>thanks for the bug report.</p>
+<p>This bug has been fixed in Mantid nightly - the mslice issue is here: <a href="https://github.com/mantidproject/mslice/issues/356" class="inline-onebox" rel="noopener nofollow ugc">Projected PSD workspace reference error · Issue #356 · mantidproject/mslice · GitHub</a></p>
+<p>Unfortunately, while it was discovered quite soon after the release of Mantid 3.13, it was not caught during the testing phase for Mantid 3.13 and so was not fixed in time for that release. Whilst in the past we sometimes had “patch” releases with critical bugfixes, there was not one for Mantid 3.13 so this bug still exists in the “stable” version.</p>
+<p>So, please use either Mantid nightly, or you can download this file: <a href="https://goo.gl/4qTraA" rel="noopener nofollow ugc">https://goo.gl/4qTraA</a> and overwrite it onto the file C:/MantidInstall/scripts/ExternalInterfaces/mslice/models/projection/powder/make_projection.py<br>
+This will fix the bug.</p>
+<p>Hope this helps,</p>
+<p>Duc.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

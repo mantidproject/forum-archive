@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Is there a limit on the number of QT objects you can have in the Workbench? - Python - Mantid Help Forum</title>
+    <meta name="description" content="Hi I am trying to write a new reduction GUI for the Workbench in Python with Qt5 and I am running in some strange problem. 
+I have a QTreeView which should show a Tree of Scans, it is filled by a custom QAbstractItemMode&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="527.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Is there a limit on the number of QT objects you can have in the Workbench?&#39;" href="https://forum.mantidproject.org/t/is-there-a-limit-on-the-number-of-qt-objects-you-can-have-in-the-workbench/527.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/is-there-a-limit-on-the-number-of-qt-objects-you-can-have-in-the-workbench/527" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/is-there-a-limit-on-the-number-of-qt-objects-you-can-have-in-the-workbench/527" />
+<meta property="og:title" content="Is there a limit on the number of QT objects you can have in the Workbench?" />
+<meta name="twitter:title" content="Is there a limit on the number of QT objects you can have in the Workbench?" />
+<meta property="og:description" content="Hi I am trying to write a new reduction GUI for the Workbench in Python with Qt5 and I am running in some strange problem.  I have a QTreeView which should show a Tree of Scans, it is filled by a custom QAbstractItemModel.  This is working fine as long as I have less than around 10.000 objects in the Tree, if I have more I get an error:  “RuntimeError: wrapped C/C++ object of type QSpinBox has been deleted”  on the next QtObject which comes after filling the Model.  It does not seem to be a Garb..." />
+<meta name="twitter:description" content="Hi I am trying to write a new reduction GUI for the Workbench in Python with Qt5 and I am running in some strange problem.  I have a QTreeView which should show a Tree of Scans, it is filled by a custom QAbstractItemModel.  This is working fine as long as I have less than around 10.000 objects in the Tree, if I have more I get an error:  “RuntimeError: wrapped C/C++ object of type QSpinBox has been deleted”  on the next QtObject which comes after filling the Model.  It does not seem to be a Garb..." />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="og:article:section" content="Python" />
+<meta property="og:article:section:color" content="9EB83B" />
+<meta property="article:published_time" content="2019-04-18T14:45:08+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="527.html">Is there a limit on the number of QT objects you can have in the Workbench?</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #9EB83B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Python</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Is there a limit on the number of QT objects you can have in the Workbench?'>
+      <link itemprop='url' href='527.html'>
+      <meta itemprop='datePublished' content='2019-04-18T14:45:07Z'>
+        <meta itemprop='articleSection' content='Python'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/thomas'><span itemprop='name'>thomas</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="527.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2019-04-18T14:45:08Z' class='post-time'>
+                    April 18, 2019,  2:45pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-18T14:45:08Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi I am trying to write a new reduction GUI for the Workbench in Python with Qt5 and I am running in some strange problem.<br>
+I have a QTreeView which should show a Tree of Scans, it is filled by a custom QAbstractItemModel.<br>
+This is working fine as long as I have less than around 10.000 objects in the Tree, if I have more I get an error:<br>
+“RuntimeError: wrapped C/C++ object of type QSpinBox has been deleted”<br>
+on the next QtObject which comes after filling the Model.<br>
+It does not seem to be a Garbage collection problem, since I can change the QtObject to anything and I get the same error (even on objects that will have a reference for sure like the QSpinBox).</p>
+<p>Before I sub-classed QAbstractItemModel I used QStandardItemModel.<br>
+I had the same problem, but earlier since I had a lot of QStandardItems.<br>
+This was running fine outside of Mantid, even with much more Objects.</p>
+<p>It also does not matter if I do incremental filling of the model, or fill it completely at creation.</p>
+<p>So I am wondering if there is anything special in the Workbench that limits the number of QtObjects?</p>
+<p>I could probably write something with uses fetchmore to get less objects, but that would prevent the user from being able to select all items.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/dimtasev'><span itemprop='name'>dimtasev</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-04-25T10:05:15Z' class='post-time'>
+                    April 25, 2019, 10:05am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-25T10:05:15Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="thomas" data-post="1" data-topic="527">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="../../user_avatar/forum.mantidproject.org/thomas/48/188_2.png" class="avatar"> thomas:</div>
+<blockquote>
+<p>So I am wondering if there is anything special in the Workbench that limits the number of QtObjects?</p>
+</blockquote>
+</aside>
+<p>I am not aware of anything like that in place.</p>
+<aside class="quote no-group" data-username="thomas" data-post="1" data-topic="527">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="../../user_avatar/forum.mantidproject.org/thomas/48/188_2.png" class="avatar"> thomas:</div>
+<blockquote>
+<p>“RuntimeError: wrapped C/C++ object of type QSpinBox has been deleted”</p>
+</blockquote>
+</aside>
+<p>I’ve seen this error pop up whenever the widget has been garbage collected by Python, but I am not sure why it would only happen with a high number of widgets.</p>
+<p>Does it happen earlier if you run the GC manually? Say, add 1000 objects, do</p>
+<pre data-code-wrap="python"><code class="lang-python">import gc
+gc.collect()
+</code></pre>
+<p>Additionally, does it happen with GC disabled?</p>
+<pre data-code-wrap="python"><code class="lang-python">import gc
+gc.disable()
+</code></pre>
+<p>Another question: does your hierarchy change in any way between running it standalone and in Workbench? What is the parent of the your main widget in each case?</p>
+<p>If you have a fork of the <a href="https://github.com/mantidproject/mantid" rel="noopener nofollow ugc">Github repo</a> with your work on it, I could have a look</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/thomas'><span itemprop='name'>thomas</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-04-26T09:00:41Z' class='post-time'>
+                    April 26, 2019,  9:00am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-26T09:00:41Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks for your help.<br>
+You are right, it is a garbage collection problem. Somehow my whole window gets garbage collected, I checked the list of the collected objects.<br>
+It just appears at high numbers because garbage collection is triggered.<br>
+If it is turned off it works.<br>
+Something seems to be wrong right at the creation of the Mainwindow object, because this is in the garbage collection:<br>
+&lt;DNSReduction.DNSReductionGUI.DNSReductionGUI object at 0x000000002EBC7CA8&gt;<br>
+the instance is created here:</p><aside class="onebox githubblob">
+  <header class="source">
+      <a href="https://github.com/thomueller/mantid/blob/master/scripts/DNS_Reduction.py" target="_blank" rel="noopener nofollow ugc">github.com</a>
+  </header>
+  <article class="onebox-body">
+    <h4><a href="https://github.com/thomueller/mantid/blob/master/scripts/DNS_Reduction.py" target="_blank" rel="noopener nofollow ugc">thomueller/mantid/blob/master/scripts/DNS_Reduction.py</a></h4>
+<pre><code class="lang-py"># Mantid Repository : https://github.com/mantidproject/mantid
+#
+# Copyright &amp;copy; 2019 ISIS Rutherford Appleton Laboratory UKRI,
+
+#     NScD Oak Ridge National Laboratory, European Spallation Source
+#     &amp; Institut Laue - Langevin
+# SPDX - License - Identifier: GPL - 3.0 +
+"""
+GUI for reduction of elastic and TOF data at the DNS instrumentat MLZ
+"""
+from __future__ import (absolute_import, division, print_function, generators)
+import sys
+import os
+from qtpy import QtWidgets, QtGui
+
+from mantidqt.gui_helper import get_qapplication
+
+from DNSReduction.main_view import DNSReductionGUI_view
+
+app, within_mantid = get_qapplication()
+</code></pre>
+
+  This file has been truncated. <a href="https://github.com/thomueller/mantid/blob/master/scripts/DNS_Reduction.py" target="_blank" rel="noopener nofollow ugc">show original</a>
+
+  </article>
+  <div class="onebox-metadata">
+    
+    
+  </div>
+  <div style="clear: both"></div>
+</aside>
+<p>
+and the class is defined here:<br>
+<a href="https://github.com/thomueller/mantid/blob/master/scripts/DNSReduction/DNSReductionGUI.py" class="onebox" target="_blank" rel="noopener nofollow ugc">https://github.com/thomueller/mantid/blob/master/scripts/DNSReduction/DNSReductionGUI.py</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/dimtasev'><span itemprop='name'>dimtasev</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-04-26T10:31:35Z' class='post-time'>
+                    April 26, 2019, 10:31am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-26T10:31:35Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thank you for your response.</p>
+<p>After a discussion with the team, we believe the issue is on our end.<br>
+You shouldn’t need to change anything in your code.</p>
+<p>We are looking into this now, and I will keep you up to date.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/dimtasev'><span itemprop='name'>dimtasev</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-04-26T10:53:35Z' class='post-time'>
+                    April 26, 2019, 10:53am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-26T10:53:35Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>PR is open here: <a href="https://github.com/mantidproject/mantid/pull/25607" class="inline-onebox">Added interface execution enviroment as class property by Matthew-Andrew · Pull Request #25607 · mantidproject/mantid · GitHub</a>, after it’s merged into <code>master</code>, you will have to merge <code>master</code> into your branch to get the change.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/thomas'><span itemprop='name'>thomas</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-04-28T15:30:36Z' class='post-time'>
+                    April 28, 2019,  3:30pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-28T15:30:36Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Ok, nice. Thanks for your help.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/dimtasev'><span itemprop='name'>dimtasev</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-04-29T08:55:23Z' class='post-time'>
+                    April 29, 2019,  8:55am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-04-29T08:55:23Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Thomas, the PR has been merged into master, you should be able to get the changes now. Could you try it out and see if your issue still persists?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

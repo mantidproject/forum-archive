@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Questions on Magnetic Moment calculation using CrystalField - Bugs - Mantid Help Forum</title>
+    <meta name="description" content="Dear All, 
+I’m calculating magnetic moment using CrystalField package with known Stevens parameters, code as follows: 
+-----------------------------------------------------------
+moment_T = cf.getMagneticMoment (Temperat&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="898.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Questions on Magnetic Moment calculation using CrystalField&#39;" href="https://forum.mantidproject.org/t/questions-on-magnetic-moment-calculation-using-crystalfield/898.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/questions-on-magnetic-moment-calculation-using-crystalfield/898" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/questions-on-magnetic-moment-calculation-using-crystalfield/898" />
+<meta property="og:title" content="Questions on Magnetic Moment calculation using CrystalField" />
+<meta name="twitter:title" content="Questions on Magnetic Moment calculation using CrystalField" />
+<meta property="og:description" content="Dear All,  I’m calculating magnetic moment using CrystalField package with known Stevens parameters, code as follows:  ----------------------------------------------------------- moment_T = cf.getMagneticMoment (Temperature = T , Hdir=[1,0,0], Hmag=0.1, Unit=&#39;bohr&#39;) -----------------------------------------------------------  where ‘T’ is a temperature list and cf is already defined.  What disturbs me is that the result seems to be irrelevant to ‘Hmag’ value. And it seems the calculation is alwa..." />
+<meta name="twitter:description" content="Dear All,  I’m calculating magnetic moment using CrystalField package with known Stevens parameters, code as follows:  ----------------------------------------------------------- moment_T = cf.getMagneticMoment (Temperature = T , Hdir=[1,0,0], Hmag=0.1, Unit=&#39;bohr&#39;) -----------------------------------------------------------  where ‘T’ is a temperature list and cf is already defined.  What disturbs me is that the result seems to be irrelevant to ‘Hmag’ value. And it seems the calculation is alwa..." />
+<meta property="og:article:section" content="Bugs" />
+<meta property="og:article:section:color" content="ED207B" />
+<meta property="article:published_time" content="2024-08-15T06:43:37+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="898.html">Questions on Magnetic Moment calculation using CrystalField</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/if-you-want-to-report-a-bug-within-mantid-heres-the-place-to-do-it/12.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #ED207B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Bugs</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Questions on Magnetic Moment calculation using CrystalField'>
+      <link itemprop='url' href='898.html'>
+      <meta itemprop='datePublished' content='2024-08-15T06:43:36Z'>
+        <meta itemprop='articleSection' content='Bugs'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/chengsu'><span itemprop='name'>chengsu</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="898.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2024-08-15T06:43:37Z' class='post-time'>
+                    August 15, 2024,  6:43am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-15T06:43:37Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Dear All,</p>
+<p>I’m calculating magnetic moment using CrystalField package with known Stevens parameters, code as follows:</p>
+<pre><code class="lang-auto">-----------------------------------------------------------
+moment_T = cf.getMagneticMoment (Temperature = T , Hdir=[1,0,0], Hmag=0.1, Unit='bohr')
+-----------------------------------------------------------
+</code></pre>
+<p>where ‘T’ is a temperature list and cf is already defined.<br>
+What disturbs me is that the result seems to be irrelevant to ‘Hmag’ value. And it seems the calculation is always using default field strength of 1 Tesla whatever input Hmag is.</p>
+<p>How can I get the desired moment value using correct Hmag strength? And will this ‘bug’ affect my following physical properties fitting? Any guidance will be appreciated.</p>
+<p>Mang thanks in advance<br>
+Cheng</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/mducle'><span itemprop='name'>mducle</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-08-19T13:16:35Z' class='post-time'>
+                    August 19, 2024,  1:16pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-19T13:16:35Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Dear <a class="mention" href="https://forum.mantidproject.org/u/chengsu">@chengsu</a>,</p>
+<p>sorry this is a bug in the code. The code silently discards the “Hmag” keyword argument.</p>
+<p>I’ve created an issue for this:</p>
+<aside class="onebox githubissue" data-onebox-src="https://github.com/mantidproject/mantid/issues/37823">
+  <header class="source">
+
+      <a href="https://github.com/mantidproject/mantid/issues/37823" target="_blank" rel="noopener nofollow ugc">github.com/mantidproject/mantid</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="github-row">
+  <div class="github-icon-container" title="Issue">
+	  <svg width="60" height="60" class="github-icon" viewBox="0 0 14 16" aria-hidden="true"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg>
+  </div>
+
+  <div class="github-info-container">
+    <h4>
+      <a href="https://github.com/mantidproject/mantid/issues/37823" target="_blank" rel="noopener nofollow ugc">Bug: Crystal Field magnetic moment calculation discards required input "Hmag"</a>
+    </h4>
+
+    <div class="github-info">
+      <div class="date">
+        opened <span class="discourse-local-date" data-format="ll" data-date="2024-08-19" data-time="13:14:35" data-timezone="UTC">01:14PM - 19 Aug 24 UTC</span>
+      </div>
+
+
+      <div class="user">
+        <a href="https://github.com/mducle" target="_blank" rel="noopener nofollow ugc">
+          <img alt="mducle" src="https://avatars.githubusercontent.com/u/14106963?v=4" class="onebox-avatar-inline" width="20" height="20">
+          mducle
+        </a>
+      </div>
+    </div>
+
+    <div class="labels">
+        <span style="display:inline-block;margin-top:2px;background-color: #B8B8B8;padding: 2px;border-radius: 4px;color: #fff;margin-left: 3px;">
+          Bug
+        </span>
+    </div>
+  </div>
+</div>
+
+  <div class="github-row">
+    <p class="github-body-container">**Original reporter:** chengsu [via Forum](https://forum.mantidproject.org/t/que<span class="show-more-container"><a href="898.html" rel="noopener" class="show-more">…</a></span><span class="excerpt hidden">stions-on-magnetic-moment-calculation-using-crystalfield/898)
+
+**Describe the bug**
+
+
+The Crystal Field physical properties calculations using the `getMagneticMoment` method for the `M(T)` case (`typeid==4`) is incorrect because it [discards the `Hmag` field](https://github.com/mantidproject/mantid/blob/78d0301522e6a4019ac7213e7a82c2fda96f1126/scripts/Inelastic/CrystalField/function.py#L705) - this line should be something like:
+
+```python
+if self._typeid == self.MAGNETISATION or self._typeid == self.MAGNETICMOMENT:
+    out += (",Hmag=%s" % (self._hmag)) 
+```
+
+This bug means that whatever value the user puts in for the `Hmag` keyword argument, they will obtain the same calculated curve, which is incorrect.
+
+**To Reproduce**
+
+```python
+from mantid.simpleapi import CreateWorkspace
+from CrystalField import CrystalField, PhysicalProperties
+import numpy as np
+
+cf = CrystalField('Ce', 'C4', Temperature=1, B20=0.2, B40=0.01, B44=-0.005)
+T = np.linspace(1,300,100)
+moment_T0p1 = CreateWorkspace(*cf.getMagneticMoment (0.1, Temperature = T , Hdir=[1,0,0], Hmag=0.1, Unit='bohr'))
+moment_T1 = CreateWorkspace(*cf.getMagneticMoment (1, Temperature = T , Hdir=[1,0,0], Hmag=1, Unit='bohr'))
+moment_T10 = CreateWorkspace(*cf.getMagneticMoment (100, Temperature = T , Hdir=[1,0,0], Hmag=10, Unit='bohr'))
+```
+
+Plot the three curves computed - they all lie on top of each other and they should not.
+
+&lt;!--Steps to reproduce the behavior:
+
+For example
+1. Go to '...'
+2. Click on '....'
+3. Scroll down to '....'
+4. See error
+--&gt;
+
+**Expected behavior**
+
+
+The expected behaviour can be obtained using this work-around
+
+```python
+from mantid.simpleapi import CreateWorkspace
+from CrystalField import CrystalField, PhysicalProperties
+import numpy as np
+
+def mymagmom(cf, **kwargs):
+    Hmag = kwargs.pop('Hmag')
+    if not isinstance(T, str) or 'mantid' in type(T):
+        twksp = CreateWorkspace(kwargs['Temperature'], kwargs['Temperature'], OutputWorkspace='_twksp')
+    else:
+        twksp = kwargs['Temperature']
+    funstr = cf.makePhysicalPropertiesFunction(PhysicalProperties("M(T)", **kwargs)) + f',Hmag={Hmag}'
+    return cf._calcSpectrum(funstr, twksp, 0)
+
+moment_T0p1 = CreateWorkspace(*mymagmom(cf, Temperature = T , Hdir=[1,0,0], Hmag=0.1, Unit='bohr'))
+moment_T1 = CreateWorkspace(*mymagmom(cf, Temperature = T , Hdir=[1,0,0], Hmag=1, Unit='bohr'))
+moment_T10 = CreateWorkspace(*mymagmom(cf, Temperature = T , Hdir=[1,0,0], Hmag=10, Unit='bohr'))
+```
+
+You can now see that the three spectra do not overlap and that the original calculation corresponds to `Hmag=1`.
+
+
+**Screenshots**
+
+
+**Platform/Version (please complete the following information):**
+ - OS: All
+ - OS Version:
+ - Mantid Version: At least since 6.9
+
+**Additional context**</span></p>
+  </div>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>so hopefully it will be fixed by the next release.</p>
+<p>However, if you want to have something working now, you can use this work-around function:</p>
+<pre><code class="lang-auto">from mantid.simpleapi import CreateWorkspace
+from CrystalField import CrystalField, PhysicalProperties
+import numpy as np
+
+def mymagmom(cf, **kwargs):
+    Hmag = kwargs.pop('Hmag')
+    if not isinstance(T, str) or 'mantid' in type(T):
+        twksp = CreateWorkspace(kwargs['Temperature'], kwargs['Temperature'], OutputWorkspace='_twksp')
+    else:
+        twksp = kwargs['Temperature']
+    funstr = cf.makePhysicalPropertiesFunction(PhysicalProperties("M(T)", **kwargs)) + f',Hmag={Hmag}'
+    return cf._calcSpectrum(funstr, twksp, 0)
+
+cf = CrystalField('Ce', 'C4', Temperature=1, B20=0.2, B40=0.01, B44=-0.005)
+T = np.linspace(1,300,100)
+moment2_T0p1 = CreateWorkspace(*mymagmom(cf, Temperature = T , Hdir=[1,0,0], Hmag=0.1, Unit='bohr'))
+moment2_T1 = CreateWorkspace(*mymagmom(cf, Temperature = T , Hdir=[1,0,0], Hmag=1, Unit='bohr'))
+moment2_T10 = CreateWorkspace(*mymagmom(cf, Temperature = T , Hdir=[1,0,0], Hmag=10, Unit='bohr'))
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/mducle'><span itemprop='name'>mducle</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-08-28T08:21:10Z' class='post-time'>
+                    August 28, 2024,  8:21am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-28T08:21:10Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Dear <a class="mention" href="https://forum.mantidproject.org/u/chengsu">@chengsu</a></p>
+<p>the fix has been <a href="https://github.com/mantidproject/mantid/pull/37847" rel="noopener nofollow ugc">merged</a> to the main Mantid tree and is available in the nightly version if you upgrade.</p>
+<p>Best wishes,</p>
+<p>Duc.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/chengsu'><span itemprop='name'>chengsu</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-08-28T10:01:20Z' class='post-time'>
+                    August 28, 2024, 10:01am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-28T10:01:20Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Dear Duc</p>
+<p>So happy to see your reply. Thank you very much for your generous help!</p>
+<p>Best regards,<br>
+Cheng</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

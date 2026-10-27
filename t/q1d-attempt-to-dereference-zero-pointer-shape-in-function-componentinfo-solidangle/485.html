@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Q1D: Attempt to dereference zero pointer (shape) in function ComponentInfo::solidAngle - Mantid Help Forum</title>
+    <meta name="description" content="hello, 
+I tried to reduce the Mcstas generated data mccode.h5  ( templateSANS_Mantid.instr ) in MantidPlot with a python script. I followed the steps in this link: 
+
+but it failed, and i have tried this on SL-7.6 and win&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="485.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Q1D: Attempt to dereference zero pointer (shape) in function ComponentInfo::solidAngle&#39;" href="https://forum.mantidproject.org/t/q1d-attempt-to-dereference-zero-pointer-shape-in-function-componentinfo-solidangle/485.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/q1d-attempt-to-dereference-zero-pointer-shape-in-function-componentinfo-solidangle/485" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/q1d-attempt-to-dereference-zero-pointer-shape-in-function-componentinfo-solidangle/485" />
+<meta property="og:title" content="Q1D: Attempt to dereference zero pointer (shape) in function ComponentInfo::solidAngle" />
+<meta name="twitter:title" content="Q1D: Attempt to dereference zero pointer (shape) in function ComponentInfo::solidAngle" />
+<meta property="og:description" content="hello,  I tried to reduce the Mcstas generated data mccode.h5  ( templateSANS_Mantid.instr ) in MantidPlot with a python script. I followed the steps in this link:   but it failed, and i have tried this on SL-7.6 and windows7 os, both gave the same error:  RuntimeError: Q1D: error (see log)  at line 20 in ‘E:/Mcstas_Project/mantid_test2/templateSANS_Mantid_20190217_110548/test2.py’  caused by line 1096 in ‘E:\MantidInstall\bin\mantid\simpleapi.py’  the log shows:  CreateWorkspace successful, Dur..." />
+<meta name="twitter:description" content="hello,  I tried to reduce the Mcstas generated data mccode.h5  ( templateSANS_Mantid.instr ) in MantidPlot with a python script. I followed the steps in this link:   but it failed, and i have tried this on SL-7.6 and windows7 os, both gave the same error:  RuntimeError: Q1D: error (see log)  at line 20 in ‘E:/Mcstas_Project/mantid_test2/templateSANS_Mantid_20190217_110548/test2.py’  caused by line 1096 in ‘E:\MantidInstall\bin\mantid\simpleapi.py’  the log shows:  CreateWorkspace successful, Dur..." />
+<meta property="article:published_time" content="2019-02-17T04:33:28+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="485.html">Q1D: Attempt to dereference zero pointer (shape) in function ComponentInfo::solidAngle</a>
+    </h1>
+
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Q1D: Attempt to dereference zero pointer (shape) in function ComponentInfo::solidAngle'>
+      <link itemprop='url' href='485.html'>
+      <meta itemprop='datePublished' content='2019-02-17T04:33:28Z'>
+        <meta itemprop='articleSection' content='Uncategorized'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/redgravel'><span itemprop='name'>redgravel</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="485.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2019-02-17T04:33:28Z' class='post-time'>
+                    February 17, 2019,  4:33am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-02-17T04:33:28Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>hello,<br>
+I tried to reduce the Mcstas generated data mccode.h5  ( templateSANS_Mantid.instr ) in MantidPlot with a python script. I followed the steps in this link:</p><aside class="onebox githubfolder">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+      <a href="https://github.com/McStasMcXtrace/McCode/wiki/McStas-and-Mantid#mantid-reduction-of-mcstas-event-data" target="_blank" rel="noopener nofollow ugc">github.com</a>
+  </header>
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/345;"><img src="https://opengraph.githubassets.com/aca998308d95f18ed33b3949576edebed6fd96268bd2e8047c99accbcfe11c3a/McStasMcXtrace/McCode" class="thumbnail" width="690" height="345"></div>
+
+<h3><a href="https://github.com/McStasMcXtrace/McCode/wiki/McStas-and-Mantid#mantid-reduction-of-mcstas-event-data" target="_blank" rel="noopener nofollow ugc">McStasMcXtrace/McCode - 
+Mantid reduction of McStas event data</a></h3>
+
+<p><a href="https://github.com/McStasMcXtrace/McCode/wiki/McStas-and-Mantid#mantid-reduction-of-mcstas-event-data" target="_blank" rel="noopener nofollow ugc">McStas-and-Mantid</a></p>
+
+  <p><span class="label1">The home of the McStas (neutrons) and McXtrace (x-rays) Monte-Carlo ray-tracing instrument simulation codes.</span></p>
+
+  </article>
+  <div class="onebox-metadata">
+    
+    
+  </div>
+  <div style="clear: both"></div>
+</aside>
+
+<p>but it failed, and i have tried this on SL-7.6 and windows7 os, both gave the same error:<br>
+RuntimeError: Q1D: error (see log)<br>
+at line 20 in ‘E:/Mcstas_Project/mantid_test2/templateSANS_Mantid_20190217_110548/test2.py’<br>
+caused by line 1096 in ‘E:\MantidInstall\bin\mantid\simpleapi.py’</p>
+<p>the log shows:<br>
+CreateWorkspace successful, Duration 0.00 seconds<br>
+Unlocking monitor<br>
+Q1D started<br>
+Algorithm: Q1D v2<br>
+Execution Date: 2019-Feb-17 03:48:54<br>
+Execution Duration: -1 seconds<br>
+Parameters:<br>
+Name: DetBankWorkspace, Value: sample, Default?: No, Direction: Input<br>
+Name: OutputWorkspace, Value: Iq_1D, Default?: No, Direction: Output<br>
+Name: OutputBinning, Value: 0.0035,0.001,0.7, Default?: No, Direction: Input<br>
+Name: PixelAdj, Value: , Default?: Yes, Direction: Input<br>
+Name: WavelengthAdj, Value: monitor, Default?: No, Direction: Input<br>
+Name: WavePixelAdj, Value: , Default?: Yes, Direction: Input<br>
+Name: AccountForGravity, Value: 0, Default?: Yes, Direction: Input<br>
+Name: SolidAngleWeighting, Value: 1, Default?: Yes, Direction: Input<br>
+Name: RadiusCut, Value: 0, Default?: Yes, Direction: Input<br>
+Name: WaveCut, Value: 0, Default?: Yes, Direction: Input<br>
+Name: OutputParts, Value: 0, Default?: Yes, Direction: Input<br>
+Name: ExtraLength, Value: 0, Default?: Yes, Direction: Input<br>
+Name: QResolution, Value: , Default?: Yes, Direction: Input<br>
+Read-locking sample<br>
+Read-locking monitor<br>
+All input workspaces were found to be valid<br>
+Q1D: Attempt to dereference zero pointer (shape) in function ComponentInfo::solidAngle</p>
+<p><a class="attachment" href="../../uploads/default/original/1X/9795ba4e930b27ddbc0a98a1de1075b7f14890b0.py">test.py</a> (708 Bytes)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

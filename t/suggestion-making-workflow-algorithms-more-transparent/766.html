@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Suggestion: Making Workflow Algorithms more transparent - Developer - Mantid Help Forum</title>
+    <meta name="description" content="Background 
+Mantid extensively uses workflow algorithms to combine individual algorithms together into a reduction. From a user perspective this hides complexity, allowing someone to run their technique and only expand o&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="766.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Suggestion: Making Workflow Algorithms more transparent&#39;" href="https://forum.mantidproject.org/t/suggestion-making-workflow-algorithms-more-transparent/766.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/suggestion-making-workflow-algorithms-more-transparent/766" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/suggestion-making-workflow-algorithms-more-transparent/766" />
+<meta property="og:title" content="Suggestion: Making Workflow Algorithms more transparent" />
+<meta name="twitter:title" content="Suggestion: Making Workflow Algorithms more transparent" />
+<meta property="og:description" content="Background  Mantid extensively uses workflow algorithms to combine individual algorithms together into a reduction. From a user perspective this hides complexity, allowing someone to run their technique and only expand out the history when required.  For developers this is an alternative to writing out scripts, whilst providing other features such as progress bars, history and a single named algorithm as an entrypoint.  The Problem  Our system tests work well as go/no-go indicators, highlighting..." />
+<meta name="twitter:description" content="Background  Mantid extensively uses workflow algorithms to combine individual algorithms together into a reduction. From a user perspective this hides complexity, allowing someone to run their technique and only expand out the history when required.  For developers this is an alternative to writing out scripts, whilst providing other features such as progress bars, history and a single named algorithm as an entrypoint.  The Problem  Our system tests work well as go/no-go indicators, highlighting..." />
+<meta property="og:article:section" content="Suggestion and Feature Requests" />
+<meta property="og:article:section:color" content="92278F" />
+<meta property="og:article:section" content="Developer" />
+<meta property="og:article:section:color" content="0088CC" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="5 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="1 ❤" />
+<meta property="article:published_time" content="2021-08-19T12:01:36+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="766.html">Suggestion: Making Workflow Algorithms more transparent</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/suggestion-and-feature-requests/discussions-with-developers-on-improvements-to-all-aspects-of-development/18.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #92278F'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Suggestion and Feature Requests</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/suggestion-and-feature-requests/discussions-with-developers-on-improvements-to-all-aspects-of-development/18.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0088CC'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Developer</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Suggestion: Making Workflow Algorithms more transparent'>
+      <link itemprop='url' href='766.html'>
+      <meta itemprop='datePublished' content='2021-08-19T12:01:36Z'>
+        <meta itemprop='articleSection' content='Developer'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DavidFair'><span itemprop='name'>DavidFair</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="766.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2021-08-19T12:01:36Z' class='post-time'>
+                    August 19, 2021, 12:01pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-09-07T07:10:38Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><strong>Background</strong></p>
+<p>Mantid extensively uses workflow algorithms to combine individual algorithms together into a reduction. From a user perspective this hides complexity, allowing someone to run their technique and only expand out the history when required.</p>
+<p>For developers this is an alternative to writing out scripts, whilst providing other features such as progress bars, history and a single named algorithm as an entrypoint.</p>
+<p><strong>The Problem</strong></p>
+<p>Our system tests work well as <em>go/no-go</em> indicators, highlighting when the data has changed but little beyond this.</p>
+<p>In cases where data should validate identically developers are faced with three choices: revert their changes, examine the diff and manually trace through the workflow algorithm, or manually step through the reduction (either through history or breakpoints to probe the output).</p>
+<p>In cases where data is expected to change, developers are either forced to validate changes have the correct scope by hand, treat the reduction as a black-box, or avoid any improvements due to the time-cost involved. This can be another source of bugs, e.g. a change that affects two algorithm steps instead of simply one from an implicitly shared data structure.</p>
+<p>Ultimately, this leads to developers quickly getting into drawn out sessions trying to replay history line-by-line, using print statements or stepping through the debugger. All whilst the Mantid Framework provides little in helping tooling. It also makes users nervous accepting changes to their data, as they can’t know with 100% certainty any change(s) have the correct scope and no “spooky action from a distance” has happened.</p>
+<p><strong>Hashing Suggestion</strong></p>
+<p><em>N.B. This is simply a suggestion to gauge interest / feedback before a proposal. I’m completely open to other suggestions or methods to solve this.</em></p>
+<p><strong>Background / Why</strong></p>
+<p>This concept is inspired by the R package <a href="https://books.ropensci.org/drake/" rel="noopener nofollow ugc">drake</a>. This allows users to write something analogous to a Workflow algorithm and “compile” or “make” it, where the tooling will identify changed steps and simply re-run those instead of the entire workflow.</p>
+<p>This makes it trivial to see where any changes to a data pipeline, be it bug or intended, has taken place.</p>
+<p>The net effect (beyond performance implications) is developers simply jumping to the section/algorithm in question and start work instead of tracing.</p>
+<p><strong>What</strong></p>
+<p>Currently, our history (whilst sometimes incomplete) makes it trivial to see “native” properties such as <code>int/float/string</code>, but <code>Workspace</code> types are effectively black boxes.</p>
+<p>I propose a new field to go into the history for all algorithms that derive from the <code>Workspace</code> type (i.e. Matrix Workspace, MD Workspace…etc.). This hashes and stores the raw data for any properties before/after execution.</p>
+<p>Because of the performance cost this would have to be manually enabled through our config manager (with a tick option maybe in settings?) and would emit a warning each time to prevent users accidentally running daily with it enabled. This would not be hidden behind an <span class="hashtag">#ifdef</span> debug as end-users could examine it / use it as a diagnostic tool.</p>
+<p><strong>How</strong></p>
+<p>A new class (e.g. WorkspaceHasher) would accept a Workspace pointer and unpack the data into a raw pointer and size (which is what most libs expect). An adaptor class would then wrap an external non-cryptographically secure hashing lib.</p>
+<p>A (likely biased) comparison of some possible options, exist on the <a href="https://github.com/Cyan4973/xxHash#benchmarks" rel="noopener nofollow ugc">xxhash repo</a> but this can be discussed at a later date.</p>
+<p>Hashing is trivially parallelisable at a spectrum level. These hashes can be appended into a single string and re-hashed into a single value that will change dramatically for any small data change.</p>
+<p><code>Algorithm::exec</code> would hash any input Workspace properties and store these values into the history. After execution completes successfully we would again hash the output Workspace properties. This would allow us to handle the case where an algorithm does an in-place operation.</p>
+<p><strong>Example</strong></p>
+<p>Imagine this block of history spread around 20 other steps where <code>CreateSampleWorkspace</code> is a stand-in for a child algorithm.</p>
+<pre><code class="lang-auto">
+CreateSampleWorkspace(OutputWorkspace='ws1', NumEvents=1000)
+
+CreateSampleWorkspace(OutputWorkspace='ws2', NumEvents=1000)
+
+CreateSampleWorkspace(OutputWorkspace='ws3', NumEvents=1000)
+
+Plus(LHSWorkspace='ws1', RHSWorkspace='ws2', OutputWorkspace='summed')
+
+Plus(LHSWorkspace='summed', RHSWorkspace='ws3', OutputWorkspace='summed')
+
+</code></pre>
+<p>If the param of a child changes subtly it can quickly blur into all other fields:</p>
+<pre><code class="lang-auto">
+CreateSampleWorkspace(OutputWorkspace='ws1', NumEvents=1000)
+
+CreateSampleWorkspace(OutputWorkspace='ws2', NumEvents=1000)
+
+CreateSampleWorkspace(OutputWorkspace='ws3', NumEvents=100)
+
+Plus(LHSWorkspace='ws1', RHSWorkspace='ws2', OutputWorkspace='summed')
+
+Plus(LHSWorkspace='summed', RHSWorkspace='ws3', OutputWorkspace='summed')
+
+</code></pre>
+<p>Switching on hashing would make this trivial to spot either by eye or using diff tools:</p>
+<p>“Good”:</p>
+<pre><code class="lang-auto">
+CreateSampleWorkspace(OutputWorkspace='ws1' : UyuxS, NumEvents=1000)
+
+CreateSampleWorkspace(OutputWorkspace='ws2' : FrAtz, NumEvents=1000)
+
+CreateSampleWorkspace(OutputWorkspace='ws3' : AllLm, NumEvents=1000)
+
+Plus(LHSWorkspace='ws1' : UyuxS, RHSWorkspace='ws2' : FrAtz, OutputWorkspace='summed' : 9j5XH)
+
+Plus(LHSWorkspace='summed' : 9j5XH, RHSWorkspace='ws3' : AllLm, OutputWorkspace='summed' : K1c3j)
+
+</code></pre>
+<p>“Bad”:</p>
+<pre><code class="lang-auto">
+CreateSampleWorkspace(OutputWorkspace='ws1' : UyuxS, NumEvents=1000)
+
+CreateSampleWorkspace(OutputWorkspace='ws2' : FrAtz, NumEvents=1000)
+
+CreateSampleWorkspace(OutputWorkspace='ws3' : 7kzuc, NumEvents=100)
+
+Plus(LHSWorkspace='ws1' : UyuxS, RHSWorkspace='ws2' : FrAtz, OutputWorkspace='summed' : 9j5XH)
+
+Plus(LHSWorkspace='summed' : 9j5XH, RHSWorkspace='ws3' : 7kzuc, OutputWorkspace='summed' : A8fUf)
+
+</code></pre>
+<p>We can see that ws1, ws2 and the first plus all have matching hashes for their output and input properties. The second plus has a different output hash, which we can easily trace to a different input and back to the root cause (the missing 0 in the third create sample workspace).</p>
+<p><strong>Pros</strong></p>
+<ul>
+<li>
+<p>Reduces the “black-box” problem of debugging with Workflow algorithms</p>
+</li>
+<li>
+<p>Helps identify steps being completed outside Mantid algorithms, as the hash will change between an output and an input. (Helps spot and remove these for project recovery)</p>
+</li>
+<li>
+<p>Allows end-users to have confidence that only the expected algorithms are/were affected by a documented change and no side-effects</p>
+</li>
+<li>
+<p>Helps with confidence in reproducibility; a published history with the same hashes is almost certainly the same result</p>
+</li>
+<li>
+<p>Highlights bugs in algorithms, such as cross-compat problems, where the same input hashes result in a different output hash</p>
+</li>
+<li>
+<p>Possibility of linking it into CI to give better diagnostics?</p>
+</li>
+</ul>
+<p><strong>Cons</strong></p>
+<ul>
+<li>
+<p>Requires another external lib (Boost hashing is in the detail namespace)</p>
+</li>
+<li>
+<p>Additional complexity in Algorithm / something else to go wrong</p>
+</li>
+<li>
+<p>Have to develop handlers for each unique Workspace type for it to “just work”</p>
+</li>
+<li>
+<p>Unknown runtime cost on very large data sets (20GB+)</p>
+</li>
+<li>
+<p>Adds noise in history when enabled / how do we best display it.</p>
+</li>
+</ul>
+<p><strong>Final thoughts</strong></p>
+<p>Long-term the user base (or at least SANS) is pointing out a growing demand for a complete history whilst publishing to journals.</p>
+<p>Any suggestions, like the above or alternatives, which improves the history would allow us to get ahead of the curve.</p>
+<p>Could you let me know on your thoughts for the above. Mostly:</p>
+<ul>
+<li>Do you have similar problems with Workflow Algorithms or not?</li>
+<li>Would something to help debugging them (not necessarily the above) help you?</li>
+<li>What are your thoughts/critiques on the suggestion above?</li>
+</ul>
+<p>Also, thanks for reading.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/peterfpeterson'><span itemprop='name'>peterfpeterson</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-08-19T17:54:52Z' class='post-time'>
+                    August 19, 2021,  5:54pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-08-19T17:54:52Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I like this idea as we already have something along these lines in <a href="https://github.com/mantidproject/mantid/blob/master/Framework/PythonInterface/plugins/algorithms/CreateCacheFilename.py">CreateCacheFilename</a>. It’s main shortcoming is in converting all the values to a string which runs into the exact same issue with workspaces that you are describing. Having this capability for “long” properties (e.g. arrays of numbers) would be equally as helpful.</p>
+<p>This would likely be most useful for developers debugging workflows, not just workflow algorithms.</p>
+<p>For the hashing, I would suggest that we do it in two places: <code>PropertyWithValue</code> and <code>Workspace</code> (the top level one) which could probably be abstracted into a single “Hashable” abstract base class that is multiple inheritanced in. The individual object that implements the method(s) could decide if it wanted to do something simple or fancy. It doesn’t matter as long as it is mostly unique. All hashing algorithms have collisions at some point and one should just acknowledge it and carry on.</p>
+<p>I have mixed feelings as to whether this should be a run-time or compile-time configurable option. For many things (integer properties, single value workspaces, etc) the information is likely fast enough to calculate all the time. Using strategies for delegating some of the work, member items could provide their own unique identifier (e.g. a instrument geometry that is fully specified by the IDF and has no parameters doesn’t need to be calculated more than when it is first loaded). The <code>Run</code> object (probably PropertyManager is better) is another case where delegation would simplify the implementation.</p>
+<p>To close on a less positive note: I think this would be helpful, but I’m not sure if the amount of effort is correctly proportional to the benefit. In other words, which cases of sorting out broken system tests would have directly benefited from this feature?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DavidFair'><span itemprop='name'>DavidFair</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-08-23T11:17:21Z' class='post-time'>
+                    August 23, 2021, 11:17am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-08-23T11:17:21Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Anything I’ve not commented on I agree with completely, but didn’t want to just have a post full of ACKs.</p>
+<aside class="quote no-group" data-username="peterfpeterson" data-post="2" data-topic="766">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="../../user_avatar/forum.mantidproject.org/peterfpeterson/48/5_2.png" class="avatar"> peterfpeterson:</div>
+<blockquote>
+<p>Having this capability for “long” properties (e.g. arrays of numbers) would be equally as helpful.</p>
+</blockquote>
+</aside>
+<p>I agree completely. Originally, I was concerned about “simple” properties such as <code>bool</code>, or a single <code>int</code> but these can be easily handled by…</p>
+<aside class="quote no-group" data-username="peterfpeterson" data-post="2" data-topic="766">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="../../user_avatar/forum.mantidproject.org/peterfpeterson/48/5_2.png" class="avatar"> peterfpeterson:</div>
+<blockquote>
+<p>The individual object that implements the method(s) could decide if it wanted to do something simple or fancy.</p>
+</blockquote>
+</aside>
+<p>…simple scalar types simply skipping hashing all-together, as it adds very little. E.g. having <code>Random:False 345jbn6mi</code> where False hashes to <code>345jbn6mi</code> simply adds noise.</p>
+<p>I’d strongly push for a unified hashing approach using an external lib to perform the actual hash. It’s statistically difficult to make a uniformally distributed function with minimal collisions and something we really shouldn’t be trying to home-make ourselves.<br>
+I was envisaging something like an adaptor class which takes “standard types” (e.g. <code>cbegin&lt;double&gt;()</code> and <code>cend&lt;double&gt;()</code> or <code>std::string</code>) and marshals them into the external lib, so it becomes trivial to add hashing to new items.</p>
+<aside class="quote no-group" data-username="peterfpeterson" data-post="2" data-topic="766">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="../../user_avatar/forum.mantidproject.org/peterfpeterson/48/5_2.png" class="avatar"> peterfpeterson:</div>
+<blockquote>
+<p>All hashing algorithms have collisions at some point and one should just acknowledge it and carry on.</p>
+</blockquote>
+</aside>
+<p>Using a vetted hashing mechanism (assuming 64-bit hash) we should approach a <a href="https://dzone.com/articles/probability-of-secure-hash-function-collisions-wit" rel="noopener nofollow ugc">40% chance of collision at 4b items hashed</a>. If we ever run into this being a problem (somehow) we can easily swap the lib behind the adaptor to a more robust alg at the cost of performance. I wouldn’t want to use something quick and simple like CRC32 as it will collide frequently with &gt;4GB hashed.</p>
+<aside class="quote no-group" data-username="peterfpeterson" data-post="2" data-topic="766">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="../../user_avatar/forum.mantidproject.org/peterfpeterson/48/5_2.png" class="avatar"> peterfpeterson:</div>
+<blockquote>
+<p>For many things (integer properties, single value workspaces, etc) the information is likely fast enough to calculate all the time</p>
+</blockquote>
+</aside>
+<p>The problem is arrays of data, e.g. a <code>Workspace</code>. Although xxhash 3 (assuming we pick for perf) claims to hash ~31GB/s, so a 2 second delay for a 64GB Workspace actually isn’t too unreasonable if these speeds can be achieved.</p>
+<p>I’d like it to be something that we can also offer users to help them see the data results are identical or not from one version of Mantid to another, and clearly show where those changes come in.<br>
+If we do provide it, some users would want to turn it off or would never use it, hence the run-time option, as it just adds noise the the workspace history. Alternatively, we could store this information somewhere else…?</p>
+<p>This is something we need to ultimately measure the performance impact of then come back and decide, but it depends on the cost benefit as discussed below…</p>
+<aside class="quote no-group" data-username="peterfpeterson" data-post="2" data-topic="766">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="../../user_avatar/forum.mantidproject.org/peterfpeterson/48/5_2.png" class="avatar"> peterfpeterson:</div>
+<blockquote>
+<p>To close on a less positive note: I think this would be helpful, but I’m not sure if the amount of effort is correctly proportional to the benefit.</p>
+</blockquote>
+</aside>
+<p>This is a good point to raise, and will be the most likely death-knell for this idea so I’m happy to take as much critique as early-on as possible.</p>
+<p>I want to clarify this is more to help people who mainly work in Workflow algorithms, rather than for helping people get system tests working. This is more anecdotal to myself and the ISIS LSS team, so we need to check if it universal:</p>
+<p>So the system tests is more a symptom rather than the root of the problem. When they fail for an single algorithm change it’s usually obvious the problem is encapsulated in a single <code>.cpp</code> or <code>.py</code> file and this limits the search area down.</p>
+<p>In Workflow algorithms there are two cases where this comes up. During refactoring (where we don’t intend for any user-visible changes) and for any scientific improvements (e.g. bug fixes or methodology improvements) which affects data.</p>
+<p>The refactoring case tends to be someone changes an attribute in a data structure which has unintentional consequences later in the workflow. This leaves many devs with a choice; back out of refactoring, manually hunt down the shared attr, or duplicate the data structure to simply avoid the problem.<br>
+IMO many developers will simply back-out of any refactoring effort, revert their changes and leave any technical debt as-is. Others will just absorb the development cost into their estimates for changing any workflow algorithm reducing what we deliver to users.</p>
+<p>The worst case is when we change data. Users are immediately concerned that something else might have unintentionally changed as they simply have our word that we verified only “x changed” instead of “x and y”. Across multiple groups I’ve seen this tend towards two directions: users will avoid the changes either by sticking with an old Mantid version or ignoring the feature until they get round to testing it (read never). When we try to be proactive and chase our users to perform their own scientific validation any bugs quickly spirals back into drawn out tracing of the problem, or loss of confidence in those changes.</p>
+<p>Assuming a best-case of users who absolutely trust what we develop, who keenly adopt any data changes knowing they are all correct and good, and regularly upgrade. We still have to have a developer sit down and step through either the history or a debugger to verify the expected step changed.</p>
+<p>These changes don’t help where we need to change something right at the start of a workflow, as all hashes will change down the algorithm. But an increasing benefit happens as we approach the end of the workflow alg. E.g. where the final step changes only a single hash should change.</p>
+<aside class="quote no-group" data-username="peterfpeterson" data-post="2" data-topic="766">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="../../user_avatar/forum.mantidproject.org/peterfpeterson/48/5_2.png" class="avatar"> peterfpeterson:</div>
+<blockquote>
+<p>In other words, which cases of sorting out broken system tests would have directly benefited from this feature?</p>
+</blockquote>
+</aside>
+<p>This is something I know for a fact would have helped both ISIS SANS and ISIS Reflectometry for past development and will likely help in the future. But this is something I want to gauge project-wide since I’ve seen the benefits personally of another academic project adopting R Drake data pipelines:</p>
+<p>Do you think it’s worth asking the development team:</p>
+<ul>
+<li>Do you work with Workflow algorithms?</li>
+<li>Have you ever had to manually trace (either through debugging, print statements, saving workspaces to compare…etc.) through a Workflow algorithm to determine a difference in data?</li>
+<li>If so, could you estimate how many development days were spent in the last year doing this?</li>
+<li>Would an indicator in the history (e.g. hash) that two properties or workspaces contain the same value when calling a child algorithm help you?</li>
+</ul>
+<p>I can only speak for SANS initially, in the last 2 years I would estimate around 1-1.5 sprints time has been lost to having to manually trace changes, revert a change and implement a workaround to avoid the overhead or manually re-verify our workflow on the groups request.</p>
+<p>In addition an entire SANS back-end, which was written by a previous developer to drastically improve performance, has been abandoned (likely 2+ months of work). This was never adopted as it produced subtly different results (likely a re-binning error) but the group ultimately never committed to the development cost of figuring out this difference. This was directly related to the time required for a developer to sit down and trace through / manually compare each step new → old.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/peterfpeterson'><span itemprop='name'>peterfpeterson</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-08-23T15:20:29Z' class='post-time'>
+                    August 23, 2021,  3:20pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-08-23T15:20:29Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I like the idea in general, and think it applies to lots of things beyond workflow algorithms. It would help answer questions at runtime like “are these two workspaces the same with different names?” The way you describe the UI changes to be “workspacename : hash” would fit well into the instrument tree as well as the log window and communicate information pretty well.</p>
+<p>The suggestion of scalars/strings not being hashed is quite valid. I’m still scratching my head on how to delegate the calculation so only parts of the workspace that have changed need to be recalculated Instrument, sample logs, counts, all change with very different frequency in algorithms.</p>
+<p>I appreciate that performance will be a factor, but if the feature is able to be disabled (via property or compile flag) it becomes less of an issue.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

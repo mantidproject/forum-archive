@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Masking detectors from a script - Python - Mantid Help Forum</title>
+    <meta name="description" content="If an algorithm or script works on a spectrum-by-spectrum basis it might want to mask certain spectra in the output if the input has zero counts, if a fit doesn’t converge, etc. 
+I note that in 
+http://docs.mantidproject&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="79.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Masking detectors from a script&#39;" href="https://forum.mantidproject.org/t/masking-detectors-from-a-script/79.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/masking-detectors-from-a-script/79" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/masking-detectors-from-a-script/79" />
+<meta property="og:title" content="Masking detectors from a script" />
+<meta name="twitter:title" content="Masking detectors from a script" />
+<meta property="og:description" content="If an algorithm or script works on a spectrum-by-spectrum basis it might want to mask certain spectra in the output if the input has zero counts, if a fit doesn’t converge, etc.  I note that in  http://docs.mantidproject.org/nightly/api/python/mantid/api/Workspace.html  there’s a function “maskDetectors”, but this seems to just run the algorithm MaskDetectors() and needs the name of the workspace to do anything. At that point in my algorithm the workspace is only known by a pointer returned from..." />
+<meta name="twitter:description" content="If an algorithm or script works on a spectrum-by-spectrum basis it might want to mask certain spectra in the output if the input has zero counts, if a fit doesn’t converge, etc.  I note that in  http://docs.mantidproject.org/nightly/api/python/mantid/api/Workspace.html  there’s a function “maskDetectors”, but this seems to just run the algorithm MaskDetectors() and needs the name of the workspace to do anything. At that point in my algorithm the workspace is only known by a pointer returned from..." />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="og:article:section" content="Python" />
+<meta property="og:article:section:color" content="9EB83B" />
+<meta property="article:published_time" content="2015-10-20T14:43:05+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="79.html">Masking detectors from a script</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #9EB83B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Python</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Masking detectors from a script'>
+      <link itemprop='url' href='79.html'>
+      <meta itemprop='datePublished' content='2015-10-20T14:43:05Z'>
+        <meta itemprop='articleSection' content='Python'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="79.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2015-10-20T14:43:05Z' class='post-time'>
+                    October 20, 2015,  2:43pm
+                  </time>
+                  <meta itemprop='dateModified' content='2015-10-20T14:43:05Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If an algorithm or script works on a spectrum-by-spectrum basis it might want to mask certain spectra in the output if the input has zero counts, if a fit doesn’t converge, etc.</p>
+<p>I note that in<br>
+<a href="http://docs.mantidproject.org/nightly/api/python/mantid/api/Workspace.html" class="onebox" target="_blank" rel="noopener nofollow ugc">http://docs.mantidproject.org/nightly/api/python/mantid/api/Workspace.html</a><br>
+there’s a function “maskDetectors”, but this seems to just run the algorithm MaskDetectors() and needs the name of the workspace to do anything. At that point in my algorithm the workspace is only known by a pointer returned from WorkspaceFactory.create(). Do I need to do self.setProperty(“OutputWorkspace”,ows) then go back and find out its name and then run MaskDetectors?</p>
+<p>Meanwhile in<br>
+<a href="http://docs.mantidproject.org/nightly/api/python/mantid/geometry/IDetector.html" class="onebox" target="_blank" rel="noopener nofollow ugc">http://docs.mantidproject.org/nightly/api/python/mantid/geometry/IDetector.html</a><br>
+there’s a function isMasked() but no corresponding setMask().</p>
+<p>Or have I overlooked something?</p>
+<p>Also a simple MaskDetectorsIfZero() and/or MaskDetectorsWithInfOrNaN() which work on any workspace and don’t assume technique-specific calibration files would be very useful.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/martyngigg'><span itemprop='name'>martyngigg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2015-10-21T11:06:14Z' class='post-time'>
+                    October 21, 2015, 11:06am
+                  </time>
+                  <meta itemprop='dateModified' content='2015-10-21T11:06:14Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi James,</p>
+<p>Unfortunately the way the masking works is a little cumbersome at the moment. Improvements to it have been in the pipeline for a while but we’ve yet to come to an agreement with many parties on exactly what an improved system should do.</p>
+<p>To answer your last point first, we do have the <a href="http://docs.mantidproject.org/nightly/algorithms/FindDetectorsOutsideLimits-v1.html">FindDetectorsOutsideLimits</a> algorithm that can be used in conjunction with <a href="http://docs.mantidproject.org/nightly/algorithms/MaskDetectors-v1.html">MaskDetectors</a> by feeding the output mask workspace from <code>FindDetectorsOutsideLimits</code> to <code>MaskDetectors</code>. As you say though, a good tidy up would be to have a <code>MaskIfDetectorsOutsideLimits</code>-type algorithm. We can look into that.</p>
+<p>For your first use case where you have a pointer to the workspace then you’ll have to run the <code>MaskDetectors</code> algorithm manually, e.g.</p>
+<pre><code class="lang-python">ws = WorkspaceFactory.create(10,10,10)
+masker = AlgorithmFactory.createUnmanaged("MaskDetectors")
+masker.setChild(True) # doesn't need a name
+masker.initialize()
+masker.setProperty("Workspace", ws) 
+workspaceIndex = 0
+masker.setProperty("WorkspaceIndexList", [workspaceIndex]) # or the appropriate index
+masker.execute()
+# this is always an in place operation so no need to retrieve the output
+print ws.getDetector( workspaceIndex ).isMasked()
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2015-10-21T13:20:32Z' class='post-time'>
+                    October 21, 2015,  1:20pm
+                  </time>
+                  <meta itemprop='dateModified' content='2015-10-21T13:20:32Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks. FindDetectorsOutsideLimits is just what I wanted, but it isn’t referenced in the documentation for MaskDetectors or in Category:Masking. Keeping the “find bad” and “mask” operations separate can be useful if we have an intermittent fault and want to mask particular detectors throughout a complete experiment for consistency, or if it’s only possible to declare a detector “bad” from calibration data rather than from the real sample.</p>
+<p>As for masking from a script: that code does work though it’s AlgorithmManager.createUnmanaged (not AlgorithmFactory).</p>
+<p>A few other observations:</p>
+<ol>
+<li>If my script creates the new workspace based on the old one, to keep instrument association, logs, etc, with ows=WorkspaceFactory.create(iws,NVectors=iws.getNumberHistograms(),XLength=xl,YLength=yl)<br>
+the masking flags are preserved.</li>
+<li>There is no matching way to un-mask a detector if the script now has valid data to put in its histogram, for example from a different run or by interpolating from the neighbouring detectors. Except…</li>
+<li>LoadInstrument() to load a different IDF (XML file) clears the masking flags but obviously doesn’t/can’t restore the data that had been zeroed! Is that by design such that an IDF could specify detectors to mask?</li>
+</ol>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-12-16T17:26:29Z' class='post-time'>
+                    December 16, 2019,  5:26pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-12-16T17:26:29Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I see there’s now “MaskDetectorsIf”. However I’d like it to work in a predictable manner if there are detectors showing NaN, for example if I’m taking the ratio of two runs and the dead detectors now give 0/0 = NaN. At present the NaNs always pass the test and are not masked.<br>
+The reason this time is that I wanted to do Instrument View of this rato workspace and it doesn’t even open a window (in Workbench 4.2) if there are NaNs in the workspace. The above recipe, with a temporary masking workspace, did mask the bad spectra.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-12-19T12:01:35Z' class='post-time'>
+                    December 19, 2019, 12:01pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-12-19T12:01:35Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I can see that MaskDetectorsIf doesn’t replace NaN values.</p>
+<p>Would this solution suffice? If you execute the algorithm “ReplaceSpecialValues” and set NaNValue and InfinityValue to 0, that should mean that the Ratio Workspace is able to be Viewed in Instrument Viewer.</p>
+<p>I understand this is just changing those values to 0 and not exactly masking them, but is this okay for your purposes?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-12-19T13:12:15Z' class='post-time'>
+                    December 19, 2019,  1:12pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-12-19T13:12:15Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It works, but once I’ve manually rescaled the colour bar to see the majority of spectra the NaNs are now indistinguishable from outliers with valid data.<br>
+The solution here might be to fix Instrument Viewer to treat NaNs or Infs the same as masked detectors and colour them grey. I note detectors which have no associated spectrum are also grey (e.g. after CropWorkspace).<br>
+A useful enhancement might be to have the option to completely hide the missing / masked / NaN detectors instead of colouring them in grey.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-12-20T15:26:58Z' class='post-time'>
+                    December 20, 2019,  3:26pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-12-20T15:26:58Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>While a current work around could involve something like this:</p>
+<pre><code>ws_fix = ReplaceSpecialValues(ws,NaNValue = -111, Infinityvalue = -111)
+MaskDetectorsIf(ws_fix, Value = -111)
+</code></pre>
+<p>I have created an <a href="https://github.com/mantidproject/mantid/issues/27642" rel="noopener nofollow ugc">issue to Fix Instrument View</a> so that it automaitcally masks and opens correctly with Nan and Inf values!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Peak Radius setting - Suggestion and Feature Requests - Mantid Help Forum</title>
+    <meta name="description" content="Mantid has a “Peak Radius” as a multiple of FWHM beyond which any peak function is assumed to go to zero, to speed up calculations especially where there’s a long spectrum with lots of sharp peaks. But this is only defin&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="96.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Peak Radius setting&#39;" href="https://forum.mantidproject.org/t/peak-radius-setting/96.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/peak-radius-setting/96" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/peak-radius-setting/96" />
+<meta property="og:title" content="Peak Radius setting" />
+<meta name="twitter:title" content="Peak Radius setting" />
+<meta property="og:description" content="Mantid has a “Peak Radius” as a multiple of FWHM beyond which any peak function is assumed to go to zero, to speed up calculations especially where there’s a long spectrum with lots of sharp peaks. But this is only defined, or visible, in the global preferences. Some functions, such as Lorentzian, have long tails (1% of the maximum amplitude remaining at x-x0 = 5*FWHM for example). This could cause errors if fitting a small peak of interest at about one Peak Radius from another more intense peak..." />
+<meta name="twitter:description" content="Mantid has a “Peak Radius” as a multiple of FWHM beyond which any peak function is assumed to go to zero, to speed up calculations especially where there’s a long spectrum with lots of sharp peaks. But this is only defined, or visible, in the global preferences. Some functions, such as Lorentzian, have long tails (1% of the maximum amplitude remaining at x-x0 = 5*FWHM for example). This could cause errors if fitting a small peak of interest at about one Peak Radius from another more intense peak..." />
+<meta property="og:article:section" content="Suggestion and Feature Requests" />
+<meta property="og:article:section:color" content="92278F" />
+<meta property="article:published_time" content="2016-02-19T15:36:41+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="96.html">Peak Radius setting</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/suggestion-and-feature-requests/10.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #92278F'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Suggestion and Feature Requests</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Peak Radius setting'>
+      <link itemprop='url' href='96.html'>
+      <meta itemprop='datePublished' content='2016-02-19T15:36:41Z'>
+        <meta itemprop='articleSection' content='Suggestion and Feature Requests'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="96.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2016-02-19T15:36:41Z' class='post-time'>
+                    February 19, 2016,  3:36pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-02-19T15:36:41Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Mantid has a “Peak Radius” as a multiple of FWHM beyond which any peak function is assumed to go to zero, to speed up calculations especially where there’s a long spectrum with lots of sharp peaks. But this is only defined, or visible, in the global preferences. Some functions, such as Lorentzian, have long tails (1% of the maximum amplitude remaining at x-x0 = 5*FWHM for example). This could cause errors if fitting a small peak of interest at about one Peak Radius from another more intense peak, where the intense peak’s simulated curve drops off a cliff. To be certain it’s best to set Peak Radius to a generously large value (99?) and ensure that anyone else repeating the same analysis has set their copy of Mantid too.</p>
+<p>Should the value of Peak Radius be set within the function, or could a function find out what it is and complain if it’s likely to cause errors? Or should it be a parameter to Fit()? The minimum safe radius depends on the data quality as well as the functions used. Perhaps Mantid shouldn’t allow the value in the preferences to be set too small. The example of 2 in the documentation is never going to be useful - it’ll even get the wrong width and area for a single peak.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/mantid_roman'><span itemprop='name'>mantid_roman</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-02-25T09:38:09Z' class='post-time'>
+                    February 25, 2016,  9:38am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-02-25T09:38:09Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Issue <a href="https://github.com/mantidproject/mantid/issues/6391" class="inline-onebox" rel="noopener nofollow ugc">Make the peak radius an attribute of the function. · Issue #6391 · mantidproject/mantid · GitHub</a> should fix the problem.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-02-25T12:58:21Z' class='post-time'>
+                    February 25, 2016, 12:58pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-02-25T12:58:21Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks for this. Having read the issue description I’m not sure having an attribute per function is necessarily the best. It may have to be processed outside the function as I note that a Python peak fit function is only called with the subset of x values within the radius, it’s too late by then. And it’ll add a load of unnecessary clutter for users who shouldn’t need to worry about such details.</p>
+<p>Walking out from x=PeakCentre until the function looks “small enough” is likely to fail with those that don’t decrease monotonically. y=sin(x)/x is a good example (and where perhaps no truncation ought to be done at all).</p>
+<p>I’d suggest a parameter to Fit called something like “AcceptablePeakError” (defaulting to zero in many cases), then a Peak Function can (optionally) define a method “RadiusRequired(self,AcceptablePeakError)” which returns the minimum Radius needed to satisfy that accuracy. The function can use the knowledge of its own behaviour, or could return “None” or “Inf” to say don’t truncate this one at all. Omitting such a method would default to no truncation too.</p>
+<p>The error could either be defined as max(y(x&gt;=cutoff)) / max(y), or it may be better to use integral(cut off tails) / integral(whole peak). These ratios need only be worked out by hand for each function when it is defined, and the method would be called once when the function is added / set up.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/mantid_roman'><span itemprop='name'>mantid_roman</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-02-25T15:28:33Z' class='post-time'>
+                    February 25, 2016,  3:28pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-02-25T15:28:33Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>What about functions for which the ratio is impossible to work out or composite Convolutions?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-02-25T17:41:05Z' class='post-time'>
+                    February 25, 2016,  5:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-02-25T17:41:05Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If the ratio is impossible (e.g. a peak function whose integral from -inf to +inf is not defined) then you default to no radius, i.e. evaluating it at all x values.</p>
+<p>For peak shapes that are too difficult to integrate and get a simple analytical expression then evaluate numerically for accuracies of 0.01,0.001, etc (at code writing time) and store a small table, from which a safe value can be chosen. Alternatively evaluate the errors for peak radii 4,8,16,32, etc and store these. There’s no need to be really accurate to save 1% computing effort.</p>
+<p>For a convolution, is it safe to evaluate to (width1<em>radius1) + (width2</em>radius2) on each side, if radius1 and radius2 are the values requested by each function on its own?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/mantid_roman'><span itemprop='name'>mantid_roman</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-02-26T09:23:13Z' class='post-time'>
+                    February 26, 2016,  9:23am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-02-26T09:23:13Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I think I’ll have to agree with you that having the peak radius as a function attribute was a bad idea.<br>
+I am still not sure what to do with convolutions, I’ll have to experiment<br>
+Maybe Fit should have 3 new parameters:</p>
+<ol>
+<li>ValueError</li>
+<li>IntegralError</li>
+<li>FixedRadius<br>
+and use whichever gives the largest radius.</li>
+</ol>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

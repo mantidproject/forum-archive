@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Plotting small values in Workbench - Bugs - Mantid Help Forum</title>
+    <meta name="description" content="Expected behavior
+Having plotted a workspace/spectrum containing small numbers (&amp;lt;1E-4) I should be able to rescale it manually. For example I may want y=0 at the bottom. 
+
+Actual behavior
+The plot settings dialog “Lower&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="563.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Plotting small values in Workbench&#39;" href="https://forum.mantidproject.org/t/plotting-small-values-in-workbench/563.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/plotting-small-values-in-workbench/563" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/plotting-small-values-in-workbench/563" />
+<meta property="og:title" content="Plotting small values in Workbench" />
+<meta name="twitter:title" content="Plotting small values in Workbench" />
+<meta property="og:description" content="Expected behavior Having plotted a workspace/spectrum containing small numbers (&lt;1E-4) I should be able to rescale it manually. For example I may want y=0 at the bottom.   Actual behavior The plot settings dialog “Lower limit” and “Upper limit” only allows fixed point entry and a maximum of 4 decimal places. It is very reluctant to accept E or e for scientific notation and having done so, on re-entering the dialog it has re-rounded the number to fixed point.   Steps to reproduce the behavior Ge..." />
+<meta name="twitter:description" content="Expected behavior Having plotted a workspace/spectrum containing small numbers (&lt;1E-4) I should be able to rescale it manually. For example I may want y=0 at the bottom.   Actual behavior The plot settings dialog “Lower limit” and “Upper limit” only allows fixed point entry and a maximum of 4 decimal places. It is very reluctant to accept E or e for scientific notation and having done so, on re-entering the dialog it has re-rounded the number to fixed point.   Steps to reproduce the behavior Ge..." />
+<meta property="og:article:section" content="Bugs" />
+<meta property="og:article:section:color" content="ED207B" />
+<meta property="article:published_time" content="2019-09-05T16:01:13+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="563.html">Plotting small values in Workbench</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/if-you-want-to-report-a-bug-within-mantid-heres-the-place-to-do-it/12.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #ED207B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Bugs</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Plotting small values in Workbench'>
+      <link itemprop='url' href='563.html'>
+      <meta itemprop='datePublished' content='2019-09-05T16:01:13Z'>
+        <meta itemprop='articleSection' content='Bugs'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="563.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2019-09-05T16:01:13Z' class='post-time'>
+                    September 5, 2019,  4:01pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-09-05T16:01:13Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <h3>
+<a name="expected-behavior-1" class="anchor" href="563.html#expected-behavior-1"></a>Expected behavior</h3>
+<p>Having plotted a workspace/spectrum containing small numbers (&lt;1E-4) I should be able to rescale it manually. For example I may want y=0 at the bottom.</p>
+<h3>
+<a name="actual-behavior-2" class="anchor" href="563.html#actual-behavior-2"></a>Actual behavior</h3>
+<p>The plot settings dialog “Lower limit” and “Upper limit” only allows fixed point entry and a maximum of 4 decimal places. It is very reluctant to accept E or e for scientific notation and having done so, on re-entering the dialog it has re-rounded the number to fixed point.</p>
+<h3>
+<a name="steps-to-reproduce-the-behavior-3" class="anchor" href="563.html#steps-to-reproduce-the-behavior-3"></a>Steps to reproduce the behavior</h3>
+<p>Generate a workspace with small Y numbers (mine is a suitably normalised Dark Counts run). Plot it (spectrum line plot or colour plot). Open the settings and try to rescale it.<br>
+To enter scientific notation it is necessary to ensure the content of the field is a valid number at all times. So type “1.5”, then move the cursor back and insert “e” and then “-” to get “1.e-5”. Alternatively pasting a fully formed number from elsewhere seems to work.</p>
+<h3>
+<a name="platforms-affected-4" class="anchor" href="563.html#platforms-affected-4"></a>Platforms affected</h3>
+<p>Mantid 4.1, Workbench. Tried on Windows, probably all.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/NickDraper'><span itemprop='name'>NickDraper</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-09-24T15:23:48Z' class='post-time'>
+                    September 24, 2019,  3:23pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-09-24T15:23:48Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="onebox githubissue">
+  <header class="source">
+      <a href="https://github.com/mantidproject/mantid/issues/26869" target="_blank" rel="noopener">github.com/mantidproject/mantid</a>
+  </header>
+  <article class="onebox-body">
+    <div class="github-row">
+  <div class="github-icon-container" title="Issue">
+	  <svg width="60" height="60" class="github-icon" viewbox="0 0 14 16" aria-hidden="true"><path d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg>
+  </div>
+
+  <div class="github-info-container">
+    <h4>
+      <a href="https://github.com/mantidproject/mantid/issues/26869" target="_blank" rel="noopener">Setting plot limits using scientific notation</a>
+    </h4>
+
+    <div class="github-info">
+      <div class="date">
+        opened <span class="discourse-local-date" data-format="ll" data-date="2019-09-24" data-time="15:23:20" data-timezone="UTC">03:23PM - 24 Sep 19 UTC</span>
+      </div>
+
+        <div class="date">
+          closed <span class="discourse-local-date" data-format="ll" data-date="2019-10-14" data-time="12:05:10" data-timezone="UTC">12:05PM - 14 Oct 19 UTC</span>
+        </div>
+
+      <div class="user">
+        <a href="https://github.com/NickDraper" target="_blank" rel="noopener">
+          <img alt="NickDraper" src="https://avatars.githubusercontent.com/u/1017173?v=4" class="onebox-avatar-inline" width="20" height="20">
+          NickDraper
+        </a>
+      </div>
+    </div>
+
+    <div class="labels">
+        <span style="display:inline-block;margin-top:2px;background-color: #B8B8B8;padding: 2px;border-radius: 4px;color: #fff;margin-left: 3px;">ISIS Team: Core</span>
+    </div>
+  </div>
+</div>
+
+  <div class="github-row">
+    <p class="github-body-container">Expected behavior
+Having plotted a workspace/spectrum containing small numbers <span class="show-more-container"><a href="563.html" rel="noopener" class="show-more">…</a></span><span class="excerpt hidden">(&lt;1E-4) I should be able to rescale it manually. For example I may want y=0 at the bottom.
+
+Actual behavior
+The plot settings dialog “Lower limit” and “Upper limit” only allows fixed point entry and a maximum of 4 decimal places. It is very reluctant to accept E or e for scientific notation and having done so, on re-entering the dialog it has re-rounded the number to fixed point.
+
+Steps to reproduce the behavior
+Generate a workspace with small Y numbers (mine is a suitably normalised Dark Counts run). Plot it (spectrum line plot or colour plot). Open the settings and try to rescale it.
+To enter scientific notation it is necessary to ensure the content of the field is a valid number at all times. So type “1.5”, then move the cursor back and insert “e” and then “-” to get “1.e-5”. Alternatively pasting a fully formed number from elsewhere seems to work.
+
+Platforms affected
+Mantid 4.1, Workbench. Tried on Windows, probably all.</span></p>
+  </div>
+
+  </article>
+  <div class="onebox-metadata">
+    
+    
+  </div>
+  <div style="clear: both"></div>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-12-10T17:09:24Z' class='post-time'>
+                    December 10, 2019,  5:09pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-12-10T17:16:24Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>A variation of this seems to have appeared. In a colour fill plot, if I’m adjusting the colour scale range it sometimes adjusts the other end of the range as I’m typing such that the range is always positive.</p>
+<p>For example if I enter the dialog with Min=15000 and Max=80000. I select the contents of the “Max” box and start to type 70000. As I press 7 the Min box changes to 6.9900 !</p>
+<p>This is very annoying!</p>
+<p>A worse example. Another workspace has initial colour range 0.2266 to 0.3476. I select the contents of Max and start to type 0.25.<br>
+Press 0: Min changes to 0.0000 and Max to 0.0100 with the cursor just after the initial 0<br>
+Press “.”: the cursor moves over the “.” that was already there<br>
+Subsequent key presses “2” and “5” are ignored since it thinks it has enough digits.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-12-11T14:28:17Z' class='post-time'>
+                    December 11, 2019,  2:28pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-12-11T14:28:17Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Created an issue for this <a href="https://github.com/mantidproject/mantid/issues/27575" class="inline-onebox" rel="noopener nofollow ugc">Colorscale limit check Remove or delay · Issue #27575 · mantidproject/mantid · GitHub</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-12-17T16:16:15Z' class='post-time'>
+                    December 17, 2019,  4:16pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-12-17T16:16:15Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This issue has been fixed and will be in the next Nightly version of Mantid (Should be the next few days) <a href="https://github.com/mantidproject/mantid/pull/27579" class="inline-onebox" rel="noopener nofollow ugc">Remove check that max value is greater than min value in the figure options images tab by PhilColebrooke · Pull Request #27579 · mantidproject/mantid · GitHub</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

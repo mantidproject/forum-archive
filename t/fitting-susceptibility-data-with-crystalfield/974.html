@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Fitting susceptibility data with CrystalField - General - Mantid Help Forum</title>
+    <meta name="description" content="Hello, 
+I have a question regarding CrystalField susceptibility fits in Mantid, and the relationship between Lambda and the molecular fields BmolX,Y,Z. 
+I’m learning from CrystalFieldSusceptibility 
+Crystal Field Python &amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="974.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Fitting susceptibility data with CrystalField&#39;" href="https://forum.mantidproject.org/t/fitting-susceptibility-data-with-crystalfield/974.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/fitting-susceptibility-data-with-crystalfield/974" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/fitting-susceptibility-data-with-crystalfield/974" />
+<meta property="og:title" content="Fitting susceptibility data with CrystalField" />
+<meta name="twitter:title" content="Fitting susceptibility data with CrystalField" />
+<meta property="og:description" content="Hello,  I have a question regarding CrystalField susceptibility fits in Mantid, and the relationship between Lambda and the molecular fields BmolX,Y,Z.  I’m learning from CrystalFieldSusceptibility  Crystal Field Python Interface  This is part of my code:  fun = ‘name=CrystalFieldSusceptibility,Ion=Ce,Symmetry=D2d,’  fun += &#39;B20 = 3.7, B40 = -0.05, B44 = 0.6, BextX=5, Lambda=0.1, ’ # Starting values  fun += ‘ties=(BextX=5),’  fun += ‘ties=(BextY=0,BextZ=0),’  fun += ‘ties=(BmolY=0,BmolZ=0),’  # ..." />
+<meta name="twitter:description" content="Hello,  I have a question regarding CrystalField susceptibility fits in Mantid, and the relationship between Lambda and the molecular fields BmolX,Y,Z.  I’m learning from CrystalFieldSusceptibility  Crystal Field Python Interface  This is part of my code:  fun = ‘name=CrystalFieldSusceptibility,Ion=Ce,Symmetry=D2d,’  fun += &#39;B20 = 3.7, B40 = -0.05, B44 = 0.6, BextX=5, Lambda=0.1, ’ # Starting values  fun += ‘ties=(BextX=5),’  fun += ‘ties=(BextY=0,BextZ=0),’  fun += ‘ties=(BmolY=0,BmolZ=0),’  # ..." />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="article:published_time" content="2025-11-11T15:50:03+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="974.html">Fitting susceptibility data with CrystalField</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/6.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Fitting susceptibility data with CrystalField'>
+      <link itemprop='url' href='974.html'>
+      <meta itemprop='datePublished' content='2025-11-11T15:50:03Z'>
+        <meta itemprop='articleSection' content='General'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/3he4he'><span itemprop='name'>3he4he</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="974.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-11-11T15:50:03Z' class='post-time'>
+                    November 11, 2025,  3:50pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-11T15:50:03Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello,<br>
+I have a question regarding CrystalField susceptibility fits in Mantid, and the relationship between Lambda and the molecular fields BmolX,Y,Z.</p>
+<p>I’m learning from <a href="https://docs.mantidproject.org/v6.1.0/fitting/fitfunctions/CrystalFieldSusceptibility.html" class="inline-onebox" rel="noopener nofollow ugc">CrystalFieldSusceptibility</a><br>
+<a href="https://docs.mantidproject.org/v3.9.1/interfaces/CrystalFieldPythonInterface.html#fitting" class="inline-onebox" rel="noopener nofollow ugc">Crystal Field Python Interface</a></p>
+<p>This is part of my code:</p>
+<p>fun = ‘name=CrystalFieldSusceptibility,Ion=Ce,Symmetry=D2d,’<br>
+fun += 'B20 = 3.7, B40 = -0.05, B44 = 0.6, BextX=5, Lambda=0.1, ’ # Starting values<br>
+fun += ‘ties=(BextX=5),’<br>
+fun += ‘ties=(BextY=0,BextZ=0),’<br>
+fun += ‘ties=(BmolY=0,BmolZ=0),’  # BolX is left free<br>
+fun += ‘Hdir=(1,0,0), Unit=cgs, inverse=0’</p>
+<p>Fit(Function=fun,<br>
+InputWorkspace=‘data_exp’, WorkspaceIndex=0, Output=‘fit’, MaxIterations=10,<br>
+OutputCompositeMembers=True, CostFunction=‘Unweighted least squares’,)</p>
+<p>This gives me a fitted value of Lambda, and what I assume is a calculated value of BmolX (BmolY and BmolZ are tied to 0). If I understand correctly, Bmol is defined as Bmol = λ/M, where Lambda is a temperature independent parameter, and M is a value of magnetization calculated at some temperature. Therefore, the value of BmolX stored in the fit_Parameters workspace corresponds to that specific temperature (?).<br>
+Is this reasoning correct? At what temperature are the M and Bmol values calculated? Can I somehow retrieve that value of temperature from any of the Mantis workspaces (I couldn’t manage to do that)?<br>
+Thanks in advance.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/mducle'><span itemprop='name'>mducle</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-13T11:04:25Z' class='post-time'>
+                    November 13, 2025, 11:04am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-13T11:04:25Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi 3he4he,</p>
+<p>Unfortunately the code is a bit disjointed and <code>Bmol</code> and <code>lambda</code> are two parameters which try to do the same thing (account phenomenologically for exchange interactions which the single-ion CEF calculation cannot calculate) in two different parts of the code:</p>
+<p><code>Bmol</code> is used in the calculation of the CEF Hamiltonian itself by adding an extra “internal” magnetic field as described in <a href="https://docs.mantidproject.org/nightly/concepts/CrystalField.html#external-and-molecular-magnetic-field-contributions" rel="noopener nofollow ugc">this part of the documentation</a>.</p>
+<p><code>lambda</code> is used only in the calculation of the magnetic susceptibility <em>after</em> the CEF Hamiltonian has been calculated and diagonalised to get the eigenvalues <em>En</em> and eigenvectors <em>Vn</em> in the first equation in <a href="https://docs.mantidproject.org/v6.1.0/fitting/fitfunctions/CrystalFieldSusceptibility.html#theory" rel="noopener nofollow ugc">this part of the susceptibility docs</a>. Now, this equation is derived using perturbation theory and <em>assumes</em> that the Zeeman term in the base Hamiltonian is zero (i.e. it does not enter into <em>En</em> and <em>Vn</em> and can be treated perturbatively).</p>
+<p><strong>Therefore if you include a non-zero <code>Bmol</code> (or <code>Bext</code>) in the calculation, it invalidates this assumption and makes the calculation invalid.</strong></p>
+<p>So, you should use the <code>lambda</code> parameter only and set all <code>Bmol</code> and <code>Bext</code> to zero. If you need to use <code>Bmol</code> or <code>Bext</code>, I would recommend to use the <code>CrystalFieldMoment</code> function instead (<a href="https://docs.mantidproject.org/nightly/fitting/fitfunctions/CrystalFieldMoment.html" rel="noopener nofollow ugc">docs here</a>). This function computes the magnetic moment without using perturbation theory by diagonalising the full CEF+Zeeman Hamiltonian and calculating the thermal expectation value of the induced moment. The down-side of this approach is that it is not valid in the limit as the applied/internal field tends to zero which is why we have the <code>CrystalFieldSusceptibility</code> function.</p>
+<p>Best wishes,</p>
+<p>Duc</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/3he4he'><span itemprop='name'>3he4he</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-17T12:22:22Z' class='post-time'>
+                    November 17, 2025, 12:22pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-17T12:22:22Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi mducle,<br>
+Thanks a lot for the detailed response. I had totally missed part of the documentation. I will take a look at it, and re-think how I’m using the functions, and I will probably get back to you with more questions.<br>
+(Edited my previous response after re-reading your explanation and docs)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/3he4he'><span itemprop='name'>3he4he</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-04T14:27:49Z' class='post-time'>
+                    December 4, 2025,  2:27pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-04T14:27:49Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Dear Duc,</p>
+<p>I followed you advice, and made fits to my data, both using <code>CrystalFieldSusceptibility</code> varying <code>Bnm</code> and <code>lambda</code> (it looks good), and then I tried with <code>CrystalFieldMoment</code> following the example you mentioned in the function documentation. As in the example, I started with ties in all the <code>Bext</code> and <code>Bmol</code> paramenters, only setting<br>
+<code>fun += 'Hmag=0.2, Hdir=(1,0,0), Unit=SI,'</code><br>
+<code>fun += 'ties=(BmolX=0,BmolY=0,BmolZ=0,BextX=0,BextY=0,BextZ=0)'</code><br>
+As expected, only the <code>Bnm</code> were fit.</p>
+<p>Then I tried removing ties. For example, if I remove <code>BmolX</code> from ties, it is ignored. And if I give an initial value, for example, <code>BmolX=0.1</code> or <code>BextX=0.1</code>, it just prints <code>BmolX = 0.1 ± inf</code> or <code>BextX = 0.1 ± inf</code>, without changing during the fit. The energy levels do change, which makes me think that <code>Bmol</code> and <code>Bext</code> are not fitted, but only used in calculating the states.</p>
+<p>Also, I cannot see in the documentation the difference between, let’s say, <code>Hmag=1, Hdir=(1,0,0)</code> and <code>BextX=1</code>.</p>
+<p>Hopefully I managed to explained myself…</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

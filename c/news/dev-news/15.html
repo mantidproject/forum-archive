@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Developer - Mantid Help Forum</title>
+    <meta name="description" content="Announcements and discussions for developers about what is going on in the code or what is on the horizon.">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="15.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="next" href="15%3Fpage=1.html">
+    <link rel="alternate" type="application/rss+xml" title="Latest posts" href="https://forum.mantidproject.org/posts.rss" />
+    <link rel="alternate" type="application/rss+xml" title="Latest topics" href="https://forum.mantidproject.org/latest.rss" />
+    <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of topics in the &#39;Developer&#39; category" href="https://forum.mantidproject.org/c/news/dev-news/15.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/c/news/dev-news/15" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/c/news/dev-news/15" />
+<meta property="og:title" content="Developer" />
+<meta name="twitter:title" content="Developer" />
+<meta property="og:description" content="Announcements and discussions for developers about what is going on in the code or what is on the horizon." />
+<meta name="twitter:description" content="Announcements and discussions for developers about what is going on in the code or what is on the horizon." />
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+      
+
+
+
+  <h1>
+      <a itemprop="item" href="../8.html">
+        <span itemprop='name'>News</span>
+</a>      &nbsp;
+
+    <a itemprop="item" href="15.html">
+      <span itemprop='name'>Developer</span>
+</a>  </h1>
+  <br/>
+
+
+<div class="topic-list-container" itemscope itemtype='http://schema.org/ItemList'>
+  <meta itemprop='itemListOrder' content='http://schema.org/ItemListOrderDescending'>
+
+  <table class='topic-list'>
+
+    <thead>
+      <tr>
+        <th>Topic</th>
+        <th></th>
+        <th class="replies">Replies</th>
+        <th class="views">Views</th>
+        <th>Activity</th>
+      </tr>
+    </thead>
+
+    <tbody>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='1'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/about-the-developer-category/470.html' class='title raw-link raw-topic-link'>About the Developer category</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/peterfpeterson" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/peterfpeterson/25/5_2.png" class="avatar" title='peterfpeterson - Original Poster, Most Recent Poster' aria-label='peterfpeterson - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>501</span>
+          </td>
+          <td>
+            January 24, 2019
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='2'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/twg-minutes-july-2023/863.html' class='title raw-link raw-topic-link'>TWG Minutes - July 2023</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/peterfpeterson" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/peterfpeterson/25/5_2.png" class="avatar" title='peterfpeterson - Original Poster, Most Recent Poster' aria-label='peterfpeterson - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>471</span>
+          </td>
+          <td>
+            July 19, 2023
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='3'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/formatting-python-code/836.html' class='title raw-link raw-topic-link'>Formatting python code</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/peterfpeterson" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/peterfpeterson/25/5_2.png" class="avatar" title='peterfpeterson - Original Poster, Most Recent Poster' aria-label='peterfpeterson - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>1</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>604</span>
+          </td>
+          <td>
+            December 12, 2022
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='4'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/import-error-caused-by-numpy-v1-22-4/810.html' class='title raw-link raw-topic-link'>Import error caused by numpy v1.22.4</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/thomashampson" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/thomashampson/25/210_2.png" class="avatar" title='thomashampson - Original Poster, Most Recent Poster' aria-label='thomashampson - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>751</span>
+          </td>
+          <td>
+            May 30, 2022
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='5'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/twg-minutes-april-2022/804.html' class='title raw-link raw-topic-link'>TWG Minutes - April 2022</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/gemmaguest" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/gemmaguest/25/190_2.png" class="avatar" title='gemmaguest - Original Poster, Most Recent Poster' aria-label='gemmaguest - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>637</span>
+          </td>
+          <td>
+            April 27, 2022
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='6'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/move-to-separate-release-notes/803.html' class='title raw-link raw-topic-link'>Move to separate release notes</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/sfoxley" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/sfoxley/25/211_2.png" class="avatar" title='sfoxley - Original Poster, Most Recent Poster' aria-label='sfoxley - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>687</span>
+          </td>
+          <td>
+            February 28, 2022
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='7'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/6-3-release-notes-during-release/797.html' class='title raw-link raw-topic-link'>6.3 Release notes during release</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/sfoxley" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/sfoxley/25/211_2.png" class="avatar" title='sfoxley - Original Poster, Most Recent Poster' aria-label='sfoxley - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>740</span>
+          </td>
+          <td>
+            January 6, 2022
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='8'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/doc-tests-cannot-find-my-new-algorithm/784.html' class='title raw-link raw-topic-link'>Doc tests cannot find my new algorithm</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/thomas" class="latest">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/thomas/25/188_2.png" class="avatar" title='thomas - Original Poster, Most Recent Poster' aria-label='thomas - Original Poster, Most Recent Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/AnthonyLim" class="">
+                <img width="25" height="25" src="../../../letter_avatar_proxy/v4/letter/a/df705f/25.png" class="avatar" title='AnthonyLim - Frequent Poster' aria-label='AnthonyLim - Frequent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>2</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>788</span>
+          </td>
+          <td>
+            October 7, 2021
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='9'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/github-renaming-master-to-main-after-6-2-release-is-out/780.html' class='title raw-link raw-topic-link'>GitHub: Renaming master to main after 6.2 release is out</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/martyngigg" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/martyngigg/25/18_2.png" class="avatar" title='martyngigg - Original Poster, Most Recent Poster' aria-label='martyngigg - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>693</span>
+          </td>
+          <td>
+            September 14, 2021
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='10'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/twg-minutes-august-2021/767.html' class='title raw-link raw-topic-link'>TWG Minutes - August 2021</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/DavidFair" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/davidfair/25/168_2.png" class="avatar" title='DavidFair - Original Poster, Most Recent Poster' aria-label='DavidFair - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>672</span>
+          </td>
+          <td>
+            August 23, 2021
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='11'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/feature-freeze-for-6-2-is-coming-up/765.html' class='title raw-link raw-topic-link'>Feature freeze for 6.2 is coming up</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/martyngigg" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/martyngigg/25/18_2.png" class="avatar" title='martyngigg - Original Poster, Most Recent Poster' aria-label='martyngigg - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>595</span>
+          </td>
+          <td>
+            August 19, 2021
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='12'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/feedback-request-conda-packaging-strategy/757.html' class='title raw-link raw-topic-link'>Feedback Request: Conda Packaging Strategy</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/martyngigg" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/martyngigg/25/18_2.png" class="avatar" title='martyngigg - Original Poster, Most Recent Poster' aria-label='martyngigg - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>758</span>
+          </td>
+          <td>
+            July 19, 2021
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='13'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/two-factor-authentication-required-for-github-org/752.html' class='title raw-link raw-topic-link'>Two-Factor Authentication Required for GitHub Org</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/martyngigg" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/martyngigg/25/18_2.png" class="avatar" title='martyngigg - Original Poster, Most Recent Poster' aria-label='martyngigg - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>601</span>
+          </td>
+          <td>
+            July 5, 2021
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='14'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/technical-steering-committee-2021-03-30/726.html' class='title raw-link raw-topic-link'>Technical Steering Committee 2021-03-30</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/peterfpeterson" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/peterfpeterson/25/5_2.png" class="avatar" title='peterfpeterson - Original Poster, Most Recent Poster' aria-label='peterfpeterson - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>660</span>
+          </td>
+          <td>
+            March 30, 2021
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='15'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/technical-steering-committee-2021-03-02/723.html' class='title raw-link raw-topic-link'>Technical Steering Committee 2021-03-02</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/peterfpeterson" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/peterfpeterson/25/5_2.png" class="avatar" title='peterfpeterson - Original Poster, Most Recent Poster' aria-label='peterfpeterson - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>645</span>
+          </td>
+          <td>
+            March 2, 2021
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='16'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/technical-steering-commitee-2021-02-02-minutes/715.html' class='title raw-link raw-topic-link'>Technical Steering Commitee 2021-02-02 minutes</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/peterfpeterson" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/peterfpeterson/25/5_2.png" class="avatar" title='peterfpeterson - Original Poster, Most Recent Poster' aria-label='peterfpeterson - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>585</span>
+          </td>
+          <td>
+            February 3, 2021
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='17'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/technical-steering-committee-2021-01-12-minutes/711.html' class='title raw-link raw-topic-link'>Technical Steering Committee 2021-01-12 minutes</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/peterfpeterson" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/peterfpeterson/25/5_2.png" class="avatar" title='peterfpeterson - Original Poster, Most Recent Poster' aria-label='peterfpeterson - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>624</span>
+          </td>
+          <td>
+            January 12, 2021
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='18'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/5-1-maintenance-period/679.html' class='title raw-link raw-topic-link'>5.1 maintenance period</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/peterfpeterson" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/peterfpeterson/25/5_2.png" class="avatar" title='peterfpeterson - Original Poster, Most Recent Poster' aria-label='peterfpeterson - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>520</span>
+          </td>
+          <td>
+            August 31, 2020
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='19'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/updates-week-37-of-2019/566.html' class='title raw-link raw-topic-link'>Updates Week 37 of 2019</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/peterfpeterson" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/peterfpeterson/25/5_2.png" class="avatar" title='peterfpeterson - Original Poster, Most Recent Poster' aria-label='peterfpeterson - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>562</span>
+          </td>
+          <td>
+            September 18, 2019
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='20'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/updates-for-week-33-of-2019/561.html' class='title raw-link raw-topic-link'>Updates for Week 33 of 2019</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/peterfpeterson" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/peterfpeterson/25/5_2.png" class="avatar" title='peterfpeterson - Original Poster, Most Recent Poster' aria-label='peterfpeterson - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>576</span>
+          </td>
+          <td>
+            August 21, 2019
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='21'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/updates-for-week-32-of-2019/558.html' class='title raw-link raw-topic-link'>Updates for Week 32 of 2019</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/peterfpeterson" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/peterfpeterson/25/5_2.png" class="avatar" title='peterfpeterson - Original Poster, Most Recent Poster' aria-label='peterfpeterson - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>573</span>
+          </td>
+          <td>
+            August 12, 2019
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='22'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/updates-for-week-31-of-2019/550.html' class='title raw-link raw-topic-link'>Updates for Week 31 of 2019</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/peterfpeterson" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/peterfpeterson/25/5_2.png" class="avatar" title='peterfpeterson - Original Poster, Most Recent Poster' aria-label='peterfpeterson - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>552</span>
+          </td>
+          <td>
+            August 5, 2019
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='23'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/updates-for-week-30-of-2019/549.html' class='title raw-link raw-topic-link'>Updates for Week 30 of 2019</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/peterfpeterson" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/peterfpeterson/25/5_2.png" class="avatar" title='peterfpeterson - Original Poster, Most Recent Poster' aria-label='peterfpeterson - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>537</span>
+          </td>
+          <td>
+            July 29, 2019
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='24'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/updates-for-week-7-of-2019/487.html' class='title raw-link raw-topic-link'>Updates for Week 7 of 2019</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/peterfpeterson" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/peterfpeterson/25/5_2.png" class="avatar" title='peterfpeterson - Original Poster, Most Recent Poster' aria-label='peterfpeterson - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>626</span>
+          </td>
+          <td>
+            February 20, 2019
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='25'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/updates-for-week-6-of-2019/486.html' class='title raw-link raw-topic-link'>Updates for Week 6 of 2019</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/peterfpeterson" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/peterfpeterson/25/5_2.png" class="avatar" title='peterfpeterson - Original Poster, Most Recent Poster' aria-label='peterfpeterson - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>635</span>
+          </td>
+          <td>
+            February 20, 2019
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='26'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/updates-for-week-5-of-2019/478.html' class='title raw-link raw-topic-link'>Updates for Week 5 of 2019</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/peterfpeterson" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/peterfpeterson/25/5_2.png" class="avatar" title='peterfpeterson - Original Poster, Most Recent Poster' aria-label='peterfpeterson - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>567</span>
+          </td>
+          <td>
+            February 6, 2019
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='27'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/updates-for-week-4-of-2019/475.html' class='title raw-link raw-topic-link'>Updates for Week 4 of 2019</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/peterfpeterson" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/peterfpeterson/25/5_2.png" class="avatar" title='peterfpeterson - Original Poster, Most Recent Poster' aria-label='peterfpeterson - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>646</span>
+          </td>
+          <td>
+            January 28, 2019
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='28'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/updates-for-week-3-of-2019/473.html' class='title raw-link raw-topic-link'>Updates for Week 3 of 2019</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/peterfpeterson" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/peterfpeterson/25/5_2.png" class="avatar" title='peterfpeterson - Original Poster, Most Recent Poster' aria-label='peterfpeterson - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>587</span>
+          </td>
+          <td>
+            January 24, 2019
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='29'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/updates-for-week-2-of-2019/472.html' class='title raw-link raw-topic-link'>Updates for Week 2 of 2019</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/peterfpeterson" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/peterfpeterson/25/5_2.png" class="avatar" title='peterfpeterson - Original Poster, Most Recent Poster' aria-label='peterfpeterson - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>557</span>
+          </td>
+          <td>
+            January 24, 2019
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='30'>
+            <span class="link-top-line">
+              <a itemprop='url' href='../../../t/updates-for-week-1-of-2019/471.html' class='title raw-link raw-topic-link'>Updates for Week 1 of 2019</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.mantidproject.org/u/peterfpeterson" class="latest single">
+                <img width="25" height="25" src="../../../user_avatar/forum.mantidproject.org/peterfpeterson/25/5_2.png" class="avatar" title='peterfpeterson - Original Poster, Most Recent Poster' aria-label='peterfpeterson - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>509</span>
+          </td>
+          <td>
+            January 24, 2019
+          </td>
+        </tr>
+    </tbody>
+
+  </table>
+</div>
+
+  <div class="navigation" role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement'>
+      <span itemprop='name'><b><a href='15%3Fpage=1.html' rel='next' itemprop='url'>next page →</a></b></span>
+  </div>
+
+ <!-- include_crawler_content? -->
+
+
+
+  
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculated Parameters Wrong in MDFit - Bugs - Mantid Help Forum</title>
+    <meta name="description" content="While trying to fit a synthetically created MDHistoWorkspace with a certain function with any of the available minimizers, none of them could fit it correctly. In fact, all of them returned the same parameter value. Howe&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="243.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Calculated Parameters Wrong in MDFit&#39;" href="https://forum.mantidproject.org/t/calculated-parameters-wrong-in-mdfit/243.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/77059b929554db4c20441ac37ffcb1bbc0b31848.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/77059b929554db4c20441ac37ffcb1bbc0b31848.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/calculated-parameters-wrong-in-mdfit/243" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/calculated-parameters-wrong-in-mdfit/243" />
+<meta property="og:title" content="Calculated Parameters Wrong in MDFit" />
+<meta name="twitter:title" content="Calculated Parameters Wrong in MDFit" />
+<meta property="og:description" content="While trying to fit a synthetically created MDHistoWorkspace with a certain function with any of the available minimizers, none of them could fit it correctly. In fact, all of them returned the same parameter value. However, that was a parameter that does not adjust at all to the data.  I could not find any way to upload the data file used. The generating script is too long and non-image files cannot be uploaded.  The fitting function is 1/3.1415692*(Dy^2)/(DD*y^4+x^2) where D is a parameter and..." />
+<meta name="twitter:description" content="While trying to fit a synthetically created MDHistoWorkspace with a certain function with any of the available minimizers, none of them could fit it correctly. In fact, all of them returned the same parameter value. However, that was a parameter that does not adjust at all to the data.  I could not find any way to upload the data file used. The generating script is too long and non-image files cannot be uploaded.  The fitting function is 1/3.1415692*(Dy^2)/(DD*y^4+x^2) where D is a parameter and..." />
+<meta property="og:article:section" content="Bugs" />
+<meta property="og:article:section:color" content="ED207B" />
+<meta property="article:published_time" content="2017-03-22T16:57:50+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="243.html">Calculated Parameters Wrong in MDFit</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/if-you-want-to-report-a-bug-within-mantid-heres-the-place-to-do-it/12.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #ED207B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Bugs</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Calculated Parameters Wrong in MDFit'>
+      <link itemprop='url' href='243.html'>
+      <meta itemprop='datePublished' content='2017-03-22T16:57:49Z'>
+        <meta itemprop='articleSection' content='Bugs'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/BartomeuLlopis'><span itemprop='name'>BartomeuLlopis</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="243.html">
+
+                <link itemprop="image" href="../../uploads/default/original/1X/77059b929554db4c20441ac37ffcb1bbc0b31848.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2017-03-22T16:57:50Z' class='post-time'>
+                    March 22, 2017,  4:57pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-03-22T16:57:50Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>While trying to fit a synthetically created MDHistoWorkspace with a certain function with any of the available minimizers, none of them could fit it correctly. In fact, all of them returned the same parameter value. However, that was a parameter that does not adjust at all to the data.</p>
+<p>I could not find any way to upload the data file used. The generating script is too long and non-image files cannot be uploaded.</p>
+<p>The fitting function is 1/3.1415692*(D<em>y^2)/(D</em>D*y^4+x^2) where D is a parameter and the data has been created with D = 1. Even giving D = 1 as the initial parameter value it cannot fit correctly the data. I have seen that it has been reported a bug on the generation of the Calc/Diff workspace (‘Calculated fit curves wrong in multi fit’). However, in this case, the parameter itself is wrong, since the returned value is D=0.13786 for all the minimizers, which is really far from the real value (D=1).</p>
+<p>The fitting call that was used is the following:</p>
+<pre><code class="lang-auto">Fit(Function='name = UserFunctionMD, Formula = 1/3.1415692*(D*y^2)/(D*D*y^4+x^2), D=1.', InputWorkspace='sqw', MaxIterations=50000, Minimizer='Levenberg-MarquardtMD', Output='sqw_output', OutputCompositeMembers=True) 
+</code></pre>
+<p>The original data looks like this:<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../uploads/default/original/1X/77059b929554db4c20441ac37ffcb1bbc0b31848.png" data-download-href="https://forum.mantidproject.org/uploads/default/77059b929554db4c20441ac37ffcb1bbc0b31848" title="OriginalData.png"><img src="../../uploads/default/optimized/1X/77059b929554db4c20441ac37ffcb1bbc0b31848_2_661x500.png" width="661" height="500" srcset="../../uploads/default/optimized/1X/77059b929554db4c20441ac37ffcb1bbc0b31848_2_661x500.png, ../../uploads/default/original/1X/77059b929554db4c20441ac37ffcb1bbc0b31848.png 1.5x, ../../uploads/default/original/1X/77059b929554db4c20441ac37ffcb1bbc0b31848.png 2x" data-small-upload="https://forum.mantidproject.org/uploads/default/optimized/1X/77059b929554db4c20441ac37ffcb1bbc0b31848_2_10x10.png"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use xlink:href="#far-image"></use></svg><span class="filename">OriginalData.png</span><span class="informations">697×527 52.2 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>While the fitted Workspace is quite different:<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../uploads/default/original/1X/f6295206a7b215766628a3180c0cdd2dffaf0443.png" data-download-href="https://forum.mantidproject.org/uploads/default/f6295206a7b215766628a3180c0cdd2dffaf0443" title="FittedWorkspace.png"><img src="../../uploads/default/original/1X/f6295206a7b215766628a3180c0cdd2dffaf0443.png" width="663" height="500" data-small-upload="https://forum.mantidproject.org/uploads/default/optimized/1X/f6295206a7b215766628a3180c0cdd2dffaf0443_2_10x10.png"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use xlink:href="#far-image"></use></svg><span class="filename">FittedWorkspace.png</span><span class="informations">697×525 58.9 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<h3>
+<a name="platforms-affected-1" class="anchor" href="243.html#platforms-affected-1"></a>Platforms affected</h3>
+<p>It seems to affect Linux as well as Windows, at least.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-03-24T15:50:18Z' class='post-time'>
+                    March 24, 2017,  3:50pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-03-24T15:50:18Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I had a look at MDworkspace fitting nearly a year ago. There was an issue with normalisation to pixel volume, as well as very sparse documentation (for example CreateMDHistoWorkspace isn’t mentioned under Concepts - MDHistoWorkspace) and no Python fit function API yet. See <a href="https://github.com/mantidproject/mantid/issues/16736" class="inline-onebox" rel="noopener nofollow ugc">Data normalization for MDWorkspaces · Issue #16736 · mantidproject/mantid · GitHub</a> (still open, still behaves as it did then).</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

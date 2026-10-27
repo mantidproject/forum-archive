@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Mantid 4.0 Workbench - Mantid Help Forum</title>
+    <meta name="description" content="This is a thread where users can discuss early interaction and experience of using the new Mantid Workbench. 
+If you are testing Workbench and have any thoughts/suggestions please post them here. This will allow the deve&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="463.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Mantid 4.0 Workbench&#39;" href="https://forum.mantidproject.org/t/mantid-4-0-workbench/463.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/mantid-4-0-workbench/463" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/mantid-4-0-workbench/463" />
+<meta property="og:title" content="Mantid 4.0 Workbench" />
+<meta name="twitter:title" content="Mantid 4.0 Workbench" />
+<meta property="og:description" content="This is a thread where users can discuss early interaction and experience of using the new Mantid Workbench.  If you are testing Workbench and have any thoughts/suggestions please post them here. This will allow the development team to capture a sense of user requirements and hopefully give you a more useful product.  Thanks!" />
+<meta name="twitter:description" content="This is a thread where users can discuss early interaction and experience of using the new Mantid Workbench.  If you are testing Workbench and have any thoughts/suggestions please post them here. This will allow the development team to capture a sense of user requirements and hopefully give you a more useful product.  Thanks!" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="4 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="2 ❤" />
+<meta property="article:published_time" content="2018-12-20T10:15:40+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+        <link rel="next" href="463%3Fpage=2.html">
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="463.html">Mantid 4.0 Workbench</a>
+    </h1>
+
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Mantid 4.0 Workbench'>
+      <link itemprop='url' href='463.html'>
+      <meta itemprop='datePublished' content='2018-12-20T10:15:40Z'>
+        <meta itemprop='articleSection' content='Uncategorized'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/keeeto'><span itemprop='name'>keeeto</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="463.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2018-12-20T10:15:40Z' class='post-time'>
+                    December 20, 2018, 10:15am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-12-20T10:15:40Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This is a thread where users can discuss early interaction and experience of using the new Mantid Workbench.</p>
+<p>If you are testing Workbench and have any thoughts/suggestions please post them here. This will allow the development team to capture a sense of user requirements and hopefully give you a more useful product.</p>
+<p>Thanks!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/wsh59'><span itemprop='name'>wsh59</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-12-20T15:46:44Z' class='post-time'>
+                    December 20, 2018,  3:46pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-12-20T15:46:44Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Needs the equivalent of View&gt;Preferences and management of Interfaces.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/joscooper'><span itemprop='name'>joscooper</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-01-08T13:36:42Z' class='post-time'>
+                    January 8, 2019,  1:36pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-01-08T13:36:42Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Just a question, should the Mantid work bench be able to run scripts which currently work in Mantid?<br>
+I have some which use loadascii which fail, but don’t know if I should be expecting it to work or not (and if not I will hold off testing until I can play)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/joscooper'><span itemprop='name'>joscooper</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-01-08T13:54:17Z' class='post-time'>
+                    January 8, 2019,  1:54pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-01-08T13:54:17Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Solved by explicitly importing mantid into scripts before running (the header text of a blank script)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/joscooper'><span itemprop='name'>joscooper</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-01-10T17:02:18Z' class='post-time'>
+                    January 10, 2019,  5:02pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-01-10T17:02:18Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Something which I just found, I had crashed the workbench in a way that also crashed the error reporter. That in itself wasn’t an issue (and is reported through other channels), however, Windows was unable to kill Mantid, and so I had to go to the task manager. In the task manager I closed the Mantid process, but Mantid stayed alive (and crashed). I closed a few more things, but it took quite a while to find that it was pythonw which needed to be killed in order to close the workbench.<br>
+At the time I was trying (and clearly succeeding) in reproducing an bug I found in 3.13, but I have always been able to close Mantid before just clicking the normal exit button a few times. Am not sure about any fixes/workarounds but the workbench seems a bit harder to stop and restart.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/joscooper'><span itemprop='name'>joscooper</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-01-28T11:56:18Z' class='post-time'>
+                    January 28, 2019, 11:56am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-01-28T11:56:18Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I have some sort of error with the new workbench reading a function description and interpreting it in some no-clear way. My code is:<br>
+def TurnScanToP2TPlots(folderpath, nameofpol_file, nameofintensity_file,polarisation=False,suffix="",nobender=“I_no_transbender”, plotdata=False):<br>
+“”“This extracts the scan parameter value and name from a set of folders within a McStas scan and creates a dictionary of the filepaths and the parameter name and value; you should already be in the correct folder, you also want to have<br>
+LoadAscii(Filename=r’C:\Users\npi34092\Dropbox\ISIS\OFFSPEC\Beamline\Upgrade\no_bender_5e7\l_after_bender.dat’, OutputWorkspace=‘I_no_bender’, Unit=‘Wavelength’). It then opens the folderpath, looks for pol and intensity files and generates P squared * transmission plots. It deletes the polarisation curves unless you say no to”""<br>
+os.chdir(str(folderpath))</p>
+<p>Which should do nothing. However this produces an error when run:</p>
+<p>SyntaxError: (unicode error) ‘unicodeescape’ codec can’t decode bytes in position 258-259: truncated \UXXXXXXXX escape</p>
+<p>Any ideas anyone? This was written in Mantid 3 and from quick investigation I can’t reproduce the error with any print statement (python 2 or 3 formatted) or a couple of test other mantid algorithms in the same position</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/martyngigg'><span itemprop='name'>martyngigg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-03-11T14:15:25Z' class='post-time'>
+                    March 11, 2019,  2:15pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-03-11T14:15:25Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="https://forum.mantidproject.org/u/joscooper">@joscooper</a> Thanks for reporting these issues. I believe all of the issues you have reported above should be sorted in the current nightly build. We “solved” the issues of missing imports for scripts that worked in MantidPlot by detecting on open whether it needs to have these imports applied and asking if the script should be fixed.</p>
+<p>Cheers.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-03-11T15:33:25Z' class='post-time'>
+                    March 11, 2019,  3:33pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-03-11T15:33:25Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Still a few problems with scripts in the Workbench:</p>
+<ul>
+<li>Spurious “Syntax error: unexpected indent” with scripts which work OK in MantidPlot. The offending line is some way into the script and is not the first at that indent level. For example my “AnalyseThresholdScans9.py” which is on the Script Repository under Muon if you want a look. It has tab indents. If I run “Tabs to Spaces” it does run OK. (It already had some but perhaps not all required import statements at the top)</li>
+<li>Algorithms defined in the Script Window do not appear in the Algorithms list and are not offered if I start typing in the box next to Execute. They did appear in MantidPlot. So I can’t easily try out the algorithm that my script has just defined, and go back to make changes and retry.</li>
+<li>The algorithms and subcategories at the second level (e.g. the next level down below Arithmetic, Muon, etc) are jumbled in a random order. MantidPlot sorts them.</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-03-11T15:42:12Z' class='post-time'>
+                    March 11, 2019,  3:42pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-03-11T15:42:12Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Table workspace errors:<br>
+My script creates a table and adds columns with types X, Y and YError. In MantidPlot I can then just open the window, select the Y and YError columns and do Scatter plot.<br>
+In Workbench, the opened table window has no column types and attempting a plot immediately will fail. I can use the menus to identify them as X and Y. Y-Error doesn’t seem to work: on plotting it I get the Y Error values plotted as another Y data set in a different colour. The menus are confusing - is it supposed to associate Y-Error columns with Y columns which need not be adjacent?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/joscooper'><span itemprop='name'>joscooper</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/77d95be0579d8d3b6b6ce18f013caf4152159cf7.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-03-13T13:22:32Z' class='post-time'>
+                    March 13, 2019,  1:22pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-03-13T13:22:32Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Currently plotting spectrum with errors makes a very confusing plot:</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="../../uploads/default/original/1X/77d95be0579d8d3b6b6ce18f013caf4152159cf7.png" data-download-href="https://forum.mantidproject.org/uploads/default/77d95be0579d8d3b6b6ce18f013caf4152159cf7" title="image"><img src="../../uploads/default/optimized/1X/77d95be0579d8d3b6b6ce18f013caf4152159cf7_2_561x500.png" alt="image" data-base62-sha1="h6evvKZqVImDEiTsmFz3RzxS6O3" width="561" height="500" srcset="../../uploads/default/optimized/1X/77d95be0579d8d3b6b6ce18f013caf4152159cf7_2_561x500.png, ../../uploads/default/original/1X/77d95be0579d8d3b6b6ce18f013caf4152159cf7.png 1.5x, ../../uploads/default/original/1X/77d95be0579d8d3b6b6ce18f013caf4152159cf7.png 2x" data-small-upload="https://forum.mantidproject.org/uploads/default/optimized/1X/77d95be0579d8d3b6b6ce18f013caf4152159cf7_2_10x10.png"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">656×584 47.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>Without errors:<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../uploads/default/original/1X/7bb7be0ab16fe54c552d1fda7739a7b23ed2fd08.png" data-download-href="https://forum.mantidproject.org/uploads/default/7bb7be0ab16fe54c552d1fda7739a7b23ed2fd08" title="image"><img src="../../uploads/default/optimized/1X/7bb7be0ab16fe54c552d1fda7739a7b23ed2fd08_2_561x500.png" alt="image" data-base62-sha1="hEsouw86KqwKOxH69f0ymD9kscw" width="561" height="500" srcset="../../uploads/default/optimized/1X/7bb7be0ab16fe54c552d1fda7739a7b23ed2fd08_2_561x500.png, ../../uploads/default/original/1X/7bb7be0ab16fe54c552d1fda7739a7b23ed2fd08.png 1.5x, ../../uploads/default/original/1X/7bb7be0ab16fe54c552d1fda7739a7b23ed2fd08.png 2x" data-small-upload="https://forum.mantidproject.org/uploads/default/optimized/1X/7bb7be0ab16fe54c552d1fda7739a7b23ed2fd08_2_10x10.png"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use xlink:href="#far-image"></use></svg><span class="filename">image</span><span class="informations">656×584 53.1 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>All of my data seems to be sensible as far as I can tell.<br>
+Nightly build from March 12th on widows 7</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/joscooper'><span itemprop='name'>joscooper</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-03-13T13:23:28Z' class='post-time'>
+                    March 13, 2019,  1:23pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-03-13T13:23:28Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I also see the spurious syntax errors for indentations from scripts written solely in mantid</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/martyngigg'><span itemprop='name'>martyngigg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-03-13T13:28:53Z' class='post-time'>
+                    March 13, 2019,  1:28pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-03-13T13:28:53Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="https://forum.mantidproject.org/u/joscooper">@joscooper</a> <a class="mention" href="https://forum.mantidproject.org/u/jameslord">@jameslord</a> Thanks for the reports. We’re looking into the script issues. Some mix up with tabs/spaces as far as we can tell.</p>
+<p><a class="mention" href="https://forum.mantidproject.org/u/joscooper">@joscooper</a> Is there any chance you could send me the data for that plot? It looks sensible on the data I try here.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/thomas'><span itemprop='name'>thomas</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-03-28T14:02:23Z' class='post-time'>
+                    March 28, 2019,  2:02pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-03-28T15:48:37Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am unable to launch the Workbench on Windows 10 64bit. I have installed both the 4.0 and the Nightly 4.0.20190327.1954-win64 but neither of them starts the Workbench. It directly comes up with the Error reporting window. There is also no output if I launch it in a terminal. MantidPlot runes fine.</p>
+<p>If I try to run this  .\mantidpython --classic .\workbench\app\mainwindow.py</p>
+<p>I get an error:<br>
+File “C:\MantidNightlyInstall\bin\workbench\config\user.py”, line 90, in get<br>
+value = self.qsettings.value(option)<br>
+TypeError: unable to convert a QVariant back to a Python object</p>
+<p>If I fix this by:<br>
+try:<br>
+value = self.qsettings.value(option)<br>
+except:<br>
+value = None</p>
+<p>the workbench seams to start but I complains that it cannot find QT5 only QT4.</p>
+<p>So then I set system variable QT_API to pyqt5, and Workbench is running fine now.</p>
+<p>So then I changed back to:<br>
+value = self.qsettings.value(option)</p>
+<p>this also works now.</p>
+<p>I am not sure why Mantid was using pyqt4 as standard, the QT_API was not set before and then the standard should be pyqt5.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/martyngigg'><span itemprop='name'>martyngigg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-03-29T11:11:46Z' class='post-time'>
+                    March 29, 2019, 11:11am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-03-29T11:11:46Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Dear Thomas,</p>
+<p>Sorry you are having trouble with the Workbench. The <code>mantidpython</code> script is currently hardcoding pyqt4 as we have not yet made some other parts that depend on that Qt5 compatible.</p>
+<p>At a command prompt, in the <code>C:\MantidNightlyInstall</code> directory, could you run <code>bin\launch_workbench.exe -console</code> and see if that gives any errors?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/thomas'><span itemprop='name'>thomas</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-03-29T14:26:37Z' class='post-time'>
+                    March 29, 2019,  2:26pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-03-29T14:26:37Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I think this was caused by some other python installation, and some cross-talk between the user options, telling the python which runs the workbench to use pyqt4.<br>
+I have delete every python / QT installation and also every Mantid installation and also all rests which where left in the user folder.<br>
+Then I reinstalled Mantid 4.0 and the workbench did work without a problem, without setting the QT_API variable.<br>
+I then reinstalled anaconda python and it is still working.</p>
+<p>I have now also reinstalled the Nightly, and started it as you suggested, it is also working now.<br>
+The only error I get is;<br>
+Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-07-16T15:41:44Z' class='post-time'>
+                    July 16, 2019,  3:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-07-16T15:41:44Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>How do I create a plot of a workspace with an extra line at y=0 (or x=0) as can be done in many other packages even including the old MantidPlot?<br>
+There’s an option for a grid but that adds lines for every tick and not just y=0. I’m happy to create the plot with a small script if necessary rather than having a button in the plot settings dialog.<br>
+I’ve searched the matplotlib documentation with no success so far…</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/hsautessella'><span itemprop='name'>hsautessella</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-07-17T09:04:33Z' class='post-time'>
+                    July 17, 2019,  9:04am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-07-17T09:04:33Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi James,</p>
+<p>This can be done with a small script.</p>
+<p>Make sure the figure you want to add the axis line to is the last figure you created, then you can run the following to add the lines with whatever colour you’d like:</p>
+<blockquote>
+<p>from __future__ import (absolute_import, division, print_function, unicode_literals)</p>
+<p>import matplotlib.pyplot as plt</p>
+<p>plt.axhline(0, color=‘red’)      # this adds a horizontal line at y=0<br>
+plt.axvline(0, color=‘green’)  # this adds a vertical line at x=0<br>
+plt.show()</p>
+</blockquote>
+<p>You can also change the style of the lines like any other Matplotlib line, see <a href="https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.axhline.html" class="inline-onebox" rel="noopener nofollow ugc">matplotlib.pyplot.axhline — Matplotlib 3.1.2 documentation</a> for other arguments you can use.</p>
+<p>Hope this helps!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Hamish_C'><span itemprop='name'>Hamish_C</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-08-19T13:47:02Z' class='post-time'>
+                    August 19, 2019,  1:47pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-08-19T13:47:02Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>A few pieces of really basic workflow feedback from my first interactions with Workbench (in 4.1).</p>
+<p>Reducing TOSCA data:</p>
+<ul>
+<li>A simple data reduction (multiple run numbers, summed, default rebin) seems to take MUCH longer than it used to. Unsure if this is expected.</li>
+</ul>
+<p>Having reduced TOSCA data:</p>
+<ul>
+<li>Right-click workspace → Plot → Spectrum… → Window pops up to allow you to select which spectrum to plot. In MantidPlot the cursor would already be in the box ready to accept keyboard input, it now requires clicking in the edit box. Very minor but utterly frustrating when plotting many spectra.</li>
+</ul>
+<p>Having plotted TOSCA data (or any data??):</p>
+<ul>
+<li>ANY change to the display options for the line (e.g. toggle error bars, changing line type, etc.) causes a reset of the axes to full scale, even if they’ve been set manually previously. This is annoying to say the least as TOSCA data files run from -20 - 10000 wavenumbers but 99% of plots use a smaller x-range.</li>
+<li>Possibly this is due to be implemented but previously in MantidPlot it was possible to save a particular “default” set of options for plotting graphs, e.g. line type, etc. - this would be a great feature to have again.</li>
+<li>After double-clicking on an axis to modify the axis limits then entering the minimum, hitting tab doesn’t take you to the next “max” text box. It seems to have ordered the “max” text box at the end of “tab targets”.</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/martyngigg'><span itemprop='name'>martyngigg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-08-21T08:24:22Z' class='post-time'>
+                    August 21, 2019,  8:24am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-08-21T08:24:22Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Hamish,</p>
+<p>Thanks for taking the time to try the workbench and provide feedback.</p>
+<p>Regarding the speed of the TOSCA reduction I can’t think of a particular reason why this should be slower.<br>
+<a class="mention" href="https://forum.mantidproject.org/u/anthonylim">@AnthonyLim</a> this is probably one for Matthew to look into - I’ve created an issue: <a href="https://github.com/mantidproject/mantid/issues/26675" class="inline-onebox">Speed issues with TOSCA reduction on workbench · Issue #26675 · mantidproject/mantid · GitHub</a>.</p>
+<p>For the other points I will raise issues for them with the exception of the “default” plot options that is already on the backlog.</p>
+<p>Thanks!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/AnthonyLim'><span itemprop='name'>AnthonyLim</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-08-29T06:58:56Z' class='post-time'>
+                    August 29, 2019,  6:58am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-08-29T06:58:56Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="https://forum.mantidproject.org/u/hamish_c">@Hamish_C</a> what is the size of the reduced file? I think the slow down may be a side effect of the new reduction algorithm, which was designed to prevent large (in the region of gigabyte) files.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+      <div role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+            <span itemprop='name'><b><a rel="next" itemprop="url" href="463%3Fpage=2.html">next page →</a></b></span>
+      </div>
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

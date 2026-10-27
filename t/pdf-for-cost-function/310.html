@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>PDF for cost function - General - Mantid Help Forum</title>
+    <meta name="description" content="Hello, 
+I am attempting to fit single peaks with FABADA following this tutorial : https://www.mantidproject.org/Fitting_QENS_using_Bayesian_Routine_FABADA 
+The PDF associated with the cost function chi-squared always see&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="310.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;PDF for cost function&#39;" href="https://forum.mantidproject.org/t/pdf-for-cost-function/310.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/c7e74b7e89cd55f39564264863ffcd29329c125c.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/c7e74b7e89cd55f39564264863ffcd29329c125c.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/pdf-for-cost-function/310" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/pdf-for-cost-function/310" />
+<meta property="og:title" content="PDF for cost function" />
+<meta name="twitter:title" content="PDF for cost function" />
+<meta property="og:description" content="Hello,  I am attempting to fit single peaks with FABADA following this tutorial : https://www.mantidproject.org/Fitting_QENS_using_Bayesian_Routine_FABADA  The PDF associated with the cost function chi-squared always seems to output a sort of exponential-like decay graph (tutorial seems to have one like that as well).  Like so:     But in literature, I always see these chi-squared graphs having a Gaussian-distribution, is there a way to get a Gaussian-like distribution for this PDF instead of th..." />
+<meta name="twitter:description" content="Hello,  I am attempting to fit single peaks with FABADA following this tutorial : https://www.mantidproject.org/Fitting_QENS_using_Bayesian_Routine_FABADA  The PDF associated with the cost function chi-squared always seems to output a sort of exponential-like decay graph (tutorial seems to have one like that as well).  Like so:     But in literature, I always see these chi-squared graphs having a Gaussian-distribution, is there a way to get a Gaussian-like distribution for this PDF instead of th..." />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="2 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="2 ❤" />
+<meta property="article:published_time" content="2017-09-08T18:55:13+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="310.html">PDF for cost function</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/6.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='PDF for cost function'>
+      <link itemprop='url' href='310.html'>
+      <meta itemprop='datePublished' content='2017-09-08T18:55:13Z'>
+        <meta itemprop='articleSection' content='General'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/xcleru'><span itemprop='name'>xcleru</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="310.html">
+
+                <link itemprop="image" href="../../uploads/default/original/1X/c7e74b7e89cd55f39564264863ffcd29329c125c.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2017-09-08T18:55:13Z' class='post-time'>
+                    September 8, 2017,  6:55pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-09-08T19:33:08Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello,</p>
+<p>I am attempting to fit single peaks with FABADA following this tutorial : <a href="https://www.mantidproject.org/Fitting_QENS_using_Bayesian_Routine_FABADA" rel="noopener nofollow ugc">https://www.mantidproject.org/Fitting_QENS_using_Bayesian_Routine_FABADA</a></p>
+<p>The PDF associated with the cost function chi-squared always seems to output a sort of exponential-like decay graph (tutorial seems to have one like that as well).</p>
+<p>Like so:<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../uploads/default/original/1X/c7e74b7e89cd55f39564264863ffcd29329c125c.png" data-download-href="https://forum.mantidproject.org/uploads/default/c7e74b7e89cd55f39564264863ffcd29329c125c" title="2017-09-08 (2)"><img src="../../uploads/default/optimized/1X/c7e74b7e89cd55f39564264863ffcd29329c125c_2_617x500.png" alt="2017-09-08 (2)" data-base62-sha1="swqyWH4cmx1zJqmZn1fTwBgtay0" width="617" height="500" srcset="../../uploads/default/optimized/1X/c7e74b7e89cd55f39564264863ffcd29329c125c_2_617x500.png, ../../uploads/default/original/1X/c7e74b7e89cd55f39564264863ffcd29329c125c.png 1.5x, ../../uploads/default/original/1X/c7e74b7e89cd55f39564264863ffcd29329c125c.png 2x" data-small-upload="https://forum.mantidproject.org/uploads/default/optimized/1X/c7e74b7e89cd55f39564264863ffcd29329c125c_2_10x10.png"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use xlink:href="#far-image"></use></svg><span class="filename">2017-09-08 (2)</span><span class="informations">622×504 28.3 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>But in literature, I always see these chi-squared graphs having a Gaussian-distribution, is there a way to get a Gaussian-like distribution for this PDF instead of the exponential-like one?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jmborr'><span itemprop='name'>jmborr</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-09-08T19:42:31Z' class='post-time'>
+                    September 8, 2017,  7:42pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-09-08T19:42:31Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Did you start the fitting far away from the minimum? What happens is you do a second fitting, but  using as your initial guess the results from your first fit?<br>
+A Gaussian distribution of Chi2 implies you don’t stray far away from the optimal solution.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/xcleru'><span itemprop='name'>xcleru</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-09-08T19:46:28Z' class='post-time'>
+                    September 8, 2017,  7:46pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-09-08T19:46:28Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am using the same fit procedure as per the tutorial (single lorentzian)<br>
+Could what I am seeing be a result of a local minimum, rather than the global one?</p>
+<p>If you don’t mind me asking, how can I fit/set at a minimum guess/start a second fit on top of my already fitted data?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jmborr'><span itemprop='name'>jmborr</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-09-08T20:15:56Z' class='post-time'>
+                    September 8, 2017,  8:15pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-09-08T20:15:56Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If you are using the “Fit Wizard”, then it’s just a matter of clicking again in the “Fit” button <img src="../../images/emoji/twitter/slight_smile.png%3Fv=9" title=":slight_smile:" class="emoji" alt=":slight_smile:"> I did this, and still the Chi2 distribution is exponential in the second fit.</p>
+<p>After thinking a bit about it, an exponential distribution is to be expected because the FABADA minimizer is nothing but a Monte Carlo simulation with exp^{-\delta \chi^2} being the probability of changing the fit parameters in the course of the minimization. Thus, you end up with a Boltzman distribution of \chi^2 values, that is, P(\chi) = exp^{\chi^2}/Z, with Z being the partition function,<br>
+Z = \sum_{conformations} exp^{\chi^2}.</p>
+<p>The distribution of the fit parameters should be Gaussian-like, though.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/xcleru'><span itemprop='name'>xcleru</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-09-08T20:52:21Z' class='post-time'>
+                    September 8, 2017,  8:52pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-09-08T20:52:21Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thank you for all the input and advice ! <img src="../../images/emoji/twitter/slight_smile.png%3Fv=9" title=":slight_smile:" class="emoji" alt=":slight_smile:"></p>
+<p>I have used the Fit Wizard to do another fit, and like you the Chi2 again returns an exponential for my single Lorentzian.<br>
+Could this distribution be due to the fit itself (<em>single lorentzian</em>)?<br>
+From the following paper <a href="http://iopscience.iop.org/article/10.1088/1742-6596/663/1/012009/pdf" rel="noopener nofollow ugc">http://iopscience.iop.org/article/10.1088/1742-6596/663/1/012009/pdf</a><br>
+(FABADA Goes MANTID to Answer an Old Question: How Many Lines Are There?)<br>
+Their example uses <em>three Lorentzians</em> which gave a gaussian-like shape for the chi2 distributions.</p>
+<p>I have a few more things to ask if you don’t mind, is there any specific literature I can use to read up more about the expected exponential distributiuon due to Monte Carlo simulation? I find it interesting and it definitely shed some light on what I see now.</p>
+<p>The PDFs of the parameters indeed show as Gaussian-like.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jmborr'><span itemprop='name'>jmborr</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/633c383966a53feadb85e61953619ae997fd6921.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-09-09T21:57:11Z' class='post-time'>
+                    September 9, 2017,  9:57pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-09-09T21:57:11Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I guess you’re referring to Figure 4 in the paper. Using one Lorentzian gives the blue distribution L1, which rapidly goes to zero for small Chi2 values.<br>
+Below is a fit I did using one Lorentzian with high MaxIterations and a very small ConvergenceCriteria in order to explore the minimum. I set NumberPDFBins very high to have the maximum of the distribution well resolved. You can see now the bell-shape of the Chi2 distribution, with an exponential decay for high Chi2 values.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../uploads/default/original/1X/633c383966a53feadb85e61953619ae997fd6921.png" data-download-href="https://forum.mantidproject.org/uploads/default/633c383966a53feadb85e61953619ae997fd6921" title="mantid_fit_FABADA"><img src="../../uploads/default/optimized/1X/633c383966a53feadb85e61953619ae997fd6921_2_610x500.png" alt="mantid_fit_FABADA" data-base62-sha1="e9ShWWAKAOUZMGXQLtRcc0wrgbf" width="610" height="500" srcset="../../uploads/default/optimized/1X/633c383966a53feadb85e61953619ae997fd6921_2_610x500.png, ../../uploads/default/optimized/1X/633c383966a53feadb85e61953619ae997fd6921_2_915x750.png 1.5x, ../../uploads/default/optimized/1X/633c383966a53feadb85e61953619ae997fd6921_2_1220x1000.png 2x" data-small-upload="https://forum.mantidproject.org/uploads/default/optimized/1X/633c383966a53feadb85e61953619ae997fd6921_2_10x10.png"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use xlink:href="#far-image"></use></svg><span class="filename">mantid_fit_FABADA</span><span class="informations">1580×1294 293 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>In my previous post I made a mistake: exp^{\chi^2}/Z is not the distribution of \chi^2 values but the probability of a microstate. The distribution of  \chi^2 must use the density of states g(\chi^2), which is the number of ways you can obtain the same \chi^2 value by trying different values of the fit parameters.</p>
+<p>P(\chi^2) = g(\chi^2) * exp^{\chi^2}/Z</p>
+<p>If your model is a single Lorentzian, then you don’t have much freedom to change the values of the fitting parameters and still obtain the same \chi^2. Thus, g(\chi^2) decays to zero very fast for small \chi^2. That’s why the L1 distribution of Figure 4 in the paper decays so sharply to zero. If your model is three Lorentzian, there there may be many combinations of the fit parameters that will give equally good \chi^2 values. Thus  g(\chi^2) decays to zero much slower,and that’s why the L3 distribution has a broader maximum. At any rate, all distributions will decay exponentially at high \chi^2 values, when the exp^{\chi^2}/Z term takes over.</p>
+<p>Wikipedia has a good enough intro to <a href="https://en.wikipedia.org/wiki/Monte_Carlo_method_in_statistical_physics" rel="noopener nofollow ugc">Monte Carlo in statistical physics</a>. There, if you substitute Energy <em>E</em> for \chi^2, substitute \vec{r} for the set of fitting parameters of you fit function, and set \beta=1, you will have essentially what FABADA does.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/xcleru'><span itemprop='name'>xcleru</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/93bc9963e9ed618181e138c2ebd88843c7d01e51.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-09-11T20:07:19Z' class='post-time'>
+                    September 11, 2017,  8:07pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-09-11T20:07:19Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes Figure 4 was the one in question. From the paper it definitely seems that the more Lorentzians added, the broader (more Gaussian-like) the resulting PDF seems to be.</p>
+<p>Over the weekend I have experimented a bit with the FABADA parameters. Setting high MaxIterations/Small ConvergenceCriteria like you have done. Is there any other parameters of interest which may alter the shape of the resulting PDF?</p>
+<p>1 Lorentzian fits stayed exponential, However, with 2 Lorentzians and the above changes in parameters i see this:<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="../../uploads/default/original/1X/93bc9963e9ed618181e138c2ebd88843c7d01e51.png" data-download-href="https://forum.mantidproject.org/uploads/default/93bc9963e9ed618181e138c2ebd88843c7d01e51" title="2017-09-11 (2)"><img src="../../uploads/default/optimized/1X/93bc9963e9ed618181e138c2ebd88843c7d01e51_2_622x500.png" alt="2017-09-11 (2)" data-base62-sha1="l4Wg7Aba5LhwXc3FYI9X33Wnj57" width="622" height="500" srcset="../../uploads/default/optimized/1X/93bc9963e9ed618181e138c2ebd88843c7d01e51_2_622x500.png, ../../uploads/default/original/1X/93bc9963e9ed618181e138c2ebd88843c7d01e51.png 1.5x, ../../uploads/default/original/1X/93bc9963e9ed618181e138c2ebd88843c7d01e51.png 2x" data-small-upload="https://forum.mantidproject.org/uploads/default/optimized/1X/93bc9963e9ed618181e138c2ebd88843c7d01e51_2_10x10.png"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use xlink:href="#far-image"></use></svg><span class="filename">2017-09-11 (2)</span><span class="informations">627×504 32.7 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>A guassian-like curve! And by using 3 Lorentzians i get the following:<br>
+<img src="../../uploads/default/original/1X/c6d932b9eeebc61df1e4a4a98c6c60e87ecb486c.png" alt="2017-09-11 (3)" data-base62-sha1="sn5SOf5eBUETXyrIQ8J43LJ6U4k" width="629" height="499"></p>
+<p>Which i assume to be the existence of more than one minima for the parameters? The lower of two peaks being the better PDF.<br>
+So it seems to be the case that a single Lorentzian did indeed limit the freedom of the parameters being changed in my particular set of data.</p>
+<p>I will read up on the intro to Monte Carlo physics and the probability information you’ve detailed above. It is really helping me to understand Bayesian statistics in general <img src="../../images/emoji/twitter/slight_smile.png%3Fv=9" title=":slight_smile:" class="emoji" alt=":slight_smile:"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/wsh59'><span itemprop='name'>wsh59</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-09-12T20:12:37Z' class='post-time'>
+                    September 12, 2017,  8:12pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-09-12T20:12:37Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Have you read the book by Devinder Sivia? He is an expert Ann Bayes and did a lot of development for ISIS.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

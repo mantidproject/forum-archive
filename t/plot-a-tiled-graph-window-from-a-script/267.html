@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Plot a tiled graph window from a script - Python - Mantid Help Forum</title>
+    <meta name="description" content="Is there a way to create a tiled plot from a Python script? I want to replicate the interactive method: right click and do “Plot spectra” and in the dialog box select “Tiled plot” and “Plot all”. I have a workspace Group&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="267.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Plot a tiled graph window from a script&#39;" href="https://forum.mantidproject.org/t/plot-a-tiled-graph-window-from-a-script/267.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/plot-a-tiled-graph-window-from-a-script/267" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/plot-a-tiled-graph-window-from-a-script/267" />
+<meta property="og:title" content="Plot a tiled graph window from a script" />
+<meta name="twitter:title" content="Plot a tiled graph window from a script" />
+<meta property="og:description" content="Is there a way to create a tiled plot from a Python script? I want to replicate the interactive method: right click and do “Plot spectra” and in the dialog box select “Tiled plot” and “Plot all”. I have a workspace Group, and each workspace has several spectra (e.g. the output of a simultaneous fit).  Additionally I’d like the curves in each sub plot to be of different types (spectrum 0 “data” as a scatter plot with error bars, spectrum 1 “calc” as a line.)  Either traditional QTIplot or matplot..." />
+<meta name="twitter:description" content="Is there a way to create a tiled plot from a Python script? I want to replicate the interactive method: right click and do “Plot spectra” and in the dialog box select “Tiled plot” and “Plot all”. I have a workspace Group, and each workspace has several spectra (e.g. the output of a simultaneous fit).  Additionally I’d like the curves in each sub plot to be of different types (spectrum 0 “data” as a scatter plot with error bars, spectrum 1 “calc” as a line.)  Either traditional QTIplot or matplot..." />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="og:article:section" content="Python" />
+<meta property="og:article:section:color" content="9EB83B" />
+<meta property="article:published_time" content="2017-06-06T14:10:21+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="267.html">Plot a tiled graph window from a script</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #9EB83B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Python</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Plot a tiled graph window from a script'>
+      <link itemprop='url' href='267.html'>
+      <meta itemprop='datePublished' content='2017-06-06T14:10:21Z'>
+        <meta itemprop='articleSection' content='Python'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="267.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2017-06-06T14:10:21Z' class='post-time'>
+                    June 6, 2017,  2:10pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-06-06T14:10:21Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Is there a way to create a tiled plot from a Python script? I want to replicate the interactive method: right click and do “Plot spectra” and in the dialog box select “Tiled plot” and “Plot all”. I have a workspace Group, and each workspace has several spectra (e.g. the output of a simultaneous fit).</p>
+<p>Additionally I’d like the curves in each sub plot to be of different types (spectrum 0 “data” as a scatter plot with error bars, spectrum 1 “calc” as a line.)</p>
+<p>Either traditional QTIplot or matplotlib based plotting would do.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-06-06T14:27:09Z' class='post-time'>
+                    June 6, 2017,  2:27pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-06-06T14:27:09Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It would also be good to do the tiled plot where the curves in each tile are NOT from the same workspace. E.g. data which is binned to reduce noise, and a calculated curve on finer time steps. That’s particularly useful if the curve is an oscillation and there isn’t always a binned data point on the maximum or minimum of each cycle. AppendSpectra and/or ConjoinWorkspaces don’t allow me to create the “ragged” workspaces which correspond to this case.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/mantid_roman'><span itemprop='name'>mantid_roman</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-06-06T15:25:40Z' class='post-time'>
+                    June 6, 2017,  3:25pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-06-06T15:25:40Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The function to use is <code>plotSubplots</code>. Here is its description:</p>
+<pre><code class="lang-auto">Signature: plotSubplots(source, indices, distribution=0, error_bars=False, window=None) 
+Docstring:
+Open a tiled plot.
+
+This plots one or more spectra, with X as the bin boundaries,
+and Y as the counts in each bin.
+
+If one workspace, each spectrum gets its own tile.
+Otherwise, each workspace gets its own tile.
+
+Args:
+    source: list of workspace names
+    indices: workspace index, or tuple or list of workspace indices to plot
+    distribution: whether or not to plot as a distribution
+    error_bars: bool, set to True to add error bars.
+    window: window used for plotting. If None a new one will be created
+Returns:
+    A handle to window if one was specified, otherwise a handle to the created one. None in case of error.
+File:      d:\work\mantid\build\bin\debug\pymantidplot\__init__.py
+Type:      function
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-06-06T15:59:08Z' class='post-time'>
+                    June 6, 2017,  3:59pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-06-06T15:59:08Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks, that works at a basic level. However the “type” parameter is missing so I can’t specify line or scatter plots (as I can in plotSpectrum). The “window” parameter behaves differently, rather than overlaying the curves or adding more tiles it reuses the window, discarding the original contents.</p>
+<p>I can do plotSpectrum(…,window=returned_value_from_plotSubplots) but that puts the new plots in the last tile - is there a function to select which tile is active, to add a plot to, or another argument to plotSpectrum()?</p>
+<p>Interesting that “plotSubplots” didn’t come up when I used the search bar at the top of the Mantid web pages and put “tile” or “tiled”, either in the home page or under “Documentation” - “Python API” which (as I already knew) search different parts of the site. “plotSubplots” as a search term only brings up a release note and the C++ code, there doesn’t appear to be a Python API description as such.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-06-06T16:24:54Z' class='post-time'>
+                    June 6, 2017,  4:24pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-06-06T16:24:54Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Aha! This works… Having deduced the existence of method setActiveLayer() from the different error messages it gives, and then searched, I find a page:<br>
+<a href="http://www.mantidproject.org/MantidPlot:_Arranging_Layers" rel="noopener nofollow ugc">http://www.mantidproject.org/MantidPlot:_Arranging_Layers</a><br>
+which is under “Usage - Mantidplot Help” and not linked from “Python API” as I might have expected. (Python API - Mantidplot has a very incomplete and outdated set of functions.) And the final catch is that layers are numbered from 1.</p>
+<pre><code>graphspec=plotSubplots(CalcCurves,0,error_bars=False)
+for i in range(len(rawdata)):
+    graphspec.setActiveLayer(graphspec.layer(i+1))
+    plotSpectrum(rawdata[i],0,type=1,error_bars=True,window=graphspec)</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-06-06T17:50:15Z' class='post-time'>
+                    June 6, 2017,  5:50pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-06-06T17:50:15Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Two additional observations about the mantidplot functions:</p>
+<p>(a) many (or all?) of them don’t take keyword parameters, so examples such as<br>
+<code>l.enableAxisLabels(axis, on = True)</code><br>
+(<a href="https://www.mantidproject.org/MantidPlot:_1D_Plots_in_Python#Customizing_the_axes" rel="noopener nofollow ugc">https://www.mantidproject.org/MantidPlot:_1D_Plots_in_Python#Customizing_the_axes</a>)<br>
+don’t actually work. Although parameter names are mentioned in the documentation, the parameters are positional-only, rare in Python.</p>
+<p>(b) the “graph”, “layer”, etc handles have many methods such as the above but these are not revealed by the handy tool tips that pop up in the script editor once you type <code>l.enab</code> and wait. It’s necessary to go to the documentation each time, or guess.</p>
+<p>Mantid workspaces, tables and algorithms behave rather better in both these respects.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-06-08T11:41:19Z' class='post-time'>
+                    June 8, 2017, 11:41am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-06-08T11:41:19Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Here’s my final, mostly working script. I abandoned “plotSubplots” since it doesn’t give a “type” option, if I want the bottom-most curve to be something other than Line. My script arranges the tiles in the order their workspaces appear in the group, not in alphabetical order as the interactive “tiled plot” does. There’s only one representative legend in tile 1.<br>
+A possible bug - the “g.arrangeLayers(False,True)” doesn’t actually resize the graph window, it just pretends to have done so and only a few tiles at the top left are visible. Manually resizing it “pops” it back to normal so all of the tiles are scaled to fill the new size.</p>
+<pre><code># size of window
+Nrows=6
+Ncols=6
+# fixed axis range for all tiles
+Xrange=(0.0,10.0)
+Yrange=(-0.3,0.2)
+# workspaces can be a WorkspaceGroup or an array of individual ones
+workspacename="TFscan143a_Workspaces"
+workspaces=mtd[workspacename]
+# choose spectra and plot types and whether to add error bars
+spectra=[(0,Layer.Scatter,True),(1,Layer.Line,False)]
+
+g = newGraph(workspacename)
+g.setLayerCanvasSize(200, 150)
+g.setNumLayers(len(workspaces))
+g.setRows(Nrows)
+g.setCols(Ncols)
+g.arrangeLayers(False, True)
+
+for i in range(len(workspaces)):
+	lay=g.layer(i+1)
+	g.setActiveLayer(lay)
+	for (spec,ctype,ebars) in spectra:
+		plotSpectrum(workspaces[i],spec,type=ctype,error_bars=ebars,window=g)
+	lay.enableAxis(0,True)
+	lay.enableAxis(2,True)
+	lay.setAxisTitle(0,"")
+	lay.setAxisTitle(2,"")
+	lay.setScale(0,Yrange[0],Yrange[1])
+	lay.setScale(2,Xrange[0],Xrange[1])
+	if(i==0):
+		# legend in layer 1 only, spectra names only
+		cnames=[]
+		for (j,(spec,ctype,ebars)) in enumerate(spectra):
+			cnames.append("\\l("+str(j+1)+")"+workspaces[0].getAxis(1).label(spec))
+		leg=lay.newLegend("\n".join(cnames))</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

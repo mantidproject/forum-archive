@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Error dialog boxes - Suggestion and Feature Requests - Mantid Help Forum</title>
+    <meta name="description" content="If an algorithm run from its dialog fails, perhaps because the inputs contained the wrong data that wasn’t immediately rejected by a Validator, it would be good to bring this to the user’s attention. At present there wil&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="588.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Error dialog boxes&#39;" href="https://forum.mantidproject.org/t/error-dialog-boxes/588.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/error-dialog-boxes/588" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/error-dialog-boxes/588" />
+<meta property="og:title" content="Error dialog boxes" />
+<meta name="twitter:title" content="Error dialog boxes" />
+<meta property="og:description" content="If an algorithm run from its dialog fails, perhaps because the inputs contained the wrong data that wasn’t immediately rejected by a Validator, it would be good to bring this to the user’s attention. At present there will just be one or more orange warnings or a red error (with traceback) in the Messages window, which might be hidden behind other workspace windows or graphs.  Should we have such errors pop up a standard error box as the host OS would use, containing a red “X” or similar, the tex..." />
+<meta name="twitter:description" content="If an algorithm run from its dialog fails, perhaps because the inputs contained the wrong data that wasn’t immediately rejected by a Validator, it would be good to bring this to the user’s attention. At present there will just be one or more orange warnings or a red error (with traceback) in the Messages window, which might be hidden behind other workspace windows or graphs.  Should we have such errors pop up a standard error box as the host OS would use, containing a red “X” or similar, the tex..." />
+<meta property="og:article:section" content="Suggestion and Feature Requests" />
+<meta property="og:article:section:color" content="92278F" />
+<meta property="article:published_time" content="2019-11-01T10:32:23+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="588.html">Error dialog boxes</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/suggestion-and-feature-requests/10.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #92278F'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Suggestion and Feature Requests</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Error dialog boxes'>
+      <link itemprop='url' href='588.html'>
+      <meta itemprop='datePublished' content='2019-11-01T10:32:23Z'>
+        <meta itemprop='articleSection' content='Suggestion and Feature Requests'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="588.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2019-11-01T10:32:23Z' class='post-time'>
+                    November 1, 2019, 10:32am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-11-01T10:32:23Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If an algorithm run from its dialog fails, perhaps because the inputs contained the wrong data that wasn’t immediately rejected by a Validator, it would be good to bring this to the user’s attention. At present there will just be one or more orange warnings or a red error (with traceback) in the Messages window, which might be hidden behind other workspace windows or graphs.</p>
+<p>Should we have such errors pop up a standard error box as the host OS would use, containing a red “X” or similar, the text of any exception raised, and an “OK” button?</p>
+<p>With algorithms run from a script, the user would be expecting to see the errors among the script output and either a red arrow in the margin where it stopped or a green one at the end, so I think no change is needed here.</p>
+<p>Workflow algorithms might want to catch and re-raise errors in their child algorithms, giving a more informative message which might then pop up if the workflow was run from a dialog.</p>
+<p>Don’t use the “Mantid has encountered an internal error, please report it” for this!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/159c95d0abb218e0bf6627aa101313c229b7fc99.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-11-04T10:38:01Z' class='post-time'>
+                    November 4, 2019, 10:38am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-11-04T10:38:01Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I would be interested in a specific example you might have. There currently seems to be this:<br>
+<img src="../../uploads/default/original/1X/159c95d0abb218e0bf6627aa101313c229b7fc99.png" alt="Errorbox" data-base62-sha1="35bvzc8fTf9idSzRGCANben0LAR" width="427" height="121"><br>
+which at least points out which number is invalid. Do you mean a pop-up explaining specifically why the value failed the validator?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-11-05T10:40:26Z' class='post-time'>
+                    November 5, 2019, 10:40am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-11-05T10:40:26Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>That’s the one you get where one input fails its validator. I’d like to expand that (for example) to the case where two inputs, valid in isolation, aren’t compatible. For example “Plus” where the two workspaces have different numbers of bins.<br>
+If it’s possible to write arbitrary validators which can look at values being entered for other properties as well as itself, that might be one solution. You might however get into the messy case of the validator doing most of the work, loading files, etc.<br>
+Or should the “dialog” top level code wrap the underlying Algorithm call in a try…except clause and use the error message (if any) to generate a dialog box rather than just letting the traceback go to the Messages window?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-11-07T14:14:02Z' class='post-time'>
+                    November 7, 2019,  2:14pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-11-07T14:14:02Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Just been discussing this with Nick and Martyn. This is something we are certainly keen to improve on and we’d like  make useful error messages less ignorable, in a clear and obvious way.</p>
+<p>We aren’t sure that a pop-up window specifically is the best way as this could become annoying quickly. Potentially a notification system or something red appearing near the “Algorithms” window. We will discuss some of the best approaches and practicalities involved after this release.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-11-07T14:32:45Z' class='post-time'>
+                    November 7, 2019,  2:32pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-11-07T14:32:45Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>An issue has been created for this: <a href="https://github.com/mantidproject/mantid/issues/27305" class="inline-onebox" rel="noopener nofollow ugc">Notifications for Algorithm Error · Issue #27305 · mantidproject/mantid · GitHub</a></p>
+<p>Do you have any suggestions as to what sort of measures may work? Are users usually not covering the Algorithms window, so some sort of indication in red here may work??<img src="../../images/emoji/twitter/red_circle.png%3Fv=9" title=":red_circle:" class="emoji" alt=":red_circle:"><img src="../../images/emoji/twitter/x.png%3Fv=9" title=":x:" class="emoji" alt=":x:"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-11-07T16:16:37Z' class='post-time'>
+                    November 7, 2019,  4:16pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-11-07T16:16:37Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I imagined that the error dialog would only appear once when the algorithm had decided to give up entirely, and raises an exception which is left to be caught by the Workbench core.</p>
+<p>In the 500 of 1000 spectra failing example, either the workflow needs all of them to be good fits, in which case it would raise the error the first time it failed and not proceed further. CalMuonDetectorPhases is/was like this. Or it would be able to work with a certain fraction of failures, so it would trap the exceptions from Fit, print warnings or errors to the messages window (including tracebacks?) and continue. These would not produce pop up error boxes, but just scroll past. At the end it may inspect the results and re-raise an error for a dialog box if there were insufficient good spectra.</p>
+<p>I like the idea of the progress bar turning red if an algorithm fails, or perhaps yellow if it has raised warnings. There’s currently a bug in Workbench that an algorithm that has yet to report any actual progress doesn’t get a progress bar or even an entry under the “Details” button, so a failure on the first spectrum may go un-alerted. (This also affects slow algorithms that don’t (yet) use the Progress mechanism at all)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-01-29T11:23:22Z' class='post-time'>
+                    January 29, 2020, 11:23am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-01-29T11:23:22Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I see this has now been implemented along with (or shortly before) the Python 3 change over. On Windows 10 it pops up a Windows notification message in the bottom right of the screen, just saying “Sorry there was an error, please look at the message display for details”. But if I’ve got the messages window down the right side of the screen this box covers up the very message it’s telling me about. But at least it does alert me…</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

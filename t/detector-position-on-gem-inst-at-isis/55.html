@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Detector position on GEM inst at ISIS - General - Mantid Help Forum</title>
+    <meta name="description" content="Hi 
+there are quite a lot of non empty spectra in the GEM data that have no detID and detectorPosition  associated to them: 
+spectra 14 to 100 
+spectra 145 to 160 
+spectra 310 to 325 
+spectra 5210 to 5929 
+the correct in&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="55.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Detector position on GEM inst at ISIS&#39;" href="https://forum.mantidproject.org/t/detector-position-on-gem-inst-at-isis/55.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/detector-position-on-gem-inst-at-isis/55" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/detector-position-on-gem-inst-at-isis/55" />
+<meta property="og:title" content="Detector position on GEM inst at ISIS" />
+<meta name="twitter:title" content="Detector position on GEM inst at ISIS" />
+<meta property="og:description" content="Hi  there are quite a lot of non empty spectra in the GEM data that have no detID and detectorPosition  associated to them:  spectra 14 to 100  spectra 145 to 160  spectra 310 to 325  spectra 5210 to 5929  the correct information in stored in the UDET variable in the isis_vms_compat group but I don’t think that detID is taking that information from there.  Is it possible to have this fixed?" />
+<meta name="twitter:description" content="Hi  there are quite a lot of non empty spectra in the GEM data that have no detID and detectorPosition  associated to them:  spectra 14 to 100  spectra 145 to 160  spectra 310 to 325  spectra 5210 to 5929  the correct information in stored in the UDET variable in the isis_vms_compat group but I don’t think that detID is taking that information from there.  Is it possible to have this fixed?" />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="article:published_time" content="2015-08-19T14:26:55+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="55.html">Detector position on GEM inst at ISIS</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/6.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Detector position on GEM inst at ISIS'>
+      <link itemprop='url' href='55.html'>
+      <meta itemprop='datePublished' content='2015-08-19T14:26:55Z'>
+        <meta itemprop='articleSection' content='General'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/draspi'><span itemprop='name'>draspi</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="55.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2015-08-19T14:26:55Z' class='post-time'>
+                    August 19, 2015,  2:26pm
+                  </time>
+                  <meta itemprop='dateModified' content='2015-08-19T14:26:55Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi<br>
+there are quite a lot of non empty spectra in the GEM data that have no detID and detectorPosition  associated to them:</p>
+<p>spectra 14 to 100<br>
+spectra 145 to 160<br>
+spectra 310 to 325<br>
+spectra 5210 to 5929</p>
+<p>the correct information in stored in the UDET variable in the isis_vms_compat group but I don’t think that detID is taking that information from there.<br>
+Is it possible to have this fixed?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/martyngigg'><span itemprop='name'>martyngigg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2015-08-20T08:41:19Z' class='post-time'>
+                    August 20, 2015,  8:41am
+                  </time>
+                  <meta itemprop='dateModified' content='2015-08-20T08:41:19Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Davide,</p>
+<p>Historically there had always been a bank on GEM that had been ignored in the Mantid IDF but I must admit I don’t really no why.</p>
+<p>The reason Mantid shows no det ID/position in the table is due to the fact that those detectors are not defined in the GEM IDF. Looking at the relevant section of the <a href="https://github.com/mantidproject/mantid/blob/master/Code/Mantid/instrument/GEM_Definition.xml#L2574">IDF</a> I can see</p>
+<pre><code class="lang-auto">  &lt;!-- DETECTOR ID LISTS --&gt;
+
+  &lt;idlist idname="monitors"&gt;
+    &lt;id start="611" end="612" /&gt;
+    &lt;id val="621" /&gt;
+    &lt;id start="631" end="634" /&gt;
+    &lt;id start="641" end="644" /&gt;
+  &lt;/idlist&gt;
+  
+  &lt;idlist idname="bank1"&gt;
+    &lt;id start="101001" end="101045" /&gt;
+    &lt;id start="102001" end="102060" /&gt;
+    &lt;id start="103001" end="103060" /&gt;
+    &lt;id start="111001" end="111045" /&gt;
+    &lt;id start="112001" end="112060" /&gt;
+    &lt;id start="113001" end="113060" /&gt;
+  &lt;/idlist&gt;
+  
+  &lt;idlist idname="bank2"&gt;
+    &lt;id start="201001" end="201080" /&gt;
+    &lt;id start="202001" end="202080" /&gt;
+    &lt;id start="211001" end="211080" /&gt;
+    &lt;id start="212001" end="212080" /&gt;  
+  &lt;/idlist&gt;
+
+  &lt;idlist idname="bank3"&gt;
+    &lt;id start="301001" end="301090" /&gt;
+    &lt;id start="302001" end="302090" /&gt;
+    &lt;id start="303001" end="303090" /&gt;
+    &lt;id start="304001" end="304090" /&gt;
+    &lt;id start="305001" end="305090" /&gt;
+    &lt;id start="311001" end="311090" /&gt;
+    &lt;id start="312001" end="312090" /&gt;
+    &lt;id start="313001" end="313090" /&gt;
+    &lt;id start="314001" end="314090" /&gt;
+    &lt;id start="315001" end="315090" /&gt;    
+  &lt;/idlist&gt;
+
+  &lt;idlist idname="bank4"&gt;
+    &lt;id start="401001" end="401100" /&gt;
+    &lt;id start="402001" end="402100" /&gt;
+    &lt;id start="403001" end="403100" /&gt;
+    &lt;id start="404001" end="404100" /&gt;
+    &lt;id start="405001" end="405100" /&gt;
+    &lt;id start="406001" end="406100" /&gt;
+    &lt;id start="407001" end="407100" /&gt;    
+    &lt;id start="411001" end="411100" /&gt;
+    &lt;id start="412001" end="412100" /&gt;
+    &lt;id start="413001" end="413100" /&gt;
+    &lt;id start="414001" end="414100" /&gt;
+    &lt;id start="415001" end="415100" /&gt;
+    &lt;id start="416001" end="416100" /&gt;
+    &lt;id start="417001" end="417100" /&gt;    
+  &lt;/idlist&gt;  
+  
+  &lt;idlist idname="bank5"&gt;
+    &lt;id start="501001" end="501120" /&gt;
+    &lt;id start="502001" end="502120" /&gt;
+    &lt;id start="503001" end="503120" /&gt;
+    &lt;id start="504001" end="504120" /&gt;
+    &lt;id start="505001" end="505120" /&gt;
+    &lt;id start="506001" end="506120" /&gt;
+    &lt;id start="507001" end="507120" /&gt;
+    &lt;id start="508001" end="508120" /&gt;
+    &lt;id start="509001" end="509120" /&gt;
+    &lt;id start="511001" end="511120" /&gt;
+    &lt;id start="512001" end="512120" /&gt;
+    &lt;id start="513001" end="513120" /&gt;
+    &lt;id start="514001" end="514120" /&gt;
+    &lt;id start="515001" end="515120" /&gt;
+    &lt;id start="516001" end="516120" /&gt;
+    &lt;id start="517001" end="517120" /&gt;
+    &lt;id start="518001" end="518120" /&gt;
+    &lt;id start="519001" end="519120" /&gt;
+  &lt;/idlist&gt;   
+  
+  &lt;idlist idname="bank6"&gt;
+    &lt;id start="601001" end="601040" /&gt;
+    &lt;id start="602001" end="602040" /&gt;
+    &lt;id start="603001" end="603040" /&gt;
+    &lt;id start="604001" end="604040" /&gt;
+    &lt;id start="605001" end="605040" /&gt;
+    &lt;id start="606001" end="606040" /&gt;
+    &lt;id start="607001" end="607040" /&gt;
+    &lt;id start="611001" end="611040" /&gt;
+    &lt;id start="612001" end="612040" /&gt;
+    &lt;id start="613001" end="613040" /&gt;
+    &lt;id start="614001" end="614040" /&gt;
+    &lt;id start="615001" end="615040" /&gt;
+    &lt;id start="616001" end="616040" /&gt;
+    &lt;id start="617001" end="617040" /&gt;
+    &lt;id start="701001" end="701080" /&gt;
+    &lt;id start="702001" end="702080" /&gt;
+    &lt;id start="703001" end="703080" /&gt;
+    &lt;id start="704001" end="704080" /&gt;
+    &lt;id start="705001" end="705080" /&gt;
+    &lt;id start="711001" end="711080" /&gt;
+    &lt;id start="712001" end="712080" /&gt;
+    &lt;id start="713001" end="713080" /&gt;
+    &lt;id start="714001" end="714080" /&gt;
+    &lt;id start="715001" end="715080" /&gt;
+  &lt;/idlist&gt;
+</code></pre>
+<p>then taking spectrum 14-100 as an example (and looking at a recent NeXus file):</p>
+<ul>
+<li>the detector IDs in the UDET table are in the range 821001 - 83120 but</li>
+<li>the IDF doesn’t have any knowledge that those detectors exist so Mantid can’t assign a valid detector to them.</li>
+</ul>
+<p>In order for all spectra to show up then we’ll need to update the IDF with the valid detector IDs. Is that something you are able to do or would like us to assist with?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

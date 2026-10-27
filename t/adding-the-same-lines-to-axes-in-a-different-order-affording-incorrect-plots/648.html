@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Adding the same lines to axes in a different order affording incorrect plots - Bugs - Mantid Help Forum</title>
+    <meta name="description" content="Expected behavior
+You have two workspaces each containing simple x,y data. If you right-click-&amp;gt;plot one dataset, you can drag the other onto the newly plotted graph. The order in which you do this should only change the&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="648.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Adding the same lines to axes in a different order affording incorrect plots&#39;" href="https://forum.mantidproject.org/t/adding-the-same-lines-to-axes-in-a-different-order-affording-incorrect-plots/648.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/optimized/1X/743b97903af56e8e536d6eeac4930355d2a31f65_2_1024x553.jpeg" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/optimized/1X/743b97903af56e8e536d6eeac4930355d2a31f65_2_1024x553.jpeg" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/adding-the-same-lines-to-axes-in-a-different-order-affording-incorrect-plots/648" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/adding-the-same-lines-to-axes-in-a-different-order-affording-incorrect-plots/648" />
+<meta property="og:title" content="Adding the same lines to axes in a different order affording incorrect plots" />
+<meta name="twitter:title" content="Adding the same lines to axes in a different order affording incorrect plots" />
+<meta property="og:description" content="Expected behavior You have two workspaces each containing simple x,y data. If you right-click-&gt;plot one dataset, you can drag the other onto the newly plotted graph. The order in which you do this should only change the colours of the lines not their intensities.   Actual behavior Plotting data “A” then dragging data “B” onto it affords a different plot for data “B” than if you plot a graph of data “B” then drag data “A” on top of it. See attached image for an example.      Steps to reproduce t..." />
+<meta name="twitter:description" content="Expected behavior You have two workspaces each containing simple x,y data. If you right-click-&gt;plot one dataset, you can drag the other onto the newly plotted graph. The order in which you do this should only change the colours of the lines not their intensities.   Actual behavior Plotting data “A” then dragging data “B” onto it affords a different plot for data “B” than if you plot a graph of data “B” then drag data “A” on top of it. See attached image for an example.      Steps to reproduce t..." />
+<meta property="og:article:section" content="Bugs" />
+<meta property="og:article:section:color" content="ED207B" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="1 ❤" />
+<meta property="article:published_time" content="2020-02-18T14:55:55+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="648.html">Adding the same lines to axes in a different order affording incorrect plots</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/if-you-want-to-report-a-bug-within-mantid-heres-the-place-to-do-it/12.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #ED207B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Bugs</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Adding the same lines to axes in a different order affording incorrect plots'>
+      <link itemprop='url' href='648.html'>
+      <meta itemprop='datePublished' content='2020-02-18T14:55:55Z'>
+        <meta itemprop='articleSection' content='Bugs'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Hamish_C'><span itemprop='name'>Hamish_C</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="648.html">
+
+                <link itemprop="image" href="../../uploads/default/original/1X/743b97903af56e8e536d6eeac4930355d2a31f65.jpeg">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2020-02-18T14:55:55Z' class='post-time'>
+                    February 18, 2020,  2:55pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-02-18T15:37:15Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <h3>
+<a name="expected-behavior-1" class="anchor" href="648.html#expected-behavior-1"></a>Expected behavior</h3>
+<p>You have two workspaces each containing simple x,y data. If you right-click-&gt;plot one dataset, you can drag the other onto the newly plotted graph. The order in which you do this should only change the colours of the lines not their intensities.</p>
+<h3>
+<a name="actual-behavior-2" class="anchor" href="648.html#actual-behavior-2"></a>Actual behavior</h3>
+<p>Plotting data “A” then dragging data “B” onto it affords a different plot for data “B” than if you plot a graph of data “B” then drag data “A” on top of it. See attached image for an example.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="../../uploads/default/original/1X/743b97903af56e8e536d6eeac4930355d2a31f65.jpeg" data-download-href="https://forum.mantidproject.org/uploads/default/743b97903af56e8e536d6eeac4930355d2a31f65" title="MantidPlot Graph Bug"><img src="../../uploads/default/optimized/1X/743b97903af56e8e536d6eeac4930355d2a31f65_2_690x373.jpeg" alt="MantidPlot Graph Bug" data-base62-sha1="gAf3Q5IuB1FiqDjOcdx5UXTTlWJ" width="690" height="373" srcset="../../uploads/default/optimized/1X/743b97903af56e8e536d6eeac4930355d2a31f65_2_690x373.jpeg, ../../uploads/default/optimized/1X/743b97903af56e8e536d6eeac4930355d2a31f65_2_1035x559.jpeg 1.5x, ../../uploads/default/optimized/1X/743b97903af56e8e536d6eeac4930355d2a31f65_2_1380x746.jpeg 2x" data-small-upload="https://forum.mantidproject.org/uploads/default/optimized/1X/743b97903af56e8e536d6eeac4930355d2a31f65_2_10x10.png"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use xlink:href="#far-image"></use></svg><span class="filename">MantidPlot Graph Bug</span><span class="informations">1922×1039 151 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<h3>
+<a name="steps-to-reproduce-the-behavior-3" class="anchor" href="648.html#steps-to-reproduce-the-behavior-3"></a>Steps to reproduce the behavior</h3>
+<p>So far I have only seen this specifically using experimental TOSCA data as one dataset and an AbINS output spectrum for the other dataset. When I plot the experimental data and then drag the AbINS spectrum on top, the anomalous behaviour occurs. When I plot the AbINS data first, it looks correct, and then plotting the experimental spectrum over that causes the correct behaviour.<br>
+I am happy to provide specific data if necessary. I’m unsure if this kind of behaviour can happen with other types of data.</p>
+<h3>
+<a name="platforms-affected-4" class="anchor" href="648.html#platforms-affected-4"></a>Platforms affected</h3>
+<p>I have tested this on MantidPlot 4.1 revision g4f102e5150a.<br>
+A test on Workbench from the same release did not show the anomalous behaviour - it seems specific to MantidPlot.<br>
+I am using Windows 10.</p>
+<p>EDIT: 2020-02-18<br>
+I just updated to the current Mantid Nightly release (2020-02-11) and was using Workbench to achieve the above and encountered the same problem again.</p>
+<p>Importantly to reproduce it there is an extra step that I missed, above.</p>
+<p>I take a workspace that is an AbINS spectrum from a Gaussian output file - call this workspace “abins”. Plotting this over experimental data leads to the correct and expected result. However, if I create a new workspace “abins_rebinned” by rebinning “abins” with the default TOSCA data reduction bin string (i.e. “-2.5,0.015,3,-0.005,4000”) then I get the anomalously high intensity at higher frequencies as described in the image when I plot this on top of experimental data. Lastly, if I plot the workspace “abins_rebinned” FIRST and then apply the experimental data on top, the spectrum appears correct.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-02-18T15:37:16Z' class='post-time'>
+                    February 18, 2020,  3:37pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-02-18T15:37:16Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Hamish,</p>
+<p>Thank you for so thoroughly testing this! Can you send the data you are using in the above examples to me and maybe even the data you use for running the Abins algorithm. Send them to my email : <a href="mailto:daniel.murphy@stfc.ac.uk">daniel.murphy@stfc.ac.uk</a></p>
+<p>All the Best!<br>
+Mantid Support</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/Hamish_C'><span itemprop='name'>Hamish_C</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-02-18T15:38:07Z' class='post-time'>
+                    February 18, 2020,  3:38pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-02-18T15:38:07Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Daniel,</p>
+<p>No problem. I’ll send you an email.</p>
+<p>Cheers,<br>
+Hamish</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-02-19T15:00:37Z' class='post-time'>
+                    February 19, 2020,  3:00pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-02-19T15:00:37Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’ve raised an issue for this and it will hopefully be looked at fairly soon: <a href="https://github.com/mantidproject/mantid/issues/27970" class="inline-onebox" rel="noopener nofollow ugc">Normalisation of Distribution/Non-distribution data wrong after changing Figure options&gt;Curves · Issue #27970 · mantidproject/mantid · GitHub</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/alicerussell1'><span itemprop='name'>alicerussell1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-02-20T15:29:43Z' class='post-time'>
+                    February 20, 2020,  3:29pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-02-20T15:29:43Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Hamish,</p>
+<p>The fix for this issue has been added so this should be working in the next Nightly build. <a href="https://github.com/mantidproject/mantid/pull/27979" class="inline-onebox" rel="noopener nofollow ugc">Fix normalisation when overplotting onto a plot with errors of distribution data by alicerussell1 · Pull Request #27979 · mantidproject/mantid · GitHub</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Discrepancy Between VSI and SV - General - Mantid Help Forum</title>
+    <meta name="description" content="hi 
+this is difficult to explain but hopefully the screen shots will help. 
+After a rebin the SV shows a representation of the data with normalisation set to ‘no’ which seems reasonable. The VSI cannot replication this v&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="59.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Discrepancy Between VSI and SV&#39;" href="https://forum.mantidproject.org/t/discrepancy-between-vsi-and-sv/59.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/da625877fe6f48aaa75f3cbd53ec3250d9d2fc1f.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/da625877fe6f48aaa75f3cbd53ec3250d9d2fc1f.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/discrepancy-between-vsi-and-sv/59" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/discrepancy-between-vsi-and-sv/59" />
+<meta property="og:title" content="Discrepancy Between VSI and SV" />
+<meta name="twitter:title" content="Discrepancy Between VSI and SV" />
+<meta property="og:description" content="hi  this is difficult to explain but hopefully the screen shots will help.  After a rebin the SV shows a representation of the data with normalisation set to ‘no’ which seems reasonable. The VSI cannot replication this view. Setting the normalisation to #events gives a rather flat featureless representation which is the same in both the SV and the VSI.  In short it seems that one cannot see the pretty spin waves in the VSI anymore. I hope the screen shots help with what i’m trying to say.  cheer..." />
+<meta name="twitter:description" content="hi  this is difficult to explain but hopefully the screen shots will help.  After a rebin the SV shows a representation of the data with normalisation set to ‘no’ which seems reasonable. The VSI cannot replication this view. Setting the normalisation to #events gives a rather flat featureless representation which is the same in both the SV and the VSI.  In short it seems that one cannot see the pretty spin waves in the VSI anymore. I hope the screen shots help with what i’m trying to say.  cheer..." />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="article:published_time" content="2015-09-21T08:03:28+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="59.html">Discrepancy Between VSI and SV</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/6.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Discrepancy Between VSI and SV'>
+      <link itemprop='url' href='59.html'>
+      <meta itemprop='datePublished' content='2015-09-21T08:03:28Z'>
+        <meta itemprop='articleSection' content='General'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/OwenArnold'><span itemprop='name'>OwenArnold</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="59.html">
+
+                <link itemprop="image" href="../../uploads/default/original/1X/da625877fe6f48aaa75f3cbd53ec3250d9d2fc1f.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2015-09-21T08:03:28Z' class='post-time'>
+                    September 21, 2015,  8:03am
+                  </time>
+                  <meta itemprop='dateModified' content='2015-09-22T09:41:42Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>hi<br>
+this is difficult to explain but hopefully the screen shots will help.<br>
+After a rebin the SV shows a representation of the data with normalisation set to ‘no’ which seems reasonable. The VSI cannot replication this view. Setting the normalisation to <span class="hashtag">#events</span> gives a rather flat featureless representation which is the same in both the SV and the VSI.<br>
+In short it seems that one cannot see the pretty spin waves in the VSI anymore. I hope the screen shots help with what i’m trying to say.<br>
+cheers<br>
+jon<br>
+<img src="../../uploads/default/original/1X/da625877fe6f48aaa75f3cbd53ec3250d9d2fc1f.png" width="640" height="283"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/OwenArnold'><span itemprop='name'>OwenArnold</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/17ce6af9cbe024f0ed52d0318eee36735debb1c7.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2015-09-21T08:28:01Z' class='post-time'>
+                    September 21, 2015,  8:28am
+                  </time>
+                  <meta itemprop='dateModified' content='2015-09-21T08:39:44Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="https://forum.mantidproject.org/u/mythicaljon">@mythicalJon</a>. This is a known problem. It’s down to the way that we are trying to predict the correct normalization to use as we load the data in the VSI. It looks like you have <strong><span class="hashtag">#Events</span> normalization</strong> selected for the SliceViewer.</p>
+<p>In the VSI, when you first open the data you can change the normalization <img src="../../uploads/default/original/1X/17ce6af9cbe024f0ed52d0318eee36735debb1c7.png" width="363" height="84"><br>
+If you change it to <strong>Number of Events</strong>, you should get what you want.</p>
+<p>The correct normalization selection is something we are trying to get fixed for the 3.5 release. This issue is being worked on <a href="https://github.com/mantidproject/mantid/issues/12832" rel="noopener nofollow ugc">here</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/AndreiSavici'><span itemprop='name'>AndreiSavici</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2015-09-28T15:24:11Z' class='post-time'>
+                    September 28, 2015,  3:24pm
+                  </time>
+                  <meta itemprop='dateModified' content='2015-09-28T15:24:11Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="https://forum.mantidproject.org/u/mythicaljon">@mythicalJon</a>.<br>
+Here is a quick workflow to figure out your normalization:</p>
+<ol>
+<li>If you have MDNorm… algorithm in your history, you should probably use NoNormalization</li>
+<li>If you have elastic scattering only, NEVER use number of event normalization. Volume normalization is the preferred option. No normalization works on a regular grid, just that the intensity scale will change when you change the bin size.</li>
+<li>For inelastic, if you start with a histogram in energy transfer (that’s the equivalent of how horace/mslice works), use NumberOfEventsNormalization. This will take care of the averaging of S(Q,w). If you don’t have a histogram in energy transfer as your starting point, you need to either use MDNormDirectSC (and see 1), or bin your data before converting to MD, and see the beginning of point 3. Otherwise the data does not make physical sense</li>
+</ol>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

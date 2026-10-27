@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Mslice pyplot problem (dedent_interpd not found) - Mantid Help Forum</title>
+    <meta name="description" content="Hello, 
+When trying to import mslice in a script open in mantidworbench, there is a bug stating that the “module ‘matplotlib._docstring’ has no attribute ‘dedent_interpd’”. The “matplotlib._docstring” command is located &amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="964.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Mslice pyplot problem (dedent_interpd not found)&#39;" href="https://forum.mantidproject.org/t/mslice-pyplot-problem-dedent-interpd-not-found/964.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/mslice-pyplot-problem-dedent-interpd-not-found/964" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/mslice-pyplot-problem-dedent-interpd-not-found/964" />
+<meta property="og:title" content="Mslice pyplot problem (dedent_interpd not found)" />
+<meta name="twitter:title" content="Mslice pyplot problem (dedent_interpd not found)" />
+<meta property="og:description" content="Hello,  When trying to import mslice in a script open in mantidworbench, there is a bug stating that the “module ‘matplotlib._docstring’ has no attribute ‘dedent_interpd’”. The “matplotlib._docstring” command is located in the script “mantidworkbench/lib/python3.10/site-packages/mslice/plotting/pyplot.py” and calls the script “mantidworkbench/lib/python3.10/site-packages/matplotlib/_docstring.py”, which contains the line “dedent_interpd = interpd = _ArtistPropertiesSubstitution()” (last line of ..." />
+<meta name="twitter:description" content="Hello,  When trying to import mslice in a script open in mantidworbench, there is a bug stating that the “module ‘matplotlib._docstring’ has no attribute ‘dedent_interpd’”. The “matplotlib._docstring” command is located in the script “mantidworkbench/lib/python3.10/site-packages/mslice/plotting/pyplot.py” and calls the script “mantidworkbench/lib/python3.10/site-packages/matplotlib/_docstring.py”, which contains the line “dedent_interpd = interpd = _ArtistPropertiesSubstitution()” (last line of ..." />
+<meta property="article:published_time" content="2025-07-08T08:28:32+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="964.html">Mslice pyplot problem (dedent_interpd not found)</a>
+    </h1>
+
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Mslice pyplot problem (dedent_interpd not found)'>
+      <link itemprop='url' href='964.html'>
+      <meta itemprop='datePublished' content='2025-07-08T08:28:32Z'>
+        <meta itemprop='articleSection' content='Uncategorized'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/slafon11'><span itemprop='name'>slafon11</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="964.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-07-08T08:28:32Z' class='post-time'>
+                    July 8, 2025,  8:28am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-08T08:28:32Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello,</p>
+<p>When trying to import mslice in a script open in mantidworbench, there is a bug stating that the “module ‘matplotlib._docstring’ has no attribute ‘dedent_interpd’”. The “matplotlib._docstring” command is located in the script “mantidworkbench/lib/python3.10/site-packages/mslice/plotting/pyplot.py” and calls the script “mantidworkbench/lib/python3.10/site-packages/matplotlib/_docstring.py”, which contains the line “dedent_interpd = interpd = _ArtistPropertiesSubstitution()” (last line of the script). Thus, I don’t know why this error occurs.</p>
+<p>Thank you in advance for you help <img src="../../images/emoji/twitter/slight_smile.png%3Fv=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/sfoxley'><span itemprop='name'>sfoxley</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-08T09:37:42Z' class='post-time'>
+                    July 8, 2025,  9:37am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-08T09:37:42Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi</p>
+<p>Which version of Mantid are you currently using? Also is it a conda install or a standalone package?</p>
+<p>Thanks</p>
+<p>Sarah</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/slafon11'><span itemprop='name'>slafon11</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-08T09:50:10Z' class='post-time'>
+                    July 8, 2025,  9:50am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-08T09:50:10Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi,<br>
+It was the last version, I’ve downloaded it 2 weeks ago so I think it is the 6.13, on Ubuntu. I have used the full installer, not the conda install.<br>
+Thank you!<br>
+Suzanne</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/sfoxley'><span itemprop='name'>sfoxley</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-08T09:56:36Z' class='post-time'>
+                    July 8, 2025,  9:56am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-08T09:56:36Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Suzanne,</p>
+<p>I think it would be v6.12 as v6.13 has only just been released. I also note that it’s using Python 3.10 and we’ve upgraded to Python 3.11 in v6.13.</p>
+<p>I think in the first instance try upgrading your version of Mantid. Try using the conda version as this means you create an environment with the correct versions of each dependency in it. For details on how to do this see <a href="https://www.mantidproject.org/installation/index#conda" class="inline-onebox">Installation — MantidProject landing page documentation</a>.</p>
+<p>Let us know how that works.</p>
+<p>Sarah</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/slafon11'><span itemprop='name'>slafon11</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-10T14:14:09Z' class='post-time'>
+                    July 10, 2025,  2:14pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-10T14:14:09Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I would rather not reinstall mantid using conda since I already have anaconda and not mamba and I am afraid of conflicts between them if I download mamba (and I do not manage to install mantid using anaconda).<br>
+How can I update mantid 6.12 to mantid 6.13 with the full installer ? I have tried to download the full installer of 6.13 but I do not manage to make the mantidworbench command work with this version. I have errors like : “xkbcommon: ERROR: failed to add default include path /jenkins_workdir/workspace/release-next_nightly_deployment/_bundle_build/mantidworkbench/share/X11/xkb”</p>
+<p>Thanks,</p>
+<p>Suzanne</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/thomashampson'><span itemprop='name'>thomashampson</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-10T17:06:04Z' class='post-time'>
+                    July 10, 2025,  5:06pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-10T17:06:04Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Suzanne,</p>
+<p>It looks like your installation of 6.13.0 was done correctly. The error message is something we have just become aware of on some flavours of Linux. We are currently working on a fix and hope to issue a patch release in the coming days.</p>
+<p>Out of interest, what flavour/version of Linux are using?</p>
+<p>Thanks,<br>
+Tom</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/slafon11'><span itemprop='name'>slafon11</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-15T13:48:51Z' class='post-time'>
+                    July 15, 2025,  1:48pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-15T13:48:51Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Tom, I am using Ubuntu 22.04 LTS “Jammy Jellyfish”.<br>
+I hope it helps,<br>
+Thanks,<br>
+Suzanne</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/thomashampson'><span itemprop='name'>thomashampson</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-24T16:05:55Z' class='post-time'>
+                    July 24, 2025,  4:05pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-24T16:05:55Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Suzanne,</p>
+<p>We have now released a patched version (v6.13.1), which resolves the issue you were seeing with launching mantidworkbench on Linux. It can be downloaded from here:</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/mantidproject/mantid/releases/tag/v6.13.1">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/mantidproject/mantid/releases/tag/v6.13.1" target="_blank" rel="noopener">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/344;"><img src="https://opengraph.githubassets.com/c91db30c09b5b08e1974047641f33bd2e291b705b803d8a02c347118d4916b86/mantidproject/mantid/releases/tag/v6.13.1" class="thumbnail" width="690" height="345"></div>
+
+<h3><a href="https://github.com/mantidproject/mantid/releases/tag/v6.13.1" target="_blank" rel="noopener">Release Release v6.13.1 · mantidproject/mantid</a></h3>
+
+  <p>This is a patch release that corrects some significant issues in version 6.13.0.
+The changes are:
+
+MantidWorkbench full installers will now work correctly on all Linux distributions (#39670).
+Muon ...</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>Thanks,<br>
+Tom</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

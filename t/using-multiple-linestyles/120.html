@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Using multiple linestyles - Python - Mantid Help Forum</title>
+    <meta name="description" content="One user asked if it’s possible to plot two lines from python, with different linestyles. 
+
+import numpy as np 
+x=np.arange(11) 
+y1=np.arange(10) 
+y2=np.arange(10)+1 
+w1=CreateWorkspace(x,y1,np.sqrt(y1)) 
+w2=CreateWorksp&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="120.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Using multiple linestyles&#39;" href="https://forum.mantidproject.org/t/using-multiple-linestyles/120.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/using-multiple-linestyles/120" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/using-multiple-linestyles/120" />
+<meta property="og:title" content="Using multiple linestyles" />
+<meta name="twitter:title" content="Using multiple linestyles" />
+<meta property="og:description" content="One user asked if it’s possible to plot two lines from python, with different linestyles.   import numpy as np  x=np.arange(11)  y1=np.arange(10)  y2=np.arange(10)+1  w1=CreateWorkspace(x,y1,np.sqrt(y1))  w2=CreateWorkspace(x,y2,np.sqrt(y2))  l=plot(w1,Layer.Line,linestyle=‘-’)  l=plot(w2,Layer.Line,linestyle=‘–’,hold=‘on’)   If I execute line by line, the first line is continuous, but, when I execute the last line, both lines become dashed.  Thanks.  Andrei" />
+<meta name="twitter:description" content="One user asked if it’s possible to plot two lines from python, with different linestyles.   import numpy as np  x=np.arange(11)  y1=np.arange(10)  y2=np.arange(10)+1  w1=CreateWorkspace(x,y1,np.sqrt(y1))  w2=CreateWorkspace(x,y2,np.sqrt(y2))  l=plot(w1,Layer.Line,linestyle=‘-’)  l=plot(w2,Layer.Line,linestyle=‘–’,hold=‘on’)   If I execute line by line, the first line is continuous, but, when I execute the last line, both lines become dashed.  Thanks.  Andrei" />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="og:article:section" content="Python" />
+<meta property="og:article:section:color" content="9EB83B" />
+<meta property="article:published_time" content="2016-05-18T18:47:04+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="120.html">Using multiple linestyles</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/python/11.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #9EB83B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Python</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Using multiple linestyles'>
+      <link itemprop='url' href='120.html'>
+      <meta itemprop='datePublished' content='2016-05-18T18:47:04Z'>
+        <meta itemprop='articleSection' content='Python'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/AndreiSavici'><span itemprop='name'>AndreiSavici</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="120.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2016-05-18T18:47:04Z' class='post-time'>
+                    May 18, 2016,  6:47pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-05-18T18:47:04Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>One user asked if it’s possible to plot two lines from python, with different linestyles.</p>
+<blockquote>
+<p>import numpy as np<br>
+x=np.arange(11)<br>
+y1=np.arange(10)<br>
+y2=np.arange(10)+1<br>
+w1=CreateWorkspace(x,y1,np.sqrt(y1))<br>
+w2=CreateWorkspace(x,y2,np.sqrt(y2))<br>
+l=plot(w1,Layer.Line,linestyle=‘-’)<br>
+l=plot(w2,Layer.Line,linestyle=‘–’,hold=‘on’)</p>
+</blockquote>
+<p>If I execute line by line, the first line is continuous, but, when I execute the last line, both lines become dashed.</p>
+<p>Thanks.</p>
+<p>Andrei</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/dokira'><span itemprop='name'>dokira</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-05-18T20:28:30Z' class='post-time'>
+                    May 18, 2016,  8:28pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-05-18T20:28:30Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>In my case, it doesn’t even plot with lines. If it helps, I’ve set my default plot 2D style to be scatter and axis to be log scale. Can this default setting interfere linestyles?</p>
+<p>Thanks,</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/FedeMPouzols'><span itemprop='name'>FedeMPouzols</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-05-19T10:32:00Z' class='post-time'>
+                    May 19, 2016, 10:32am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-05-19T10:32:00Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Unfortunately <code>pymantidplot.pyplot</code> doesn’t support controlling the line styles individually. That is one of the many features of mantidplot that are not directly supported.<br>
+It can be done, but it is undocumented, and there is no “matplotlib-like” interface for it. Modifying Andrei’s example, if you want to plot a first line as solid line and then a second line as a dashed-dotted line you can do as follows:</p>
+<pre><code class="lang-auto">import numpy as np
+x=np.arange(11)
+y1=np.arange(10)
+y2=np.arange(10)+1
+w1=CreateWorkspace(x,y1,np.sqrt(y1))
+w2=CreateWorkspace(x,y2,np.sqrt(y2))
+lines1=plot(w1, 0, linestyle='-')
+lines2=plot(w2, 0, hold='on')
+
+line = lines2[0]
+line._graph.activeLayer().setCurveLineStyle(0, pymantidplot.pyplot.__linestyle_to_qt_penstyle['-.'])
+# The '0' passed to setCurveLineStyle() is the index of the line
+# Style alternatives: '-', '--', '-.', ':'
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/FedeMPouzols'><span itemprop='name'>FedeMPouzols</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-05-19T10:35:16Z' class='post-time'>
+                    May 19, 2016, 10:35am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-05-19T10:35:16Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="https://forum.mantidproject.org/u/dokira">@dokira</a>: if you post an example we could take a look at that issue. The default curve style in the Mantid settings should not interfere with the <code>linestyle</code> keyword argument, in principle.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/dokira'><span itemprop='name'>dokira</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-05-19T12:53:15Z' class='post-time'>
+                    May 19, 2016, 12:53pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-05-19T12:53:15Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group quote-modified" data-username="FedeMPouzols" data-post="3" data-topic="120">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="../../user_avatar/forum.mantidproject.org/fedempouzols/48/26_2.png" class="avatar"> FedeMPouzols:</div>
+<blockquote>
+<p>import numpy as np<br>
+x=np.arange(11)<br>
+y1=np.arange(10)<br>
+y2=np.arange(10)+1<br>
+w1=CreateWorkspace(x,y1,np.sqrt(y1))<br>
+w2=CreateWorkspace(x,y2,np.sqrt(y2))<br>
+lines1=plot(w1, 0, linestyle=‘-’)<br>
+lines2=plot(w2, 0, hold=‘on’)</p>
+<p>line = lines2[0]<br>
+line._graph.activeLayer().setCurveLineStyle(0, pymantidplot.pyplot.__linestyle_to_qt_penstyle[‘-.’])</p>
+</blockquote>
+</aside>
+<p>Unfortunately, this example doesn’t work in my mantidplot. I copied and pasted the code and ran in the script interpreter of mantidplot. But still get Marker (default) plots not linestyles.</p>
+<p>Best regards,</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

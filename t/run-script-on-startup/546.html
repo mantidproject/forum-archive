@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Run script on startup? - General - Mantid Help Forum</title>
+    <meta name="description" content="Hello 
+Is it possible to run automatically run a python script on startup that would launch a custom interface? 
+Regards 
+Derek">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="546.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Run script on startup?&#39;" href="https://forum.mantidproject.org/t/run-script-on-startup/546.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/run-script-on-startup/546" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/run-script-on-startup/546" />
+<meta property="og:title" content="Run script on startup?" />
+<meta name="twitter:title" content="Run script on startup?" />
+<meta property="og:description" content="Hello  Is it possible to run automatically run a python script on startup that would launch a custom interface?  Regards  Derek" />
+<meta name="twitter:description" content="Hello  Is it possible to run automatically run a python script on startup that would launch a custom interface?  Regards  Derek" />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="article:published_time" content="2019-07-18T12:44:56+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+        <link rel="next" href="546%3Fpage=2.html">
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="546.html">Run script on startup?</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/6.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Run script on startup?'>
+      <link itemprop='url' href='546.html'>
+      <meta itemprop='datePublished' content='2019-07-18T12:44:56Z'>
+        <meta itemprop='articleSection' content='General'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/dezzed'><span itemprop='name'>dezzed</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="546.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2019-07-18T12:44:56Z' class='post-time'>
+                    July 18, 2019, 12:44pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-07-18T12:44:56Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello</p>
+<p>Is it possible to run automatically run a python script on startup that would launch a custom interface?</p>
+<p>Regards</p>
+<p>Derek</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/NickDraper'><span itemprop='name'>NickDraper</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-07-23T10:22:41Z' class='post-time'>
+                    July 23, 2019, 10:22am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-07-23T10:22:41Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello,</p>
+<p>if you run mantidplot  (and I believe the workbench) with the command line argument -x  it will immediately run the script on startup.</p>
+<p>We’ve not tried it to start up user interfaces ourselves, so that is something you can try out.</p>
+<p>Regards,<br>
+Nick Draper</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/dezzed'><span itemprop='name'>dezzed</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-09-22T10:13:14Z' class='post-time'>
+                    September 22, 2020, 10:13am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-09-22T10:13:14Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>A very late response but…</p>
+<p>I have failed to find an example python script to open a MantidQt::API::UserSubWindow. Can you provide one?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-09-22T15:52:02Z' class='post-time'>
+                    September 22, 2020,  3:52pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-09-22T15:52:02Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi,<br>
+This should be everything you need.<br>
+I have saved a file called <code>show_data_reduction.py</code> to my Desktop with this contents:</p>
+<pre><code>"""Script to combine with mantidworkbench -x to launch a custom interface.
+Note that this currently only supports the C++ interfaces.
+"""
+from mantidqt.interfacemanager import InterfaceManager
+from mantidqt.utils.qt.qappthreadcall import QAppThreadCall
+def show_interface(name):
+    def impl():
+        window = InterfaceManager().createSubWindow(name)
+        window.show()
+        return window
+    window = QAppThreadCall(impl)()
+    return window
+# Example with Indirect Data Reduction. The string name needs to match the string
+# returned by the static name() method on the UserSubWindow
+# This could be customized to look at sys.argv to pull the name from the command line
+show_interface("Data Reduction")
+</code></pre>
+<p>Then from terminal / command prompt, I have run:</p>
+<pre><code>cd Desktop
+path/to/Mantid -x show_data_reduction.py
+</code></pre>
+<p>On different OS:</p>
+<pre><code># Windows
+C:\MantidInstall\bin\MantidWorkbench -x show_data_reduction.py
+
+#Linux
+/opt/Mantid/mantidworkbench -x show_data_reduction.py
+
+#MacOS
+/Applications/MantidWorkbench.app/Contents/MacOS/MantidWorkbench -x show_data_reduction.py
+</code></pre>
+<p>On an older version the executable may be <code>launch_workbench.exe</code> rather than <code>MantidWorkbench</code> and there is also a mantidplot equivalent.</p>
+<p>Tell me if this works!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/dezzed'><span itemprop='name'>dezzed</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-09-22T16:43:58Z' class='post-time'>
+                    September 22, 2020,  4:43pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-09-22T16:43:58Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yep this works a treat. Thanks</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/dezzed'><span itemprop='name'>dezzed</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-09-23T12:19:49Z' class='post-time'>
+                    September 23, 2020, 12:19pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-09-23T12:19:49Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Ok so next question.</p>
+<p>The python script window is left open after running the example script. Is it possible to close/hide the script window?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-09-23T12:43:04Z' class='post-time'>
+                    September 23, 2020, 12:43pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-09-23T12:43:04Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Let me check what you want to close?</p>
+<ul>
+<li>Do you want the launch script to be removed from the script editor?</li>
+<li>Do you want the script editor to be removed?</li>
+<li>Do you want the Main Mantid Workbench window to be hidden/minimised??</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/dezzed'><span itemprop='name'>dezzed</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-09-23T13:18:25Z' class='post-time'>
+                    September 23, 2020,  1:18pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-09-23T13:18:25Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The UserSubWindow is running in our operational control room as an overhead display. I would like to remove all non-essential distractions.</p>
+<p>I would definitely like the script editor to be removed if possible. Minimising the main mantid window would be nice.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="../../uploads/default/original/1X/5066e4bef908cd79e62d3fbac9145fa1a505c3aa.gif">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-09-23T14:13:00Z' class='post-time'>
+                    September 23, 2020,  2:13pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-09-23T14:13:00Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If you close the script editor [clicking the black x] (and probably also the IPython interpreter) and even drag the Workbench window to a smaller size, closing Mantid and reopening will allow Mantid to remember this layout. It can then be reversed in View&gt;Restore Default Layout.</p>
+<p>Does this help??</p>
+<p>P.S. I’m just trying out ScreentoGIF and had a go for this, not sure I’ve quite got the hang of it yet:</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="../../uploads/default/original/1X/5066e4bef908cd79e62d3fbac9145fa1a505c3aa.gif" data-download-href="https://forum.mantidproject.org/uploads/default/5066e4bef908cd79e62d3fbac9145fa1a505c3aa" title="RemoveScriptEditor"><img src="../../uploads/default/original/1X/5066e4bef908cd79e62d3fbac9145fa1a505c3aa.gif" alt="RemoveScriptEditor" data-base62-sha1="btgE3kdziBj7GMgaPX7NXHpfhii" width="690" height="492" class="animated" data-small-upload="https://forum.mantidproject.org/uploads/default/optimized/1X/5066e4bef908cd79e62d3fbac9145fa1a505c3aa_2_10x10.png"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use xlink:href="#far-image"></use></svg><span class="filename">RemoveScriptEditor</span><span class="informations">1253×895 1.01 MB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/dezzed'><span itemprop='name'>dezzed</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-09-24T06:00:48Z' class='post-time'>
+                    September 24, 2020,  6:00am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-09-24T06:00:48Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The script editor and the UserSubWindow are floating. MantidPlot remembers which of the docked windows have been hidden but not the floating windows.</p>
+<p>Starting the UserSubWindow from MantidPlot-&gt;Interfaces-&gt;UserSubWindow results in the window being docked but when I start MantidPlot with your script my UserSubWindow is floating.</p>
+<p>Can these be docked?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/dezzed'><span itemprop='name'>dezzed</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-09-24T06:06:02Z' class='post-time'>
+                    September 24, 2020,  6:06am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-09-24T06:06:02Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Interestingly when the startup script is used the a MantidPlot-&gt;Windows menu does not appear with the option to “Change to floating/docked”</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/dezzed'><span itemprop='name'>dezzed</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-10-08T10:14:32Z' class='post-time'>
+                    October 8, 2020, 10:14am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-10-08T10:14:32Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>When I say interestingly what I perhaps should have said is"How can I dock the UserSubwindow with Mantid?"</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-10-09T10:08:56Z' class='post-time'>
+                    October 9, 2020, 10:08am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-10-09T10:08:56Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Sorry, I forgot you were using MantidPlot. See if using a script like this works?</p>
+<pre><code>"""Script to combine with mantidplot -x to launch a custom interface.
+Note that this currently only supports the C++ interfaces.
+"""
+from mantidqt.interfacemanager import InterfaceManager
+from mantidqt.utils.qt.qappthreadcall import QAppThreadCall
+from qtpy.QtWidgets import QApplication
+def show_interface(name):
+    def impl():
+        window = InterfaceManager().createSubWindow(name)
+        window.show()
+        return window
+    window = QAppThreadCall(impl)()
+    return window
+def hide_script_window_if_in_mantidplot():
+    """If inside MantidPlot we try to find the
+    script window and hide it. This is predicated on finding
+    a top-level widget with MantidPlot: Python Window in the title
+    """
+    def impl():
+        try:
+            import _qti
+        except ImportError:
+            # assume not mantidplot
+            return
+        qapp = QApplication.instance()
+        widgets = qapp.topLevelWidgets()
+        script_window = None
+        for widget in widgets:
+            if 'Python Window' in widget.windowTitle():
+                script_window = widget
+                break
+        if script_window is not None:
+            script_window.hide()
+    #
+    QAppThreadCall(impl)()
+# Example with Indirect Data Reduction. The string name needs to match the string
+# returned by the static name() method on the UserSubWindow
+# This could be customized to look at sys.argv to pull the name from the command line
+show_interface("Data Reduction")
+hide_script_window_if_in_mantidplot()</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/dezzed'><span itemprop='name'>dezzed</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-10-09T10:54:53Z' class='post-time'>
+                    October 9, 2020, 10:54am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-10-09T10:54:53Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks that does the trick. The script window is closed.</p>
+<p>Last question I promise. Can the UserSubWindow be docked with Mantid?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-10-09T15:15:50Z' class='post-time'>
+                    October 9, 2020,  3:15pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-10-09T15:15:50Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Glad that works. Haha it’s great to have questions!</p>
+<p>No as far as I’m aware they can’t be docked.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/dezzed'><span itemprop='name'>dezzed</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-03-05T07:58:15Z' class='post-time'>
+                    March 5, 2021,  7:58am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-03-05T07:58:15Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Actually that wasn’t my last question. I have two more.</p>
+<p>Does mantid need to run to launch the UserSubWindow?</p>
+<p>What I would really like is to relaunch the UserSubWindow if the user closes the window. Can this the scripted?</p>
+<p>Thanks</p>
+<p>Derek</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-03-16T10:56:53Z' class='post-time'>
+                    March 16, 2021, 10:56am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-03-16T10:56:53Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi, Sorry for the slow reply.</p>
+<p>You can launch a custom interface outside MantidWorkbench (or Plot) with mantidpython.</p>
+<p>Here’s an example show_data_reduction.py script:</p>
+<pre><code>"""Script to launch a custom interface with mantidpython
+Note that this currently only supports the C++ interfaces.
+"""
+from mantid.api import FrameworkManager
+from mantidqt.interfacemanager import InterfaceManager
+from qtpy.QtWidgets import QApplication
+# Create Qt QApplication
+qapp = QApplication(['Mantid Interface'])
+# Create Mantid FrameworkManager
+fmgr = FrameworkManager.Instance()
+# Create interface
+# This could be customized to look at sys.argv to pull the name from the command line
+window = InterfaceManager().createSubWindow('Data Reduction')
+window.show()
+# Start the event loop
+qapp.exec_()
+</code></pre>
+<p>I can’t remember what OS you are on, but to launch use one of these:</p>
+<pre><code class="lang-auto"># Windows
+C:\MantidInstall\bin\mantidpython.bat --classic show_data_reduction.py
+
+#Linux
+/opt/Mantid/bin/mantidpython --classic show_data_reduction.py
+
+#MacOS
+/Applications/MantidWorkbench.app/Contents/MacOS/mantidpython --classic show_data_reduction.py
+</code></pre>
+<p>As for restarting on exit. I think this could be scripted, although getting the correct logic might be complex. (A restart method and a proper exit method). This is something you could script, but we don’t have a quick solution to this.</p>
+<p>Tell me if the script above works for you!</p>
+<p>All the Best,<br>
+Daniel</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/dezzed'><span itemprop='name'>dezzed</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-03-17T08:03:37Z' class='post-time'>
+                    March 17, 2021,  8:03am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-03-17T08:03:37Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks for this.</p>
+<p>An infinite loop in a bash script will do for a respawn script.</p>
+<blockquote>
+<p>!/bin/bash<br>
+while :<br>
+mantidpython --classic show_data_reduction.py</p>
+</blockquote>
+<p>Your example works perfectly. Unfortunately when I modify the show_data_reduction.py to use my UserSubWindow I get a core dump. I include the backtrace on the off chance that a clue is provided where the problem lies.</p>
+<p>I guess a hint is the unhandled exception</p>
+<p>Backtrace:-<br>
+Gtk-Message: 07:47:46.010: Failed to load module “canberra-gtk-module”<br>
+FrameworkManager-[Notice] Welcome to Mantid 5.0.0<br>
+FrameworkManager-[Notice] Please cite: <a href="http://dx.doi.org/10.1016/j.nima.2014.07.029" class="inline-onebox" rel="noopener nofollow ugc">Redirecting</a> and this release: <a href="http://dx.doi.org/10.5286/Software/Mantid5.0" class="inline-onebox" rel="noopener nofollow ugc">Mantid 5.0.0 Release Notes</a><br>
+DllOpen-[Error] Could not open library /home/codac-dev/work/mantid/build/bin/libMantidCurveFitting.so: /home/codac-dev/work/mantid/build/bin/libMantidCurveFitting.so: undefined symbol: _ZN6Mantid6Kernel13FileValidatorC1ERKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS8_EEbb<br>
+DllOpen-[Error] Could not open library /home/codac-dev/work/mantid/build/bin/libMantidDataHandling.so: /home/codac-dev/work/mantid/build/bin/libMantidDataHandling.so: undefined symbol: _ZN6Mantid8Geometry24SampleEnvironmentFactoryC1ESt10unique_ptrINS0_28ISampleEnvironmentSpecFinderESt14default_deleteIS3_EE</p>
+<blockquote>
+<p>********* UNHANDLED EXCEPTION *********<br>
+what(): CompositeBraggScatterer is already registered.</p>
+</blockquote>
+<p>Backtrace:<br>
+/opt/Mantid/lib/mantid/api/…/…/…/lib/libMantidAPI.so(+0x1a0a29) [0x7f4548a0ea29]<br>
+/opt/Mantid/lib/mantid/api/…/…/…/lib/libMantidAPI.so(+0x1a0bfa) [0x7f4548a0ebfa]<br>
+/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x92ae6) [0x7f45593fcae6]<br>
+/usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x91b49) [0x7f45593fbb49]<br>
+/usr/lib/x86_64-linux-gnu/libstdc++.so.6(__gxx_personality_v0+0x2a8) [0x7f45593fc4b8]<br>
+/lib/x86_64-linux-gnu/libgcc_s.so.1(+0x10573) [0x7f4559162573]<br>
+/lib/x86_64-linux-gnu/libgcc_s.so.1(_Unwind_Resume+0x125) [0x7f4559162df5]<br>
+/opt/Mantid/lib/mantid/api/…/…/…/lib/libMantidGeometry.so(_ZN6Mantid8Geometry25BraggScattererFactoryImpl18subscribeScattererINS0_23CompositeBraggScattererEEEvv+0x452) [0x7f454843ee42]<br>
+/lib64/ld-linux-x86-64.so.2(+0x10783) [0x7f455ab52783]<br>
+/lib64/ld-linux-x86-64.so.2(+0x1524f) [0x7f455ab5724f]<br>
+/lib/x86_64-linux-gnu/libc.so.6(_dl_catch_exception+0x6f) [0x7f455a66d51f]<br>
+/lib64/ld-linux-x86-64.so.2(+0x1481a) [0x7f455ab5681a]<br>
+/lib/x86_64-linux-gnu/libdl.so.2(+0xf96) [0x7f455a0e3f96]<br>
+/lib/x86_64-linux-gnu/libc.so.6(_dl_catch_exception+0x6f) [0x7f455a66d51f]<br>
+/lib/x86_64-linux-gnu/libc.so.6(_dl_catch_error+0x2f) [0x7f455a66d5af]<br>
+/lib/x86_64-linux-gnu/libdl.so.2(+0x1745) [0x7f455a0e4745]<br>
+/lib/x86_64-linux-gnu/libdl.so.2(dlopen+0x71) [0x7f455a0e4051]<br>
+/opt/Mantid/lib/mantid/kernel/…/…/…/lib/libMantidKernel.so(_ZN6Mantid6Kernel7DllOpen7openDllERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE+0x2a) [0x7f4553432cda]<br>
+/opt/Mantid/lib/mantid/kernel/…/…/…/lib/libMantidKernel.so(_ZN6Mantid6Kernel14LibraryWrapper11openLibraryERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE+0x1c) [0x7f4553468adc]<br>
+/opt/Mantid/lib/mantid/kernel/…/…/…/lib/libMantidKernel.so(_ZN6Mantid6Kernel18LibraryManagerImpl11openLibraryERKN4Poco4FileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE+0x4a) [0x7f4553467a4a]<br>
+/opt/Mantid/lib/mantid/kernel/…/…/…/lib/libMantidKernel.so(_ZN6Mantid6Kernel18LibraryManagerImpl13openLibrariesERKN4Poco4FileENS1_13LoadLibrariesERKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaISD_EE+0x3c7) [0x7f4553467fa7]<br>
+/opt/Mantid/lib/mantid/kernel/…/…/…/lib/libMantidKernel.so(_ZN6Mantid6Kernel18LibraryManagerImpl13openLibrariesERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS1_13LoadLibrariesERKSt6vectorIS7_SaIS7_EE+0x138) [0x7f45534681c8]<br>
+/opt/Mantid/lib/mantid/api/…/…/…/lib/libMantidAPI.so(<em>ZN6Mantid3API20FrameworkManagerImpl19loadPluginsUsingKeyERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9</em>+0x3b8) [0x7f4548a11388]<br>
+/opt/Mantid/lib/mantid/api/…/…/…/lib/libMantidAPI.so(_ZN6Mantid3API20FrameworkManagerImpl11loadPluginsEv+0xce) [0x7f4548a118ae]<br>
+/opt/Mantid/lib/mantid/api/…/…/…/lib/libMantidAPI.so(_ZN6Mantid3API20FrameworkManagerImplC1Ev+0x99) [0x7f4548a119c9]<br>
+/opt/Mantid/lib/mantid/api/…/…/…/lib/libMantidAPI.so(_ZN6Mantid6Kernel15SingletonHolderINS_3API20FrameworkManagerImplEE8InstanceEv+0x71) [0x7f4548a06491]<br>
+/opt/Mantid/lib/mantid/api/_api.so(+0x10d76a) [0x7f4548eb876a]<br>
+/opt/Mantid/lib/mantid/api/_api.so(+0x10f6a7) [0x7f4548eba6a7]<br>
+/usr/lib/x86_64-linux-gnu/libboost_python3-py36.so.1.65.1(<em>ZNK5boost6python7objects8function4callEP7_objectS4</em>+0x285) [0x7f4552ff9855]<br>
+/usr/lib/x86_64-linux-gnu/libboost_python3-py36.so.1.65.1(+0x21a18) [0x7f4552ff9a18]<br>
+/usr/lib/x86_64-linux-gnu/libboost_python3-py36.so.1.65.1(_ZNK5boost6python6detail17exception_handlerclERKNS_9function0IvEE+0x6b) [0x7f45530005db]<br>
+/opt/Mantid/lib/mantid/api/_api.so(+0xd43c3) [0x7f4548e7f3c3]</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/DanielMurphy22'><span itemprop='name'>DanielMurphy22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-03-18T14:06:55Z' class='post-time'>
+                    March 18, 2021,  2:06pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-03-18T14:06:55Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Do you have both a built version(/home/codac-dev/work/mantid/build/bin) and a released package(opt/Mantid/lib…) of Mantid on your computer? We’ve had problems on Ubuntu with them conflicting with eachother, and this looks very like the same problem. If you don’t need the release package version, then please uninstall it.</p>
+<p>Otherwise, try setting the python path to the bin directory of your build.<br>
+<code>export PYTHONPATH="/home/codac-dev/work/mantid/build/bin/:$PYTHONPATH"</code></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/dezzed'><span itemprop='name'>dezzed</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-03-22T09:16:42Z' class='post-time'>
+                    March 22, 2021,  9:16am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-03-22T09:16:42Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I did indeed have a built version and a released package of Mantid. Following your instructions I still get a core dump but the problem now lies in my own code. I shall investigate.</p>
+<p>Thanks for the help.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+      <div role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+            <span itemprop='name'><b><a rel="next" itemprop="url" href="546%3Fpage=2.html">next page →</a></b></span>
+      </div>
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

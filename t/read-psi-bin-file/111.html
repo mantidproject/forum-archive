@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Read PSI bin file - Miscellaneous - Mantid Help Forum</title>
+    <meta name="description" content="Dear All, 
+I’m unable to open PSI bin files with the Muon Analysis interface. 
+What is the correct procedure load this data file format? 
+Thanks, 
+Pietro">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="111.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Read PSI bin file&#39;" href="https://forum.mantidproject.org/t/read-psi-bin-file/111.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/read-psi-bin-file/111" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/read-psi-bin-file/111" />
+<meta property="og:title" content="Read PSI bin file" />
+<meta name="twitter:title" content="Read PSI bin file" />
+<meta property="og:description" content="Dear All,  I’m unable to open PSI bin files with the Muon Analysis interface.  What is the correct procedure load this data file format?  Thanks,  Pietro" />
+<meta name="twitter:description" content="Dear All,  I’m unable to open PSI bin files with the Muon Analysis interface.  What is the correct procedure load this data file format?  Thanks,  Pietro" />
+<meta property="og:article:section" content="Miscellaneous" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="article:published_time" content="2016-04-21T07:51:49+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="111.html">Read PSI bin file</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/miscellaneous/9.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Miscellaneous</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Read PSI bin file'>
+      <link itemprop='url' href='111.html'>
+      <meta itemprop='datePublished' content='2016-04-21T07:51:49Z'>
+        <meta itemprop='articleSection' content='Miscellaneous'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/pietro.bonfa'><span itemprop='name'>pietro.bonfa</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="111.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2016-04-21T07:51:49Z' class='post-time'>
+                    April 21, 2016,  7:51am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-04-21T07:51:49Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Dear All,</p>
+<p>I’m unable to open PSI bin files with the Muon Analysis interface.<br>
+What is the correct procedure load this data file format?</p>
+<p>Thanks,<br>
+Pietro</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/tom-perkins'><span itemprop='name'>tom-perkins</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-04-21T13:30:40Z' class='post-time'>
+                    April 21, 2016,  1:30pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-04-21T13:30:40Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Pietro,</p>
+<p>Unfortunately, the muon interface doesn’t currently support loading bin files.<br>
+It can load muon NeXus files (from PSI or ISIS). Are you able to convert your data into this format?</p>
+<p>Tom</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/pietro.bonfa'><span itemprop='name'>pietro.bonfa</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-04-21T13:55:47Z' class='post-time'>
+                    April 21, 2016,  1:55pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-04-21T13:55:47Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Dear Tom,</p>
+<p>I don’t have any means of converting my bin files to the NeXus format.</p>
+<p>I do have some experience with this code</p>
+<p><a href="http://lmu.web.psi.ch/docu/manuals/bulk_manuals/software/Class_MuSR_PSI/index.html" class="onebox" target="_blank" rel="noopener nofollow ugc">http://lmu.web.psi.ch/docu/manuals/bulk_manuals/software/Class_MuSR_PSI/index.html</a></p>
+<p>but writing a converter would take some time.</p>
+<p>Should I file a bug on github? (this was closed: <a href="https://github.com/mantidproject/mantid/issues/6523" class="inline-onebox" rel="noopener nofollow ugc">Create a PSI muon file reader · Issue #6523 · mantidproject/mantid · GitHub</a> )</p>
+<p>Pietro</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/tom-perkins'><span itemprop='name'>tom-perkins</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-04-21T15:07:56Z' class='post-time'>
+                    April 21, 2016,  3:07pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-04-21T15:31:34Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Dear Pietro,</p>
+<p>Thanks - after looking into the history of this, it seems the original issue was closed when Mantid gained the ability to load v2 muon Nexus files. I’ve reopened the issue and will keep you updated with progress.</p>
+<p>However, PSI have an application “any2many” that has been used in the past to convert bin files to Nexus - I wonder if this would help at all in this case?</p>
+<p>Tom</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/pietro.bonfa'><span itemprop='name'>pietro.bonfa</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-04-22T08:46:28Z' class='post-time'>
+                    April 22, 2016,  8:46am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-04-22T08:46:28Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Dear Tom,</p>
+<p>I installed PSI’s musrfit which includes any2many (took one night to compile ROOT5 but that’s ok) and I was finally able to convert the PSI bin files to the Nexus 2 HDF5 format.</p>
+<p>These files can be loaded in MantidPlot but they do crash the Muon Interface so they are quite useless.</p>
+<p>I uploaded a couple of converted files here:</p>
+<p><a href="http://www.fis.unipr.it/home/pietro.bonfa/nexus1830.nxs" class="onebox" target="_blank" rel="noopener nofollow ugc">http://www.fis.unipr.it/home/pietro.bonfa/nexus1830.nxs</a><br>
+<a href="http://www.fis.unipr.it/home/pietro.bonfa/nexus1831.nxs" class="onebox" target="_blank" rel="noopener nofollow ugc">http://www.fis.unipr.it/home/pietro.bonfa/nexus1831.nxs</a></p>
+<p>Can you please confirm the issue I’m reporting? If yes I’ll file a bug.</p>
+<p>Thanks,<br>
+Pietro</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/tom-perkins'><span itemprop='name'>tom-perkins</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-04-22T09:10:15Z' class='post-time'>
+                    April 22, 2016,  9:10am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-04-22T09:10:15Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Dear Pietro,</p>
+<p>Thanks very much for this. I’m able to load your Nexus files into the muon interface ok here (using Mantid 3.6) - at which point do you see the crash, when trying to load or afterwards? Is there an error message or does it just freeze up? Which version of Mantid are you using? Also, do you have your facility set to SmuS? (Help &gt; First time setup &gt; default facility)</p>
+<p>Thanks,<br>
+Tom</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/pietro.bonfa'><span itemprop='name'>pietro.bonfa</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-04-22T09:19:43Z' class='post-time'>
+                    April 22, 2016,  9:19am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-04-22T09:19:43Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Dear Tom,</p>
+<p>MantiPlot crashes just after I load the files in the Muon Interface (just after the window opened by the Browse button is closed)</p>
+<p>Here’s how to reproduce the bug:</p>
+<ol>
+<li>start MantidPlot</li>
+<li>Set SmuS and GPS</li>
+<li>Interfaces → Muons → Muon analysis</li>
+<li>Click Browse, select one file, press ok</li>
+</ol>
+<p>Segmentation fault (I can give you the backtrace but it does not look very usefull)</p>
+<p>Compiled git version from the brach which include GSL2 patch (cannot downgrade GSL, other packages need the new version). For this reason I’m asking to verify the bug before posting it on github.</p>
+<p>Thanks for you support,<br>
+Pietro</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/tom-perkins'><span itemprop='name'>tom-perkins</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-04-22T10:18:50Z' class='post-time'>
+                    April 22, 2016, 10:18am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-04-22T10:18:50Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Dear Pietro,</p>
+<p>Thanks for the extra information.</p>
+<p>It sounds as though the bug may be related to using GSL2, which is not yet fully supported in Mantid - though the next release (3.7) will support it. I suspect the crash occurs in the processing just after the file is loaded in the muon interface (probably removing the exponential decay, as a fit is involved here).</p>
+<p>I’m going to try and reproduce the bug on a system with GSL2 installed, then we can raise it as a bug with the GSL2 patch.</p>
+<p>Thanks<br>
+Tom</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/tom-perkins'><span itemprop='name'>tom-perkins</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-04-22T11:07:35Z' class='post-time'>
+                    April 22, 2016, 11:07am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-04-22T11:07:35Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Pietro,</p>
+<p>Just to update, I think the bug is specific to the GSL2 branch - I don’t see the crash on master or other branches.</p>
+<p>Tom</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/tom-perkins'><span itemprop='name'>tom-perkins</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-04-25T15:03:04Z' class='post-time'>
+                    April 25, 2016,  3:03pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-04-25T15:03:04Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Further update:<br>
+I have replicated the bug on a system with GSL2 and added an issue. We’ll fix this as part of the work adding GSL2 support to Mantid, which will be in the next release (3.7).</p>
+<p>Thanks</p>
+<p>Tom</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/pietro.bonfa'><span itemprop='name'>pietro.bonfa</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-04-27T08:40:42Z' class='post-time'>
+                    April 27, 2016,  8:40am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-04-27T08:40:42Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks for these updates. I’ll stay tuned on the repo and I’ll retry as soon as new commits for the GSL2 package are pushed.</p>
+<p>Bests,<br>
+Pietro</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/tom-perkins'><span itemprop='name'>tom-perkins</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-05-18T12:09:48Z' class='post-time'>
+                    May 18, 2016, 12:09pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-05-18T12:09:48Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Pietro,<br>
+We recently fixed a bug loading data in the muon interface and I can now load your files using the current master branch built on Ubuntu 16.04 (which uses GSL2). Hopefully this should fix the problem you were seeing.<br>
+Thanks<br>
+Tom</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

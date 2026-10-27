@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Chi squared for different fit minimisers - General - Mantid Help Forum</title>
+    <meta name="description" content="Question from @jameslord: 
+I’m looking at the “Cost Function” returned by fits. 
+I’d expect to see (weighted) chi-squared per degree of freedom. This should be close to 1.0 for a successful fit where the error bars on th&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="126.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Chi squared for different fit minimisers&#39;" href="https://forum.mantidproject.org/t/chi-squared-for-different-fit-minimisers/126.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/chi-squared-for-different-fit-minimisers/126" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/chi-squared-for-different-fit-minimisers/126" />
+<meta property="og:title" content="Chi squared for different fit minimisers" />
+<meta name="twitter:title" content="Chi squared for different fit minimisers" />
+<meta property="og:description" content="Question from @jameslord:  I’m looking at the “Cost Function” returned by fits.  I’d expect to see (weighted) chi-squared per degree of freedom. This should be close to 1.0 for a successful fit where the error bars on the input data are an accurate representation of the scatter in the points and the fit function can represent the ideal curve well. I do get this with the Levenberg-Marquardt minimiser and also from CalculateChiSquared(). All the other minimisers (including Levenberg-MarquardtMD) g..." />
+<meta name="twitter:description" content="Question from @jameslord:  I’m looking at the “Cost Function” returned by fits.  I’d expect to see (weighted) chi-squared per degree of freedom. This should be close to 1.0 for a successful fit where the error bars on the input data are an accurate representation of the scatter in the points and the fit function can represent the ideal curve well. I do get this with the Levenberg-Marquardt minimiser and also from CalculateChiSquared(). All the other minimisers (including Levenberg-MarquardtMD) g..." />
+<meta property="og:article:section" content="General" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="article:published_time" content="2016-06-14T14:00:06+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="126.html">Chi squared for different fit minimisers</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/general/6.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>General</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Chi squared for different fit minimisers'>
+      <link itemprop='url' href='126.html'>
+      <meta itemprop='datePublished' content='2016-06-14T14:00:05Z'>
+        <meta itemprop='articleSection' content='General'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/tom-perkins'><span itemprop='name'>tom-perkins</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="126.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2016-06-14T14:00:06Z' class='post-time'>
+                    June 14, 2016,  2:00pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-06-14T14:00:06Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Question from <a class="mention" href="https://forum.mantidproject.org/u/jameslord">@jameslord</a>:</p>
+<p>I’m looking at the “Cost Function” returned by fits.</p>
+<p>I’d expect to see (weighted) chi-squared per degree of freedom. This should be close to 1.0 for a successful fit where the error bars on the input data are an accurate representation of the scatter in the points and the fit function can represent the ideal curve well. I do get this with the Levenberg-Marquardt minimiser and also from CalculateChiSquared(). All the other minimisers (including Levenberg-MarquardtMD) generally return a value which is half of this, though the fitted parameters are the same and CalculateChiSquared still gives 1.0 from the same function and final parameters.</p>
+<p>I’ve observed this both with Fit() from a Python script (see attached) and using the Muon Interface.</p>
+<p>The script actually tries different numbers of maximum iterations and returns the status and parameters so far. Sometimes Fit returns something like “Failed to converge after 10 iterations”. Shouldn’t this also appear as a warning (orange) in the Results Log window, between the usual “Fit started” and “Fit successful, duration 1.0 seconds”?</p>
+<p>Some minimisers (the Conjugate Gradient ones for example), given plenty more iterations than necessary to work with, stop with “iteration is not making progress towards solution” rather than “success”. The parameter values and cost function look good anyway. Conversely sometimes Simplex returns “success” but its parameters aren’t quite as good as the others.</p>
+<p>I note there’s now a page:<br>
+<a href="http://docs.mantidproject.org/nightly/concepts/FittingMinimizers.html" class="onebox" target="_blank" rel="noopener nofollow ugc">http://docs.mantidproject.org/nightly/concepts/FittingMinimizers.html</a></p>
+<p>Should this list the convergence parameters (e.g. MaxError) that some minimisers take and under what conditions I might want to change them from the defaults?</p>
+<p>It also says that some minimisers such as Levenberg-Marquardt and BFGS use the second derivatives of the function. Should there therefore be a way for a fit function to return these higher derivatives, where they’re straightforward to derive analytically, as it can for the first order ones?</p>
+<p>Minor problem while writing that script: it seems that EvaluateFunction requires that the OutputWorkspace property is set, even when I’m assigning its return value (that workspace reference) to a Python variable for use as input to other algorithms later and don’t care whether it goes in the ADS or not. This is unlike most other algorithms.</p>
+<p><a class="attachment" href="../../uploads/default/original/1X/2d5227bbad078031c5f9490249d422fe6d9fa0dc.py">FitConvergenceComparison.py</a> (2.6 KB)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-06-22T12:58:37Z' class='post-time'>
+                    June 22, 2016, 12:58pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-06-22T12:58:37Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Another minimiser comment:</p>
+<p>If I have a parameter with a large value and a relatively small error bar, or meaningful range, such as the line centre position on a spectrum, things can go wrong with the fit if it falls back to numerical derivatives. See the script here:<br>
+<a class="attachment" href="../../uploads/default/original/1X/0b9abd1f0925dd478792db0d1dcae55402908ea5.py">DynamicRangeOfFits.py</a> (1.5 KB)</p>
+<p>I think Mantid’s default numerical derivative varies the parameter by 0.1%. If this shifts a sharp line by an amount comparable to its width, the derivatives will be meaningless!</p>
+<p>I’ve modified some of my code to have a hard coded offset on some sensitive parameters so they are in the range (-1,1) and all seems to be working much better now! But there should be a warning in the documentation - and also perhaps at the conclusion of Fit() if it finds that its step size for derivatives is not small compared to the error bar on that parameter. Or should I be able to hint at an appropriate step size for each parameter, based on knowledge of the function?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-06-22T13:43:30Z' class='post-time'>
+                    June 22, 2016,  1:43pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-06-22T13:43:30Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>A further comment: giving a parameter an initial guess of zero, even if that’s quite close to the expected value, upsets the numerical derivative and the minimiser exits with “Singular matrix”.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-06-24T09:58:39Z' class='post-time'>
+                    June 24, 2016,  9:58am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-06-24T09:58:39Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Just wondering - In the comparison of fit minimiser performance, were these tests done using analytical derivatives (specially coded C++ or Python fit function) or numerical derivatives (name=UserFunction, formula=…)? Would it be worth running both variants?</p>
+<p>And shouldn’t the Accuracy ranking be relative to the certified values provided by NIST rather than the best that any of the currently implemented Mantid minimisers can do? (I’d expect that some do a good job and it doesn’t make a difference but it would be good to be certain)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/FedeMPouzols'><span itemprop='name'>FedeMPouzols</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-06-24T11:21:15Z' class='post-time'>
+                    June 24, 2016, 11:21am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-06-24T11:21:15Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes, the comparison of minimizers was done using <code>UserFunction</code> in all cases (no tailored fit function defintiions). We should clarify that detail in the text.</p>
+<p>We defined the ranking as relative to the best solution available in Mantid for simplicity and readability. As it stands now it is a comparison in relative terms, but not an evaluation of how good the minimizers are. In the future we should add further details on how close the best Mantid minimiser is to the best/certified solution.</p>
+<p>In our experience, and also according to the experts from the numerical group of the SCD we are collaborating with, the NIST certified values are extremely good. For some problems we have not been able to get close to those certified best solutions. We’d suspect that they were obtained by generating more starting points, as it seems really challenging to obtain such good ressults starting from any of the two official starting points.</p>
+<p>Thank you for your coments, James. Please, don’t hesitate to give us any further feedback. This was just a first version and we are planning to extend it for the next releases. Our aim to include more specific neutron &amp; muon datasets and fitting problems, besides new minimiizers that are being developed.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/MichaelWedel'><span itemprop='name'>MichaelWedel</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-06-30T14:03:55Z' class='post-time'>
+                    June 30, 2016,  2:03pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-06-30T14:16:55Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>With regards to derivatives, may it be worthwhile looking into automatic differentiation again? A while ago I looked into that (a library called <a href="http://www.met.reading.ac.uk/clouds/adept/">adept</a> for completely different reasons but never completed the work properly. There’s a design document:</p>
+<aside class="onebox githubblob">
+  <header class="source">
+      <a href="https://github.com/mantidproject/documents/blob/master/Design/IntegratingAdept.md" target="_blank" rel="noopener">github.com</a>
+  </header>
+  <article class="onebox-body">
+    <h4><a href="https://github.com/mantidproject/documents/blob/master/Design/IntegratingAdept.md" target="_blank" rel="noopener">mantidproject/documents/blob/master/Design/IntegratingAdept.md</a></h4>
+<pre><code class="lang-md">Integrating adept into Mantid
+=============================
+
+As described in a previously uploaded [document](https://github.com/mantidproject/documents/blob/master/Design/Autodiff.md), [adept](http://www.met.rdg.ac.uk/clouds/adept/) is a library for automatic differentiation, which can be an alternative to numeric derivatives in some cases. Ticket [#9782](http://trac.mantidproject.org/mantid/ticket/9782) was created for the integration of adept into Mantid. This document summarizes the results from this ticket and contains suggestions and questions related to finalization of the integration process.
+
+1. Cross platform compatibility
+-------------------------------
+adept is distributed as source code, but the most recent version (1.0 as of November 2014) only works on Linux, furthermore the build script only generates a static library. The first goals were to find out whether it's possible to compile adept as a shared library and also on all platforms that Mantid supports. It turns out that both tasks are possible, but with some modifications to the library. Since we only need the library itself and none of the other things the original source archive contains, a fork was created and uploaded to [github](https://github.com/MichaelWedel/adept-fork).
+
+In this fork, the following things were changed:
+
+  - Build system was changed from a single Makefile to a CMake-based solution
+  - Instead of a static library, a shared library is built
+  - define-directives for a usable DLL were added/changed
+  - A CMake find module for adept was added
+  - Packaging scripts for deb and rpm packages were added
+  
+The shared library builds under Linux, Windows and Mac OS X.
+
+2. Performance
+</code></pre>
+
+  This file has been truncated. <a href="https://github.com/mantidproject/documents/blob/master/Design/IntegratingAdept.md" target="_blank" rel="noopener">show original</a>
+
+  </article>
+  <div class="onebox-metadata">
+    
+    
+  </div>
+  <div style="clear: both"></div>
+</aside>
+
+<p>This was done using version 1.0, now there’s a version 1.1 which apparently had some major changes, so I don’t know if the performance was impacted by that.</p>
+<p>The advantage of using automatic differentiation is that you get the same values as for analytical derivatives down to machine precision, but you don’t need to write the derivatives. In many cases it’s much faster than numerical derivatives as well. The disadvantage is that you need to use a special data type (not plain <code>double</code>) that records the operations on the variables and function evaluation can get a bit slower (usually not massively).</p>
+<p>Let me know if this would still be of interest.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/jameslord'><span itemprop='name'>jameslord</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-06-30T14:48:16Z' class='post-time'>
+                    June 30, 2016,  2:48pm
+                  </time>
+                  <meta itemprop='dateModified' content='2016-06-30T14:48:16Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>That Adept library sounds interesting and may have applications elsewhere but will it work for me? In my fit functions the parameters are used to initialise some elements of NumPY matrices which are then multiplied, inverted, diagonalised, etc and the final fit curve usually evaluated as a series of sine/cosine terms.</p>
+<p>I could write my own derivatives to do numerical differences internally with a carefully chosen step size and then fill in the Jacobian inside functionDeriv1D() as if I had defined analytical derivatives. That assumes of course that the minimiser uses them in the case of composite functions or multi data set fitting. As the calculations are to double precision there is probably quite a large dynamic range between the step size being too large (function non-linearity) and too small (precision/rounding) and it’s not too hard to write a “test” function to plot the errors in the derivatives versus the step.</p>
+<p>As an aside, function1D returns the whole fit curve in one go as a numpy array while functionDeriv1D needs Npts * Nparams calls to jacobian.set(). In most simple functions the analytical derivative with respect to a parameter is best calculated as a numpy array and could be returned all in one go if there was an interface for it.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Mantid Algorithms being removed in v6.13 - News - Mantid Help Forum</title>
+    <meta name="description" content="Now that v6.12 of Mantid has been released we are focusing on what we want to achieve for v6.13 before the code freeze for that in May. This includes removing algorithms that have been deprecated for some time. 
+In v6.13&amp;hellip;">
+    <meta name="generator" content="Discourse 3.4.7 - https://github.com/discourse/discourse version d2137efca79b8d2015d202a8a550e62ee30c6c06">
+<link rel="icon" type="image/png" href="../../uploads/default/optimized/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="../../uploads/default/optimized/1X/9cbb8e9d5ecd0c8ec8f48ded2f11025970ab194b_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="940.html" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="Mantid Help Forum Search">
+
+    <link href="../../stylesheets/color_definitions_base__2_ce9d70e104dd2c731bf403ab64254897829cd316.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" class="light-scheme"/>
+
+  <link href="../../stylesheets/desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+  <link href="../../stylesheets/checklist_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="checklist"  />
+  <link href="../../stylesheets/discourse-details_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-details"  />
+  <link href="../../stylesheets/discourse-lazy-videos_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+  <link href="../../stylesheets/discourse-local-dates_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+  <link href="../../stylesheets/discourse-narrative-bot_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+  <link href="../../stylesheets/discourse-presence_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="discourse-presence"  />
+  <link href="../../stylesheets/docker_manager_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="docker_manager"  />
+  <link href="../../stylesheets/footnote_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="footnote"  />
+  <link href="../../stylesheets/poll_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll"  />
+  <link href="../../stylesheets/spoiler-alert_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+  <link href="../../stylesheets/poll_desktop_be4b6866a9bd438286303c34875379279060a8e9.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="../../stylesheets/desktop_theme_2_c4e52999ed8bb2821953994838a8ab458626631a.css%3F__ws=forum.mantidproject.org.css" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="2" data-theme-name="mantid.css"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Mantid Algorithms being removed in v6.13&#39;" href="https://forum.mantidproject.org/t/mantid-algorithms-being-removed-in-v6-13/940.rss" />
+    <meta property="og:site_name" content="Mantid Help Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:image" content="https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png" />
+<meta property="og:url" content="https://forum.mantidproject.org/t/mantid-algorithms-being-removed-in-v6-13/940" />
+<meta name="twitter:url" content="https://forum.mantidproject.org/t/mantid-algorithms-being-removed-in-v6-13/940" />
+<meta property="og:title" content="Mantid Algorithms being removed in v6.13" />
+<meta name="twitter:title" content="Mantid Algorithms being removed in v6.13" />
+<meta property="og:description" content="Now that v6.12 of Mantid has been released we are focusing on what we want to achieve for v6.13 before the code freeze for that in May. This includes removing algorithms that have been deprecated for some time.  In v6.13 we have already removed (and therefore is already not available in the current nightly): -  AlignDetectors (please use a combination of ApplyDiffCal and ConvertUnits instead)  We will also be removing: -  CentroidPeaksMD v1 (replaced by CentroidPeaksMD v2)  LoadNexusMonitors v1 ..." />
+<meta name="twitter:description" content="Now that v6.12 of Mantid has been released we are focusing on what we want to achieve for v6.13 before the code freeze for that in May. This includes removing algorithms that have been deprecated for some time.  In v6.13 we have already removed (and therefore is already not available in the current nightly): -  AlignDetectors (please use a combination of ApplyDiffCal and ConvertUnits instead)  We will also be removing: -  CentroidPeaksMD v1 (replaced by CentroidPeaksMD v2)  LoadNexusMonitors v1 ..." />
+<meta property="og:article:section" content="News" />
+<meta property="og:article:section:color" content="0E76BD" />
+<meta property="article:published_time" content="2025-03-05T14:35:49+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    
+  </head>
+  <body class="crawler "><div style="background:#fff3cd;padding:8px;text-align:center">Read-only archive. Ask new questions on <a href="https://github.com/mantidproject/mantid/discussions">GitHub Discussions</a>.</div>
+    
+    <header>
+  <a href="../../index.html">
+    Mantid Help Forum
+  </a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="940.html">Mantid Algorithms being removed in v6.13</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="../../c/news/8.html" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0E76BD'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>News</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Mantid Algorithms being removed in v6.13'>
+      <link itemprop='url' href='940.html'>
+      <meta itemprop='datePublished' content='2025-03-05T14:35:48Z'>
+        <meta itemprop='articleSection' content='News'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Mantid Help Forum'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://forum.mantidproject.org/uploads/default/original/1X/11e2455c3c4b5d6fc63c28650af9a5e72fababbc.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://forum.mantidproject.org/u/sfoxley'><span itemprop='name'>sfoxley</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="940.html">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-03-05T14:35:49Z' class='post-time'>
+                    March 5, 2025,  2:35pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-03-05T14:35:49Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Now that v6.12 of Mantid has been released we are focusing on what we want to achieve for v6.13 before the code freeze for that in May. This includes removing algorithms that have been deprecated for some time.</p>
+<p>In v6.13 we have already removed (and therefore is already not available in the current nightly): -</p>
+<p>AlignDetectors (please use a combination of <a href="https://docs.mantidproject.org/nightly/algorithms/ApplyDiffCal-v1.html">ApplyDiffCal</a> and <a href="https://docs.mantidproject.org/nightly/algorithms/ConvertUnits-v1.html">ConvertUnits</a> instead)</p>
+<p>We will also be removing: -</p>
+<p><a href="https://docs.mantidproject.org/nightly/algorithms/CentroidPeaksMD-v1.html">CentroidPeaksMD v1</a> (replaced by <a href="https://docs.mantidproject.org/nightly/algorithms/CentroidPeaksMD-v2.html">CentroidPeaksMD v2</a>)</p>
+<p><a href="https://docs.mantidproject.org/nightly/algorithms/LoadNexusMonitors-v1.html">LoadNexusMonitors v1</a> (replaced by <a href="https://docs.mantidproject.org/nightly/algorithms/LoadNexusMonitors-v2.html">LoadNexusMonitors v2</a>)</p>
+<p><a href="https://docs.mantidproject.org/nightly/algorithms/Transpose3D-v1.html">Transpose3D</a> (use <a href="https://docs.mantidproject.org/nightly/algorithms/TransposeMD-v1.html">TransposeMD v1</a> instead)</p>
+<p>Please update your scripts and workflows accordingly. For algorithms with multiple versions the most recent version is the default used unless you specify otherwise e.g. the following will default to v2</p>
+<p>CentroidPeaksMD(InputWorkspace=‘TOPAZ_3132_md’, PeaksWorkspace=‘TOPAZ_3132_peaks’, OutputWorkspace=‘TOPAZ_3132_peaks2’)</p>
+<p>If you wanted to specify the version of the algorithm you use you would rewrite the above as follows: -</p>
+<p>CentroidPeaksMD(InputWorkspace=‘TOPAZ_3132_md’, PeaksWorkspace=‘TOPAZ_3132_peaks’, OutputWorkspace=‘TOPAZ_3132_peaks2’, Version=2)</p>
+<p>Future changes</p>
+<p>Please note the following as also currently deprecated and we will be looking to remove them in the future (just not in v6.13). Again please update your scripts and workflows to avoid using these.</p>
+<p><a href="https://docs.mantidproject.org/nightly/algorithms/ConvertUnitsUsingDetectorTable-v1.html">ConvertUnitsUsingDetectorTable</a> (this has no replacement)</p>
+<p><a href="https://docs.mantidproject.org/nightly/algorithms/DiffractionFocussing-v1.html">DiffractionFocussing v1</a> (replaced by <a href="https://docs.mantidproject.org/nightly/algorithms/DiffractionFocussing-v2.html">DiffractionFocussing v2</a>)</p>
+<p><a href="https://docs.mantidproject.org/nightly/algorithms/EvaluateMDFunction-v1.html">EvaluateMDFunction</a> (please use <a href="https://docs.mantidproject.org/nightly/algorithms/EvaluateFunction-v1.html">EvaluateFunction</a> instead)</p>
+<p><a href="https://docs.mantidproject.org/nightly/algorithms/FFTSmooth-v1.html">FFTSmooth v1</a> (replaced by <a href="https://docs.mantidproject.org/nightly/algorithms/FFTSmooth-v2.html">FFTSmooth v2</a>)</p>
+<p><a href="https://docs.mantidproject.org/nightly/algorithms/IntegratePeakTimeSlices-v1.html">IntegratePeakTimeSlices</a> (there is no replacement)</p>
+<p><a href="https://docs.mantidproject.org/nightly/algorithms/LoadDspacemap-v1.html">LoadDspacemap</a> (there is no replacement)</p>
+<p><a href="https://docs.mantidproject.org/nightly/algorithms/LoadSINQFocus-v1.html">LoadSINQFocus</a> (replaced by <a href="https://docs.mantidproject.org/nightly/algorithms/LoadSINQ-v1.html">LoadSINQ</a>)</p>
+<p><a href="https://docs.mantidproject.org/nightly/algorithms/MaskInstrument-v1.html">MaskInstrument</a> (use <a href="https://docs.mantidproject.org/nightly/algorithms/MaskDetectors-v1.html">MaskDetectors</a> instead)</p>
+<p><a href="https://docs.mantidproject.org/nightly/algorithms/SofQWCentre-v1.html">SofQWCentre</a> (use <a href="https://docs.mantidproject.org/nightly/algorithms/SofQWNormalisedPolygon-v1.html">SofQWNormalisedPolygon</a> instead)</p>
+<p><a href="https://docs.mantidproject.org/nightly/algorithms/SofQWPolygon-v1.html">SofQWPolygon</a> (use <a href="https://docs.mantidproject.org/nightly/algorithms/SofQWNormalisedPolygon-v1.html">SofQWNormalisedPolygon</a> instead)</p>
+<p>If you have any queries about these algorithms please contact us using <a href="mailto:mantid-help@mantidproject.org">mantid-help@mantidproject.org</a> which is monitored.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../index.html' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../categories.html' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='../../guidelines.html' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../tos.html' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='../../privacy.html' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>
